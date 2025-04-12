@@ -8,13 +8,13 @@
 import SwiftUI
 
 #if !os(macOS)
-struct SearchBar: UIViewRepresentable {
+public struct SearchBar: UIViewRepresentable {
     @Binding var text: String
     let prompt: String
     let useRounded: Bool
     var onSearchButtonClicked: () -> Void
 
-    func makeUIView(context: Context) -> UISearchBar {
+    public func makeUIView(context: Context) -> UISearchBar {
         if useRounded{
             let searchBar = CustomSearchStyle()
             searchBar.placeholder = prompt
@@ -30,48 +30,48 @@ struct SearchBar: UIViewRepresentable {
 
     }
 
-    func updateUIView(_ uiView: UISearchBar, context: Context) {
+    public func updateUIView(_ uiView: UISearchBar, context: Context) {
         uiView.text = text
         uiView.searchBarStyle = .minimal
     }
     
 
-    func makeCoordinator() -> Coordinator { Coordinator(self) }
+    public func makeCoordinator() -> Coordinator { Coordinator(self) }
     
-    class Coordinator: NSObject, UISearchBarDelegate {
+    public class Coordinator: NSObject, UISearchBarDelegate {
         var parent: SearchBar
 
         init(_ searchBar: SearchBar) {
             self.parent = searchBar
         }
 
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             parent.text = searchText
         }
         
-        func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
             searchBar.setShowsCancelButton(true, animated: true)
         }
-        func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
             searchBar.setShowsCancelButton(false, animated: true)
         }
 
-        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
             parent.onSearchButtonClicked()
             searchBar.resignFirstResponder()
         }
         
-        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
             searchBar.resignFirstResponder()
         }
     }
     
-    class CustomSearchStyle: UISearchBar {
+    public class CustomSearchStyle: UISearchBar {
         private var didObserveSubviews = false
         private let desiredCornerRadius = 22.0
         private var observedLayers = NSHashTable<CALayer>.weakObjects()
         
-        override func willMove(toWindow newWindow: UIWindow?) {
+        public override func willMove(toWindow newWindow: UIWindow?) {
             super.willMove(toWindow: newWindow)
          
             // Adding to window
@@ -89,7 +89,7 @@ struct SearchBar: UIViewRepresentable {
             view.subviews.forEach { observeSubviews($0) }
         }
             
-        override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
             guard keyPath == "cornerRadius" else {
                 super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
                 return
@@ -102,14 +102,14 @@ struct SearchBar: UIViewRepresentable {
     }
     
     #if !os(visionOS)
-    init(text: Binding<String>, prompt: String = "Search", onSearchButtonClicked:   @escaping () -> Void = {}) {
+    public init(text: Binding<String>, prompt: String = "Search", onSearchButtonClicked:   @escaping () -> Void = {}) {
         self._text = text
         self.prompt = prompt
         self.onSearchButtonClicked = onSearchButtonClicked
         self.useRounded = false
     }
     #else
-    init(text: Binding<String>, prompt: String = "Search", useRounded: Bool = false,    onSearchButtonClicked: @escaping () -> Void = {}) {
+    public init(text: Binding<String>, prompt: String = "Search", useRounded: Bool = false,    onSearchButtonClicked: @escaping () -> Void = {}) {
         self._text = text
         self.prompt = prompt
         self.onSearchButtonClicked = onSearchButtonClicked
@@ -118,23 +118,23 @@ struct SearchBar: UIViewRepresentable {
     #endif
 }
 #else
-struct SearchBar: NSViewRepresentable {
-    @Binding var text: String
-    var onClear: () -> Void
+public struct SearchBar: NSViewRepresentable {
+    @Binding public var text: String
+    public var onClear: () -> Void
 
-    let prompt: String
+    public let prompt: String
 
-    init(text: Binding<String>, prompt: String = "Search", onClear:   @escaping () -> Void = {}) {
+    public init(text: Binding<String>, prompt: String = "Search", onClear:   @escaping () -> Void = {}) {
         self._text = text
         self.prompt = prompt
         self.onClear = onClear
     }
 
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         Coordinator(binding: $text, onClear: onClear)
     }
 
-    func makeNSView(context: Context) -> NSSearchField {
+    public func makeNSView(context: Context) -> NSSearchField {
         let textField = NSSearchField(string: text)
         textField.placeholderString = prompt
         textField.delegate = context.coordinator
@@ -143,21 +143,21 @@ struct SearchBar: NSViewRepresentable {
         return textField
     }
 
-    func updateNSView(_ nsView: NSSearchField, context: Context) {
+    public func updateNSView(_ nsView: NSSearchField, context: Context) {
         nsView.stringValue = text
     }
 
-    class Coordinator: NSObject, NSSearchFieldDelegate {
+    public class Coordinator: NSObject, NSSearchFieldDelegate {
         let binding: Binding<String>
         let onClear: () -> Void
 
-        init(binding: Binding<String>, onClear: @escaping () -> Void) {
+        public init(binding: Binding<String>, onClear: @escaping () -> Void) {
             self.binding = binding
             self.onClear = onClear
             super.init()
         }
 
-        func controlTextDidChange(_ obj: Notification) {
+        public func controlTextDidChange(_ obj: Notification) {
             guard let field = obj.object as? NSTextField else { return }
             binding.wrappedValue = field.stringValue
 
