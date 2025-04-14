@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct Example: View {
+    @State private var names: [String] = ["John", "Adam"]
     @State private var searchText = ""
     var body: some View {
-        #if os(visonOS)
-        SearchBar(text: $searchText, useRounded: true)
-#endif
         SearchBar(text: $searchText)
-
+            .padding(.horizontal)
     }
 }
 
