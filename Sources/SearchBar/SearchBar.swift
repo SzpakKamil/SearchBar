@@ -124,7 +124,7 @@ public struct SearchBar: NSViewRepresentable {
 
     public let prompt: String
 
-    public init(text: Binding<String>, prompt: String = "Search", onClear:   @escaping () -> Void = {}) {
+    public init(text: Binding<String>, prompt: String = "Search", onClear: @escaping () -> Void = {}) {
         self._text = text
         self.prompt = prompt
         self.onClear = onClear

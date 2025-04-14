@@ -1,5 +1,7 @@
 # `SearchBar`
 
+![Banner](./Resources/SearchBarBanner.jpg)
+
 A SwiftUI package that integrates native UIKit and AppKit search bar components, offering a robust alternative to SwiftUI's `.searchable` modifier with platform-specific styling.
 
 ## Overview
