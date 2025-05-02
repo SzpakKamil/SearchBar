@@ -29,6 +29,7 @@ public struct SearchBarSuggestion: Equatable {
     @available(iOS 16.0, *)
     @MainActor
     var suggestion: UISearchSuggestionItem {
+        #if os(iOS)
         let image: UIImage?
         if let systemName = systemName {
             image = UIImage(systemName: systemName)
@@ -36,6 +37,9 @@ public struct SearchBarSuggestion: Equatable {
             image = nil
         }
         return UISearchSuggestionItem(localizedAttributedSuggestion: NSAttributedString(string: title), localizedDescription: description, iconImage: image)
+        #else
+        return UISearchSuggestionItem(localizedSuggestion: title, localizedDescription: description)
+        #endif
     }
     #endif
     public static func ==(lhs: SearchBarSuggestion, rhs: SearchBarSuggestion) -> Bool {

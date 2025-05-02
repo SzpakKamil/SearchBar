@@ -23,11 +23,12 @@ struct ExampleNew: View {
             }
             SearchBar(text: $searchText)
                 .searchBarSuggestions($suggestions)
+                .searchBarEnableAutomaticSuggestionsFiltering()
                 .searchBarOnClearPerform { test = "Cleared"}
+                .searchBarOnSearchPerform { test = "Searched"}
                 .searchBarOnBeginEditingPerform { test = "Started" }
                 .searchBarOnEndEditingPerform { test = "Ended" }
-                .searchBarEnableAutomaticSuggestionsFiltering()
-                #if !os(macOS)
+                #if !os(macOS) && !os(tvOS)
                 .searchBarCurrentTokens($currentTokens)
                 #endif
                 #if os(visionOS)
