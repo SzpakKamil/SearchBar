@@ -13,7 +13,7 @@ public struct SearchBarToken: Equatable {
     let title: String
     let systemName: String
     
-    #if !os(macOS)
+    #if !os(macOS) && !os(tvOS)
     @MainActor
     var searchToken: UISearchToken {
         let token = UISearchToken(icon: UIImage(systemName: systemName), text: title)
