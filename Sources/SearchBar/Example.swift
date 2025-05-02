@@ -7,15 +7,57 @@
 
 import SwiftUI
 
-struct Example: View {
+@available(iOS 16.0, *)
+struct ExampleNew: View {
+    @State private var test = "Not Set"
     @State private var names: [String] = ["John", "Adam"]
     @State private var searchText = ""
+    @State private var currentTokens: [SearchBarToken] = []
+    @State private var suggestions: [SearchBarSuggestion] = [.init(title: "Text", description: "Text", systemName: "camera")]
+    
     var body: some View {
-        SearchBar(text: $searchText)
-            .padding(.horizontal)
+        VStack {
+            Text(test)
+            Button("Add Example") {
+                currentTokens.append(.init(title: "Title", systemName: "camera"))
+            }
+            SearchBar(text: $searchText)
+                .searchBarSuggestions($suggestions)
+                .searchBarOnClearPerform { test = "Cleared"}
+                .searchBarOnBeginEditingPerform { test = "Started" }
+                .searchBarOnEndEditingPerform { test = "Ended" }
+                .searchBarEnableAutomaticSuggestionsFiltering()
+                #if !os(macOS)
+                .searchBarCurrentTokens($currentTokens)
+                #endif
+                #if os(visionOS)
+                .searchBarWithRoundedCorners()
+                #endif
+                .padding(.horizontal)
+        }
+    }
+}
+
+struct ExampleOld: View {
+    @State private var names: [String] = ["John", "Adam"]
+    @State private var searchText = ""
+    @State private var currentTokens: [SearchBarToken] = []
+    
+    var body: some View {
+        VStack {
+            Button("Add Example") {
+                currentTokens.append(.init(title: "Title", systemName: "camera"))
+            }
+            SearchBar(text: $searchText)
+                .padding(.horizontal)
+        }
     }
 }
 
 #Preview {
-    Example()
+    if #available(iOS 16.0, *) {
+        ExampleNew()
+    } else {
+        ExampleOld()
+    }
 }
