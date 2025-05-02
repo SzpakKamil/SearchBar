@@ -7,7 +7,7 @@ let package = Package(
     name: "SearchBar",
     defaultLocalization: "en",
     platforms: [
-        .macOS(.v11), .iOS(.v14), .visionOS(.v1)
+        .macOS(.v11), .iOS(.v14), .visionOS(.v1), .tvOS(.v14)
     ],
     products: [
         .library(name: "SearchBar", targets: ["SearchBar"])
