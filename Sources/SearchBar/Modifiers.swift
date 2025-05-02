@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension SearchBar {
+public extension SearchBar {
 #if os(visionOS)
     @ViewBuilder
     func searchBarWithRoundedCorners(_ value: Bool = true) -> SearchBar {
@@ -17,7 +17,7 @@ extension SearchBar {
     
     
     
-#if !os(macOS) && !os(tvOS)
+#if !os(macOS)
     @ViewBuilder
     func searchBarCurrentTokens(_ tokens: Binding<[SearchBarToken]>) -> SearchBar {
         self.updateSearchTokens(tokens)
