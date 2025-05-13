@@ -1,0 +1,99 @@
+@Tutorial(time: 6) {
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Adjusting SearchBar Placement Across Platforms") {
+        Explore how to modify the placement of the SearchBar to suit the design requirements of visionOS, ensuring a seamless experience across devices.
+
+        @Image(source: MS-Banner, alt: "A split-screen view of the Searcher app on an iPhone and iPad, showcasing a genre-categorized movie list with vibrant icons and a sleek search bar positioned at the bottom of each device.")
+    }
+    @Section(title: "Switching the App Target to Vision Pro") {
+        @ContentAndMedia {
+            In this section, you’ll learn how to configure your project to target the Apple Vision Pro for building and testing the app on visionOS.
+
+            @Image(source: SST-Section1.png, alt: "A flowchart diagram illustrating the integration process of the SearchBar framework into an Xcode project, with arrows highlighting connections between key components.")
+        }
+
+        @Steps {
+            @Step {
+                In the Xcode top bar, select your current target device, such as "My Mac".
+
+                @Image(source: MS-Section3-Step1.png, alt: "A screenshot of the Xcode welcome screen, emphasizing the 'Create New Project' option among alternatives like Clone Git Repository and Open Existing Project.")
+            }
+            @Step {
+                From the target devices menu, select "Apple Vision Pro" to compile and run the app for the visionOS platform.
+
+                @Image(source: MS-Section3-Step2.png, alt: "A screenshot of the Xcode welcome screen, highlighting the 'Create New Project' option among alternatives like Clone Git Repository and Open Existing Project.")
+            }
+            @Step {
+                The app will build successfully, and you’ll observe the current implementation in action.
+                @Image(source: MS-Section3-Step3.png, alt: "A screenshot of the Xcode welcome screen, highlighting the 'Create New Project' option among alternatives like Clone Git Repository and Open Existing Project.")
+            }
+        }
+    }
+
+    @Section(title: "Implementing Platform-Specific SearchBar Placement") {
+        @ContentAndMedia {
+            In this section, you’ll customize the SearchBar’s placement to adapt to visionOS, moving it to the toolbar while preserving its original position on other platforms.
+
+            @Image(source: SST-Section1.png, alt: "A flowchart diagram illustrating the integration process of the SearchBar framework into an Xcode project, with arrows highlighting connections between key components.")
+        }
+        @Steps {
+            @Step {
+                In your Xcode project, open "ContentView.swift" from the project navigator and locate the `body` property.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-17.swift"){
+                    @Image(source: MS-Section3-Step3.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Wrap the `searchBarImplementation()` call inside an #if !os(visionOS) block to exclude it from the visionOS build.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-18.swift"){
+                    @Image(source: HSContentView-19.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Add an #if os(visionOS) block containing a `.toolbar` modifier, and include an #else block with a `.navigationTitle` modifier below it for other platforms.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-19.swift"){
+                    @Image(source: HSContentView-19.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Within the `.toolbar` modifier, add a `ToolbarItem` with `.principal` placement, and embed `searchBarImplementation()` inside it to position the SearchBar at the top of the screen on visionOS.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-20.swift"){
+                    @Image(source: HSContentView-20.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+        }
+    }
+    
+    @Section(title: "Adjusting the Top SearchBar Width on visionOS") {
+        @ContentAndMedia {
+            In this section, you’ll refine the width of the top-placed SearchBar on visionOS using dynamic sizing based on the screen dimensions.
+
+            @Image(source: SST-Section1.png, alt: "A flowchart diagram illustrating the integration process of the SearchBar framework into an Xcode project, with arrows highlighting connections between key components.")
+        }
+        @Steps {
+            @Step {
+                Wrap the `NavigationStack` inside a `GeometryReader` to access the screen’s size and enable dynamic adjustments.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-21-2.swift", previousFile: "HSContentView-21-1.swift"){
+                    @Image(source: HSContentView-20.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Apply a horizontal padding to the `searchBarImplementation()` within the toolbar, using a value of `proxy.size.width / 4` to adjust its width dynamically.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-22.swift"){
+                    @Image(source: HSContentView-22.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Review your implementation to ensure it aligns with the provided video demonstration.
+
+                @Video(source: "HSSection3-Video.mp4", poster: HSContentView-22.png, alt: "A video demonstrating the Searcher app interface with a search bar at the bottom, showcasing a genre-categorized movie list and smooth transitions as the user types and focus changes.")
+            }
+        }
+    }
+}

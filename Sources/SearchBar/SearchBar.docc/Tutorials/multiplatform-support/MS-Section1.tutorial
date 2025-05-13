@@ -1,0 +1,66 @@
+@Tutorial(time: 6, projectFiles: Searcher-Chapter3.zip) {
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Platform-Dependent Modifiers in a Multiplatform App") {
+        Discover how to implement platform-specific modifiers to ensure compatibility across different operating systems.
+
+        @Image(source: MS-Banner, alt: "A split-screen view of the Searcher app on an iPhone and iPad, showcasing a genre-categorized movie list with colorful icons and a sleek search bar at the bottom of each device.")
+    }
+
+    @Section(title: "Switching the App Target") {
+        @ContentAndMedia {
+            In this section, you'll learn how to change the target device to a Mac for building your app.
+
+            @Image(source: SST-Section1.png, alt: "A flowchart diagram illustrating the integration process of the SearchBar framework into an Xcode project, with arrows highlighting connections between key components.")
+        }
+
+        @Steps {
+            @Step {
+                In the Xcode top bar, select your current target device, such as "iPhone 16".
+
+                @Image(source: MS-Section1-Step1.png, alt: "A screenshot of the Xcode welcome screen, emphasizing the 'Create New Project' option among other choices like Clone Git Repository and Open Existing Project.")
+            }
+            @Step {
+                From the target devices menu, choose "My Mac" to compile for the macOS target.
+
+                @Image(source: MS-Section1-Step2.png, alt: "A screenshot of the Xcode welcome screen, highlighting the 'Create New Project' option among other choices like Clone Git Repository and Open Existing Project.")
+            }
+            @Step {
+                Your app will now fail to compile due to unsupported modifiers, which we’ll address in the following section.
+            }
+        }
+    }
+    @Section(title: "Handling Unsupported Modifiers with Compiler Directives") {
+        @ContentAndMedia {
+            The SearchBar framework does not support tokens on macOS due to API limitations. You can exclude these features from the macOS build using compiler directives like `#if`, ensuring cross-platform compatibility for your app.
+
+            @Image(source: SST-Section1.png, alt: "A flowchart diagram illustrating the integration process of the SearchBar framework into an Xcode project, with arrows highlighting connections between key components.")
+        }
+        @Steps {
+            @Step {
+                In your Xcode project, open "`ContentView.swift`" from the project navigator and locate the SearchBar view.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-3.swift"){
+                }
+            }
+            @Step {
+                Enclose z.searchBarCurrentTokensz and z.searchBarSuggestedTokensz within an `#if !os(macOS)` block at the start and an #endif at the end.
+                >: These modifiers are not supported on macOS.
+                @Code(name: "ContentView.swift", file: "HSContentView-4.swift"){
+                }
+            }
+            @Step {
+                Move the `.searchBarStyle` and `.searchBarCancelButtonDisplayMode()` modifiers into the `#if !os(macOS)` block, and add an `#else` block with a modified `.searchBarStyle` that excludes the tokenBackground parameter.
+                >: The tokenBackground parameter and cancel button are not supported on macOS.
+                @Code(name: "ContentView.swift", file: "HSContentView-5.swift"){
+                }
+            }
+            @Step {
+                Relocate the keyboard-related modifiers—such as .`searchBarAutoCorrectionType()`, `.searchBarReturnKeyType()`, and `.searchBarTextContentType()` into the `#if !os(macOS)` block.
+                >: These modifiers are not supported on macOS.
+                @Code(name: "ContentView.swift", file: "HSContentView-6.swift"){
+                    @Image(source: HSContentView-6.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+        }
+    }
+}

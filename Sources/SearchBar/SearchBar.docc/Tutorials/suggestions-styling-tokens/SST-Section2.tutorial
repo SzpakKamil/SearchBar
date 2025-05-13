@@ -1,0 +1,47 @@
+@Tutorial(time: 6) {
+
+    @Intro(title: "Enhancing Search with Tokens") {
+        Improve your search experience by integrating tokens to refine user queries effectively.
+
+        @Image(source: SST-Banner, alt: "A split-screen view of the Searcher app interface on an iPhone and iPad, displaying a movie list with genre icons and a search bar at the bottom of each screen.")
+    }
+    
+    @Section(title: "Adding Support for Genre Tokens") {
+        @ContentAndMedia {
+            Seamlessly integrate genre tokens alongside search suggestions for an enhanced user experience.
+
+            @Image(source: SST-Section1.png, alt: "An arrow diagram illustrating the integration flow from the SearchBar framework icon to the Xcode project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                In ContentView, create a @State property `currentTokens` as an array of `SearchBarToken`, and add `.searchBarCurrentTokens($currentTokens)` to the search bar.
+                
+                >Important: This modifier is essential; without it, token selection will not function.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-4.swift", previousFile: "SSTContentView-3.swift"){
+                    @Image(source: SSTContentView-3.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                To display tokens within suggestions, add `.searchBarSuggestedTokens(Genre.allCases.map(\.suggestion))` to include genres as selectable options.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-5.swift"){
+                    @Image(source: SSTContentView-5.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Update the filtering logic and app UI to support token-based filtering and display a "no results" message when applicable.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-6-2.swift", previousFile: "SSTContentView-6-1.swift"){
+                    @Image(source: SSTContentView-6.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Review your app to ensure it matches this design.
+
+                @Video(source: "SST-Section1.mp4", poster: SSTContentView-6.png, alt: "A video showcasing the Searcher app interface with a search bar at the bottom, displaying a genre-categorized movie list and dynamic filtering with smooth animations as the user types.")
+            }
+        }
+    }
+}

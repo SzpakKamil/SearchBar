@@ -1,0 +1,83 @@
+@Tutorial(time: 6, projectFiles: Searcher-Chapter2.zip) {
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Optimize Search Performance with SearchBar Events") {
+        Enhance the Searcher app’s performance by leveraging SearchBar events like `searchBarChangeAction()`. This tutorial guides you through transitioning from computed properties to manual filtering and using event handlers to update the movie list dynamically, ensuring a smoother and more responsive search experience.
+
+        @Image(source: HE-Banner, alt: "A split-screen view of the Searcher app on an iPhone and iPad, showcasing a movie list with genre icons and a search bar at the bottom of each interface.")
+    }
+
+    @Section(title: "Transitioning to Manual Data Filtering") {
+        @ContentAndMedia {
+            Improve the Searcher app’s performance by shifting from a computed `filteredMovies` property to manual updates with a `@State` property, enabling more efficient filtering of the movie list.
+
+            @Image(source: SST-Section1.png, alt: "An arrow diagram illustrating the integration flow from the SearchBar framework icon to the Xcode project icon.")
+        }
+
+        @Steps {
+            @Step {
+                Open "ContentView.swift" in your Xcode project navigator to review the current setup, which uses a computed `filteredMovies` property to filter movies based on search text and tokens.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-4.swift"){
+                @Image(source: HEContentView-0.png, alt: "A smartphone screen showing the Searcher app interface with a categorized movie list by genre and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+        
+            @Step {
+                Convert `filteredMovies` from a computed property to a `@State` property to allow manual updates, preparing for event-driven filtering.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-5.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen showing the Searcher app interface with a categorized movie list by genre and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+        
+            @Step {
+                Add a `filterMovies(for:)` function to encapsulate the filtering logic, which will update the `filteredMovies` state based on the search text and selected tokens.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-6.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen showing the Searcher app interface with a categorized movie list by genre and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+        
+            @Step {
+                Implement the filtering logic in `filterMovies(for:)` to update the `filteredMovies` array, mirroring the previous computed property logic but now triggered manually for better performance.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-7.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen showing the Searcher app interface with a categorized movie list by genre and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+        }
+    }
+
+    @Section(title: "Triggering Updates with SearchBar Events") {
+        @ContentAndMedia {
+            Use the `.searchBarChangeAction()` modifier to trigger the `filterMovies(for:)` function on text changes, ensuring the movie list updates dynamically while maintaining smooth animations for a better user experience.
+
+            @Image(source: SST-Section1.png, alt: "An arrow diagram illustrating the integration flow from the SearchBar framework icon to the Xcode project icon.")
+        }
+
+        @Steps {
+            @Step {
+                Locate the SearchBar view in "ContentView.swift", which is already configured with features like genre-based suggestions, a capsule style, and focus tracking.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-8.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen showing the Searcher app interface with a categorized movie list by genre and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Add the `.searchBarChangeAction(filterMovies)` modifier to the SearchBar to call the `filterMovies(for:)` function whenever the search text changes, enabling real-time filtering of the movie list.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-9.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen showing the Searcher app interface with a categorized movie list by genre and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            
+            @Step {
+                Update the `.animation(.smooth, value:)` modifier to use `filteredMovies` instead of `searchText` as the value parameter, ensuring animations reflect changes in the filtered movie list for a smoother experience.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-10-2.swift", previousFile: "HEContentView-10-1.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen showing the Searcher app interface with a categorized movie list by genre and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                    }
+                }
+            }
+        }
+}

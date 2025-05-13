@@ -1,0 +1,113 @@
+@Tutorial(time: 15) {
+
+    @Intro(title: "Customizing Your SearchBar") {
+        Tailor your SearchBar's appearance to seamlessly match your app's design and enhance user experience.
+
+        @Image(source: SST-Banner, alt: "A split-screen view of the Searcher app interface on an iPhone and iPad, displaying a movie list with genre icons and a search bar at the bottom of each screen.")
+    }
+    
+    @Section(title: "Customizing the SearchBar Shape") {
+        @ContentAndMedia {
+            The SearchBar's shape is key to aligning it with your app's aesthetic, and it can be easily customized.
+
+            @Image(source: SST-Section1.png, alt: "An arrow diagram illustrating the integration flow from the SearchBar framework icon to the Xcode project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                In the Xcode project navigator, locate and open "ContentView.swift", then find the SearchBar View.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-7.swift"){
+                    @Image(source: SSTContentView-7.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Below the SearchBar, add the `.searchBarStyle(.capsule)` modifier to adjust the SearchBar's shape.
+
+                >Note: This modifier supports default styles like `.capsule` and `.rectangle`, or you can specify custom corner radius values for more control.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-8.swift"){
+                    @Image(source: SSTContentView-8.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Expand `.searchBarStyle()` by adding the `textColor: .blue` parameter to change the text color.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-9.swift", previousFile: "SSTContentView-8.swift"){
+                    @Image(source: SSTContentView-9.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Expand `.searchBarStyle()` by adding the `tokenBackground: .blue` parameter to update the background color of tokens.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-10.swift"){
+                    @Image(source: SSTContentView-10.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Expand `.searchBarStyle()` by adding the `tint: .cyan` parameter to adjust the tint color, such as for the cancel button.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-11.swift"){
+                    @Image(source: SSTContentView-11.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Expand `.searchBarStyle()` by adding the `backgroundColor: .blue.opacity(0.1)` parameter to set a subtle background color for the SearchBar.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-12.swift"){
+                    @Image(source: SSTContentView-12.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+        }
+    }
+    
+    @Section(title: "Customizing the SearchBar Icon") {
+        @ContentAndMedia {
+            Personalize the SearchBar icon by integrating custom views for a unique appearance.
+
+            @Image(source: SST-Section1.png, alt: "An arrow diagram illustrating the integration flow from the SearchBar framework icon to the Xcode project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Below the SearchBar, add the `.searchBarIconView()` modifier to enable icon customization.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-13.swift", previousFile: "SSTContentView-12.swift"){
+                    @Image(source: SSTContentView-13.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Add a custom view, such as a system image of book pages, to create a distinctive icon appearance.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-14.swift"){
+                    @Image(source: SSTContentView-14.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+        }
+    }
+    
+    @Section(title: "Configuring Element Display Modes") {
+        @ContentAndMedia {
+            Adjust display modes to control the visibility of elements like the cancel or clear button for a tailored user experience.
+
+            @Image(source: SST-Section1.png, alt: "An arrow diagram illustrating the integration flow from the SearchBar framework icon to the Xcode project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Modify the clear button to appear only when the SearchBar is not being edited by using `.searchBarClearButtonDisplayMode(.unlessEditing)`.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-15.swift", previousFile: "SSTContentView-14.swift"){
+                    @Image(source: SSTContentView-15.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Set the cancel button to always be visible by using `.searchBarCancelButtonDisplayMode(.always)`.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-16.swift"){
+                    @Image(source: SSTContentView-16.png, alt: "A smartphone screen showing the Searcher app interface with a genre-categorized movie list and a styled search bar at the bottom, featuring a bar background and proper padding.")
+                }
+            }
+        }
+    }
+}

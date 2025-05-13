@@ -1,0 +1,112 @@
+@Tutorial(time: 6) {
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Adapting the Searcher App for Platform-Specific Design") {
+        Learn how to customize the Searcher app’s design to seamlessly align with the distinct design languages of various operating systems, ensuring an optimal user experience across platforms.
+
+        @Image(source: MS-Banner, alt: "A split-screen view of the Searcher app on an iPhone and iPad, showcasing a genre-categorized movie list with vibrant icons and a sleek search bar positioned at the bottom of each device.")
+    }
+
+    @Section(title: "Extracting the SearchBar into a Dedicated Function") {
+        @ContentAndMedia {
+            In this section, you’ll refactor the SearchBar implementation by extracting it from the `body` property into a dedicated function, enhancing code organization and reusability for better maintainability.
+
+            @Image(source: SST-Section1.png, alt: "A flowchart diagram illustrating the integration process of the SearchBar framework into an Xcode project, with arrows highlighting connections between key components.")
+        }
+        @Steps {
+            @Step {
+                In your Xcode project, open "ContentView.swift" from the project navigator and locate the SearchBar view within the `body` property.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-7-1.swift"){
+                    @Image(source: HSContentView-6.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Create a new function named `searchBarImplementation() -> some View` and annotate it with the `@ViewBuilder` property wrapper to manage the view composition effectively.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-7-3.swift", previousFile: "HSContentView-7-2.swift"){
+                    @Image(source: HSContentView-6.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Move the entire SearchBar implementation into the `searchBarImplementation()` function, then update the `body` property to call this function instead of directly embedding the SearchBar.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-8.swift"){
+                    @Image(source: HSContentView-6.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+        }
+    }
+    
+    @Section(title: "Customizing Padding and Styling for Different Operating Systems") {
+        @ContentAndMedia {
+            In this section, you’ll fine-tune the SearchBar’s padding and styling to comply with the design guidelines of iOS, macOS, and visionOS, ensuring a consistent and polished user experience across all platforms.
+
+            @Image(source: SST-Section1.png, alt: "A flowchart diagram illustrating the integration process of the SearchBar framework into an Xcode project, with arrows highlighting connections between key components.")
+        }
+        @Steps {
+            @Step {
+                Inside the `searchBarImplementation()` function, add two computed properties—`bottomPadding: CGFloat` and `horizontalPadding: CGFloat`—to manage padding values tailored for each platform.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-9-2.swift", previousFile: "HSContentView-9-1.swift"){
+                    @Image(source: HSContentView-6.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Implement `#if`, `#elseif`, and `#else` statements to define platform-specific values for `bottomPadding` and `horizontalPadding`, ensuring appropriate spacing for each operating system.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-10.swift"){
+                    @Image(source: HSContentView-6.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Assign `bottomPadding` values of 20 for iOS, 5 for macOS, and 0 for visionOS to align with each platform’s design standards.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-11.swift"){
+                    @Image(source: HSContentView-6.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Set `horizontalPadding` to 5 for macOS, and 0 for both iOS and visionOS, ensuring proper spacing adjustments for each platform’s layout requirements.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-12.swift"){
+                    @Image(source: HSContentView-6.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Modify the SearchBar’s padding by replacing `.padding(.bottom, 20)` with `.padding(.bottom, bottomPadding)` and adding `.padding(.horizontal, horizontalPadding)` to apply the computed padding values dynamically.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-13.swift"){
+                    @Image(source: HSContentView-13.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Introduce a new computed property `style: SearchBarStyle` to encapsulate platform-specific styling configurations for the SearchBar.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-14-2.swift", previousFile: "HSContentView-14-1.swift"){
+                    @Image(source: HSContentView-13.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Replicate the existing styling from the view hierarchy for iOS and visionOS, and create a simplified, rounded design for macOS to better match its native design language.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-15.swift"){
+                    @Image(source: HSContentView-16.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Eliminate the `#else` block in the SearchBar implementation and streamline the styling by replacing all `.searchBarStyle` modifiers with a single `.searchBarStyle(style)` modifier for consistency.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-16.swift"){
+                    @Image(source: HSContentView-16.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+            @Step {
+                Enclose the `.background(.bar)` modifier within an `#if !os(visionOS)` block to exclude this effect on visionOS, ensuring a cleaner appearance on that platform.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-16-2.swift"){
+                    @Image(source: HSContentView-16.png, alt: "A smartphone screen displaying the Searcher app interface, featuring a movie list categorized by genre and a styled search bar at the bottom with a bar background and proper padding.")
+                }
+            }
+        }
+    }
+}

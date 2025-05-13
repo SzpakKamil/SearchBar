@@ -1,0 +1,56 @@
+@Tutorials(name: "SearchBar") {    
+    @Intro(title: "Revolutionize Your App with SearchBar") {
+        Unlock the potential of the SearchBar framework to create seamless, intuitive search and filtering experiences with minimal effort. This tutorial series guides you through building a dynamic Searcher app, from foundational setup to advanced interactivity and multiplatform optimization, empowering you to craft user-focused applications.
+    @Image(source: SearchBar-Tutorial-Banner.png, alt: "A vibrant split-screen view of the Searcher app on an iPhone and iPad, featuring a curated movie list with colorful genre icons and a sleek, integrated search bar at the bottom of each interface.")
+    }
+
+    @Chapter(name: "Building the Searcher App Foundation") {
+        Kickstart your journey by creating a robust Searcher app from scratch using the SearchBar Framework. Learn to set up a multiplatform project, design data models, and implement a dynamic UI with basic filtering, enabling users to browse and search movies effortlessly.
+
+        @Image(source: FFA-Image, alt: "A side-by-side view of the Searcher app on an iPhone and iPad, showcasing a meticulously organized movie list grouped by genre with vibrant icons and a user-friendly search bar at the bottom.")
+
+        @TutorialReference(tutorial: "doc:FFA-Section0")
+        @TutorialReference(tutorial: "doc:FFA-Section1")
+        @TutorialReference(tutorial: "doc:FFA-Section2")
+        @TutorialReference(tutorial: "doc:FFA-Section3")
+        @TutorialReference(tutorial: "doc:FFA-Section4")
+    }
+
+    @Chapter(name: "Adding Advanced Search Features") {
+        Elevate your Searcher app with sophisticated SearchBar capabilities, including dynamic search suggestions, genre-based token filtering, and custom styling. These enhancements create a polished, engaging search experience tailored to user needs.
+
+        @Image(source: SST-Image, alt: "A wireframe of the Searcher app interface, featuring a prominent search bar at the top with suggestion dropdowns and a categorized movie list below, enriched with genre-based tokens.")
+
+        @TutorialReference(tutorial: "doc:SST-Section0")
+        @TutorialReference(tutorial: "doc:SST-Section1")
+        @TutorialReference(tutorial: "doc:SST-Section2")
+        @TutorialReference(tutorial: "doc:SST-Section3")
+        @TutorialReference(tutorial: "doc:SST-Section4")
+        @TutorialReference(tutorial: "doc:SST-Section5")
+    }
+
+    @Chapter(name: "Mastering Interactive Event Handling") {
+        Transform your Searcher app into a highly responsive experience by leveraging SearchBar event handlers. Learn to respond to user actions like editing, clearing, or canceling searches, ensuring a dynamic and intuitive interface that adapts in real-time.
+
+        @Image(source: HE-Image, alt: "A wireframe of the Searcher app interface, highlighting an interactive search bar at the top with event-driven elements and a dynamic, genre-categorized movie list below, updated in real-time.")
+
+        @TutorialReference(tutorial: "doc:HE-Section0")
+        @TutorialReference(tutorial: "doc:HE-Section1")
+        @TutorialReference(tutorial: "doc:HE-Section2")
+        @TutorialReference(tutorial: "doc:HE-Section3")
+        @TutorialReference(tutorial: "doc:HE-Section4")
+    }
+
+    @Chapter(name: "Optimizing for Multiplatform Excellence") {
+        Finalize your Searcher app by adapting it for seamless performance across iOS, macOS, visionOS, and iPadOS. Master platform-specific SearchBar configurations, responsive UI design to deliver a consistent, polished experience on every device.
+
+        @Image(source: SST-Image, alt: "A wireframe of the Searcher app interface, showcasing a versatile search bar and movie list optimized for multiple platforms, with platform-specific styling and modifiers.")
+
+        @TutorialReference(tutorial: "doc:MS-Section0")
+        @TutorialReference(tutorial: "doc:MS-Section1")
+        @TutorialReference(tutorial: "doc:MS-Section2")
+        @TutorialReference(tutorial: "doc:MS-Section3")
+        @TutorialReference(tutorial: "doc:MS-Section4")
+    }
+
+}
