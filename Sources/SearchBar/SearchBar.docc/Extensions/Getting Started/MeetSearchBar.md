@@ -12,7 +12,8 @@
     @PageImage(
         purpose: icon, 
         source: "meetSearchBar", 
-        alt: "An icon of waving hand inside circle.")
+        alt: "An icon of waving hand.")
+    
 }
 
 @Options{

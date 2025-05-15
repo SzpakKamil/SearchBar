@@ -12,7 +12,7 @@
     @PageImage(
         purpose: icon, 
         source: "settingUp", 
-        alt: "An icon of hammer inside circle.")
+        alt: "An icon of hammer.")
 }
 
 @Options{

@@ -12,7 +12,7 @@
     @PageImage(
         purpose: icon, 
         source: "modifiers", 
-        alt: "An icon of wand with sparkles inside circle.")
+        alt: "An icon of wand with sparkles.")
 }
 
 @Options{
