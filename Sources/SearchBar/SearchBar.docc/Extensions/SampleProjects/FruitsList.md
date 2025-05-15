@@ -7,6 +7,7 @@
     @Available(swift, introduced: "6.0")
     @Available(Xcode, introduced: "15.0")
     @PageKind(sampleCode)
+    @PageColor(purple)
     @PageImage(
         purpose: icon, 
         source: "sampleCode", 
