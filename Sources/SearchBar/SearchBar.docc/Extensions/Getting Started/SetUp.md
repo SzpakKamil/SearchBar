@@ -9,10 +9,6 @@
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
     @PageColor(green)
-    @PageImage(
-        purpose: icon, 
-        source: "settingUp", 
-        alt: "An icon of hammer.")
 }
 
 @Options{

@@ -8,10 +8,6 @@
     @Available(Xcode, introduced: "15.0")
     @PageKind(sampleCode)
     @PageColor(purple)
-    @PageImage(
-        purpose: icon, 
-        source: "sampleCode", 
-        alt: "An icon of curly braces.")
     @CallToAction(url: "https://kamilszpak.com/Packages/SearchBarSamples/FruitsList.zip", label: "Download")
 }
 

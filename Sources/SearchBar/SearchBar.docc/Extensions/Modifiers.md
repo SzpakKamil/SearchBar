@@ -9,10 +9,6 @@
     @Available(swift, introduced: "6.0")
     @Available(Xcode, introduced: "15.0")
     @PageColor(green)
-    @PageImage(
-        purpose: icon, 
-        source: "modifiers", 
-        alt: "An icon of wand with sparkles.")
 }
 
 @Options{

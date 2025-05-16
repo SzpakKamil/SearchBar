@@ -8,10 +8,6 @@
     @Available(swift, introduced: "6.0")
     @Available(Xcode, introduced: "15.0")
     @DocumentationExtension(mergeBehavior: override)
-    @PageImage(
-        purpose: icon, 
-        source: "searchBarIcon", 
-        alt: "A technology icon representing the SearchBar framework.")
 }
 
 @Options {
