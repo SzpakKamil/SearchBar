@@ -1,0 +1,56 @@
+@Tutorial(time: 6, projectFiles: Searcher-Chapter1.zip) {
+    @XcodeRequirement(
+           title: "Xcode 15 or Later", 
+           destination: "https://developer.apple.com/download/")
+
+    @Intro(title: "Enhancing Your App with Search Suggestions") {
+        This section walks you through adding search suggestions to your Searcher app using the SearchBar Framework, boosting user engagement and search efficiency.
+
+        @Image(source: SST-Banner, alt: "A screenshot of the \"Searcher\" app interface on tablet and smartphone, showing search bars with blue highlighted text, gray placeholder content blocks, and on-screen keyboards. Both devices display the same clean app design with blue accents against a black background.")
+    }
+
+    @Section(title: "Adding Search Suggestions with SearchBar") {
+        @ContentAndMedia {
+            Learn how to use the `.searchBarSuggestions()` modifier to implement dynamic search suggestions, enabling users to find content quickly and effortlessly.
+
+            @Image(source: SST-Section1.png, alt: "A 3D SearchBar framework Modifiers logo connected by an arrow to a smartphone displaying the \"Searcher\" app interface with movie search results, keyboard, and search suggestions, labeled \"Suggestions\" below.")
+        }
+
+        @Steps {
+            @Step {
+                In the Xcode project navigator, locate and open "ContentView.swift" to enable suggestions support.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-0.swift"){
+                    @Image(source: FFA-Section3-Step5.png, alt: "A smartphone screen showing the Searcher app with movie titles and descriptions grouped by genres (ACTION, ADVENTURE, ANIMATION), including icons and a search bar.")
+                }
+            }
+            @Step {
+                Below the SearchBar View, add `.searchBarSuggestions()` with the parameter set to `movies.map(\.suggestion)`.
+
+                >Important: Note that suggestions are not filtered at this stage, so all suggestions are displayed regardless of input.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-1.swift"){
+                    @Image(source: SSTContentView-1.png, alt: "A smartphone displaying the Searcher app with movie search results including "Movie 1" and expanded search suggestions showing movies.")
+                }
+            }
+
+            @Step {
+                Below `.searchBarSuggestions()`, add `.searchBarEnableAutomaticSuggestionsFiltering()` without any parameters.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-2.swift"){
+                    @Image(source: SSTContentView-2.png, alt: "A smartphone displaying the Searcher app with \"Movie 1\" suggestion in the search field and results list.")
+                }
+            }
+
+            @Step {
+                The current setup shows suggestions only when the search text exceeds 3 characters. To customize this, define a custom filtering action. Typing a single letter 'v' now returns relevant results.
+
+                >Note: The `searchText` parameter is pre-trimmed to remove whitespace and newlines.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-3.swift"){
+                    @Image(source: SSTContentView-3.png, alt: "A smartphone displaying the Searcher app interface with movie categories. Shows \"Movie 1\" under ACTION and \"Everywhere and nowhere\" under ADVENTURE The keyboard is visible. ")
+                }
+            }
+        }
+    }
+}

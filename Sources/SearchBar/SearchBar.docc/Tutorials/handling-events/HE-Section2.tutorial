@@ -1,0 +1,83 @@
+@Tutorial(time: 6, projectFiles: Searcher-Chapter2.zip) {
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Optimize Search Performance with SearchBar Events") {
+        Enhance the Searcher app’s performance by leveraging SearchBar events like `searchBarChangeAction()`. This tutorial guides you through transitioning from computed properties to manual filtering and using event handlers to update the movie list dynamically, ensuring a smoother and more responsive search experience.
+
+        @Image(source: HE-Banner, alt: "A screenshot of the 'Searcher' app interface on a tablet and smartphone, both displaying a list of search results with blue square icons and gray placeholders, on a light background.")
+    }
+
+    @Section(title: "Transitioning to Manual Data Filtering") {
+        @ContentAndMedia {
+            Improve the Searcher app’s performance by shifting from a computed `filteredMovies` property to manual updates with a `@State` property, enabling more efficient filtering of the movie list.
+
+            @Image(source: HE-Section3.png, alt: "A graphic showing a transition from \"Computed Properties\" (represented by a circular icon with arrows and an exclamation mark) to \"State Properties\" (represented by a box icon), with an arrow indicating the flow between them, illustrating a concept in the Searcher app development.")
+        }
+
+        @Steps {
+            @Step {
+                Open "ContentView.swift" in your Xcode project navigator to review the current setup, which uses a computed `filteredMovies` property to filter movies based on search text and tokens.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-4.swift"){
+                @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+        
+            @Step {
+                Convert `filteredMovies` from a computed property to a `@State` property to allow manual updates, preparing for event-driven filtering.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-5.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+        
+            @Step {
+                Add a `filterMovies(for:)` function to encapsulate the filtering logic, which will update the `filteredMovies` state based on the search text and selected tokens.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-6.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+        
+            @Step {
+                Implement the filtering logic in `filterMovies(for:)` to update the `filteredMovies` array, mirroring the previous computed property logic but now triggered manually for better performance.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-7.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+        }
+    }
+
+    @Section(title: "Triggering Updates with SearchBar Events") {
+        @ContentAndMedia {
+            Use the `.searchBarChangeAction()` modifier to trigger the `filterMovies(for:)` function on text changes, ensuring the movie list updates dynamically while maintaining smooth animations for a better user experience.
+
+            @Image(source: HE-Section4.png, alt: "A graphic showing a sequence of actions in the Searcher app: a keyboard icon labeled \"Edit Search Text\" a blue search bar icon labeled \"Change Modifier\" and a circular arrow icon labeled \"Recompute Results\" illustrating the process of editing and updating search results.")
+        }
+
+        @Steps {
+            @Step {
+                Locate the SearchBar view in "ContentView.swift", which is already configured with features like genre-based suggestions, a capsule style, and focus tracking.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-8.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Add the `.searchBarChangeAction(filterMovies)` modifier to the SearchBar to call the `filterMovies(for:)` function whenever the search text changes, enabling real-time filtering of the movie list.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-9.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            
+            @Step {
+                Update the `.animation(.smooth, value:)` modifier to use `filteredMovies` instead of `searchText` as the value parameter, ensuring animations reflect changes in the filtered movie list for a smoother experience.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-10-2.swift", previousFile: "HEContentView-10-1.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                    }
+                }
+            }
+        }
+}
