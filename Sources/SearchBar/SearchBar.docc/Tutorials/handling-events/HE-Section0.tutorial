@@ -1,0 +1,22 @@
+@Article(time: 2) {
+    @Intro(title: "Introduction to SearchBar Event Handling") {        
+        Learn how to make your Searcher app more interactive by responding to key SearchBar events, such as beginning and ending editing, tapping the cancel button, and clearing the search text.        
+        @Image(source: HE-Banner, alt: "A screenshot of the 'Searcher' app interface on a tablet and smartphone, both displaying a list of search results with blue square icons and gray placeholders, on a light background.")   
+    }
+    
+    ## Chapter Purpose
+    The SearchBar Framework provides powerful tools to enhance your app’s interactivity by handling user interactions with the search bar. Chapter 3 focuses on implementing event-handling capabilities in the Searcher app, allowing you to execute custom code when users begin editing, end editing, tap the cancel button, or tap the clear button. By following this guide, you’ll create a more responsive and dynamic search experience that adapts to user actions, improving the overall usability of your app.
+
+    ## What You Will Learn
+    In this chapter, you’ll master the implementation of SearchBar event handling within a SwiftUI-based Xcode project. You’ll learn how to:
+    - Use SearchBar modifiers like `searchBarBeginEditingAction()` and `searchBarEndEditingAction()` to detect and respond to editing events.
+    - Handle cancel and clear button taps with modifiers like `searchBarCancelButtonDisplayMode()` to update the app’s state and UI.
+    - Integrate event-driven logic, such as `searchBarChangeAction()`, to provide real-time feedback, including dynamic navigation title updates and optimized filtering.
+    By the end, you’ll have a Searcher app that dynamically reacts to user interactions, laying the groundwork for multiplatform enhancements.
+
+    ## Expanding Your App in Future Chapters
+    In the final chapter, you’ll build on these event-handling skills to optimize your Searcher app for multiplatform support across iOS, visionOS, and macOS. You’ll implement platform-specific tweaks, accessibility enhancements, and tailored styling to ensure a seamless and polished experience on all devices.
+
+    ## Returning Reader
+    If you’re joining us for Chapter 3, you can download the completed Chapter 2 project files in the next section to catch up. This will allow you to start adding event-handling capabilities to your Searcher app, building on the search suggestions and token-based filtering implemented previously.
+}

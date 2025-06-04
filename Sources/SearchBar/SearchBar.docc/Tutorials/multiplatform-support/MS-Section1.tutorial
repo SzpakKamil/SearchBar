@@ -1,0 +1,66 @@
+@Tutorial(time: 6, projectFiles: Searcher-Chapter3.zip) {
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Platform-Dependent Modifiers in a Multiplatform App") {
+        Discover how to implement platform-specific modifiers to ensure compatibility across different operating systems.
+
+        @Image(source: MS-Banner, alt: "A tablet screen displaying the Searcher app interface with a list of search results, a laptop screen in the background with a colorful wallpaper and app icons, and a smartphone screen showing the Searcher app with a search bar and \"Cancel\" button, all on a light background, illustrating the app's consistency across devices.")
+    }
+
+    @Section(title: "Switching the App Target") {
+        @ContentAndMedia {
+            In this section, you'll learn how to change the target device to a Mac for building your app.
+
+            @Image(source: MS-Section1.png, alt: "A smartphone screen displaying the Searcher app interface with a list of search results on iOS, and a laptop screen showing the Searcher app interface with a similar list, both with a search bar and \"Cancel\" button, connected by an arrow to illustrate the app's cross-platform consistency.")
+        }
+
+        @Steps {
+            @Step {
+                In the Xcode top bar, select your current target device, such as "iPhone 16".
+
+                @Image(source: MS-Section1-Step1.png, alt: "A screenshot of an Xcode interface showing the project navigator and editor area, with the target device selection option highlighted in the top bar.")
+            }
+            @Step {
+                From the target devices menu, choose "My Mac" to compile for the macOS target.
+
+                @Image(source: MS-Section1-Step2.png, alt: "A screenshot of an Xcode interface with the target device menu open in the top bar, highlighting the \"My Mac\" option for macOS compilation.")
+            }
+            @Step {
+                Your app will now fail to compile due to unsupported modifiers, which we’ll address in the following section.
+            }
+        }
+    }
+    @Section(title: "Handling Unsupported Modifiers with Compiler Directives") {
+        @ContentAndMedia {
+            The SearchBar framework does not support tokens on macOS due to API limitations. You can exclude these features from the macOS build using compiler directives like `#if`, ensuring cross-platform compatibility for your app.
+
+            @Image(source: MS-Section2.png, alt: "The image highlights a solution for compatibility issues between iOS and macOS. The red shield points to a code snippet using conditional compilation (#if os(macOS) ... #else ... #endif). This approach allows developers to write platform-specific code, ensuring the \"Searcher\" app works seamlessly on both iOS and macOS by adapting to each platform's requirements.")
+        }
+        @Steps {
+            @Step {
+                In your Xcode project, open "`ContentView.swift`" from the project navigator and locate the SearchBar view.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-3.swift"){
+                }
+            }
+            @Step {
+                Enclose z.searchBarCurrentTokensz and z.searchBarSuggestedTokensz within an `#if !os(macOS)` block at the start and an #endif at the end.
+                >: These modifiers are not supported on macOS.
+                @Code(name: "ContentView.swift", file: "HSContentView-4.swift"){
+                }
+            }
+            @Step {
+                Move the `.searchBarStyle` and `.searchBarCancelButtonDisplayMode()` modifiers into the `#if !os(macOS)` block, and add an `#else` block with a modified `.searchBarStyle` that excludes the tokenBackground parameter.
+                >: The tokenBackground parameter and cancel button are not supported on macOS.
+                @Code(name: "ContentView.swift", file: "HSContentView-5.swift"){
+                }
+            }
+            @Step {
+                Relocate the keyboard-related modifiers—such as .`searchBarAutoCorrectionType()`, `.searchBarReturnKeyType()`, and `.searchBarTextContentType()` into the `#if !os(macOS)` block.
+                >: These modifiers are not supported on macOS.
+                @Code(name: "ContentView.swift", file: "HSContentView-6.swift"){
+                    @Image(source: HSContentView-6.png, alt: "The \"Searcher\" app on macOS shows movie search results, reflecting resolved iOS-macOS compatibility issues.")
+                }
+            }
+        }
+    }
+}

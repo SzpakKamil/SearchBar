@@ -1,0 +1,99 @@
+@Tutorial(time: 6) {
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Adjusting SearchBar Placement Across Platforms") {
+        Explore how to modify the placement of the SearchBar to suit the design requirements of visionOS, ensuring a seamless experience across devices.
+
+        @Image(source: MS-Banner, alt: "A tablet screen displaying the Searcher app interface with a list of search results, a laptop screen in the background with a colorful wallpaper and app icons, and a smartphone screen showing the Searcher app with a search bar and \"Cancel\" button, all on a light background, illustrating the app's consistency across devices.")
+    }
+    @Section(title: "Switching the App Target to Vision Pro") {
+        @ContentAndMedia {
+            In this section, you’ll learn how to configure your project to target the Apple Vision Pro for building and testing the app on visionOS.
+
+            @Image(source: MS-Section5.png, alt: "")
+        }
+
+        @Steps {
+            @Step {
+                In the Xcode top bar, select your current target device, such as "My Mac".
+
+                @Image(source: MS-Section3-Step1.png, alt: "Xcode top bar with \"My Mac\" selected in the target device dropdown for the \"Searcher\" app.")
+            }
+            @Step {
+                From the target devices menu, select "Apple Vision Pro" to compile and run the app for the visionOS platform.
+
+                @Image(source: MS-Section3-Step2.png, alt: "Xcode top bar with \"Apple Vision Pro\" highlighted in the target device dropdown for the \"Searcher\" app.")
+            }
+            @Step {
+                The app will build successfully, and you’ll observe the current implementation in action.
+                @Image(source: MS-Section3-Step3.png, alt: "A screenshot of the \"Searcher\" app running on visionOS, displaying a search interface with categories like Action, Adventure, and Animation, and a search bar at the bottom, viewed in a virtual living room environment after a successful build in Xcode.")
+            }
+        }
+    }
+
+    @Section(title: "Implementing Platform-Specific SearchBar Placement") {
+        @ContentAndMedia {
+            In this section, you’ll customize the SearchBar’s placement to adapt to visionOS, moving it to the toolbar while preserving its original position on other platforms.
+
+            @Image(source: MS-Section6.png, alt: "A graphic illustrating the visionOS styling section for the \"Searcher\" app, showcasing a 3D search interface with glass-like effects, depth, and spatial elements in a virtual environment, contrasting with a flatter iOS design, emphasizing visionOS-specific customization.")
+        }
+        @Steps {
+            @Step {
+                In your Xcode project, open "ContentView.swift" from the project navigator and locate the `body` property.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-17.swift"){
+                    @Image(source: MS-Section3-Step3.png, alt: "A screenshot of the \"Searcher\" app running on visionOS, displaying a search interface with categories like Action, Adventure, and Animation, and a search bar at the bottom, viewed in a virtual living room environment after a successful build in Xcode.")
+                }
+            }
+            @Step {
+                Wrap the `searchBarImplementation()` call inside an #if !os(visionOS) block to exclude it from the visionOS build.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-18.swift"){
+                    @Image(source: HSContentView-19.png, alt: "A preview graphic of the visionOS design for the \"Searcher\" app, featuring a 3D search interface with glass-like effects, depth, and spatial elements in a virtual environment, showcasing visionOS-specific styling.")
+                }
+            }
+            @Step {
+                Add an #if os(visionOS) block containing a `.toolbar` modifier, and include an #else block with a `.navigationTitle` modifier below it for other platforms.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-19.swift"){
+                    @Image(source: HSContentView-19.png, alt: "A preview graphic of the visionOS design for the \"Searcher\" app, featuring a 3D search interface with glass-like effects, depth, and spatial elements in a virtual environment, showcasing visionOS-specific styling.")
+                }
+            }
+            @Step {
+                Within the `.toolbar` modifier, add a `ToolbarItem` with `.principal` placement, and embed `searchBarImplementation()` inside it to position the SearchBar at the top of the screen on visionOS.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-20.swift"){
+                    @Image(source: HSContentView-20.png, alt: "A preview graphic of the visionOS design for the "Searcher" app, featuring a 3D search interface with glass-like effects and depth in a virtual environment, highlighting the search bar positioned at the top.")
+                }
+            }
+        }
+    }
+    
+    @Section(title: "Adjusting the Top SearchBar Width on visionOS") {
+        @ContentAndMedia {
+            In this section, you’ll refine the width of the top-placed SearchBar on visionOS using dynamic sizing based on the screen dimensions.
+
+            @Image(source: MS-Section7.png, alt: "A graphic comparing the \"Searcher\" app interface, showing a transition from a full-width design to a resized design with the maximum width reduced to half, highlighting the change in layout for visionOS styling.")
+        }
+        @Steps {
+            @Step {
+                Wrap the `NavigationStack` inside a `GeometryReader` to access the screen’s size and enable dynamic adjustments.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-21-2.swift", previousFile: "HSContentView-21-1.swift"){
+                    @Image(source: HSContentView-20.png, alt: "A preview graphic of the visionOS design for the "Searcher" app, featuring a 3D search interface with glass-like effects and depth in a virtual environment, highlighting the search bar positioned at the top.")
+                }
+            }
+            @Step {
+                Apply a horizontal padding to the `searchBarImplementation()` within the toolbar, using a value of `proxy.size.width / 4` to adjust its width dynamically.
+
+                @Code(name: "ContentView.swift", file: "HSContentView-22.swift"){
+                    @Image(source: HSContentView-22.png, alt: "A preview graphic of the \"Searcher\" app interface on visionOS, showcasing a resized design with the maximum width set to half of the original, featuring a 3D search layout with glass-like effects and depth in a virtual environment.")
+                }
+            }
+            @Step {
+                Review your implementation to ensure it aligns with the provided video demonstration.
+
+                @Video(source: "HSSection3-Video.mp4", poster: HSContentView-22.png, alt: "A preview graphic of the \"Searcher\" app interface on visionOS, showcasing a resized design with the maximum width set to half of the original, featuring a 3D search layout with glass-like effects and depth in a virtual environment.")
+            }
+        }
+    }
+}

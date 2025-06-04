@@ -1,0 +1,58 @@
+@Tutorial(time: 5) {
+    @XcodeRequirement(
+           title: "Xcode 15 or later", 
+           destination: "https://developer.apple.com/download/")
+
+    
+    @Intro(title: "Creating a Project") {
+        This section walks you through setting up a new project using the SearchBar Framework efficiently.
+        
+        @Image(source: FFA-Banner, alt: "A screenshot of the 'Searcher' app interface on a tablet and smartphone, both displaying a list of items with blue square icons and gray placeholders, and a Search bar at the bottom.")
+    }
+    
+    @Section(title: "Set Up a New Project with SearchBar Integration") {
+        @ContentAndMedia {
+            Initialize and configure an Xcode project to incorporate the SearchBar framework seamlessly.
+            
+            @Image(source: FFA-Section1.png, alt: "An arrow illustrating the integration path from the SearchBar framework icon to the Xcode project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Launch Xcode and select "Create New Project" from the welcome screen, or navigate to File > New > Project from the menu.
+                
+                @Image(source: FFA-Section1-Step1.png, alt: "A screenshot of the Xcode welcome interface, highlighting the 'Create New Project' option among Create New Project, Clone Git Repository, and Open Existing Project.")
+            }
+            
+            @Step {
+                In the template chooser, opt for the Multiplatform platform, choose the App template, and proceed by clicking Next.
+                
+                @Image(source: FFA-Section1-Step2.png, alt: "A screenshot of the template selection dialog in Xcode, with Multiplatform selected and the App template highlighted, and the Next button emphasized.")
+            }
+            
+            @Step {
+                Input "Searcher" as the product name, click Next, and select a suitable directory on your Mac to store the Searcher project.
+                
+                @Image(source: FFA-Section1-Step3.png, alt: "A screenshot of the project configuration window displaying 'Searcher' entered as the Product Name.")
+            }
+            
+            @Step {
+                Open the Searcher project in Xcode and select File > Add Package Dependencies from the menu bar to include external libraries.
+                
+                @Image(source: FFA-Section1-Step4.png, alt: "A screenshot of the Xcode menu bar with the File > Add Package Dependencies option selected.")
+            }
+            
+            @Step {
+                In the search field, type package URL `https://github.com/SzpakKamil/SearchBar`, set the dependency rule to "Up to Next Major Version", confirm the version is at least 2.0.0, and click Add Package to proceed.
+                
+                @Image(source: FFA-Section1-Step5.png, alt: "A screenshot of the package dependency dialog in Xcode, showing the URL 'https://github.com/SzpakKamil/SearchBar', 'Up to Next Major Version' rule, and version 2.0.0 or higher.")
+            }
+            
+            @Step {
+                Ensure the "SearchBar" package product is assigned to the "Searcher" target, then click "Add Package" to finalize the integration into your project.
+                
+                @Image(source: FFA-Section1-Step6.png, alt: "A screenshot of the package products selection window in Xcode, with 'SearchBar' mapped to the 'Searcher' target.")
+            }
+        }
+    }
+}

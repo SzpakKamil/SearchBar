@@ -1,0 +1,47 @@
+@Tutorial(time: 6) {
+
+    @Intro(title: "Refining Search Input Styling") {
+        Customize the SearchBar input experience to improve usability and align with your app's needs.
+
+        @Image(source: SST-Banner, alt: "A screenshot of the \"Searcher\" app interface on tablet and smartphone, showing search bars with blue highlighted text, gray placeholder content blocks, and on-screen keyboards. Both devices display the same clean app design with blue accents against a black background.")
+    }
+    
+    @Section(title: "Customizing the Keyboard") {
+        @ContentAndMedia {
+            On iOS, iPadOS, and visionOS, you can adjust the keyboard style, content type, and return key to enhance the search experience.
+
+            @Image(source: SST-Section6.png, alt: "Three smartphones showing different keyboard types in the Searcher app - \"Default\" with standard QWERTY keyboard, \"Web Search\" with web-optimized keyboard, and \"Decimal Pad\" with numeric keypad.")
+        }
+        
+        @Steps {
+            @Step {
+                Set the keyboard style to `.webSearch` by adding the `.searchBarKeyboardType(.webSearch)` modifier.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-17.swift", previousFile: "SSTContentView-16.swift"){
+                    @Image(source: SSTContentView-17.png, alt: "Searcher app showing movie listings in background with search interface overlay. On-screen keyboard is active. Search field appears empty with cursor visible.")
+                }
+            }
+            @Step {
+                Disable autocorrection for a streamlined search experience using the `.searchBarDisableAutocorrection(true)` modifier.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-18.swift"){
+                    @Image(source: SSTContentView-18.png, alt: "Searcher app displaying movie categories in background with search interface active. On-screen keyboard is visible with empty search field and blue \"go\" button in bottom right corner of keyboard.")
+                }
+            }
+            @Step {
+                Change the return key to a search-specific key by replacing the `.searchBarKeyboardType(.webSearch) with `.searchBarReturnKeyType(.search)` modifier.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-19.swift"){
+                    @Image(source: SSTContentView-19.png, alt: "Searcher app showing movie listings with search interface overlay. On-screen keyboard is displayed with empty search field and \"search\" button visible in bottom right corner of keyboard. Movie categories ACTION, ADVENTURE visible in background.")
+                }
+            }
+            @Step {
+                For specific search fields, set the content type, such as `.emailAddress`, using the `.searchBarTextContentType(.emailAddress)` modifier.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-20.swift"){
+                    @Image(source: SSTContentView-19.png, alt: "Searcher app showing movie listings with search interface overlay. On-screen keyboard is displayed with empty search field and \"search\" button visible in bottom right corner of keyboard. Movie categories ACTION, ADVENTURE visible in background.")
+                }
+            }
+        }
+    }
+}

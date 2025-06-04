@@ -1,0 +1,18 @@
+@Article(time: 2) {    
+    @Intro(title: "Advanced SearchBar Features Overview") {        
+        Recap the key achievements of Chapter 2 in the Advanced Searcher project, where you enriched your app with search suggestions, tokens, and customized styling using the SearchBar Framework. Prepare for the next chapters to add event handling and multiplatform support.        
+        @Image(source: SST-Banner, alt: "A screenshot of the \"Searcher\" app interface on tablet and smartphone, showing search bars with blue highlighted text, gray placeholder content blocks, and on-screen keyboards. Both devices display the same clean app design with blue accents against a black background.")    
+    }
+    
+    ## Summary
+    Congratulations on completing Chapter 2 of the Advanced Searcher project! You’ve significantly enhanced your SwiftUI-based iOS application by leveraging the SearchBar Framework to implement advanced search features. This chapter focused on improving user engagement and search efficiency through dynamic suggestions, token-based filtering, and tailored styling. These milestones provide a strong foundation for further refinements in interactivity and platform compatibility.
+
+    Here’s a recap of the key achievements and skills you’ve gained in Chapter 2:
+
+    - **Search Suggestions**: Boosted user engagement by implementing dynamic search suggestions with the `.searchBarSuggestions()` modifier, enabling movie title suggestions and refining responsiveness with `.searchBarEnableAutomaticSuggestionsFiltering()` and custom filtering logic (Tutorial: "Enhancing Your App with Search Suggestions").
+    - **Genre Tokens**: Enhanced query refinement by adding genre token support using `.searchBarSuggestedTokens()` and `.searchBarCurrentTokens()`, allowing users to filter movies by genre seamlessly, with updated filtering logic to handle tokens and display "no results" messages (Tutorial: "Enhancing Search with Tokens").
+    - **SearchBar Customization**: Tailored the SearchBar’s appearance to match the app’s aesthetic using `.searchBarStyle()` to set a capsule shape, blue text, cyan tint, blue token background, and a subtle background color. Personalized the icon with `.searchBarIconView()` (e.g., a book pages image) and configured display modes for clear and cancel buttons with `.searchBarClearButtonDisplayMode(.unlessEditing)` and `.searchBarCancelButtonDisplayMode(.always)` (Tutorial: "Customizing Your SearchBar").
+    - **Keyboard Refinement**: Optimized the search input experience by customizing the keyboard with `.searchBarReturnKeyType(.search)`, disabling autocorrection via `.searchBarDisableAutocorrection(true)`, and setting a content type (e.g., `.emailAddress`) with `.searchBarTextContentType(.emailAddress)` for specific search fields (Tutorial: "Refining Search Input Styling").
+
+    By mastering these features, you’ve built a highly functional Searcher app with an efficient, user-friendly search interface and advanced customization options. In the upcoming chapters, you’ll enhance interactivity with event-handling capabilities, such as dynamic UI updates, and finalize the app with multiplatform support for iOS, visionOS, and macOS, ensuring a seamless experience across diverse devices.
+}

@@ -1,0 +1,63 @@
+@Tutorial(time: 6, projectFiles: Searcher-Chapter2.zip) {
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Enhance Searcher with SearchBar Focus Handling") {
+        Boost the Searcher app’s interactivity by adding focus detection to its search bar. In this tutorial, you’ll use the SearchBar framework to track focus states and dynamically update the UI, creating a more intuitive experience for browsing and filtering a movie list with genre-based tokens.
+
+        @Image(source: HE-Banner, alt: "A screenshot of the 'Searcher' app interface on a tablet and smartphone, both displaying a list of search results with blue square icons and gray placeholders, on a light background.")
+    }
+
+    @Section(title: "Tracking SearchBar Focus State") {
+        @ContentAndMedia {
+            Learn to use the `.searchBarIsFocused($isSearching)` modifier to track when the SearchBar is active, enabling dynamic UI updates based on user interaction with the movie search interface.
+
+            @Image(source: HE-Section1.png, alt: "A graphic showing a hand icon tapping a search bar with a blue icon, labeled \"Begin Editing,\" alongside code snippets \".searchBarIsFocused()\" and \"$isSearching,\" illustrating the activation of the search bar in the Searcher app.")
+    }
+
+        @Steps {
+            @Step {
+                In your Xcode project, open "ContentView.swift" from the project navigator. Find the SearchBar view, which is already set up with features like genre-based token suggestions, a capsule style, and an email keyboard type.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-0.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Introduce a new `@State` property named `isSearching` to track the focus state, then add the `.searchBarIsFocused($isSearching)` modifier to the SearchBar to bind this property and enable focus detection.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-1.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+        }
+    }
+
+    @Section(title: "Updating the Navigation Title Based on Focus") {
+        @ContentAndMedia {
+            Use the `isSearching` state to dynamically update the app’s navigation title, providing clear feedback to users when they’re actively searching through the movie list.
+
+            @Image(source: HE-Section2.png, alt: "A smartphone screen displaying the Searcher app interface with search results showing movies grouped by genres (ACTION, ADVENTURE), each with a blue icon and description, a search bar with a \"Cancel\" button, and an open keyboard, on a light background, accompanied by a graphic of a hand tapping a blue icon labeled \"Begin Editing\" on a black background.")
+        }
+
+        @Steps {
+            @Step {
+                Create a `navigationTitle` property that toggles between "Searcher" and "Search Results" based on the `isSearching` state, reflecting whether the user is currently focused on the SearchBar.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-2-2.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Update the `NavigationStack` to use the new `navigationTitle` property instead of the static "Searcher" title, ensuring the UI reflects the SearchBar’s focus state dynamically.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-3.swift"){
+                    @Image(source: HEContentView-3.png, alt: "A smartphone screen displaying the Searcher app interface with search results showing movies grouped by genres (ACTION, ADVENTURE), each with a blue icon and description, a search bar with a \"Cancel\" button, and an open keyboard, on a light background.")
+                }
+            }
+            @Step {
+                Watch the fully functional implementation in action with a video showcasing the dynamic title updates as the SearchBar gains and loses focus.
+
+                @Video(source: "HE-Section1-Video.mp4", poster: HEContentView-3.png, alt: "A smartphone screen displaying the Searcher app interface with search results showing movies grouped by genres (ACTION, ADVENTURE), each with a blue icon and description, a search bar with a \"Cancel\" button, and an open keyboard, on a light background.")
+            }
+        }
+    }
+}

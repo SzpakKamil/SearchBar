@@ -1,0 +1,110 @@
+@Tutorial(time: 6, projectFiles: Searcher-Chapter2.zip) {    
+    @XcodeRequirement(title: "Xcode 15 or Later", destination: "https://developer.apple.com/download/")
+    @Intro(title: "Handle Edge Cases with SearchBar Editing Events") {
+        Optimize the Searcher app by using `searchBarBeginEditingAction()` and `searchBarEndEditingAction()` to manage edge cases in navigation title updates. This tutorial guides you through replacing focus-based logic with event handlers, ensuring a more reliable and dynamic UI for browsing and searching movies.
+
+        @Image(source: HE-Banner, alt: "A screenshot of the 'Searcher' app interface on a tablet and smartphone, both displaying a list of search results with blue square icons and gray placeholders, on a light background.")
+    }
+
+    @Section(title: "Transitioning to a State-Driven Navigation Title") {
+        @ContentAndMedia {
+            Replace the computed `navigationTitle` with a `@State` property to enable dynamic updates driven by SearchBar events, moving away from the `.searchBarIsFocused` modifier for more precise control.
+
+            @Image(source: HE-Section5.png, alt: "A graphics showing a hand with pointing finger on the left, an arrow pointing right, and a wireframe or mockup of what appears to be a user interface or form with placeholder elements on the right.")
+        }
+
+        @Steps {
+            @Step {
+                Open "ContentView.swift" in your Xcode project navigator. Review the current setup, which uses a computed `navigationTitle` based on the `isSearching` state to toggle between "Searcher" and "Search Results".
+
+                @Code(name: "ContentView.swift", file: "HEContentView-11.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            
+            @Step {
+                Replace the computed `navigationTitle` with a `@State` property initialized to "Searcher", allowing for manual updates based on SearchBar events.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-12.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+        }
+    }
+
+    @Section(title: "Implementing Navigation Title Logic with Event States") {
+        @ContentAndMedia {
+            Define a `recomputeNavigationTitle(isEditing:)` function to determine the navigation title based on editing state, search text, and tokens, ensuring accurate updates for all scenarios.
+
+            @Image(source: HE-Section6.png, alt: "A code diagram comparing simple focus-based navigation title logic (if-else statement) with a more complex state-driven approach using a switch statement that considers multiple boolean conditions (isEditing, isEmpty).")
+        }
+
+        @Steps {
+            @Step {
+                Add a `recomputeNavigationTitle(isEditing:)` function to manage the navigation title logic, preparing to handle editing events and edge cases.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-13-2.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Implement initial logic in `recomputeNavigationTitle(isEditing:)` to set the title to "Search Results" when editing and "Searcher" when not, mirroring the previous focus-based approach.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-14.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Refine the logic to handle edge cases by using a switch statement that considers both `isEditing` and whether the search text and tokens are empty, ensuring the title updates appropriately.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-15.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+        }
+    }
+
+    @Section(title: "Triggering Title Updates with SearchBar Events") {
+        @ContentAndMedia {
+            Use `searchBarBeginEditingAction()`, `searchBarEndEditingAction()`, and `searchBarChangeAction()` to trigger `recomputeNavigationTitle`, replacing the `.searchBarIsFocused` modifier for more robust navigation title management.
+
+            @Image(source: HE-Section7.png, alt: "A graphic showing a comparison of two smartphone screens displaying the Searcher app: the left screen with \"Search Results\" and \"No Results found for 'Som'\" in a search bar, and the right screen with \"Searcher\" and the same \"No Results found for 'Som'\" message, both with a search bar and \"Cancel\" button, accompanied by a blue icon labeled \"Begin Editing\" in the center, illustrating focus-based and content-based navigation title concepts.")
+        }
+
+        @Steps {
+            @Step {
+                Locate the SearchBar view in "ContentView.swift", which is already set up with features like token-based filtering, suggestions, and a capsule style.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-16.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Add `.searchBarBeginEditingAction()` and `.searchBarEndEditingAction()` modifiers to the SearchBar, calling `recomputeNavigationTitle(isEditing:)` with `true` when editing begins and `false` when it ends.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-17.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Update the existing `.searchBarChangeAction()` modifier to also call `recomputeNavigationTitle(isEditing: true)` after filtering movies, ensuring the title updates during active searches.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-18-2.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Remove the `.searchBarIsFocused($isSearching)` modifier and the `isSearching` property, as the new event-based approach fully handles title updates.
+
+                @Code(name: "ContentView.swift", file: "HEContentView-19-2.swift"){
+                    @Image(source: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                }
+            }
+            @Step {
+                Review the updated functionality in a video to confirm the navigation title updates correctly as the user interacts with the SearchBar.
+
+                @Video(source: "HEContentView-20.mp4", poster: HEContentView-0.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+            }
+        }
+    }
+}

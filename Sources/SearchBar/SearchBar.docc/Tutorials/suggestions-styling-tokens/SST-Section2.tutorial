@@ -1,0 +1,47 @@
+@Tutorial(time: 6) {
+
+    @Intro(title: "Enhancing Search with Tokens") {
+        Improve your search experience by integrating tokens to refine user queries effectively.
+
+        @Image(source: SST-Banner, alt: "A screenshot of the \"Searcher\" app interface on tablet and smartphone, showing search bars with blue highlighted text, gray placeholder content blocks, and on-screen keyboards. Both devices display the same clean app design with blue accents against a black background.")
+    }
+    
+    @Section(title: "Adding Support for Genre Tokens") {
+        @ContentAndMedia {
+            Seamlessly integrate genre tokens alongside search suggestions for an enhanced user experience.
+
+            @Image(source: SST-Section2.png, alt: "A SearchBar framework Modifiers logo connected by an arrow to a smartphone displaying the \"Searcher\" app interface with adventure movie search results, search tokens, and keyboard, labeled \"Tokens\" below.")
+        }
+        
+        @Steps {
+            @Step {
+                In ContentView, create a @State property `currentTokens` as an array of `SearchBarToken`, and add `.searchBarCurrentTokens($currentTokens)` to the search bar.
+                
+                >Important: This modifier is essential; without it, token selection will not function.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-4.swift", previousFile: "SSTContentView-3.swift"){
+                    @Image(source: SSTContentView-3.png, alt: "A smartphone displaying the Searcher app interface with movie categories. Shows \"Movie 1\" under ACTION and \"Everywhere and nowhere\" under ADVENTURE The keyboard is visible. ")
+                }
+            }
+            @Step {
+                To display tokens within suggestions, add `.searchBarSuggestedTokens(Genre.allCases.map(\.suggestion))` to include genres as selectable options.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-5.swift"){
+                    @Image(source: SSTContentView-5.png, alt: "The Searcher app showing search results with an expanded dropdown menu displaying \"Adventure\", \"Everywhere and nowhere\", and \"Movie 1\" as selectable options. The on-screen keyboard shows uppercase letters. ")
+                }
+            }
+            @Step {
+                Update the filtering logic and app UI to support token-based filtering and display a "no results" message when applicable.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-6-2.swift", previousFile: "SSTContentView-6-1.swift"){
+                    @Image(source: SSTContentView-6.png, alt: "Searcher app displaying filtered results showing only ADVENTURE category movies: \"Everywhere and nowhere\" and \"Look! Where?\" with description \"Funny Adventure of two sisters.\" The search bar shows \"Adventure\" as an active filter.")
+                }
+            }
+            @Step {
+                Review your app to ensure it matches this design.
+
+                @Video(source: "SST-Section1-Video.mp4", poster: SSTContentView-6.png, alt: "Searcher app displaying filtered results showing only ADVENTURE category movies: \"Everywhere and nowhere\" and \"Look! Where?\" with description \"Funny Adventure of two sisters.\" The search bar shows \"Adventure\" as an active filter.")
+            }
+        }
+    }
+}

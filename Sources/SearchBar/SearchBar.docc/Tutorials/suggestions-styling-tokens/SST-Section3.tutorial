@@ -1,0 +1,113 @@
+@Tutorial(time: 15) {
+
+    @Intro(title: "Customizing Your SearchBar") {
+        Tailor your SearchBar's appearance to seamlessly match your app's design and enhance user experience.
+
+        @Image(source: SST-Banner, alt: "A screenshot of the \"Searcher\" app interface on tablet and smartphone, showing search bars with blue highlighted text, gray placeholder content blocks, and on-screen keyboards. Both devices display the same clean app design with blue accents against a black background.")
+    }
+    
+    @Section(title: "Customizing the SearchBar Shape") {
+        @ContentAndMedia {
+            The SearchBar's shape is key to aligning it with your app's aesthetic, and it can be easily customized.
+
+            @Image(source: SST-Section3.png, alt: "Two search bars showing transformation from \"Default Style\" (gray search bar with magnifying glass icon) to \"Custom Style\" (blue search bar with document icon), connected by an arrow.")
+        }
+        
+        @Steps {
+            @Step {
+                In the Xcode project navigator, locate and open "ContentView.swift", then find the SearchBar View.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-7.swift"){
+                    @Image(source: SSTContentView-7.png, alt: "Searcher app showing multiple categories - ACTION with \"Movie 1\", ADVENTURE with \"Everywhere and nowhere\", and \"Look! Where?\", and ANIMATION section featuring \"Where is Dany?\" and \"CoLOrS\" with description \"Explaining meaning of Color.\"")
+                }
+            }
+            @Step {
+                Below the SearchBar, add the `.searchBarStyle(.capsule)` modifier to adjust the SearchBar's shape.
+
+                >Note: This modifier supports default styles like `.capsule` and `.rectangle`, or you can specify custom corner radius values for more control.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-8.swift"){
+                    @Image(source: SSTContentView-8.png, alt: "Same view as Image 4, showing the complete Searcher app interface with all movie categories (ACTION, ADVENTURE, ANIMATION) and their respective titles displayed.")
+                }
+            }
+            @Step {
+                Expand `.searchBarStyle()` by adding the `textColor: .blue` parameter to change the text color.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-9.swift", previousFile: "SSTContentView-8.swift"){
+                    @Image(source: SSTContentView-9.png, alt: "Searcher app with only the ACTION section visible, showing \"Movie 1\" with its tagline. The search bar shows \"Movie 1\" as the current search term with the keyboard displayed below.")
+                }
+            }
+            @Step {
+                Expand `.searchBarStyle()` by adding the `tokenBackground: .blue` parameter to update the background color of tokens.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-10.swift"){
+                    @Image(source: SSTContentView-10.png, alt: "Searcher app showing ADVENTURE movies with an empty search bar and keyboard visible.")
+                }
+            }
+            @Step {
+                Expand `.searchBarStyle()` by adding the `tint: .cyan` parameter to adjust the tint color, such as for the cancel button.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-11.swift"){
+                    @Image(source: SSTContentView-11.png, alt: "Searcher app displaying ADVENTURE category movies with \"Adventure\" shown as a blue filter tag in the search bar, and keyboard visible at the bottom of the screen.")
+                }
+            }
+            @Step {
+                Expand `.searchBarStyle()` by adding the `backgroundColor: .blue.opacity(0.1)` parameter to set a subtle background color for the SearchBar.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-12.swift"){
+                    @Image(source: SSTContentView-12.png, alt: " A smartphone displaying the Searcher app showing movie categories with ACTION section containing \"Movie 1\" and ADVENTURE section with \"Everywhere and nowhere\" and \"Look! Where?\. The search bar is empty with placeholder text \"Search\". ")
+                }
+            }
+        }
+    }
+    
+    @Section(title: "Customizing the SearchBar Icon") {
+        @ContentAndMedia {
+            Personalize the SearchBar icon by integrating custom views for a unique appearance.
+
+            @Image(source: SST-Section4.png, alt: "Two blue search bars labeled \"Original\" (with magnifying glass icon) and \"Custom Layout\" (with document icon), showing different styling approaches.")
+        }
+        
+        @Steps {
+            @Step {
+                Below the SearchBar, add the `.searchBarIconView()` modifier to enable icon customization.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-13.swift", previousFile: "SSTContentView-12.swift"){
+                    @Image(source: SSTContentView-13.png, alt: "Searcher app main screen showing movie categories: ACTION section with \"Movie 1\", ADVENTURE section with \"Everywhere and nowhere\" and \"Look! Where?\", and ANIMATION section with \"Where is Dany?\" and \"CoLOrS\" Search bar visible at bottom.")
+                }
+            }
+            @Step {
+                Add a custom view, such as a system image of book pages, to create a distinctive icon appearance.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-14.swift"){
+                    @Image(source: SSTContentView-14.png, alt: "Same Searcher app main screen, showing identical movie listings across ACTION, ADVENTURE, and ANIMATION categories with search bar at bottom.")
+                }
+            }
+        }
+    }
+    
+    @Section(title: "Configuring Element Display Modes") {
+        @ContentAndMedia {
+            Adjust display modes to control the visibility of elements like the cancel or clear button for a tailored user experience.
+
+            @Image(source: SST-Section5.png, alt: "Two smartphones showing the Searcher app - \"Default\" displays movie search results in categories, while \"Unless Editing\" shows a \"No Results found for 'Some'\" message with active search.")
+        }
+        
+        @Steps {
+            @Step {
+                Modify the clear button to appear only when the SearchBar is not being edited by using `.searchBarClearButtonDisplayMode(.unlessEditing)`.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-15.swift", previousFile: "SSTContentView-14.swift"){
+                    @Image(source: SSTContentView-15.png, alt: "Split view showing Searcher app - Left side displays \"No Results found for 'Some'\" message with empty search results. Right side shows search interface with \"Some\" entered in search field, on-screen.")
+                }
+            }
+            @Step {
+                Set the cancel button to always be visible by using `.searchBarCancelButtonDisplayMode(.always)`.
+
+                @Code(name: "ContentView.swift", file: "SSTContentView-16.swift"){
+                    @Image(source: SSTContentView-16.png, alt: "Split view of Searcher app - Left side shows main movie listing screen with all categories visible. Right side displays search interface with empty search field, on-screen keyboard active.")
+                }
+            }
+        }
+    }
+}
