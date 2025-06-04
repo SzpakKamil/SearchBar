@@ -1,0 +1,68 @@
+@Tutorials(name: "SearchBar") {    
+    @Intro(title: "Meet SearchBar") {
+        SearchBar streamlines intuitive search and filtering for apps. Learn to build a dynamic Searcher app, from setup to multiplatform polish.
+        @Image(source: SearchBar-Tutorial-Banner.png, alt: "Searcher app on iPhone and iPad, showcasing a movie list with genre icons and a sleek search bar.")
+    }
+
+    @Chapter(name: "Searcher App Basics") {
+        Start your Searcher app with SearchBar. Set up a multiplatform project, create data models, and build a dynamic UI for effortless movie browsing.
+        @Image(source: FFA-Image, alt: "Searcher app on iPhone and iPad, displaying a genre-organized movie list with a user-friendly search bar.")
+        @TutorialReference(tutorial: "doc:FFA-Section0")
+        @TutorialReference(tutorial: "doc:FFA-Section1")
+        @TutorialReference(tutorial: "doc:FFA-Section2")
+        @TutorialReference(tutorial: "doc:FFA-Section3")
+        @TutorialReference(tutorial: "doc:FFA-Section4")
+    }
+
+    @Chapter(name: "Advanced Search Tools") {
+        Enhance your Searcher app with SearchBar’s suggestions, token filtering, and custom styles for a tailored, engaging search experience.
+        @Image(source: SST-Image, alt: "Searcher app wireframe with a top search bar, suggestion dropdowns, and a categorized movie list.")
+        @TutorialReference(tutorial: "doc:SST-Section0")
+        @TutorialReference(tutorial: "doc:SST-Section1")
+        @TutorialReference(tutorial: "doc:SST-Section2")
+        @TutorialReference(tutorial: "doc:SST-Section3")
+        @TutorialReference(tutorial: "doc:SST-Section4")
+        @TutorialReference(tutorial: "doc:SST-Section5")
+    }
+
+    @Chapter(name: "Interactive Search Events") {
+        Make your Searcher app responsive with SearchBar event handlers for editing, clearing, or canceling searches, ensuring a fluid UI.
+        @Image(source: HE-Image, alt: "Searcher app wireframe with an interactive search bar and a dynamic, genre-sorted movie list.")
+        @TutorialReference(tutorial: "doc:HE-Section0")
+        @TutorialReference(tutorial: "doc:HE-Section1")
+        @TutorialReference(tutorial: "doc:HE-Section2")
+        @TutorialReference(tutorial: "doc:HE-Section3")
+        @TutorialReference(tutorial: "doc:HE-Section4")
+    }
+
+    @Chapter(name: "Multiplatform Mastery") {
+        Optimize your Searcher app for iOS, macOS, visionOS, and iPadOS with SearchBar tweaks and responsive UI for a seamless experience.
+        @Image(source: MS-Image, alt: "Searcher app wireframe with a versatile search bar and movie list tailored for multiple platforms.")
+        @TutorialReference(tutorial: "doc:MS-Section0")
+        @TutorialReference(tutorial: "doc:MS-Section1")
+        @TutorialReference(tutorial: "doc:MS-Section2")
+        @TutorialReference(tutorial: "doc:MS-Section3")
+        @TutorialReference(tutorial: "doc:MS-Section4")
+    }
+    
+    @Resources {
+        Explore SearchBar resources.
+
+        @Documentation(destination: "https://kamilszpak.com/documentation/searchbar") {
+            Dive into SearchBar documentation.
+            - [Modifiers](https://kamilszpak.com/documentation/searchbar/modifiers)
+            - [Token Model](https://kamilszpak.com/documentation/searchbar/searchbartoken)
+            - [Suggestion Model](https://kamilszpak.com/documentation/searchbar/suggestions)
+        }
+        
+        @SampleCode(destination: "https://kamilszpak.com/documentation/searchbar") {
+            Explore a sample SearchBar project.
+            - [FruitsList](https://kamilszpak.com/documentation/searchbar/fruitslist)
+        }
+        
+        @Forums(destination: "https://github.com/SzpakKamil/SearchBar/issues") {
+            Get help and report SearchBar issues.
+        }
+    }
+}
+

@@ -1,0 +1,23 @@
+@Article(time: 2) {    
+    @Intro(title: "Introduction to Advanced Features") { 
+        Explore the core objectives of Chapter 2 in the Searcher project and the advanced skills you’ll gain by enhancing the SearchBar framework’s capabilities.
+        @Image(source: SST-Banner, alt: "A screenshot of the \"Searcher\" app interface on tablet and smartphone, showing search bars with blue highlighted text, gray placeholder content blocks, and on-screen keyboards. Both devices display the same clean app design with blue accents against a black background.")
+    }
+    ## Chapter Purpose
+    The SearchBar framework empowers developers to create rich, interactive search experiences. Chapter 2 focuses on enhancing the Searcher app with advanced features like dynamic search suggestions, genre-based token filtering, customized SearchBar styling, and refined keyboard interactions. By following this guide, you’ll transform your app into a more engaging and user-friendly filtering application, leveraging the SearchBar framework to deliver a polished search experience.
+
+    ## What You Will Learn
+    In Chapter 2, you’ll master the implementation of advanced SearchBar features within a SwiftUI-based Xcode project. You’ll learn how to:
+    - Add dynamic search suggestions using `.searchBarSuggestions()` and customize filtering with `.searchBarEnableAutomaticSuggestionsFiltering()`.
+    - Implement genre tokens with `.searchBarSuggestedTokens()` and `.searchBarCurrentTokens()` for refined query filtering.
+    - Customize the SearchBar’s appearance with `.searchBarStyle()` (e.g., capsule shape, colors) and `.searchBarIconView()`, and configure button visibility with `.searchBarClearButtonDisplayMode()` and `.searchBarCancelButtonDisplayMode()`.
+    - Optimize keyboard input with modifiers like `.searchBarReturnKeyType(.search)`, `.searchBarDisableAutocorrection(true)`, and `.searchBarTextContentType(.emailAddress)`.
+    By the end, you’ll have a Searcher app with a sophisticated search interface, ready for further interactivity enhancements.
+
+    ## Expanding Your App in Future Chapters
+    In the upcoming chapters, you’ll build on these advanced features by adding event-handling capabilities in Chapter 3, such as responding to editing and button-tap events for dynamic UI updates. The final chapter will focus on multiplatform support, optimizing your app for iOS, visionOS, and macOS with platform-specific styling and accessibility enhancements.
+
+    ## Returning Reader
+    If you’re joining us for Chapter 2, you can download the completed Chapter 1 project files in the next section to catch up. This will allow you to start enhancing your Searcher app with advanced features, building on the foundational project setup, data models, and basic filtering implemented previously.
+
+}

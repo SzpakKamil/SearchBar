@@ -1,0 +1,92 @@
+@Tutorial(time: 18) {
+    
+    @XcodeRequirement(
+           title: "Xcode 15 or later", 
+           destination: "https://developer.apple.com/download/")
+
+    
+    @Intro(title: "Building App UI") {
+        This section provides a comprehensive, step-by-step guide to constructing the user interface for the Searcher project, leveraging the SearchBar framework to create an intuitive and interactive app layout.
+        
+        @Image(source: FFA-Banner, alt: "A screenshot of the 'Searcher' app interface on a tablet and smartphone, both displaying a list of items with blue square icons and gray placeholders, and a Search bar at the bottom.")
+    }
+    
+    @Section(title: "Creating a Basic List Screen") {
+        @ContentAndMedia {
+            Start by building a list screen to display movies, which will later be enhanced with search functionality for a seamless user experience.
+            
+            @Image(source: FFA-Section5.png, alt: "Three orange Swift bird icons stacked vertically on a black background, representing the Swift programming language.")
+        }
+        @Steps {
+            @Step {
+                In the Xcode project navigator, locate and open the "ContentView.swift" file to begin crafting the app's user interface.
+                @Code(name: "ContentView.swift", file: "FFAContentView-0.swift"){
+                    @Image(source: FFA-Section3-Step1.png, alt: "A smartphone screen displaying a simple 'Hello, world!' message with a globe icon, on a white background with a black frame.")
+                }
+            }
+            
+            @Step {
+                Add an array of `movies` as the data source for the list, and create a computed dictionary `groups` to categorize movies by genre, along with a `keys` array to store sorted genre keys for iteration.
+                @Code(name: "ContentView.swift", file: "FFAContentView-1.swift"){
+                    @Image(source: FFA-Section3-Step1.png, alt: "A smartphone screen displaying a simple 'Hello, world!' message with a globe icon, on a white background with a black frame.")
+                }
+            }
+            
+            @Step {
+                Replace the existing UI with a `List` wrapped inside a `NavigationStack`. Use nested `ForEach` loops to iterate over the sorted `keys` and display movies grouped by genre, with each genre as a section.
+                @Code(name: "ContentView.swift", file: "FFAContentView-2-2.swift", previousFile: "FFAContentView-2-1.swift"){
+                    @Image(source: FFA-Section3-Step2.png, alt: "A smartphone screen displaying the Searcher app interface with a list of 'To Do' items under categories like ACTION, ADVENTURE, and ANIMATION, on a light background")
+                }
+            }
+            
+            @Step {
+                Create a `movieRow(for:)` function to define the appearance of each movie row. The row will use a `Label` with a `VStack` for the title (in bold) and description, and the icon will be the movie's genre `systemImage`.
+                @Code(name: "ContentView.swift", file: "FFAContentView-3.swift"){
+                    @Image(source: FFA-Section3-Step3.png, alt: "A smartphone screen showing the Searcher app with movie titles and descriptions grouped by genres (ACTION, ADVENTURE, ANIMATION), including icons.")
+                }
+            }
+        }
+    } 
+    
+    @Section(title: "Implementing Filtering Functionality with SearchBar") {
+        @ContentAndMedia {
+            Add search functionality to the list screen using the SearchBar framework, enabling users to filter movies dynamically by title.
+            
+            @Image(source: FFA-Section6.png, alt: "Two smartphone screens side by side on a black background, with the left showing the Searcher app list and the right showing the same list with a search bar added, connected by an arrow with a magnifying glass icon.")
+        }
+        @Steps {
+            @Step {
+                Wrap the `List` inside a `ZStack` with `bottom` alignment to prepare for adding the search bar at the bottom of the screen.
+                @Code(name: "ContentView.swift", file: "FFAContentView-4.swift"){
+                    @Image(source: FFA-Section3-Step3.png, alt: "A smartphone screen showing the Searcher app with movie titles and descriptions grouped by genres (ACTION, ADVENTURE, ANIMATION), including icons.")
+                }
+            }
+            
+            @Step {
+                Import the SearchBar framework, add a `@State` property `searchText` to manage the search input, and place a `SearchBar` view after the `List`. Apply styling: set the `SearchBar` bottom padding to 20, background color to `.bar`, and add bottom padding of 80 to the `List` for proper spacing.
+                @Code(name: "ContentView.swift", file: "FFAContentView-5.swift"){
+                    @Image(source: FFA-Section3-Step5.png, alt: "A smartphone screen showing the Searcher app with movie titles and descriptions grouped by genres (ACTION, ADVENTURE, ANIMATION), including icons and a search bar.")
+                }
+            }
+            
+            @Step {
+                Create a computed property `filteredMovies` that filters the `movies` array based on whether `searchText` is empty. If not empty, use `localizedStandardContains(searchText)` to match the movie title. Update the `groups` dictionary to use `filteredMovies`, and add a smooth animation to the `List` with `.animation(.smooth, value: searchText)`.
+                @Code(name: "ContentView.swift", file: "FFAContentView-6.swift"){
+                    @Image(source: FFA-Section3-Step5.png, alt: "A smartphone screen showing the Searcher app with movie titles and descriptions grouped by genres (ACTION, ADVENTURE, ANIMATION), including icons and a search bar.")
+                }
+            }
+            
+            @Step {
+                Review the current functionality of the app, which now supports dynamic filtering of movies based on the search input.
+                @Video(source: "FFA-Section3-Step7.mp4", poster: FFA-Section3-Step5.png, alt: "A video demonstrating the Searcher app interface with a search bar at the bottom, showing movies grouped by genre and dynamically filtering the list with smooth animations as the user types in the search bar.")
+            }
+            
+            @Step {
+                Enhance the app by adding a "No Results Found" row when the search text does not match any movies, improving user feedback. Additionally, refine the search functionality by applying `.trimmingCharacters(in: .whitespaces)` to the `searchText` to handle extra spaces gracefully.
+                @Code(name: "ContentView.swift", file: "FFAContentView-8.swift"){
+                    @Image(source: FFA-Section3-Step8.png, alt: "A smartphone screen displaying the Searcher app with a search bar showing 'No Results found for \"Movie 2\"' and a keyboard open, indicating a search query.")
+                }
+            }
+        }
+    } 
+}

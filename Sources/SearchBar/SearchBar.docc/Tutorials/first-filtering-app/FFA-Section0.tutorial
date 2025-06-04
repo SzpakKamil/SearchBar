@@ -1,0 +1,15 @@
+@Article(time: 3) {    
+    @Intro(title: "Getting Started with SearchBar Framework") {        
+        Discover the core objectives of Chapter 1 in the Searcher project and the foundational skills you’ll gain by implementing the SearchBar framework.        
+        @Image(source: FFA-Banner, alt: "A screenshot of the \"Searcher\" app interface on a tablet and smartphone, both displaying a list of items with blue square icons and gray placeholders, and a Searchbar at the bottom")    
+    }
+    
+    ## Chapter Purpose
+    The SearchBar framework offers a streamlined solution for integrating powerful search and filtering capabilities into your app. Chapter 1 focuses on the simplest implementation of the SearchBar framework, enabling you to add a native, platform-specific search bar to your app with minimal setup. By following this guide, you’ll create a basic filtering app that leverages SearchBar to enhance user experience through efficient search functionality.
+
+    ## What You Will Learn
+    Through Chapter 1, you’ll master the foundational implementation of the SearchBar framework in an Xcode project. You’ll learn how to set up a new multiplatform project, integrate the SearchBar package via Swift Package Manager, and configure it for a seamless user interface. By the end, you’ll have a functional app with a search bar that supports basic filtering, providing a solid base to explore more advanced features in subsequent chapters.
+
+    ## Expanding Your App in Future Chapters
+    As you progress through later chapters, you’ll enhance your app by incorporating advanced SearchBar features, such as dynamic search suggestions, token-based filtering, event-driven interactions, and multiplatform optimizations. These additions will build upon the foundational implementation from Chapter 1, enabling you to create a robust and feature-rich filtering application tailored to diverse user needs.
+}

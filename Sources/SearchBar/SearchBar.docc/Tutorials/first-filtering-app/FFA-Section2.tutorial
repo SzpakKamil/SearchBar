@@ -1,0 +1,99 @@
+@Tutorial(time: 12) {
+    
+    @XcodeRequirement(
+           title: "Xcode 15 or later", 
+           destination: "https://developer.apple.com/download/")
+
+    
+    @Intro(title: "Defining Data Models for Filtering") {
+        This section offers a detailed, step-by-step approach to building effective data models for the Searcher project.
+        
+        @Image(source: FFA-Banner, alt: "A screenshot of the 'Searcher' app interface on a tablet and smartphone, both displaying a list of items with blue square icons and gray placeholders, and a Search bar at the bottom.")
+    }
+    
+    @Section(title: "Establishing File Organization Structure") {
+        @ContentAndMedia {
+            Create a well-organized file hierarchy to enhance development efficiency and maintainability.
+            
+            @Image(source: FFA-Section2.png, alt: "Three orange Swift bird icons stacked vertically on a black background, representing the Swift programming language.")
+        }
+        @Steps {
+            @Step {
+                Press CMD + N on your keyboard within the project to initiate a new file, then select "Swift File" from the template options.
+                @Image(source: FFA-Section2-Step1.png, alt: "A screenshot of the Xcode new file dialog, with the 'Swift File' option highlighted under the iOS category, and the Next button emphasized.")
+            }
+            
+            @Step {
+                Enter "Movie" in the Save As field to name the file, then click Create to generate the new Swift file.
+                @Image(source: FFA-Section2-Step2.png, alt: "A screenshot of the Xcode file creation dialog, with 'Movie' entered in the Save As field, the Searcher project selected, and the Create button highlighted.")
+            }
+            
+            @Step {
+                Create an additional file named "Genre" to complement "Movie.swift", establishing separate files for distinct data models, which is sufficient for this stage.
+                @Image(source: FFA-Section2-Step3.png, alt: "A screenshot of the Xcode file creation dialog, with 'Genre' entered in the Save As field, the Searcher project selected, and the Create button highlighted.")
+            }
+        }
+    } 
+    
+    @Section(title: "Building the Genre Data Enum") {
+        @ContentAndMedia {
+            Develop the foundational data structure for your app by creating a robust Genre enum to support filtering functionality.
+            
+            @Image(source: FFA-Section3.png, alt: "A single Swift file icon labeled 'Genre.swift' on a black background, representing the Genre enum file.")
+        }
+        
+        @Steps {
+            @Step {
+                In the Xcode project navigator, locate and open the "Genre.swift" file to begin defining the data enum.
+                @Code(name: "Genre.swift", file: "FFAGenre-0.swift")
+            }
+            @Step {
+                Define the `Genre` enum by adding cases for each movie genre, ensuring it conforms to `Identifiable` for unique identification, `Equatable` checking equality, and `Comparable` for sorting.
+                @Code(name: "Genre.swift", file: "FFAGenre-1.swift")
+            }
+            @Step {
+                Enhance the `Genre` enum by adding computed properties for display purposes, such as `name`, `description`, and `systemImage`, to provide user-friendly representations.
+                @Code(name: "Genre.swift", file: "FFAGenre-2-2.swift", previousFile: "FFAGenre-2-1.swift")
+            }
+            @Step {
+                Import the SearchBar framework and implement the `suggestion` property to enable genre suggestions within the search bar, enhancing the app's filtering capabilities.
+                @Code(name: "Genre.swift", file: "FFAGenre-3-2.swift", previousFile: "FFAGenre-3-1.swift")
+            }
+            @Step {
+                Add token support to the `suggestion` property by integrating `SearchBarToken`, enabling enhanced search functionality on iOS and visionOS platforms.
+                @Code(name: "Genre.swift", file: "FFAGenre-4.swift")
+            }
+        }
+    } 
+
+    @Section(title: "Building the Movie Data Model") {
+        @ContentAndMedia {
+            Develop a comprehensive data structure for your app by creating a robust `Movie` struct to support filtering and search functionality.
+            
+            @Image(source: FFA-Section4.png, alt: "A single Swift file icon labeled 'Movie.swift' on a black background, representing the Movie data model file.")
+        }
+        
+        @Steps {
+            @Step {
+                In the Xcode project navigator, locate and open the "Movie.swift" file to begin defining the data model.
+                @Code(name: "Movie.swift", file: "FFAMovie-0.swift")
+            }
+            @Step {
+                Declare a basic `Movie` struct as a placeholder for future properties.
+                @Code(name: "Movie.swift", file: "FFAMovie-1.swift")
+            }
+            @Step {
+                Add `id`, `title`, and `description` properties, and ensure the struct conforms to `Identifiable` and `Codable` for data management.
+                @Code(name: "Movie.swift", file: "FFAMovie-2.swift")
+            }
+            @Step {
+                Enhance the `Movie` struct with `Comparable` and `Equatable` conformance for sorting and equality checks.
+                @Code(name: "Movie.swift", file: "FFAMovie-3.swift")
+            }
+            @Step {
+                Integrate the `SearchBarSuggestion` property and add `genre`, `releaseYear`, and `rating` properties for enhanced search and metadata support, with the suggestion tailored for full movie title suggestions.
+                @Code(name: "Movie.swift", file: "FFAMovie-4.swift")
+            }
+        }
+    } 
+}
