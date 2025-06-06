@@ -9,7 +9,7 @@
     @PageKind(sampleCode)
     @PageColor(purple)
     @PageImage(purpose: card, source: "SearchBarSample")
-    @CallToAction(url: "https://kamilszpak.com/Packages/SearchBarSamples/FruitsList.zip", label: "Download")
+    @CallToAction(url: "https://assets.kamilszpak.com/SearchBar/FruitsList.zip", label: "Download")
 }
 
 Discover how the `SearchBar` package powers a dynamic, token-based search experience in a sample fruit list app for iOS and visionOS.
@@ -110,7 +110,7 @@ To run the Fruits List sample project:
    - Build the project in Xcode 15.0+.
    - Test on an iOS or visionOS simulator/device to explore the search functionality.
 
-Alternatively, tap to open the complete project from the [Fruits List sample](https://kamilszpak.com/Packages/SearchBarSamples/FruitsList.zip).
+Alternatively, tap to open the complete project from the [Fruits List sample](https://assets.kamilszpak.com/SearchBar/FruitsList.zip).
 
 ## Troubleshooting
 

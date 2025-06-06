@@ -17,5 +17,9 @@ let package = Package(
     ],
     targets: [
         .target(name: "SearchBar"),
+        .testTarget(
+            name: "SearchBarTests",
+            dependencies: ["SearchBar"]
+        ),
     ]
 )

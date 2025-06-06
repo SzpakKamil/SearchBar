@@ -1,9 +1,9 @@
-# ``SearchBar/SearchBarCornerStyle/rectangular``
+# ``SearchBar/SearchBarCornerStyle/rectangle``
 
-A style where the `SearchBar` has a sharp-edged, rectangular appearance.
+A style where the `SearchBar` has a sharp-edged, rectangle appearance.
 
 @Metadata {
-    @DisplayName("Rectangular")
+    @DisplayName("rectangle")
     @Available(macOS, introduced: "11.0")
     @Available(iOS, introduced: "14.0")
     @Available(visionOS, introduced: "1.0")
@@ -15,7 +15,7 @@ A style where the `SearchBar` has a sharp-edged, rectangular appearance.
 
 ## Overview
 
-- Specifies a rectangular `SearchBar` with sharp, unrounded edges.
+- Specifies a rectangle `SearchBar` with sharp, unrounded edges.
 - Provides a corner radius of 0.
 - Used with the `searchBarStyle(_:)` modifier or `SearchBarStyle.rectangle`.
 - Suitable for minimalistic or geometric search bar designs.
@@ -31,7 +31,7 @@ struct ContentView: View {
 
     var body: some View {
         SearchBar(text: $searchText)
-            .searchBarStyle(style: .rectangular)
+            .searchBarStyle(style: .rectangle)
     }
 }
 ```

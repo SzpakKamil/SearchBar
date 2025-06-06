@@ -17,7 +17,7 @@ The roundness of the `SearchBar`’s corners.
 
 - A `CGFloat` value determining the corner radius of the `SearchBar`.
 - Set directly via initializers or derived from a `SearchBarCornerStyle`.
-- Common values include 0 (rectangular), 10 (rounded on iOS/visionOS), or 18/22 (capsule).
+- Common values include 0 (rectangle), 10 (rounded on iOS/visionOS), or 18/22 (capsule).
 
 ## Example
 

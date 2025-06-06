@@ -10,7 +10,7 @@ import SwiftUI
 
 public enum SearchBarCornerStyle{
     case capsule
-    case rectangular
+    case rectangle
     case rounded
     
     public var cornerRadius: CGFloat {
@@ -21,7 +21,7 @@ public enum SearchBarCornerStyle{
             #else
             return 18
             #endif
-        case .rectangular:
+        case .rectangle:
             return 0
         case .rounded:
             #if os(macOS)
@@ -43,7 +43,19 @@ public struct SearchBarStyle: Equatable{
     
     @_documentation(visibility: internal)
     public static func == (lhs: SearchBarStyle, rhs: SearchBarStyle) -> Bool {
-        return lhs.cornerRadius == rhs.cornerRadius && lhs.backgroundColor == rhs.backgroundColor && lhs.tintColor == rhs.tintColor && lhs.textColor == rhs.textColor
+        // Compare all properties for equality
+        let sameCornerStyle = lhs.cornerRadius == rhs.cornerRadius
+        let sameBackgroundColor: Bool
+        if !lhs.usesCustomBackground && !rhs.usesCustomBackground{
+            sameBackgroundColor = true
+        }else{
+            sameBackgroundColor = lhs.backgroundColor == rhs.backgroundColor
+        }
+        let sameTintColor = lhs.tintColor == rhs.tintColor
+        let sameTextColor = lhs.textColor == rhs.textColor
+        let sameTokenBackground = lhs.tokenBackground == rhs.tokenBackground
+        
+        return sameCornerStyle && sameBackgroundColor && sameTintColor && sameTextColor && sameTokenBackground
     }
     
     public init(cornerRadius: CGFloat = 0, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) {
@@ -59,7 +71,13 @@ public struct SearchBarStyle: Equatable{
             #if !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else
-            self.backgroundColor = Color(light: NSColor.white ,dark: NSColor.quinaryLabel)
+            self.backgroundColor = Color(NSColor(name: nil, dynamicProvider: { appearance in
+                if appearance.name == .aqua{
+                    return NSColor.white
+                }else{
+                    return NSColor.quinaryLabel
+                }
+            }).cgColor)
             #endif
         }
 
@@ -76,11 +94,7 @@ public struct SearchBarStyle: Equatable{
             self.usesCustomBackground = true
         }else{
             self.usesCustomBackground = false
-            #if !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
-            #else
-            self.backgroundColor = Color(light: NSColor.white ,dark: NSColor.quinaryLabel)
-            #endif
         }
     }
     public init(style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color? = nil, backgroundColor: Color? = nil) {
@@ -93,11 +107,7 @@ public struct SearchBarStyle: Equatable{
             self.usesCustomBackground = true
         }else{
             self.usesCustomBackground = false
-            #if !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
-            #else
-            self.backgroundColor = Color(light: NSColor.white ,dark: NSColor.quinaryLabel)
-            #endif
         }
     }
     #endif
@@ -115,13 +125,19 @@ public struct SearchBarStyle: Equatable{
             #if !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else
-            self.backgroundColor = Color(light: NSColor.white ,dark: NSColor.quinaryLabel)
+            self.backgroundColor = Color(NSColor(name: nil, dynamicProvider: { appearance in
+                if appearance.name == .aqua{
+                    return NSColor.white
+                }else{
+                    return NSColor.quinaryLabel
+                }
+            }).cgColor)
             #endif
         }
     }
     
     public static let capsule = SearchBarStyle(style: .capsule)
-    public static let rectangle = SearchBarStyle(style: .rectangular)
+    public static let rectangle = SearchBarStyle(style: .rectangle)
     public static let rounded = SearchBarStyle(style: .rounded)
 
 }

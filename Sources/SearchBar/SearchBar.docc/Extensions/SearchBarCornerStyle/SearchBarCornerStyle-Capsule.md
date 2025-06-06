@@ -39,7 +39,7 @@ struct ContentView: View {
 ## See Also
 
 - ``SearchBarCornerStyle``
-- ``SearchBarCornerStyle/rectangular``
+- ``SearchBarCornerStyle/rectangle``
 - ``SearchBarCornerStyle/rounded``
 - ``SearchBarStyle``
 - ``SearchBar``

@@ -40,6 +40,6 @@ struct ContentView: View {
 
 - ``SearchBarCornerStyle``
 - ``SearchBarCornerStyle/capsule``
-- ``SearchBarCornerStyle/rectangular``
+- ``SearchBarCornerStyle/rectangle``
 - ``SearchBarStyle``
 - ``SearchBar``
