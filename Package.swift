@@ -12,9 +12,6 @@ let package = Package(
     products: [
         .library(name: "SearchBar", targets: ["SearchBar"])
     ],
-    dependencies: [
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-    ],
     targets: [
         .target(name: "SearchBar"),
         .testTarget(
