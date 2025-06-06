@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1630"
+   LastUpgradeVersion = "1640"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SearchBar"
-               BuildableName = "SearchBar"
-               BlueprintName = "SearchBar"
-               ReferencedContainer = "container:">
+               BlueprintIdentifier = "D5B9047E2DA9BD580031E506"
+               BuildableName = "SymbolPickerTests.app"
+               BlueprintName = "SymbolPickerTests"
+               ReferencedContainer = "container:../SymbolPickerTests/SymbolPickerTests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,18 +29,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SearchBarTests"
-               BuildableName = "SearchBarTests"
-               BlueprintName = "SearchBarTests"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -52,6 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D5B9047E2DA9BD580031E506"
+            BuildableName = "SymbolPickerTests.app"
+            BlueprintName = "SymbolPickerTests"
+            ReferencedContainer = "container:../SymbolPickerTests/SymbolPickerTests.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -59,15 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "SearchBar"
-            BuildableName = "SearchBar"
-            BlueprintName = "SearchBar"
-            ReferencedContainer = "container:">
+            BlueprintIdentifier = "D5B9047E2DA9BD580031E506"
+            BuildableName = "SymbolPickerTests.app"
+            BlueprintName = "SymbolPickerTests"
+            ReferencedContainer = "container:../SymbolPickerTests/SymbolPickerTests.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

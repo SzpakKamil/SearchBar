@@ -1,5 +1,5 @@
 //
-//  SearchBarMacOS.swift
+//  SearchBariOSVision.swift.swift
 //  SearchBar
 //
 //  Created by KamilSzpak on 02/05/2025.
