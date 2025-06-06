@@ -6,6 +6,7 @@ The following versions of SearchBar are currently supported with security update
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 2.0.x   | :white_check_mark: |
 | 1.0.x   | :white_check_mark: |
 | < 1.0.0 | :x:                |
 
@@ -66,4 +67,4 @@ Security updates, bug fixes, and new features will be published as new package v
 
 ---
 
-This security policy was last updated on April 24, 2025.
+This security policy was last updated on June 6, 2025.
