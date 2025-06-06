@@ -107,6 +107,22 @@ public struct SearchBar: UIViewRepresentable{
         if #available(iOS 16.0, *), uiView.isFirstResponder {
             uiView.searchTextField.searchSuggestions = filteredSuggestions.map { $0.suggestion }
         }
+        #if os(visionOS)
+        uiView.desiredCornerRadius = style.cornerRadius
+        #else
+        uiView.searchTextField.borderStyle = .none
+        if #available(iOS 17.0, *) {uiView.searchTextField.hoverStyle = UIHoverStyle(shape: .rect(cornerRadius: style.cornerRadius))}
+        uiView.searchTextField.layer.cornerRadius = style.cornerRadius
+        uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
+        #endif
+        if let tintColor = style.tintColor{ uiView.searchTextField.tintColor = UIColor(tintColor); uiView.tintColor = UIColor(tintColor) }
+        if let tokenBackground = style.tokenBackground{ uiView.searchTextField.tokenBackgroundColor = UIColor(tokenBackground) }
+        #if os(visionOS)
+        if style.usesCustomBackground{
+            uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
+        }
+        #endif
+        if let textColor = style.textColor{uiView.searchTextField.textColor = UIColor(textColor)}
     }
     
     @_documentation(visibility: internal)
