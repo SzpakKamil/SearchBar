@@ -10,6 +10,7 @@ For detailed documentation, visit the [SearchBar Documentation](https://kamilszp
 
 - [Features](#features)
 - [Tutorial](#tutorial)
+- [Resources](#resources)
 - [Usage](#usage)
   - [Basic Usage](#basic-usage)
   - [Advanced Customization](#advanced-customization)
@@ -33,17 +34,13 @@ For detailed documentation, visit the [SearchBar Documentation](https://kamilszp
 
 Check out the comprehensive tutorial at [SearchBar Tutorial](https://kamilszpak.com/tutorials/searchbartutorial). The tutorial guides you through building a dynamic **Searcher app**, focusing on intuitive search and filtering.
 
-#### Resources
+## Resources
 Explore additional SearchBar resources to deepen your understanding:
 
-- **Documentation**: Dive into detailed SearchBar documentation at [https://kamilszpak.com/documentation/searchbar](https://kamilszpak.com/documentation/searchbar).
+- **Documentation**: Dive into detailed SearchBar documentation.
   - [Modifiers](https://kamilszpak.com/documentation/searchbar/modifiers)
   - [Token Model](https://kamilszpak.com/documentation/searchbar/searchbartoken)
   - [Suggestion Model](https://kamilszpak.com/documentation/searchbar/searchbarsuggestion)
-
-- **Sample Code**: Explore a sample SearchBar project [FruitsList](https://kamilszpak.com/documentation/searchbar/fruitslist)
-
-- **Forums**: Get help and report SearchBar issues at [https://github.com/SzpakKamil/SearchBar/issues](https://github.com/SzpakKamil/SearchBar/issues).
 
 ## Usage
 
