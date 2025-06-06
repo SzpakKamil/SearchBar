@@ -87,7 +87,7 @@ struct ContentView: View {
 
 ## Modifiers
 
-The `SearchBar` package offers a variety of modifiers to customize its appearance, behavior, and interaction. Below are examples from each category. For a complete list, refer to the [SearchBar Documentation](https://kamilszpak.com/documentation/searchbar).
+The `SearchBar` package offers a variety of modifiers to customize its appearance, behavior, and interaction. Below are examples from each category. For a complete list, refer to the [SearchBar Documentation](https://kamilszpak.com/documentation/searchbar/modifiers).
 
 ### Appearance Modifiers
 
