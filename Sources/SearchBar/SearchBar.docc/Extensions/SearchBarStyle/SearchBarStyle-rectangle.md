@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/rectangle``
 
-A predefined `SearchBarStyle` with a rectangular appearance.
+A predefined `SearchBarStyle` with a rectangle appearance.
 
 @Metadata {
     @DisplayName("Rectangle")
@@ -16,7 +16,7 @@ A predefined `SearchBarStyle` with a rectangular appearance.
 
 ## Overview
 
-- A static `SearchBarStyle` property using `SearchBarCornerStyle.rectangular`.
+- A static `SearchBarStyle` property using `SearchBarCornerStyle.rectangle`.
 - Provides a corner radius of 0 for sharp edges.
 - Applied via the `searchBarStyle(_:)` modifier for a minimalistic `SearchBar` design.
 - Suitable for geometric or modern search bar layouts.
@@ -42,5 +42,5 @@ struct ContentView: View {
 - ``SearchBarStyle``
 - ``SearchBarStyle/capsule``
 - ``SearchBarStyle/rounded``
-- ``SearchBarCornerStyle/rectangular``
+- ``SearchBarCornerStyle/rectangle``
 - ``SearchBar``

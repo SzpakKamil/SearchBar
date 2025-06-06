@@ -34,14 +34,14 @@ public struct SearchBarSuggestion: Identifiable, Hashable, Comparable, Codable, 
     #endif
     
     public init(text: String, description: String? = nil, systemName: String? = nil) {
-        self.id = "\(text)\(description ?? "")"
+        self.id = "\(text)\(description ?? "")\(systemName ?? "")"
         self.text = text
         self.description = description
         self.systemName = systemName
         self.token = nil
     }
     public init(text: String, description: String? = nil, systemName: String? = nil, token: SearchBarToken? = nil) {
-        self.id = "\(text)\(description ?? "")"
+        self.id = "\(text)\(description ?? "")\(systemName ?? "")"
         self.text = text
         self.description = description
         self.systemName = systemName
@@ -77,11 +77,15 @@ public struct SearchBarSuggestion: Identifiable, Hashable, Comparable, Codable, 
 
     @_documentation(visibility: internal)
     public static func ==(lhs: SearchBarSuggestion, rhs: SearchBarSuggestion) -> Bool {
-        lhs.id == rhs.id
+        lhs.id == rhs.id && lhs.token == rhs.token
     }
     @_documentation(visibility: internal)
     public static func <(lhs: SearchBarSuggestion, rhs: SearchBarSuggestion) -> Bool {
-        lhs.text == rhs.text
+        if lhs.text == rhs.text{
+            lhs.description ?? "" < rhs.description ?? ""
+        }else{
+            lhs.text < rhs.text
+        }
     }
  
 }

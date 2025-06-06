@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-public enum SearchBarClearButtonDisplayMode{
+public enum SearchBarClearButtonDisplayMode: Int, Identifiable, Codable, Comparable, Equatable, Hashable{
     case always
     case never
     case whileEditing
@@ -28,4 +28,15 @@ public enum SearchBarClearButtonDisplayMode{
         }
     }
     #endif
+    
+    public var id: Int {
+        return self.rawValue
+    }
+    
+    static public func < (lhs: SearchBarClearButtonDisplayMode, rhs: SearchBarClearButtonDisplayMode) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+    static public func == (lhs: SearchBarClearButtonDisplayMode, rhs: SearchBarClearButtonDisplayMode) -> Bool {
+        return lhs.rawValue == rhs.rawValue
+    }
 }
