@@ -7,6 +7,7 @@ Native, Highly Customizable Search Component
     @Available(iOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
     @DocumentationExtension(mergeBehavior: override)
 }
 
