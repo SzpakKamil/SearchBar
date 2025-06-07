@@ -16,7 +16,7 @@ An enumeration that specifies the corner style of a `SearchBar`.
 
 ## Overview
 
-`SearchBarCornerStyle` defines the corner appearance of a `SearchBar`, offering three styles: `capsule`, `rectangle`, or `rounded`. It is used within `SearchBarStyle` to set the corner radius and is applied via the `searchBarStyle(_:)` modifier on macOS, iOS, and visionOS. The `cornerRadius` property provides platform-specific values, such as 22 for `capsule` on visionOS and 5 for `rounded` on macOS.
+`SearchBarCornerStyle` defines the corner appearance of a `SearchBar`, offering three styles: `capsule`, `rectangle`, or `rounded`. It is used within `SearchBarStyle` to set the corner radius and is applied via the `searchBarStyle(_:)` modifier on macOS, iOS, iPadOS, and visionOS. The `cornerRadius` property provides platform-specific values, such as 22 for `capsule` on visionOS and 5 for `rounded` on macOS.
 
 ## Cases
 

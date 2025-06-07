@@ -5,8 +5,11 @@ Triggers an action when the search text in the `SearchBar` changes.
 @Metadata {
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 
@@ -17,7 +20,7 @@ Triggers an action when the search text in the `SearchBar` changes.
 
 ## Overview
 
-The `searchBarChangeAction(_:)` modifier executes a closure whenever the user modifies the `SearchBar`’s text. Available on iOS, visionOS, and macOS, it’s useful for real-time search updates or logging user input.
+The `searchBarChangeAction(_:)` modifier executes a closure whenever the user modifies the `SearchBar`’s text. Available on iOS, iPadOS, visionOS, and macOS, it’s useful for real-time search updates or logging user input.
 
 ## Parameters
 

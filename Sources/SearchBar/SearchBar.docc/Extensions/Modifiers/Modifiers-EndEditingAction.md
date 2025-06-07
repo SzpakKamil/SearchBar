@@ -5,8 +5,11 @@ Triggers an action when the user stops editing the `SearchBar`’s text.
 @Metadata {
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "12.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 
@@ -17,7 +20,7 @@ Triggers an action when the user stops editing the `SearchBar`’s text.
 
 ## Overview
 
-The `searchBarEndEditingAction(_:)` modifier specifies a closure to execute when the user finishes editing the `SearchBar`’s text. Available on iOS, visionOS, and macOS (12.0+), it’s useful for handling post-editing logic.
+The `searchBarEndEditingAction(_:)` modifier specifies a closure to execute when the user finishes editing the `SearchBar`’s text. Available on iOS, iPadOS, visionOS, and macOS (12.0+), it’s useful for handling post-editing logic.
 
 ## Parameters
 
