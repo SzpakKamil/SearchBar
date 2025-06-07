@@ -4,10 +4,11 @@
     @SupportedLanguage(swift)
     @TitleHeading("Getting Started")
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "15.0")
+    @Available(Xcode, introduced: "14.0")
     @PageColor(green)
     @PageImage(purpose: card, source: "SearchBarSetUp")
 }
@@ -20,7 +21,7 @@ Learn how to integrate the `SearchBar` package into your SwiftUI project.
 
 ## Overview
 
-The `SearchBar` package provides a customizable SwiftUI search bar for iOS, macOS, and visionOS. This guide explains how to add the package using Swift Package Manager (SPM).
+The `SearchBar` package provides a customizable SwiftUI search bar for iOS, iPadOS, macOS, and visionOS. This guide explains how to add the package using Swift Package Manager (SPM).
 
 ## Adding SearchBar to Your Project
 

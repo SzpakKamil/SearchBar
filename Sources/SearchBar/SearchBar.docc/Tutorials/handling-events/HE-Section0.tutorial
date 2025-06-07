@@ -15,7 +15,7 @@
     By the end, you’ll have a Searcher app that dynamically reacts to user interactions, laying the groundwork for multiplatform enhancements.
 
     ## Expanding Your App in Future Chapters
-    In the final chapter, you’ll build on these event-handling skills to optimize your Searcher app for multiplatform support across iOS, visionOS, and macOS. You’ll implement platform-specific tweaks, accessibility enhancements, and tailored styling to ensure a seamless and polished experience on all devices.
+    In the final chapter, you’ll build on these event-handling skills to optimize your Searcher app for multiplatform support across iOS, iPadOS, visionOS, and macOS. You’ll implement platform-specific tweaks, accessibility enhancements, and tailored styling to ensure a seamless and polished experience on all devices.
 
     ## Returning Reader
     If you’re joining us for Chapter 3, you can download the completed Chapter 2 project files in the next section to catch up. This will allow you to start adding event-handling capabilities to your Searcher app, building on the search suggestions and token-based filtering implemented previously.
