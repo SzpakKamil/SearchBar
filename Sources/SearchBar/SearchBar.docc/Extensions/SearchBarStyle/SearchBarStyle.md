@@ -16,7 +16,7 @@ A struct that defines the visual appearance and color configuration for a `Searc
 
 ## Overview
 
-`SearchBarStyle` is a core component of the `SearchBar` package, used to customize the appearance of a `SearchBar` by configuring its corner radius, text color, tint color, token background color, and background color. It integrates with `SearchBar` via the `searchBarStyle(_:)` modifier, supporting predefined styles through static properties (`capsule`, `rectangle`, `rounded`) or custom configurations via initializers. Available on macOS, iOS, and visionOS, with some properties limited to non-macOS platforms.
+`SearchBarStyle` is a core component of the `SearchBar` package, used to customize the appearance of a `SearchBar` by configuring its corner radius, text color, tint color, token background color, and background color. It integrates with `SearchBar` via the `searchBarStyle(_:)` modifier, supporting predefined styles through static properties (`capsule`, `rectangle`, `rounded`) or custom configurations via initializers. Available on macOS, iOS, iPadOS, and visionOS, with some properties limited to non-macOS platforms.
 
 ## Support
 

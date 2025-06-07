@@ -5,8 +5,11 @@ Sets a custom icon view for the `SearchBar`.
 @Metadata {
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 
@@ -17,7 +20,7 @@ Sets a custom icon view for the `SearchBar`.
 
 ## Overview
 
-The `searchBarIconView(_:)` modifier allows you to set a custom SwiftUI view as the icon for the `SearchBar`. Available on iOS, visionOS, and macOS, the icon is styled with a secondary foreground color for consistency.
+The `searchBarIconView(_:)` modifier allows you to set a custom SwiftUI view as the icon for the `SearchBar`. Available on iOS, iPadOS, visionOS, and macOS, the icon is styled with a secondary foreground color for consistency.
 
 ## Parameters
 

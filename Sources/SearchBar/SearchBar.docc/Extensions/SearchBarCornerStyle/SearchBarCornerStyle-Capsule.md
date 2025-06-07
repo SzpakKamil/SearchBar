@@ -16,7 +16,7 @@ A style where the `SearchBar` has a fully rounded, capsule-shaped appearance.
 ## Overview
 
 - Specifies a capsule-shaped `SearchBar` with fully rounded edges.
-- Provides a corner radius of 18 (iOS, macOS) or 22 (visionOS).
+- Provides a corner radius of 18 (iOS, iPadOS, macOS) or 22 (visionOS).
 - Used with the `searchBarStyle(_:)` modifier or `SearchBarStyle.capsule`.
 - Suitable for modern, pill-like search bar designs.
 

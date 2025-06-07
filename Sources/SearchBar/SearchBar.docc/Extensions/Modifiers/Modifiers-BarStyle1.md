@@ -5,8 +5,11 @@ Applies a custom style to the `SearchBar` to configure its visual appearance.
 @Metadata {
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 
@@ -17,7 +20,7 @@ Applies a custom style to the `SearchBar` to configure its visual appearance.
 
 ## Overview
 
-The `searchBarStyle(_:)` modifier applies a predefined `SearchBarStyle` to customize the `SearchBar`’s appearance, such as corner radius, text color, and background. Available on iOS, visionOS, and macOS, this modifier provides a simple way to match the search bar to your app’s design.
+The `searchBarStyle(_:)` modifier applies a predefined `SearchBarStyle` to customize the `SearchBar`’s appearance, such as corner radius, text color, and background. Available on iOS, iPadOS, visionOS, and macOS, this modifier provides a simple way to match the search bar to your app’s design.
 
 Use static styles like `.capsule` or create a custom `SearchBarStyle` for detailed control.
 

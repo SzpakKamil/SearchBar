@@ -13,6 +13,6 @@
     - **Dynamic UI Adjustments**: Leveraged event handlers to update the UI, such as toggling the navigation title between "Searcher" and "Search Results" based on editing state, and adjusted animations to use `filteredMovies` for smoother transitions (Tutorial: "Enhance Searcher with SearchBar Focus Handling").
     - **Efficient Event Management**: Streamlined SearchBar interactions by removing unnecessary state (`isSearching`) and using event modifiers like `searchBarChangeAction()` to handle text changes, ensuring a responsive and user-friendly experience (Tutorial: "Handle Edge Cases with SearchBar Editing Events").
 
-    With these accomplishments, you’ve built a more responsive and efficient Searcher app that reacts seamlessly to user interactions. In the final chapter, you’ll focus on multiplatform support, refining the app for iOS, visionOS, and macOS with platform-specific tweaks, and tailored styling to ensure a consistent experience across all devices.
+    With these accomplishments, you’ve built a more responsive and efficient Searcher app that reacts seamlessly to user interactions. In the final chapter, you’ll focus on multiplatform support, refining the app for iOS, iPadOS, visionOS, and macOS with platform-specific tweaks, and tailored styling to ensure a consistent experience across all devices.
 
 }

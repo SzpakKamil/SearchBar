@@ -5,8 +5,11 @@ Configures the display behavior of the clear button in the `SearchBar`.
 @Metadata {
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 
@@ -17,7 +20,7 @@ Configures the display behavior of the clear button in the `SearchBar`.
 
 ## Overview
 
-The `searchBarClearButtonDisplayMode(_:)` modifier determines when the clear button is visible in the `SearchBar`. Available on iOS, visionOS, and macOS, it supports modes like always visible or visible only while editing.
+The `searchBarClearButtonDisplayMode(_:)` modifier determines when the clear button is visible in the `SearchBar`. Available on iOS, iPadOS, visionOS, and macOS, it supports modes like always visible or visible only while editing.
 
 ## Parameters
 

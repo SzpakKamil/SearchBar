@@ -17,7 +17,7 @@ A predefined `SearchBarStyle` with a softly rounded appearance.
 ## Overview
 
 - A static `SearchBarStyle` property using `SearchBarCornerStyle.rounded`.
-- Provides a corner radius of 5 (macOS) or 10 (iOS, visionOS).
+- Provides a corner radius of 5 (macOS) or 10 (iOS, iPadOS, visionOS).
 - Applied via the `searchBarStyle(_:)` modifier for a user-friendly `SearchBar` design.
 - Suitable for standard, approachable search bar aesthetics.
 

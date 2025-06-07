@@ -5,8 +5,11 @@ Sets a static list of suggestions for the `SearchBar`.
 @Metadata {
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "16.0")
+    @Available(iPadOS, introduced: "16.0")
     @Available(macOS, introduced: "15.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 
@@ -17,7 +20,7 @@ Sets a static list of suggestions for the `SearchBar`.
 
 ## Overview
 
-The `searchBarSuggestions(_:)` modifier sets a static list of `SearchBarSuggestion` objects for the `SearchBar`. Available on iOS, visionOS, and macOS, it provides a fixed set of suggestions for the user.
+The `searchBarSuggestions(_:)` modifier sets a static list of `SearchBarSuggestion` objects for the `SearchBar`. Available on iOS, iPadOS, visionOS, and macOS, it provides a fixed set of suggestions for the user.
 
 ## Parameters
 

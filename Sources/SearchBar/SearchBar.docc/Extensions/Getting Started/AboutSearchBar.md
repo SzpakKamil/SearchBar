@@ -4,10 +4,11 @@
     @SupportedLanguage(swift)
     @TitleHeading("Getting Started")
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "15.0")
+    @Available(Xcode, introduced: "14.0")
     @PageColor(green)
     @PageImage(purpose: card, source: "SearchBarGreeting")
 }
@@ -20,7 +21,7 @@ Learn about the customizable SwiftUI `SearchBar` package for enhanced search fun
 
 ## Overview
 
-The `SearchBar` package extends SwiftUI’s default search bar, offering flexible customization and robust functionality. Supporting iOS (14.0+), visionOS (1.0+), and macOS (11.0+), it integrates native components (`UISearchBar` for iOS/visionOS, and on macOS, it recreates `NSSearchField` from AppKit using SwiftUI components) into a SwiftUI API for seamless, platform-specific solutions.
+The `SearchBar` package extends SwiftUI’s default search bar, offering flexible customization and robust functionality. Supporting iOS, iPadOS, visionOS, and macOS, it integrates native components (`UISearchBar` for iOS/visionOS, and on macOS, it recreates `NSSearchField` from AppKit using SwiftUI components) into a SwiftUI API for seamless, platform-specific solutions.
 
 ## Why Use SearchBar?
 
@@ -108,7 +109,7 @@ The `SearchBar` package is ideal for:
 - **Custom Placement**: Embedding in toolbars or custom views.
 - **Branded Apps**: Matching app design with custom colors and styles.
 - **Specialized Inputs**: Apps requiring specific keyboard configurations.
-- **Cross-Platform Apps**: Consistent search across iOS, visionOS, and macOS.
+- **Cross-Platform Apps**: Consistent search across iOS, iPadOS, visionOS, and macOS.
 
 ## Next Steps
 
