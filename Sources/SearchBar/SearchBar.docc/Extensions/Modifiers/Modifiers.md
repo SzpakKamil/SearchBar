@@ -9,7 +9,7 @@
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "14.0")
-    @PageColor(blue)
+    @PageColor(green)
     @PageImage(purpose: card, source: "SearchBarModifiers")
 }
 
