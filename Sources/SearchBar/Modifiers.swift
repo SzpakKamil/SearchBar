@@ -24,7 +24,7 @@ public extension SearchBar{
         copy.style = .init(cornerRadius: cornerRadius, textColor: textColor, tint: tint, tokenBackground: tokenBackground, backgroundColor: backgroundColor)
         return copy
     }
-    func searchBarStyle(_ style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color? = nil, backgroundColor: Color? = nil) -> SearchBar {
+    func searchBarStyle(_ style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) -> SearchBar {
         var copy = self
         copy.style = .init(style: style, textColor: textColor, tint: tint, tokenBackground: tokenBackground, backgroundColor: backgroundColor)
         return copy
@@ -100,7 +100,7 @@ public extension SearchBar{
         copy.style = style
         return copy
     }
-    func searchBarStyle(cornerRadius: CGFloat = 0, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) -> SearchBar {
+    func searchBarStyle(cornerRadius: CGFloat, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) -> SearchBar {
         var copy = self
         copy.style = .init(cornerRadius: cornerRadius, textColor: textColor, tint: tint, backgroundColor: backgroundColor)
         return copy
