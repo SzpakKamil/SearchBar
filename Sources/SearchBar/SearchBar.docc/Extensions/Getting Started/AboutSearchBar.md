@@ -1,4 +1,4 @@
-# About Search Bar
+# About SearchBar
 
 @Metadata {
     @SupportedLanguage(swift)
