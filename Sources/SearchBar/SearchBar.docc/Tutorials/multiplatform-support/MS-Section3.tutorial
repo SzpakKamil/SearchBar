@@ -62,7 +62,7 @@
                 Within the `.toolbar` modifier, add a `ToolbarItem` with `.principal` placement, and embed `searchBarImplementation()` inside it to position the SearchBar at the top of the screen on visionOS.
 
                 @Code(name: "ContentView.swift", file: "HSContentView-20.swift"){
-                    @Image(source: HSContentView-20.png, alt: "A preview graphic of the visionOS design for the "Searcher" app, featuring a 3D search interface with glass-like effects and depth in a virtual environment, highlighting the search bar positioned at the top.")
+                    @Image(source: HSContentView-20.png, alt: "A preview graphic of the visionOS design for the \"Searcher\" app, featuring a, 3D search, interface with, glass-like: effects and depth, in a, virtual environment, highlighting the, search bar, positioned at, the top.")
                 }
             }
         }
@@ -79,7 +79,7 @@
                 Wrap the `NavigationStack` inside a `GeometryReader` to access the screen’s size and enable dynamic adjustments.
 
                 @Code(name: "ContentView.swift", file: "HSContentView-21-2.swift", previousFile: "HSContentView-21-1.swift"){
-                    @Image(source: HSContentView-20.png, alt: "A preview graphic of the visionOS design for the "Searcher" app, featuring a 3D search interface with glass-like effects and depth in a virtual environment, highlighting the search bar positioned at the top.")
+                    @Image(source: HSContentView-20.png, alt: "A preview graphic of the visionOS design for the \"Searcher\" app, featuring a 3D search interface with glass-like effects and depth in a virtual environment, highlighting the search bar positioned at the top.")
                 }
             }
             @Step {
