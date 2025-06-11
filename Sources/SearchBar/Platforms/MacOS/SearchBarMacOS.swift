@@ -23,6 +23,8 @@ public struct SearchBar: View {
     var filteringAction: ((String, SearchBarSuggestion)-> Bool)? = nil
     var isUsingCustomFocus = false
     var isFocused: Binding<Bool> = .constant(false)
+    var material: SearchBarMaterial = .solid
+    var scale: SearchBarScale = .small
     var prompt: String?
     
     var filteredSuggestions: [SearchBarSuggestion]{
@@ -75,14 +77,26 @@ public struct SearchBar: View {
         }
         .font(.callout)
         .padding(.horizontal, 7)
-        .padding(.vertical, 3)
+        .padding(.vertical, 3 * scale.heightMultiplier)
         .onAppear{
             searchChangeAction?("")
         }
-        .background(style.backgroundColor)
-        .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius))
+        .if{ content in
+            if #available(macOS 26.0, *), material == .glass {
+                if style.usesCustomBackground{
+                    content.glassEffect(.regular.tint(style.backgroundColor).interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
+                }else{
+                    content.glassEffect(.regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
+                }
+                
+            } else {
+                content.background(style.backgroundColor)
+            }
+        }
+        
+        .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
         .overlay( /// apply a rounded border
-            RoundedRectangle(cornerRadius: style.cornerRadius)
+            RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
                 .stroke(LinearGradient(colors: [Color(NSColor.quaternaryLabelColor), Color(NSColor.tertiaryLabelColor)], startPoint: .top, endPoint: .bottom), lineWidth: 0.75)
         )
         .padding(.horizontal, 1)

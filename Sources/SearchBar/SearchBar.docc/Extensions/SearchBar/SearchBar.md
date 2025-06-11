@@ -5,8 +5,11 @@ A SwiftUI view that provides a customizable search bar for text input and sugges
 @Metadata {
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 
@@ -71,6 +74,8 @@ This example creates a `SearchBar` with a capsule style, a custom icon, and even
 - ``SearchBar/SearchBar/searchBarStyle(_:textColor:tint:backgroundColor:)``
 - ``SearchBar/SearchBar/searchBarIconView(_:)``
 - ``SearchBar/SearchBar/searchBarIconView()``
+- ``SearchBar/SearchBar/searchBarMaterial(_:)``
+- ``SearchBar/SearchBar/searchBarScale(_:)``
 
 ### Input Configuration Modifiers (iOS and visionOS only)
 - ``SearchBar/SearchBar/searchBarKeyboardType(_:)``

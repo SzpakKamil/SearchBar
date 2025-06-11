@@ -30,7 +30,7 @@
                 >Important: Note that suggestions are not filtered at this stage, so all suggestions are displayed regardless of input.
 
                 @Code(name: "ContentView.swift", file: "SSTContentView-1.swift"){
-                    @Image(source: SSTContentView-1.png, alt: "A smartphone displaying the Searcher app with movie search results including "Movie 1" and expanded search suggestions showing movies.")
+                    @Image(source: SSTContentView-1.png, alt: "A smartphone displaying the Searcher app with movie search results including \"Movie 1\" and expanded search suggestions showing movies.")
                 }
             }
 

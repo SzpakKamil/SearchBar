@@ -19,13 +19,13 @@ public struct SearchBar: UIViewRepresentable{
     var enabledAutomaticFiltering = false
     var filteringAction: ((String, SearchBarSuggestion)-> Bool)? = nil
     var currentTokens: Binding<[SearchBarToken]> = .constant([])
-    
+    var material: SearchBarMaterial = .solid
     var returnKeyType: UIReturnKeyType = .default
     var keyboardType: UIKeyboardType? = nil
     var autoCorrectionType: UITextAutocorrectionType = .default
     var textContentType: UITextContentType? = nil
     var autoCapitalizationType: UITextAutocapitalizationType? = nil
-    
+    var scale: SearchBarScale = .small
     var isUsingCustomFocus = false
     var isFocused: Binding<Bool> = .constant(false)
     var cancelButtonAction: (() -> Void)? = nil
@@ -73,7 +73,7 @@ public struct SearchBar: UIViewRepresentable{
         }else if (isUsingCustomFocus && !isFocused.wrappedValue){
             searchBar.searchTextField.resignFirstResponder()
         }
-        
+        // Add 10pt left padding to the search text field
         if let iconView{
             let view = UIHostingController(rootView: iconView).view
             view?.backgroundColor = .clear
@@ -86,7 +86,6 @@ public struct SearchBar: UIViewRepresentable{
         }
         searchBar.searchTextField.returnKeyType = returnKeyType
         searchBar.returnKeyType = returnKeyType
-    
         return searchBar
     }
     
@@ -107,47 +106,77 @@ public struct SearchBar: UIViewRepresentable{
         if #available(iOS 16.0, *), uiView.isFirstResponder {
             uiView.searchTextField.searchSuggestions = filteredSuggestions.map { $0.suggestion }
         }
-        #if os(visionOS)
-        uiView.desiredCornerRadius = style.cornerRadius
-        #else
-        uiView.searchTextField.borderStyle = .none
-        if #available(iOS 17.0, *) {uiView.searchTextField.hoverStyle = UIHoverStyle(shape: .rect(cornerRadius: style.cornerRadius))}
-        uiView.searchTextField.layer.cornerRadius = style.cornerRadius
-        uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
-        #endif
-        if let tintColor = style.tintColor{ uiView.searchTextField.tintColor = UIColor(tintColor); uiView.tintColor = UIColor(tintColor) }
-        if let tokenBackground = style.tokenBackground{ uiView.searchTextField.tokenBackgroundColor = UIColor(tokenBackground) }
-        #if os(visionOS)
-        if style.usesCustomBackground{
-            uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
-        }
-        #endif
-        if let textColor = style.textColor{uiView.searchTextField.textColor = UIColor(textColor)}
+        let _ = configStyle(view: uiView)
     }
     
     @_documentation(visibility: internal)
     public func makeCoordinator() -> SearchBarCoordinator { SearchBarCoordinator(self) }
 
     @_documentation(visibility: internal)
-    public func configStyle() -> UISearchBar{
+    public func configStyle(view: UISearchBar? = nil) -> UISearchBar{
         #if os(visionOS)
-        let uiView = SearchStyleVisionOS()
-        uiView.desiredCornerRadius = style.cornerRadius
+        let uiView = view ?? SearchStyleVisionOS()
+        uiView.layer.cornerRadius = style.cornerRadius * scale.cornerScale
+        uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
         #else
-        let uiView = UISearchBar()
+        let uiView = view ?? UISearchBar()
         uiView.searchTextField.borderStyle = .none
-        if #available(iOS 17.0, *) {uiView.searchTextField.hoverStyle = UIHoverStyle(shape: .rect(cornerRadius: style.cornerRadius))}
-        uiView.searchTextField.layer.cornerRadius = style.cornerRadius
+        if #available(iOS 17.0, *) {uiView.searchTextField.hoverStyle = UIHoverStyle(shape: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))}
+        uiView.searchTextField.layer.cornerRadius = style.cornerRadius * scale.cornerScale
         uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
         #endif
         if let tintColor = style.tintColor{ uiView.searchTextField.tintColor = UIColor(tintColor); uiView.tintColor = UIColor(tintColor) }
         if let tokenBackground = style.tokenBackground{ uiView.searchTextField.tokenBackgroundColor = UIColor(tokenBackground) }
-        #if os(visionOS)
-        if style.usesCustomBackground{
-            uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
+
+        if let textColor = style.textColor{uiView.searchTextField.textColor = UIColor(textColor)}
+        
+        #if !os(visionOS)
+        if #available(iOS 26.0, *), material == .glass {
+
+            let glassEffect = UIGlassEffect()
+            uiView.searchTextField.backgroundColor = UIColor(.clear)
+            uiView.backgroundColor = UIColor(.clear)
+            glassEffect.isInteractive = true
+            if style.usesCustomBackground{
+                glassEffect.tintColor = UIColor(style.backgroundColor)
+            }
+                let oldView = uiView.viewWithTag(100)
+                oldView?.removeFromSuperview()
+                let glassView = UIVisualEffectView(effect: glassEffect)
+                glassView.layer.cornerRadius = style.cornerRadius * scale.cornerScale
+                glassView.translatesAutoresizingMaskIntoConstraints = false
+                glassView.tag = 100
+            
+                uiView.insertSubview(glassView, at: 0)
+                NSLayoutConstraint.activate([
+                    glassView.centerYAnchor.constraint(equalTo: uiView.centerYAnchor),
+                    glassView.leadingAnchor.constraint(equalTo: uiView.searchTextField.leadingAnchor),
+                    glassView.heightAnchor.constraint(equalTo: scale == .small ? uiView.searchTextField.heightAnchor : uiView.heightAnchor, multiplier: scale.heightMultiplier),
+                    glassView.widthAnchor.constraint(equalTo: uiView.searchTextField.widthAnchor)
+                ])
+        }else{
+            uiView.searchTextField.backgroundColor = UIColor(.clear)
+            // If material is not glass, use a solid color background similar to the glass view layout, applying the same constraints for consistency.
+            let solidTag = 101
+            if let oldSolidView = uiView.viewWithTag(solidTag) {
+                oldSolidView.removeFromSuperview()
+            }
+            let solidView = UIView()
+            solidView.backgroundColor = UIColor(style.backgroundColor)
+            solidView.layer.cornerRadius = style.cornerRadius * scale.cornerScale
+            solidView.translatesAutoresizingMaskIntoConstraints = false
+            solidView.tag = solidTag
+            uiView.insertSubview(solidView, at: 0)
+            NSLayoutConstraint.activate([
+                solidView.centerYAnchor.constraint(equalTo: uiView.centerYAnchor),
+                solidView.leadingAnchor.constraint(equalTo: uiView.searchTextField.leadingAnchor),
+                solidView.heightAnchor.constraint(equalTo: scale == .small ? uiView.searchTextField.heightAnchor : uiView.heightAnchor, multiplier: scale.heightMultiplier),
+                solidView.widthAnchor.constraint(equalTo: uiView.searchTextField.widthAnchor)
+            ])
         }
         #endif
-        if let textColor = style.textColor{uiView.searchTextField.textColor = UIColor(textColor)}
+        
+        
         return uiView
     }
 }

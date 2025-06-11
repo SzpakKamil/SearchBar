@@ -328,4 +328,26 @@ struct ModifiersTests {
         updatedSearchBar.searchEndEditingAction?()
         #expect(testValue, "Expected searchEndEditingAction to be set and called")
     }
+    
+    @Test("searchBarScale updates correctly")
+    @MainActor
+    func testSearchBarScale() async throws {
+        #if !os(visionOS)
+        let scale: SearchBarScale = .large
+        let updatedSearchBar = baseSearchBar.searchBarScale(scale)
+        #expect(updatedSearchBar.scale == scale, "Expected scale to be updated to \(scale)")
+        #endif
+    }
+
+    @Test("searchBarMaterial updates correctly")
+    @MainActor
+    func testSearchBarMaterial() async throws {
+        #if !os(visionOS)
+        if #available(macOS 26.0, iOS 26.0, *) {
+            let material: SearchBarMaterial = .glass
+            let updatedSearchBar = baseSearchBar.searchBarMaterial(material)
+            #expect(updatedSearchBar.material == material, "Expected material to be updated to \(material)")
+        }
+        #endif
+    }
 }

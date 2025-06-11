@@ -100,6 +100,19 @@ public extension SearchBar{
         copy.style = style
         return copy
     }
+    #if !os(visionOS)
+    @available(iOS 26.0, macOS 26.0, *)
+    func searchBarMaterial(_ material: SearchBarMaterial) -> SearchBar {
+        var copy = self
+        copy.material = material
+        return copy
+    }
+    func searchBarScale(_ scale: SearchBarScale) -> SearchBar {
+        var copy = self
+        copy.scale = scale
+        return copy
+    }
+    #endif
     func searchBarStyle(cornerRadius: CGFloat, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) -> SearchBar {
         var copy = self
         copy.style = .init(cornerRadius: cornerRadius, textColor: textColor, tint: tint, backgroundColor: backgroundColor)
