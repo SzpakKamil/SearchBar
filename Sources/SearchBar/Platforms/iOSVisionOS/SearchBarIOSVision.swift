@@ -116,8 +116,9 @@ public struct SearchBar: UIViewRepresentable{
     public func configStyle(view: UISearchBar? = nil) -> UISearchBar{
         #if os(visionOS)
         let uiView = view ?? SearchStyleVisionOS()
-        uiView.layer.cornerRadius = style.cornerRadius * scale.cornerScale
         uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
+        uiView.layer.cornerRadius = style.cornerRadius
+        uiView.searchTextField.layer.cornerRadius = style.cornerRadius
         #else
         let uiView = view ?? UISearchBar()
         uiView.searchTextField.borderStyle = .none
