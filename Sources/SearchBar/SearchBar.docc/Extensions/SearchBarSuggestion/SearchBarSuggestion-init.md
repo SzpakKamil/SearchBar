@@ -7,6 +7,9 @@ Creates a new search suggestion with the specified text, description, and option
     @Available(iOS, introduced: "16.0")
     @Available(visionOS, introduced: "1.0")
     @Available(macOS, introduced: "15.0")
+    @Available(iPadOS, introduced: "16.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
 }
 @Options {
     @AutomaticSeeAlso(disabled)
