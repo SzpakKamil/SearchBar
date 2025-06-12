@@ -4,7 +4,10 @@ Creates a `SearchBarStyle` with a `SearchBarCornerStyle` and optional colors, in
 
 @Metadata {
     @Available(iOS, introduced: "14.0")
+    @Available(iPadOS, introduced: "14.0")
     @Available(visionOS, introduced: "1.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
 }
 @Options {
     @AutomaticSeeAlso(disabled)

@@ -4,7 +4,7 @@
     @TitleHeading("Sample Code")
     @Available(iOS, introduced: "16.0")
     @Available(visionOS, introduced: "1.0")
-    @Available(swift, introduced: "6.0")
+    @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "14.0")
     @PageKind(sampleCode)
     @PageColor(purple)

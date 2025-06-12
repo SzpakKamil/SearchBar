@@ -7,6 +7,8 @@ A case of the `SearchBarScale` enum that applies an expanded size to the `Search
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
+    @Available(swift, introduced: "5.9")
+    @Available(Xcode, introduced: "14.0")
     @DisplayName("Large")
 }
 @Options {
