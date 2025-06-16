@@ -3,7 +3,8 @@
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%2014.0+%20|%20macOS%2011.0+%20|%20visionOS%201.0+-15437D.svg)
 ![License](https://img.shields.io/badge/License-MIT-C8ECFE.svg)
 
-![Banner](./Resources/SearchBar-Banner.png)
+![Banner](./Resources/SearchBar-Banner.png#gh-light-mode-only)
+![Banner](./Resources/SearchBar-BannerDark.png#gh-dark-mode-only)
 
 **SearchBar** is a SwiftUI package that provides a highly customizable, native search bar component for iOS, iPadOS, macOS, and visionOS. It leverages `UISearchBar` for iOS, iPadOS, and visionOS, and a SwiftUI-reimplemented `NSSearchField` for macOS, ensuring a seamless, platform-specific experience. With advanced customization options, accessibility features, and support for search tokens and suggestions, `SearchBar` is ideal for creating modern, user-focused search interfaces.
 
