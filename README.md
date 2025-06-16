@@ -25,7 +25,7 @@ For detailed documentation, visit the [SearchBar Documentation](https://kamilszp
 ## Features
 
 - **Native Integration**: Uses `UISearchBar` for iOS, iPadOS, and visionOS, and an implementation of SwiftUI `TextField` tailored for a native search bar experience on macOS, ensuring authentic platform behavior.
-- **Extensive Customization**: Modify appearance with styles, colors, icons, and more via SwiftUI modifiers.
+- **Extensive Customization**: Modify appearance with styles, colors, icons, and materials via SwiftUI modifiers.
 - **Dynamic Search**: Real-time text updates with `Binding<String>` and event handling for user interactions.
 - **Tokens and Suggestions**: Supports search tokens (iOS 16.0+, visionOS 1.0+) and suggestions (iOS 16.0+, visionOS 1.0+, macOS 15.0+).
 - **Accessibility**: Built-in support for VoiceOver and Dynamic Type ensures inclusivity.
@@ -96,6 +96,9 @@ struct ContentView: View {
                 .searchBarCancelButtonDisplayMode(.always)
                 .searchBarKeyboardType(.default)
                 #endif
+                #if os(iOS) || os(macOS) || os(visionOS)
+                .searchBarMaterial(.glass) // Apply glass material on iOS 26.0+, macOS 26.0+, visionOS 26.0+
+                #endif
             Text("Searching: \(searchText)")
         }
         .padding()
@@ -113,6 +116,8 @@ The `SearchBar` package offers a variety of modifiers to customize its appearanc
   *Available on iOS, visionOS, and macOS.*
 - **`searchBarIconView(_:)`**: Sets a custom icon view for the search bar.  
   *Available on iOS, visionOS, and macOS.*
+- **`searchBarMaterial(_:)`**: Applies a material effect (`.solid` or `.glass`) for a modern, translucent background. Fully supported on iOS 26.0+, macOS 26.0+, and visionOS 26.0+.  
+  *Available on iOS (26.0+), macOS (26.0+), and visionOS (26.0+).*
 
 ### Input Configuration Modifiers (iOS and visionOS only)
 
@@ -149,13 +154,13 @@ The `SearchBar` package offers a variety of modifiers to customize its appearanc
 
 ### Swift Package Manager
 
-Add `SearchBar` to your project via Swift Package Manager. The minimum version required is **2.0.0**.
+Add `SearchBar` to your project via Swift Package Manager. The minimum version required is **2.1.0**.
 
 #### In `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/SzpakKamil/SearchBar.git", from: "2.0.0")
+    .package(url: "https://github.com/SzpakKamil/SearchBar.git", from: "2.1.0")
 ]
 ```
 
@@ -163,7 +168,7 @@ dependencies: [
 
 1. Go to **File > Swift Packages > Add Package Dependency**.
 2. Enter the URL: `https://github.com/SzpakKamil/SearchBar.git`.
-3. Select version **2.0.0** or later.
+3. Select version **2.1.0** or later.
 
 ## Requirements
 
