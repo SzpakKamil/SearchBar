@@ -103,7 +103,7 @@
             @Step {
                 Review the updated functionality in a video to confirm the navigation title updates correctly as the user interacts with the SearchBar.
 
-                @Video(source: "HEContentView-20.mp4", poster: HE-Section7-Step4.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                @Video(source: "HE-Section7-Step5.mp4", poster: HE-Section7-Step4.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
             }
         }
     }

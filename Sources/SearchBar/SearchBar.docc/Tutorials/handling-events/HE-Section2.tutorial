@@ -67,8 +67,7 @@
                 Add the `.searchBarChangeAction(filterMovies)` modifier to the SearchBar to call the `filterMovies(for:)` function whenever the search text changes, enabling real-time filtering of the movie list.
 
                 @Code(name: "ContentView.swift", file: "HEContentView-9.swift"){
-                    @Image(source: HE-Section4-Step2.png
-                           .png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                    @Image(source: HE-Section4-Step2.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
                 }
             }
             
@@ -76,7 +75,7 @@
                 Update the `.animation(.smooth, value:)` modifier to use `filteredMovies` instead of `searchText` as the value parameter, ensuring animations reflect changes in the filtered movie list for a smoother experience.
 
                 @Code(name: "ContentView.swift", file: "HEContentView-10-2.swift", previousFile: "HEContentView-10-1.swift"){
-                    @Image(source: HE-Section4-Step3, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
+                    @Image(source: HE-Section4-Step3.png, alt: "A smartphone screen displaying the Searcher app interface with a list of movies grouped by genres (ACTION, ADVENTURE, ANIMATION), each with a blue icon and description, and a search bar with a \"Cancel\" button at the bottom, on a light background.")
                     }
                 }
             }
