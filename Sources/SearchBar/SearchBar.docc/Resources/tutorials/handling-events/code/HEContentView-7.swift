@@ -25,7 +25,7 @@ struct ContentView: View {
         
     func filterMovies(for text: String) {
         let trimmedSearchText = searchText.trimmingCharacters(in: .whitespaces)
-        guard !trimmedSearchText.isEmpty && !currentTokens.isEmpty else{
+        guard !trimmedSearchText.isEmpty || !currentTokens.isEmpty else{
             filteredMovies = movies
             return
         }
