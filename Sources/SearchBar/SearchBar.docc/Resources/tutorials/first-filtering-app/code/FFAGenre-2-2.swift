@@ -48,7 +48,7 @@ enum Genre: Int, Identifiable, CaseIterable, Codable, Comparable, Equatable {
         case .animation: return "film.fill"
         case .comedy: return "music.note"
         case .drama: return "book.fill"
-        case .fantasy: return "wand.and.sparkles.fill"
+        case .fantasy: return "wand.and.sparkles"
         case .horror: return "moon.fill"
         case .romance: return "heart.fill"
         case .scienceFiction: return "lightbulb.fill"

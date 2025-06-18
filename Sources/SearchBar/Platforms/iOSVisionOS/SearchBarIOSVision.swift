@@ -103,9 +103,6 @@ public struct SearchBar: UIViewRepresentable{
             uiView.searchTextField.resignFirstResponder()
         }
         uiView.searchTextField.tokens = currentTokens.wrappedValue.map(\.searchToken)
-        if #available(iOS 16.0, *), uiView.isFirstResponder {
-            uiView.searchTextField.searchSuggestions = filteredSuggestions.map { $0.suggestion }
-        }
         let _ = configStyle(view: uiView)
     }
     
@@ -195,6 +192,15 @@ public class SearchBarCoordinator: NSObject, UISearchBarDelegate, UISearchTextFi
         }
         parent.currentTokens.wrappedValue = parent.currentTokens.wrappedValue.filter{ token in
             searchBar.searchTextField.tokens.map{ $0.representedObject as? String }.contains(token.searchToken.representedObject as? String) }
+        if #available(iOS 16.0, *), searchBar.isFirstResponder {
+            searchBar.searchTextField.searchSuggestions = parent.suggestions.filter{
+                if let filteringAction = parent.filteringAction{
+                    return parent.enabledAutomaticFiltering ? filteringAction(searchText.trimmingCharacters(in: .whitespacesAndNewlines), $0) : true
+                }else{
+                    return parent.enabledAutomaticFiltering ? $0.text.localizedStandardContains(searchText) && searchText.count > 2 && ($0.token != nil ? true : searchText.count != $0.text.count) : true
+                }
+            }.map(\.suggestion)
+        }
         parent.text = searchText
     }
     
@@ -223,6 +229,9 @@ public class SearchBarCoordinator: NSObject, UISearchBarDelegate, UISearchTextFi
     }
     
     public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        if #available(iOS 26.0, *){
+            searchBar.searchTextField.searchSuggestions = []
+        }
         searchBar.resignFirstResponder()
         if let cancelButtonAction = parent.cancelButtonAction{
             cancelButtonAction()
@@ -237,19 +246,24 @@ public class SearchBarCoordinator: NSObject, UISearchBarDelegate, UISearchTextFi
             return
         }
         
-        if let suggestionMatched = parent.suggestions.first(where: { $0.text == suggestionText }){
-            if let token = suggestionMatched.token{
-                parent.text = ""
-                parent.currentTokens.wrappedValue.append(token)
-            }else{
-                parent.text = suggestionText
-                searchTextField.text = suggestionText
+        if searchTextField.isFirstResponder{
+            if let suggestionMatched = parent.suggestions.first(where: { $0.text == suggestionText }){
+                if let token = suggestionMatched.token{
+                    parent.text = ""
+                    parent.currentTokens.wrappedValue.append(token)
+                }else{
+                    parent.text = suggestionText
+                    searchTextField.text = suggestionText
+                }
             }
+            searchTextField.searchSuggestions = parent.filteredSuggestions.map(\.suggestion)
         }
-        searchTextField.searchSuggestions = parent.filteredSuggestions.map(\.suggestion)
     }
     
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if #available(iOS 26.0, *){
+            searchBar.searchTextField.searchSuggestions = []
+        }
         searchBar.resignFirstResponder()
     }
     
