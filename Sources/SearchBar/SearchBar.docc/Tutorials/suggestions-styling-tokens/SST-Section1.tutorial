@@ -21,7 +21,7 @@
                 In the Xcode project navigator, locate and open "ContentView.swift" to enable suggestions support.
 
                 @Code(name: "ContentView.swift", file: "SSTContentView-0.swift"){
-                    @Image(source: FFA-Section3-Step5.png, alt: "A smartphone screen showing the Searcher app with movie titles and descriptions grouped by genres (ACTION, ADVENTURE, ANIMATION), including icons and a search bar.")
+                    @Image(source: SST-Section1-Step1.png, alt: "A smartphone screen showing the Searcher app with movie titles and descriptions grouped by genres (ACTION, ADVENTURE, ANIMATION), including icons and a search bar.")
                 }
             }
             @Step {
@@ -30,7 +30,7 @@
                 >Important: Note that suggestions are not filtered at this stage, so all suggestions are displayed regardless of input.
 
                 @Code(name: "ContentView.swift", file: "SSTContentView-1.swift"){
-                    @Image(source: SSTContentView-1.png, alt: "A smartphone displaying the Searcher app with movie search results including \"Movie 1\" and expanded search suggestions showing movies.")
+                    @Image(source: SST-Section1-Step2.png, alt: "A smartphone displaying the Searcher app with movie search results including \"Movie 1\" and expanded search suggestions showing movies.")
                 }
             }
 
@@ -38,7 +38,7 @@
                 Below `.searchBarSuggestions()`, add `.searchBarEnableAutomaticSuggestionsFiltering()` without any parameters.
 
                 @Code(name: "ContentView.swift", file: "SSTContentView-2.swift"){
-                    @Image(source: SSTContentView-2.png, alt: "A smartphone displaying the Searcher app with \"Movie 1\" suggestion in the search field and results list.")
+                    @Image(source: SST-Section1-Step3.png, alt: "A smartphone displaying the Searcher app with \"Movie 1\" suggestion in the search field and results list.")
                 }
             }
 
@@ -48,7 +48,7 @@
                 >Note: The `searchText` parameter is pre-trimmed to remove whitespace and newlines.
 
                 @Code(name: "ContentView.swift", file: "SSTContentView-3.swift"){
-                    @Image(source: SSTContentView-3.png, alt: "A smartphone displaying the Searcher app interface with movie categories. Shows \"Movie 1\" under ACTION and \"Everywhere and nowhere\" under ADVENTURE The keyboard is visible. ")
+                    @Image(source: SST-Section1-Step4.png, alt: "A smartphone displaying the Searcher app interface with movie categories. Shows \"Movie 1\" under ACTION and \"Everywhere and nowhere\" under ADVENTURE The keyboard is visible. ")
                 }
             }
         }

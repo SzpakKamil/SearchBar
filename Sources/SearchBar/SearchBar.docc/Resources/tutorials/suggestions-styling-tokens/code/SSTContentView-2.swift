@@ -11,7 +11,7 @@ import SearchBar
 struct ContentView: View {
     ...
         SearchBar(text: $searchText)
-            .searchBarSuggestions(movies.map(.suggestion))
+            .searchBarSuggestions(movies.map(\.suggestion))
             .searchBarEnableAutomaticSuggestionsFiltering()
             .padding(.bottom, 20)
             .background(.bar)
