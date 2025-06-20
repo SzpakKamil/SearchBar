@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         let groups = Dictionary(grouping: filteredMovies, by: \.genre)
         let keys = groups.keys.sorted()
-        GeometryProxy{ proxy in
+        GeometryReader{ proxy in
             NavigationStack{
                 ZStack(alignment: .bottom){
                     List{
@@ -26,7 +26,7 @@ struct ContentView: View {
                     #endif
                 }
                 #if os(visionOS)
-                .toolbar{
+                .safeAreaInset(edge: .top){
                     searchBarImplementation()
                         .padding(.horizontal, proxy.size.width / 4)
                 }

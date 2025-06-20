@@ -37,7 +37,7 @@ struct ContentView: View {
             .searchBarStyle(.capsule, textColor: .blue, tint: .cyan, tokenBackground: .blue, backgroundColor: .blue.opacity(0.1))
             .searchBarCancelButtonDisplayMode(.always)
             #else
-            .searchBarStyle(style: .capsule, textColor: .blue, tint: .cyan, backgroundColor: .blue.opacity(0.1))
+            .searchBarStyle(.capsule, textColor: .blue, tint: .cyan, backgroundColor: .blue.opacity(0.1))
             #endif
             .searchBarEnableAutomaticSuggestionsFiltering{ searchText, suggestion in
                 guard !searchText.isEmpty && searchText.count != suggestion.text.count else {

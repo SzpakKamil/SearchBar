@@ -25,7 +25,7 @@ struct ContentView: View {
                 #endif
             }
             #if os(visionOS)
-            .toolbar{
+            .safeAreaInset(edge: .top){
                 searchBarImplementation()
             }
             #else
