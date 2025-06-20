@@ -26,6 +26,8 @@
             }
             @Step {
                 Your app will now fail to compile due to unsupported modifiers, which we’ll address in the following section.
+                
+                @Image(source: MS-Section1-Step3.png, alt: "ToDo")
             }
         }
     }
@@ -40,25 +42,28 @@
                 In your Xcode project, open "`ContentView.swift`" from the project navigator and locate the SearchBar view.
 
                 @Code(name: "ContentView.swift", file: "HSContentView-3.swift"){
+                    @Image(source: MS-Section2-Step1.png, alt: "ToDo")
                 }
             }
             @Step {
                 Enclose z.searchBarCurrentTokensz and z.searchBarSuggestedTokensz within an `#if !os(macOS)` block at the start and an #endif at the end.
                 >: These modifiers are not supported on macOS.
                 @Code(name: "ContentView.swift", file: "HSContentView-4.swift"){
+                    @Image(source: MS-Section2-Step2.png, alt: "ToDo")
                 }
             }
             @Step {
                 Move the `.searchBarStyle` and `.searchBarCancelButtonDisplayMode()` modifiers into the `#if !os(macOS)` block, and add an `#else` block with a modified `.searchBarStyle` that excludes the tokenBackground parameter.
                 >: The tokenBackground parameter and cancel button are not supported on macOS.
                 @Code(name: "ContentView.swift", file: "HSContentView-5.swift"){
+                    @Image(source: MS-Section2-Step3.png, alt: "ToDo")
                 }
             }
             @Step {
                 Relocate the keyboard-related modifiers—such as .`searchBarAutoCorrectionType()`, `.searchBarReturnKeyType()`, and `.searchBarTextContentType()` into the `#if !os(macOS)` block.
                 >: These modifiers are not supported on macOS.
                 @Code(name: "ContentView.swift", file: "HSContentView-6.swift"){
-                    @Image(source: HSContentView-6.png, alt: "The \"Searcher\" app on macOS shows movie search results, reflecting resolved iOS-macOS compatibility issues.")
+                    @Image(source: MS-Section2-Step4.png, alt: "The \"Searcher\" app on macOS shows movie search results, reflecting resolved iOS-macOS compatibility issues.")
                 }
             }
         }

@@ -102,7 +102,6 @@ public struct SearchBar: UIViewRepresentable{
         }else if (isUsingCustomFocus && !isFocused.wrappedValue){
             uiView.searchTextField.resignFirstResponder()
         }
-        uiView.searchTextField.tokens = currentTokens.wrappedValue.map(\.searchToken)
         let _ = configStyle(view: uiView)
     }
     
@@ -258,6 +257,7 @@ public class SearchBarCoordinator: NSObject, UISearchBarDelegate, UISearchTextFi
             }
             searchTextField.searchSuggestions = parent.filteredSuggestions.map(\.suggestion)
         }
+        searchTextField.tokens = parent.currentTokens.wrappedValue.map(\.searchToken)
     }
     
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
