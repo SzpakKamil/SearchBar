@@ -60,7 +60,7 @@
             - [FruitsList](https://kamilszpak.com/documentation/searchbar/fruitslist)
         }
         
-        @Forums(destination: "https://github.com/SzpakKamil/SearchBar/issues") {
+        @Forums(destination: "https://github.com/SzpakKamil/SearchBar/discussions") {
             Get help and report SearchBar issues.
         }
     }
