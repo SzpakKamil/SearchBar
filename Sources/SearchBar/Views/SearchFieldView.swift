@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 @available(iOS 15.0, macOS 12.0, *)
 struct SearchFieldView: View{
     @Binding var text: String
@@ -56,7 +57,7 @@ struct SearchFieldView: View{
                         .onChange(of: text){ _, newValue in
                             searchChangeAction?(newValue)
                         }
-                    #if os(macOS)
+                        #if compiler(>=6.0)
                         .conditionalModifier{ content in
                             if #available(macOS 15.0, *) {
                                 content
@@ -72,7 +73,7 @@ struct SearchFieldView: View{
                                 content
                             }
                         }
-                    #endif
+                        #endif
                         .onKeyPress(.return, phases: .down) { press in
                             if !filteredSuggestions.isEmpty{
                                 isEditing = false
@@ -115,3 +116,4 @@ struct SearchFieldView: View{
         }
     }
 }
+#endif
