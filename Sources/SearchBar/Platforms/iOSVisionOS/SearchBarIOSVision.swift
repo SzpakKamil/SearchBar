@@ -127,9 +127,8 @@ public struct SearchBar: UIViewRepresentable{
 
         if let textColor = style.textColor{uiView.searchTextField.textColor = UIColor(textColor)}
         
-        #if !os(visionOS)
+        #if !os(visionOS) && swift(>=6.2)
         if #available(iOS 26.0, *), material == .glass {
-
             let glassEffect = UIGlassEffect()
             uiView.searchTextField.backgroundColor = UIColor(.clear)
             uiView.backgroundColor = UIColor(.clear)
@@ -171,6 +170,25 @@ public struct SearchBar: UIViewRepresentable{
                 solidView.widthAnchor.constraint(equalTo: uiView.searchTextField.widthAnchor)
             ])
         }
+        #elseif !os(visionOS)
+        uiView.searchTextField.backgroundColor = UIColor(.clear)
+        // If material is not glass, use a solid color background similar to the glass view layout, applying the same constraints for consistency.
+        let solidTag = 101
+        if let oldSolidView = uiView.viewWithTag(solidTag) {
+            oldSolidView.removeFromSuperview()
+        }
+        let solidView = UIView()
+        solidView.backgroundColor = UIColor(style.backgroundColor)
+        solidView.layer.cornerRadius = style.cornerRadius * scale.cornerScale
+        solidView.translatesAutoresizingMaskIntoConstraints = false
+        solidView.tag = solidTag
+        uiView.insertSubview(solidView, at: 0)
+        NSLayoutConstraint.activate([
+            solidView.centerYAnchor.constraint(equalTo: uiView.centerYAnchor),
+            solidView.leadingAnchor.constraint(equalTo: uiView.searchTextField.leadingAnchor),
+            solidView.heightAnchor.constraint(equalTo: scale == .small ? uiView.searchTextField.heightAnchor : uiView.heightAnchor, multiplier: scale.heightMultiplier),
+            solidView.widthAnchor.constraint(equalTo: uiView.searchTextField.widthAnchor)
+        ])
         #endif
         
         

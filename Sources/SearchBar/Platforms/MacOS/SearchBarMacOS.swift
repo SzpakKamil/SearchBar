@@ -82,6 +82,7 @@ public struct SearchBar: View {
             searchChangeAction?("")
         }
         .if{ content in
+            #if swift(>=6.2)
             if #available(macOS 26.0, *), material == .glass {
                 if style.usesCustomBackground{
                     content.glassEffect(.regular.tint(style.backgroundColor).interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
@@ -92,6 +93,9 @@ public struct SearchBar: View {
             } else {
                 content.background(style.backgroundColor)
             }
+            #else
+            content.background(style.backgroundColor)
+            #endif
         }
         
         .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
