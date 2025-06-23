@@ -43,7 +43,7 @@
             }
             
             @Step {
-                In the search field, type package URL `https://github.com/SzpakKamil/SearchBar`, set the dependency rule to "Up to Next Major Version", confirm the version is at least 2.1.0, and click Add Package to proceed.
+                In the search field, type package URL `https://github.com/SzpakKamil/SearchBar`, set the dependency rule to "Up to Next Major Version", confirm the version is at least 2.1.1, and click Add Package to proceed.
                 
                 @Image(source: FFA-Section1-Step5.png, alt: "A screenshot of the package dependency dialog in Xcode, showing the URL 'https://github.com/SzpakKamil/SearchBar', 'Up to Next Major Version' rule, and version 2.1.0 or higher.")
             }
