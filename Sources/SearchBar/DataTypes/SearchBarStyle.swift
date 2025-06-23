@@ -71,13 +71,7 @@ public struct SearchBarStyle: Equatable, Hashable{
             #if !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else
-            self.backgroundColor = Color(NSColor(name: nil, dynamicProvider: { appearance in
-                if appearance.name == .aqua{
-                    return NSColor.white
-                }else{
-                    return NSColor.quinaryLabel
-                }
-            }).cgColor)
+            self.backgroundColor = .clear
             #endif
         }
 
