@@ -73,7 +73,7 @@ public struct SearchBarStyle: Equatable, Hashable{
     }
     
     #if !os(macOS)
-    public init(cornerRadius: CGFloat, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color, backgroundColor: Color? = nil) {
+    public init(cornerRadius: CGFloat, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) {
         self.cornerRadius = cornerRadius
         self.textColor = textColor
         self.tintColor = tint
@@ -86,7 +86,7 @@ public struct SearchBarStyle: Equatable, Hashable{
             self.backgroundColor = Color(.secondarySystemBackground)
         }
     }
-    public init(style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color, backgroundColor: Color? = nil) {
+    public init(style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) {
         self.cornerRadius = style.cornerRadius
         self.textColor = textColor
         self.tintColor = tint
