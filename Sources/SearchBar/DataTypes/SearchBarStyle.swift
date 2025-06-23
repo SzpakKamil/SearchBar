@@ -33,7 +33,7 @@ public enum SearchBarCornerStyle{
     }
 }
 
-public struct SearchBarStyle: Equatable{
+public struct SearchBarStyle: Equatable, Hashable{
     public let cornerRadius: CGFloat
     public let tintColor: Color?
     public let textColor: Color?
