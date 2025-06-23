@@ -5,7 +5,7 @@
     @Available(iOS, introduced: "16.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "14.0")
+    @Available(Xcode, introduced: "15.0")
     @PageKind(sampleCode)
     @PageColor(purple)
     @PageImage(purpose: card, source: "SearchBarSample")
@@ -104,7 +104,7 @@ To run the Fruits List sample project:
 
 2. **Create Project Files**:
    - Add `ContentView.swift` and `KeywordFruit.swift` to your Xcode project.
-   - Ensure the project’s deployment target is iOS 16.0+ or visionOS 1.0+ and uses Swift 6.0.
+   - Ensure the project’s deployment target is iOS 16.0+ or visionOS 1.0+ and uses Swift 5.9+.
 
 3. **Build and Run**:
    - Build the project in Xcode 15.0+.

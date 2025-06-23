@@ -178,7 +178,7 @@ dependencies: [
 - **macOS**: 11.0+
 - **visionOS**: 1.0+
 - **Swift**: 5.9+
-- **Xcode**: 14.0+
+- **Xcode**: 15.0+
 
 ## License
 

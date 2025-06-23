@@ -6,7 +6,7 @@ Applies a predefined corner style to the `SearchBar` with optional customization
     @SupportedLanguage(swift)
     @Available(macOS, introduced: "11.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "14.0")
+    @Available(Xcode, introduced: "15.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 
