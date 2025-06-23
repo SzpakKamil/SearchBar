@@ -8,7 +8,7 @@
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "14.0")
+    @Available(Xcode, introduced: "15.0")
     @PageColor(green)
     @PageImage(purpose: card, source: "SearchBarSetUp")
 }
@@ -30,7 +30,7 @@ Add the `SearchBar` package to your project via Swift Package Manager:
 1. In Xcode, go to **File > Add Package Dependency**.
 2. Enter the package URL: `https://github.com/SzpakKamil/SearchBar.git`.
 3. Select a version (e.g., a specific tag) or use the `main` branch, then click **Add Package**.
-4. Ensure your project uses Swift 6.0 for compatibility.
+4. Ensure your project uses Swift 5.9+ for compatibility.
 5. Import the module in your SwiftUI view:
 
    ```swift

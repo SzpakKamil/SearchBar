@@ -9,7 +9,7 @@ A SwiftUI view that provides a customizable search bar for text input and sugges
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "14.0")
+    @Available(Xcode, introduced: "15.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 

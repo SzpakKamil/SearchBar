@@ -8,7 +8,7 @@ A SwiftUI view modifier that applies a material style to a `SearchBar` view.
     @Available(iPadOS, introduced: "26.0")
     @Available(macOS, introduced: "26.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "14.0")
+    @Available(Xcode, introduced: "15.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 

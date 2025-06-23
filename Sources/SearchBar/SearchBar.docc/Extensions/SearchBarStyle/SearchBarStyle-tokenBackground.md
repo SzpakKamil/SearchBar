@@ -8,7 +8,7 @@ The background color for tokens in the `SearchBar`.
     @Available(iPadOS, introduced: "14.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "14.0")
+    @Available(Xcode, introduced: "15.0")
 }
 @Options {
     @AutomaticSeeAlso(disabled)

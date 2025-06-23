@@ -9,7 +9,7 @@ A struct that defines the visual appearance and color configuration for a `Searc
     @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "14.0")
+    @Available(Xcode, introduced: "15.0")
     @DocumentationExtension(mergeBehavior: override)
 }
 @Options {

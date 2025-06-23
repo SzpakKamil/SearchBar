@@ -10,7 +10,7 @@ The unique identifier for a `SearchBarSuggestion`, derived from its `text` and `
     @Available(macOS, introduced: "15.0")
     @Available(iPadOS, introduced: "16.0")
     @Available(swift, introduced: "5.9")
-    @Available(Xcode, introduced: "14.0")
+    @Available(Xcode, introduced: "15.0")
 }
 @Options {
     @AutomaticSeeAlso(disabled)
