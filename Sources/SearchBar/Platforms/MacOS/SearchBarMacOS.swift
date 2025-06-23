@@ -97,7 +97,8 @@ public struct SearchBar: View {
             content.background(style.backgroundColor)
             #endif
         }
-        
+        .id(style)
+        .id(material)
         .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
         .overlay( /// apply a rounded border
             RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
