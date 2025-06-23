@@ -9,6 +9,7 @@ import SwiftUI
 
 #if os(macOS)
 public struct SearchBar: View {
+    @Environment(\.colorScheme) var colorScheme
     @Binding var text: String
     var style = SearchBarStyle.rounded
     var clearButtonDisplayMode = SearchBarClearButtonDisplayMode.always
@@ -91,8 +92,14 @@ public struct SearchBar: View {
                 }
                 
             } else {
+                #if os(macOS)
+                content.background(style.backgroundColor != .clear ? style.backgroundColor : colorScheme == .dark ? Color(NSColor.quinaryLabel) : Color(.white))
+                #else
                 content.background(style.backgroundColor)
+                #endif
             }
+            #elseif os(macOS)
+            content.background(style.backgroundColor != .clear ? style.backgroundColor : colorScheme == .dark ? Color(NSColor.quinaryLabel) : Color(.white))
             #else
             content.background(style.backgroundColor)
             #endif
