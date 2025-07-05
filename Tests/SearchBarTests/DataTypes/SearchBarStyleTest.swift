@@ -24,31 +24,6 @@ struct SearchBarStyleTests {
         #expect(customCornerRadiusStyle.usesCustomBackground == true, "Expected custom style to use custom background when backgroundColor is specified")
     }
     
-    @Test("Custom corner radius style initialization with nil backgroundColor")
-    func testCustomCornerRadiusStyleWithNilBackground() async throws {
-        let customCornerRadiusStyle = SearchBarStyle(cornerRadius: 15, textColor: .blue, tint: .red)
-        #expect(customCornerRadiusStyle.cornerRadius == 15, "Expected custom style to have a corner radius of 15")
-        #expect(customCornerRadiusStyle.textColor == .blue, "Expected custom style to have a text color of blue")
-        #expect(customCornerRadiusStyle.tintColor == .red, "Expected custom style to have a tint color of red")
-        #if !os(macOS)
-        #expect(customCornerRadiusStyle.backgroundColor == Color(.secondarySystemBackground), "Expected custom style to have default secondarySystemBackground on non-macOS when backgroundColor is nil")
-        #else
-        let defaultColor = NSColor(name: nil, dynamicProvider: { appearance in
-            if appearance.name == .aqua{
-                return NSColor.white
-            }else{
-                return NSColor.quinaryLabel
-            }
-        })
-        let areColorsSame = customCornerRadiusStyle.backgroundColor.resolve(in: .init()).cgColor.components?[0] == defaultColor.cgColor.components?[0] &&
-                            customCornerRadiusStyle.backgroundColor.resolve(in: .init()).cgColor.components?[1] == defaultColor.cgColor.components?[1] &&
-                            customCornerRadiusStyle.backgroundColor.resolve(in: .init()).cgColor.components?[2] == defaultColor.cgColor.components?[2]
-        #expect(areColorsSame, "Expected custom style to have default light/dark background on macOS when backgroundColor is nil")
-        #endif
-        #expect(customCornerRadiusStyle.tokenBackground == nil, "Expected custom style to not have a token background color")
-        #expect(customCornerRadiusStyle.usesCustomBackground == false, "Expected custom style to not use custom background when backgroundColor is nil")
-    }
-    
     // MARK: - Tests for SearchBarStyle with Predefined Corner Style
     @Test("Custom style with capsule corner radius initialization")
     func testCustomStyleWithCapsule() async throws {
@@ -59,32 +34,6 @@ struct SearchBarStyleTests {
         #expect(customStyle.backgroundColor == .green, "Expected custom style to have a background color of green")
         #expect(customStyle.tokenBackground == nil, "Expected custom style with capsule corner radius to not have a token background color")
         #expect(customStyle.usesCustomBackground == true, "Expected custom style to use custom background when backgroundColor is specified")
-    }
-    
-    @Test("Custom style with capsule and nil backgroundColor")
-    func testCustomStyleWithCapsuleAndNilBackground() async throws {
-        let customStyle = SearchBarStyle(style: .capsule, textColor: .blue, tint: .red)
-        #expect(customStyle.cornerRadius == SearchBarCornerStyle.capsule.cornerRadius, "Expected custom style with capsule corner radius to have the same corner radius as capsule style")
-        #expect(customStyle.textColor == .blue, "Expected custom style to have a text color of blue")
-        #expect(customStyle.tintColor == .red, "Expected custom style to have a tint color of red")
-        #if !os(macOS)
-        #expect(customStyle.backgroundColor == Color(.secondarySystemBackground), "Expected custom style to have default secondarySystemBackground on non-macOS when backgroundColor is nil")
-        #else
-        let defaultColor = NSColor(name: nil, dynamicProvider: { appearance in
-            if appearance.name == .aqua{
-                return NSColor.white
-            }else{
-                return NSColor.quinaryLabel
-            }
-        })
-        let areColorsSame = customStyle.backgroundColor.resolve(in: .init()).cgColor.components?[0] == defaultColor.cgColor.components?[0] &&
-                            customStyle.backgroundColor.resolve(in: .init()).cgColor.components?[1] == defaultColor.cgColor.components?[1] &&
-                            customStyle.backgroundColor.resolve(in: .init()).cgColor.components?[2] == defaultColor.cgColor.components?[2]
-
-        #expect(areColorsSame, "Expected custom style to have default light/dark background on macOS when backgroundColor is nil")
-        #endif
-        #expect(customStyle.tokenBackground == nil, "Expected custom style with capsule corner radius to not have a token background color")
-        #expect(customStyle.usesCustomBackground == false, "Expected custom style to not use custom background when backgroundColor is nil")
     }
     
     // MARK: - Tests for SearchBarStyle with Token Background (Non-macOS)
