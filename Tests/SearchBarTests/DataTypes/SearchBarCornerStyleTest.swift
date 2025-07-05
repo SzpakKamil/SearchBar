@@ -6,6 +6,7 @@
 //
 
 import Foundation
+#if canImport(Testing)
 import Testing
 @testable import SearchBar
 
@@ -59,3 +60,4 @@ struct SearchBarCornerStyleTests {
     }
     
 }
+#endif

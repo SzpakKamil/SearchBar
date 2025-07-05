@@ -6,6 +6,7 @@
 //
 
 import Foundation
+#if canImport(Testing)
 import Testing
 import SwiftUI
 #if !os(macOS)
@@ -278,3 +279,4 @@ struct SearchBarSuggestionTests {
         #endif
     }
 }
+#endif

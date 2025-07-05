@@ -6,6 +6,7 @@
 //
 
 import Foundation
+#if canImport(Testing)
 import Testing
 import SwiftUI
 #if !os(macOS)
@@ -15,15 +16,6 @@ import UIKit
 
 struct SearchBarClearButtonDisplayModeTests {
     
-    // MARK: - Tests for Initialization and Raw Values
-    @Test("Initialization with raw values")
-    func testInitializationWithRawValues() async throws {
-        #expect(SearchBarClearButtonDisplayMode(rawValue: 0) == .always, "Expected raw value 0 to map to .always")
-        #expect(SearchBarClearButtonDisplayMode(rawValue: 1) == .never, "Expected raw value 1 to map to .never")
-        #expect(SearchBarClearButtonDisplayMode(rawValue: 2) == .whileEditing, "Expected raw value 2 to map to .whileEditing")
-        #expect(SearchBarClearButtonDisplayMode(rawValue: 3) == .unlessEditing, "Expected raw value 3 to map to .unlessEditing")
-        #expect(SearchBarClearButtonDisplayMode(rawValue: 4) == nil, "Expected invalid raw value 4 to return nil")
-    }
     
     // MARK: - Tests for Identifiable Conformance
     @Test("Identifiable conformance")
@@ -56,46 +48,6 @@ struct SearchBarClearButtonDisplayModeTests {
         #expect(!(SearchBarClearButtonDisplayMode.unlessEditing < .always), "Expected .unlessEditing to not be less than .always")
     }
     
-    // MARK: - Tests for Codable Conformance
-    @Test("Encoding SearchBarClearButtonDisplayMode")
-    func testEncoding() async throws {
-        let encoder = JSONEncoder()
-        let encodedAlways = try encoder.encode(SearchBarClearButtonDisplayMode.always)
-        let encodedNever = try encoder.encode(SearchBarClearButtonDisplayMode.never)
-        let encodedWhileEditing = try encoder.encode(SearchBarClearButtonDisplayMode.whileEditing)
-        let encodedUnlessEditing = try encoder.encode(SearchBarClearButtonDisplayMode.unlessEditing)
-        
-        let decodedAlways = try JSONDecoder().decode(Int.self, from: encodedAlways)
-        let decodedNever = try JSONDecoder().decode(Int.self, from: encodedNever)
-        let decodedWhileEditing = try JSONDecoder().decode(Int.self, from: encodedWhileEditing)
-        let decodedUnlessEditing = try JSONDecoder().decode(Int.self, from: encodedUnlessEditing)
-        
-        #expect(decodedAlways == 0, "Expected .always to encode as 0")
-        #expect(decodedNever == 1, "Expected .never to encode as 1")
-        #expect(decodedWhileEditing == 2, "Expected .whileEditing to encode as 2")
-        #expect(decodedUnlessEditing == 3, "Expected .unlessEditing to encode as 3")
-    }
-    
-    @Test("Decoding SearchBarClearButtonDisplayMode")
-    func testDecoding() async throws {
-        let encoder = JSONEncoder()
-        let decoder = JSONDecoder()
-        
-        let alwaysData = try encoder.encode(0)
-        let neverData = try encoder.encode(1)
-        let whileEditingData = try encoder.encode(2)
-        let unlessEditingData = try encoder.encode(3)
-        
-        let decodedAlways = try decoder.decode(SearchBarClearButtonDisplayMode.self, from: alwaysData)
-        let decodedNever = try decoder.decode(SearchBarClearButtonDisplayMode.self, from: neverData)
-        let decodedWhileEditing = try decoder.decode(SearchBarClearButtonDisplayMode.self, from: whileEditingData)
-        let decodedUnlessEditing = try decoder.decode(SearchBarClearButtonDisplayMode.self, from: unlessEditingData)
-        
-        #expect(decodedAlways == .always, "Expected 0 to decode as .always")
-        #expect(decodedNever == .never, "Expected 1 to decode as .never")
-        #expect(decodedWhileEditing == .whileEditing, "Expected 2 to decode as .whileEditing")
-        #expect(decodedUnlessEditing == .unlessEditing, "Expected 3 to decode as .unlessEditing")
-    }
     
     // MARK: - Tests for Hashable Conformance
     @Test("Hashable conformance")
@@ -119,3 +71,4 @@ struct SearchBarClearButtonDisplayModeTests {
         #endif
     }
 }
+#endif

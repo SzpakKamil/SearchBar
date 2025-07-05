@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+#if canImport(Testing)
 import Testing
 @testable import SearchBar
 
@@ -190,3 +191,4 @@ struct SearchBarStyleTests {
         #endif
     }
 }
+#endif
