@@ -6,6 +6,7 @@
 //
 
 import Foundation
+#if canImport(Testing)
 import Testing
 @testable import SearchBar
 import SwiftUI
@@ -351,3 +352,4 @@ struct ModifiersTests {
         #endif
     }
 }
+#endif
