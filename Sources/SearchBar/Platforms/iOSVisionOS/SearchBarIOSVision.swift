@@ -127,7 +127,7 @@ public struct SearchBar: UIViewRepresentable{
 
         if let textColor = style.textColor{uiView.searchTextField.textColor = UIColor(textColor)}
         
-        #if !os(visionOS) && swift(>=6.2)
+        #if !os(visionOS) && compiler(>=6.2)
         if #available(iOS 26.0, *), material == .glass {
             let glassEffect = UIGlassEffect()
             uiView.searchTextField.backgroundColor = UIColor(.clear)
