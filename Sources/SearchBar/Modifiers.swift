@@ -19,14 +19,14 @@ public extension SearchBar{
         copy.cancelButtonAction = action
         return copy
     }
-    func searchBarStyle(cornerRadius: CGFloat, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) -> SearchBar {
+    func searchBarStyle(cornerRadius: CGFloat, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) -> SearchBar {
         var copy = self
-        copy.style = .init(cornerRadius: cornerRadius, textColor: textColor, tint: tint, tokenBackground: tokenBackground, backgroundColor: backgroundColor)
+        copy.style = .init(cornerRadius: cornerRadius, borderColor: borderColor, textColor: textColor, tint: tint, tokenBackground: tokenBackground, backgroundColor: backgroundColor)
         return copy
     }
-    func searchBarStyle(_ style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) -> SearchBar {
+    func searchBarStyle(_ style: SearchBarCornerStyle = .rounded, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) -> SearchBar {
         var copy = self
-        copy.style = .init(style: style, textColor: textColor, tint: tint, tokenBackground: tokenBackground, backgroundColor: backgroundColor)
+        copy.style = .init(style: style, borderColor: borderColor, textColor: textColor, tint: tint, tokenBackground: tokenBackground, backgroundColor: backgroundColor)
         return copy
     }
     @available(iOS 16.0, *)
@@ -113,14 +113,14 @@ public extension SearchBar{
         return copy
     }
     #endif
-    func searchBarStyle(cornerRadius: CGFloat, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) -> SearchBar {
+    func searchBarStyle(cornerRadius: CGFloat, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) -> SearchBar {
         var copy = self
-        copy.style = .init(cornerRadius: cornerRadius, textColor: textColor, tint: tint, backgroundColor: backgroundColor)
+        copy.style = .init(cornerRadius: cornerRadius, borderColor: borderColor, textColor: textColor, tint: tint, backgroundColor: backgroundColor)
         return copy
     }
-    func searchBarStyle(_ style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) -> SearchBar {
+    func searchBarStyle(_ style: SearchBarCornerStyle = .rounded, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) -> SearchBar {
         var copy = self
-        copy.style = .init(style: style, textColor: textColor, tint: tint, backgroundColor: backgroundColor)
+        copy.style = .init(style: style, borderColor: borderColor, textColor: textColor, tint: tint, backgroundColor: backgroundColor)
         return copy
     }
     

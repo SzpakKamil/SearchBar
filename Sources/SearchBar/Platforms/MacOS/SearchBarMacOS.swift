@@ -101,7 +101,7 @@ public struct SearchBar: View {
         .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
         .overlay( /// apply a rounded border
             RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
-                .stroke(LinearGradient(colors: [Color(NSColor.quaternaryLabelColor), Color(NSColor.tertiaryLabelColor)], startPoint: .top, endPoint: .bottom), lineWidth: 0.75)
+                .stroke( LinearGradient(colors: style.borderColor == nil ? [Color(NSColor.quaternaryLabelColor), Color(NSColor.tertiaryLabelColor)] : [style.borderColor ?? .clear], startPoint: .top, endPoint: .bottom), lineWidth: 0.75)
         )
         .padding(.horizontal, 1)
     }

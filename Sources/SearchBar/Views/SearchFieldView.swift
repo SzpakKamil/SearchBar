@@ -75,7 +75,7 @@ struct SearchFieldView: View{
                         }
                         #endif
                         .onKeyPress(.return, phases: .down) { press in
-                            if !filteredSuggestions.isEmpty{
+                            if filteredSuggestions.isEmpty{
                                 isEditing = false
                             }
 

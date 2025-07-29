@@ -29,10 +29,10 @@ The `SearchBar` package provides a variety of modifiers to customize its appeara
 
 ### Appearance Modifiers
 - ``SearchBar/SearchBar/searchBarStyle(_:)``: Applies a custom `SearchBarStyle` configuration. Available on iOS, iPadOS, visionOS, and macOS.
-- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:textColor:tint:tokenBackground:backgroundColor:)``: Configures style with specific parameters including token background. Available on iOS and visionOS.
-- ``SearchBar/SearchBar/searchBarStyle(_:textColor:tint:tokenBackground:backgroundColor:)``: Applies a predefined corner style with optional parameters including token background. Available on iOS and visionOS.
-- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:textColor:tint:backgroundColor:)``: Configures style with specific parameters. Available on macOS.
-- ``SearchBar/SearchBar/searchBarStyle(_:textColor:tint:backgroundColor:)``: Applies a predefined corner style with optional parameters. Available on macOS.
+- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``: Configures style with specific parameters including token background. Available on iOS and visionOS.
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``: Applies a predefined corner style with optional parameters including token background. Available on iOS and visionOS.
+- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``: Configures style with specific parameters. Available on macOS.
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``: Applies a predefined corner style with optional parameters. Available on macOS.
 - ``SearchBar/SearchBar/searchBarIconView(_:)``: Sets a custom icon view for the search bar. Available on iOS, iPadOS, visionOS, and macOS.
 - ``SearchBar/SearchBar/searchBarIconView()``: Removes the custom icon view, setting it to an empty view. Available on iOS, iPadOS, visionOS, and macOS.
 - ``SearchBar/SearchBar/searchBarMaterial(_:)``: Applies a material style (e.g., `solid` or `glass`) to the search bar. Available on iOS 26.0+, iPadOS 26.0+, and macOS 26.0+. Experimental “Liquid Glass” implementation.

@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarStyle(_:textColor:tint:tokenBackground:backgroundColor:)``
+# ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
 Applies a predefined corner style to the `SearchBar` with customizations including token background color.
 
@@ -24,6 +24,7 @@ The `searchBarStyle(_:textColor:tint:tokenBackground:backgroundColor:)` modifier
 ## Parameters
 
 - `style`: A `SearchBarCornerStyle` defining the corner style, defaulting to `.rounded`.
+- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
 - `textColor`: An optional `Color` for the search bar’s text. If `nil`, uses the system default.
 - `tint`: An optional `Color` for the search bar’s tint. If `nil`, uses the system default.
 - `tokenBackground`: An optional `Color` for the background of tokens. If `nil`, uses the system default.

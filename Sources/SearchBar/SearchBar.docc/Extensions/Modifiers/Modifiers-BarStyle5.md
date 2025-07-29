@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarStyle(cornerRadius:textColor:tint:tokenBackground:backgroundColor:)``
+# ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
 Configures the `SearchBar`’s style with a specific corner radius and color settings, including token background.
 
@@ -24,6 +24,7 @@ The `searchBarStyle(cornerRadius:textColor:tint:tokenBackground:backgroundColor:
 ## Parameters
 
 - `cornerRadius`: A `CGFloat` defining the corner radius, defaulting to `0`.
+- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
 - `textColor`: An optional `Color` for the search bar’s text. If `nil`, uses the system default.
 - `tint`: An optional `Color` for the search bar’s tint. If `nil`, uses the system default.
 - `tokenBackground`: An optional `Color` for the background of tokens. If `nil`, uses the system default.
@@ -51,4 +52,4 @@ This example sets a corner radius of 15 and custom colors, including a yellow to
 
 - ``SearchBarStyle``
 - ``SearchBar/SearchBar/searchBarStyle(_:)``
-- ``SearchBar/SearchBar/searchBarStyle(_:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
