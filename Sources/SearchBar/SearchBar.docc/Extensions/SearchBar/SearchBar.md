@@ -68,10 +68,10 @@ This example creates a `SearchBar` with a capsule style, a custom icon, and even
 
 ### Appearance Modifiers
 - ``SearchBar/SearchBar/searchBarStyle(_:)``
-- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:textColor:tint:tokenBackground:backgroundColor:)``
-- ``SearchBar/SearchBar/searchBarStyle(_:textColor:tint:tokenBackground:backgroundColor:)``
-- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:textColor:tint:backgroundColor:)``
-- ``SearchBar/SearchBar/searchBarStyle(_:textColor:tint:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
 - ``SearchBar/SearchBar/searchBarIconView(_:)``
 - ``SearchBar/SearchBar/searchBarIconView()``
 - ``SearchBar/SearchBar/searchBarMaterial(_:)``

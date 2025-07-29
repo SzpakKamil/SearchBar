@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarStyle(_:textColor:tint:backgroundColor:)``
+# ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
 
 Applies a predefined corner style to the `SearchBar` with optional customizations for text color, tint, and background color.
 
@@ -22,6 +22,7 @@ The `searchBarStyle(_:textColor:tint:backgroundColor:)` modifier configures the 
 ## Parameters
 
 - `style`: A `SearchBarCornerStyle` defining the corner style, defaulting to `.rounded`.
+- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
 - `textColor`: An optional `Color` for the search bar’s text. If `nil`, uses the system default.
 - `tint`: An optional `Color` for the search bar’s tint. If `nil`, uses the system default.
 - `backgroundColor`: An optional `Color` for the search bar’s background. If `nil`, uses the system default.

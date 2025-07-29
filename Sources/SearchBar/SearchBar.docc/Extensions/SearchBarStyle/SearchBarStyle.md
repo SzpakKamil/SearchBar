@@ -51,6 +51,7 @@ struct ContentView: View {
 
 ### Properties
 - ``SearchBarStyle/cornerRadius``
+- ``SearchBarStyle/borderColor``
 - ``SearchBarStyle/textColor``
 - ``SearchBarStyle/tintColor``
 - ``SearchBarStyle/tokenBackground``
@@ -58,10 +59,10 @@ struct ContentView: View {
 - ``SearchBarStyle/backgroundColor``
 
 ### Initializers
-- ``SearchBarStyle/init(cornerRadius:textColor:tint:backgroundColor:)``
-- ``SearchBarStyle/init(style:textColor:tint:backgroundColor:)``
-- ``SearchBarStyle/init(cornerRadius:textColor:tint:tokenBackground:backgroundColor:)``
-- ``SearchBarStyle/init(style:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBarStyle/init(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBarStyle/init(style:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBarStyle/init(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBarStyle/init(style:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
 ### Static Properties
 - ``SearchBarStyle/capsule``

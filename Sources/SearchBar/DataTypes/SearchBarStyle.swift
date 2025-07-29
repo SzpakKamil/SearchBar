@@ -37,6 +37,7 @@ public struct SearchBarStyle: Equatable, Hashable{
     public let cornerRadius: CGFloat
     public let tintColor: Color?
     public let textColor: Color?
+    public let borderColor: Color?
     public let tokenBackground: Color?
     public let usesCustomBackground: Bool
     public let backgroundColor: Color
@@ -53,9 +54,10 @@ public struct SearchBarStyle: Equatable, Hashable{
         return sameCornerStyle && sameBackgroundColor && sameTintColor && sameTextColor && sameTokenBackground
     }
     
-    public init(cornerRadius: CGFloat, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) {
+    public init(cornerRadius: CGFloat, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) {
         self.cornerRadius = cornerRadius
         self.textColor = textColor
+        self.borderColor = borderColor
         self.tintColor = tint
         self.tokenBackground = nil
         if let backgroundColor{
@@ -73,10 +75,11 @@ public struct SearchBarStyle: Equatable, Hashable{
     }
     
     #if !os(macOS)
-    public init(cornerRadius: CGFloat, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) {
+    public init(cornerRadius: CGFloat, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) {
         self.cornerRadius = cornerRadius
         self.textColor = textColor
         self.tintColor = tint
+        self.borderColor = borderColor
         self.tokenBackground = tokenBackground
         if let backgroundColor{
             self.backgroundColor = backgroundColor
@@ -86,11 +89,12 @@ public struct SearchBarStyle: Equatable, Hashable{
             self.backgroundColor = Color(.secondarySystemBackground)
         }
     }
-    public init(style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) {
+    public init(style: SearchBarCornerStyle = .rounded, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) {
         self.cornerRadius = style.cornerRadius
         self.textColor = textColor
         self.tintColor = tint
         self.tokenBackground = tokenBackground
+        self.borderColor = borderColor
         if let backgroundColor{
             self.backgroundColor = backgroundColor
             self.usesCustomBackground = true
@@ -101,10 +105,11 @@ public struct SearchBarStyle: Equatable, Hashable{
     }
     #endif
     
-    public init(style: SearchBarCornerStyle = .rounded, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) {
+    public init(style: SearchBarCornerStyle = .rounded, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, backgroundColor: Color? = nil) {
         self.cornerRadius = style.cornerRadius
         self.textColor = textColor
         self.tintColor = tint
+        self.borderColor = borderColor
         self.tokenBackground = nil
         if let backgroundColor{
             self.backgroundColor = backgroundColor

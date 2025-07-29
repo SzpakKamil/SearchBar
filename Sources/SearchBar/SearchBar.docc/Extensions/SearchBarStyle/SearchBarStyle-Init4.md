@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBarStyle/init(style:textColor:tint:tokenBackground:backgroundColor:)``
+# ``SearchBar/SearchBarStyle/init(style:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
 Creates a `SearchBarStyle` with a `SearchBarCornerStyle` and optional colors, including `tokenBackground`.
 
@@ -23,6 +23,7 @@ Creates a `SearchBarStyle` with a `SearchBarCornerStyle` and optional colors, in
 ## Parameters
 
 - `style`: A `SearchBarCornerStyle` defining the corner shape.
+- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
 - `textColor`: An optional `Color` for the text.
 - `tint`: An optional `Color` for interactive elements.
 - `tokenBackground`: An optional `Color` for token backgrounds.
@@ -47,8 +48,8 @@ struct ContentView: View {
 ## See Also
 
 - ``SearchBarStyle``
-- ``SearchBarStyle/init(cornerRadius:textColor:tint:backgroundColor:)``
-- ``SearchBarStyle/init(style:textColor:tint:backgroundColor:)``
-- ``SearchBarStyle/init(cornerRadius:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBarStyle/init(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBarStyle/init(style:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBarStyle/init(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 - ``SearchBarCornerStyle``
 - ``SearchBarToken``
