@@ -23,7 +23,6 @@ struct SearchFieldClearButton: View{
                     }
                 }
         }
-        .buttonStyle(.borderless)
         .labelsHidden()
         .scaleEffect(isVisible ? 1 : 0)
         .opacity(isVisible ? 1 : 0)
