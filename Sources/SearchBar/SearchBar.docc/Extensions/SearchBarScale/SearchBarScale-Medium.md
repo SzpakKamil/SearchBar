@@ -18,7 +18,7 @@ A case of the `SearchBarScale` enum that applies a balanced size to the `SearchB
 
 ## Overview
 
-The `medium` case specifies a balanced size for the `SearchBar` view, with a `heightMultiplier` of 0.80 (or 2 on macOS) and a `cornerScale` of 1.15. It has a fixed `id` of `1` and is applied using the `.searchBarScale(.medium)` modifier. This scale is suitable for standard layouts requiring a moderately sized search bar. Available on iOS 14.0+, iPadOS 14.0+ and macOS 11.0+.
+The `medium` case specifies a balanced size for the `SearchBar` view, with a `heightMultiplier` of 0.8 (or 0.77 on iOS 26.0+; 2 on macOS) and a `cornerScale` of 1.2 (or 1.35 on iOS 26.0+). It has a fixed `id` of `1` and is applied using the `.searchBarScale(.medium)` modifier. This scale is suitable for standard layouts requiring a moderately sized search bar. Available on iOS 14.0+, iPadOS 14.0+, and macOS 11.0+.
 
 > Important: This type is unavailable on visionOS.
 
@@ -37,4 +37,3 @@ struct ContentView: View {
     }
 }
 ```
-
