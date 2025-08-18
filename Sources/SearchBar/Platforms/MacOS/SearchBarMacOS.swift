@@ -79,6 +79,7 @@ public struct SearchBar: View {
         .font(.callout)
         .padding(.horizontal, 7)
         .padding(.vertical, 3 * scale.heightMultiplier)
+        .padding(.horizontal, scale == .small ? 0 : 1 * scale.heightMultiplier)
         .onAppear{
             searchChangeAction?("")
         }

@@ -28,11 +28,19 @@ public enum SearchBarScale: Identifiable, Equatable, Hashable{
     var cornerScale: Double{
         switch self {
         case .small:
-            1.0
+            return 1
         case .medium:
-            1.15
+            if #available(iOS 26.0, *){
+                return 1.35
+            }else{
+                return 1.2
+            }
         case .large:
-            1.25
+            if #available(iOS 26.0, *){
+                return 1.4
+            }else{
+                return 1.4
+            }
         }
     }
     
@@ -50,11 +58,23 @@ public enum SearchBarScale: Identifiable, Equatable, Hashable{
         #else
         switch self {
         case .small:
-            1.0
+            if #available(iOS 26.0, *){
+                0.82
+            }else{
+                1.0
+            }
         case .medium:
-            0.80
+            if #available(iOS 26.0, *){
+                0.77
+            }else{
+                0.8
+            }
         case .large:
-            0.9
+            if #available(iOS 26.0, *){
+                0.8
+            }else{
+                0.9
+            }
         }
         #endif
     }
