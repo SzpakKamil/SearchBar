@@ -61,7 +61,7 @@ public struct SearchBar: UIViewRepresentable{
     public func makeUIView(context: Context) -> UISearchBar {
         let searchBar = configStyle()
         searchBar.searchBarStyle = .minimal
-        searchBar.placeholder = prompt ?? "Search"
+        searchBar.placeholder = prompt ?? SearchBarTranslation.prompt.value
         searchBar.delegate = context.coordinator
         searchBar.searchTextField.delegate = context.coordinator
         if let keyboardType{ searchBar.searchTextField.keyboardType = keyboardType; searchBar.keyboardType = keyboardType }

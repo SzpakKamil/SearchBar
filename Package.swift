@@ -13,7 +13,12 @@ let package = Package(
         .library(name: "SearchBar", targets: ["SearchBar"])
     ],
     targets: [
-        .target(name: "SearchBar"),
+        .target(
+            name: "SearchBar",
+            resources: [
+                .process("Resources/Localizable.xcstrings")
+            ]
+        ),
         .testTarget(
             name: "SearchBarTests",
             dependencies: ["SearchBar"]
