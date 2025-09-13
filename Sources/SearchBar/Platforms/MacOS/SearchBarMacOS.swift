@@ -61,7 +61,7 @@ public struct SearchBar: View {
                     isFocused: isFocused
                 )
             } else {
-                TextField(prompt ?? "Search", text: $text)
+                TextField(prompt ?? SearchBarTranslation.prompt.value, text: $text)
                     .textFieldStyle(.plain)
                     .foregroundColor(style.textColor ?? .primary)
                 Spacer()
