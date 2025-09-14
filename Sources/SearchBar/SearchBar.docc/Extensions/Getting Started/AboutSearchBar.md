@@ -13,7 +13,7 @@
     @PageImage(purpose: card, source: "SearchBarGreeting")
 }
 
-@Options{
+@Options {
     @AutomaticSeeAlso(disabled)
 }
 
@@ -21,7 +21,7 @@ Learn about the customizable SwiftUI `SearchBar` package for enhanced search fun
 
 ## Overview
 
-The `SearchBar` package extends SwiftUI’s default search bar, offering flexible customization and robust functionality. Supporting iOS, iPadOS, visionOS, and macOS, it integrates native components (`UISearchBar` for iOS/visionOS, and on macOS, it recreates `NSSearchField` from AppKit using SwiftUI components) into a SwiftUI API for seamless, platform-specific solutions.
+The `SearchBar` package extends SwiftUI’s default search bar, offering flexible customization and robust functionality. Supporting iOS, iPadOS, visionOS, and macOS, it integrates native components (`UISearchBar` for iOS/visionOS, and on macOS, it recreates `NSSearchField` from AppKit using SwiftUI components) into a unified SwiftUI API for seamless, platform-specific solutions. The package is fully localized, supporting translations for every language available on the supported operating systems, ensuring that prompts, placeholders, and system-provided text (e.g., cancel button labels) adapt to the user’s preferred language settings for a native and accessible experience.
 
 ## Why Use SearchBar?
 
@@ -36,8 +36,9 @@ The `SearchBar` package improves upon Apple’s default search bars with:
 - **Advanced Features**: Search tokens (iOS 16.0+, visionOS 1.0+) and suggestions (iOS 16.0+, visionOS 1.0+, macOS 15.0+).
 - **Accessibility**: Supports VoiceOver and Dynamic Type for inclusive experiences.
 - **Platform Consistency**: Unified SwiftUI API with native behaviors (e.g., capsule styling on visionOS).
+- **Full Localization**: Translated into every language available on iOS, iPadOS, macOS, and visionOS, ensuring seamless integration with system language settings for prompts, buttons, and other UI elements.
 
-These features enable developers to create accessible, customized search bars efficiently.
+These features enable developers to create accessible, customized, and globally adaptable search bars efficiently.
 
 ## Customization Modifiers
 
@@ -110,6 +111,7 @@ The `SearchBar` package is ideal for:
 - **Branded Apps**: Matching app design with custom colors and styles.
 - **Specialized Inputs**: Apps requiring specific keyboard configurations.
 - **Cross-Platform Apps**: Consistent search across iOS, iPadOS, visionOS, and macOS.
+- **Global Applications**: Supporting every available system language for prompts, buttons, and UI elements, ensuring a native experience worldwide.
 
 ## Next Steps
 
