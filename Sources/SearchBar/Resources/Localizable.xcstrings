@@ -1,9 +1,18 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+      "localizations" : {
+        "zu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
     "SearchBarTranslation.Prompt" : {
       "comment" : "Default Prompt for SearchBar",
-      "extractionState" : "extracted_with_value",
       "localizations" : {
         "af" : {
           "stringUnit" : {

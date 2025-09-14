@@ -40,7 +40,7 @@ struct SearchFieldView: View{
         Group{
             if #available(iOS 17.0, macOS 14.0, *) {
                 ZStack{
-                    TextField(prompt, text: $text)
+                    TextField(prompt ?? SearchBarTranslation.prompt.value, text: $text)
                         .textFieldStyle(.plain)
                         .focused($isEditing)
                         .foregroundStyle(style.textColor ?? .primary)
