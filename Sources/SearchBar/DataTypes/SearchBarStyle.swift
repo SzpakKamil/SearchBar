@@ -65,7 +65,9 @@ public struct SearchBarStyle: Equatable, Hashable{
             self.usesCustomBackground = true
         }else{
             self.usesCustomBackground = false
-            #if !os(macOS)
+            #if os(visionOS)
+            self.backgroundColor = .clear
+            #elseif !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else
             self.backgroundColor = Color(NSColor.quinaryLabel)
@@ -86,7 +88,13 @@ public struct SearchBarStyle: Equatable, Hashable{
             self.usesCustomBackground = true
         }else{
             self.usesCustomBackground = false
+            #if os(visionOS)
+            self.backgroundColor = .clear
+            #elseif !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
+            #else
+            self.backgroundColor = Color(NSColor.quinaryLabel)
+            #endif
         }
     }
     public init(style: SearchBarCornerStyle = .rounded, borderColor: Color? = nil, textColor: Color? = nil, tint: Color? = nil, tokenBackground: Color?, backgroundColor: Color? = nil) {
@@ -100,7 +108,13 @@ public struct SearchBarStyle: Equatable, Hashable{
             self.usesCustomBackground = true
         }else{
             self.usesCustomBackground = false
+            #if os(visionOS)
+            self.backgroundColor = .clear
+            #elseif !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
+            #else
+            self.backgroundColor = Color(NSColor.quinaryLabel)
+            #endif
         }
     }
     #endif
@@ -116,7 +130,9 @@ public struct SearchBarStyle: Equatable, Hashable{
             self.usesCustomBackground = true
         }else{
             self.usesCustomBackground = false
-            #if !os(macOS)
+            #if os(visionOS)
+            self.backgroundColor = .clear
+            #elseif !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else
             self.backgroundColor = Color(NSColor.quinaryLabel)
