@@ -49,6 +49,93 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        Customize the corner radius to match your iOS app's design aesthetic.
+
+        @TabNavigator {
+            @Tab("Capsule") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-iOS", alt: "Capsule") {
+                    Capsule
+                }
+            }
+            @Tab("Rounded") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-iOS", alt: "Rounded") {
+                    Rounded
+                }
+            }
+            @Tab("Rectangle") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-iOS", alt: "Rectangle") {
+                    Rectangle
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Select a corner style that compliments the iPadOS interface.
+
+        @TabNavigator {
+            @Tab("Capsule") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-iPadOS", alt: "Capsule") {
+                    Capsule
+                }
+            }
+            @Tab("Rounded") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-iPadOS", alt: "Rounded") {
+                    Rounded
+                }
+            }
+            @Tab("Rectangle") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-iPadOS", alt: "Rectangle") {
+                    Rectangle
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Adapt the search bar's shape to fit the macOS desktop environment.
+
+        @TabNavigator {
+            @Tab("Capsule") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-macOSTahoe", alt: "Capsule") {
+                    Capsule
+                }
+            }
+            @Tab("Rounded") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-macOSTahoe", alt: "Rounded") {
+                    Rounded
+                }
+            }
+            @Tab("Rectangle") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-macOSTahoe", alt: "Rectangle") {
+                    Rectangle
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Choose a style that enhances spatial computing.
+
+        @TabNavigator {
+            @Tab("Capsule") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-visionOS", alt: "Capsule") {
+                    Capsule
+                }
+            }
+            @Tab("Rounded") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-visionOS", alt: "Rounded") {
+                    Rounded
+                }
+            }
+            @Tab("Rectangle") {
+                @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-visionOS", alt: "Rectangle") {
+                    Rectangle
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBar``

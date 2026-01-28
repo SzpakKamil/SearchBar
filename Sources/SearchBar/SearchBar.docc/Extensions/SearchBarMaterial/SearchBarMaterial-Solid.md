@@ -37,6 +37,24 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        @Image(source: "Documentation-SearchBarStyle-Material-Solid-iOS", alt: "Solid Material") {
+            Solid Material
+        }
+    }
+    @Tab("iPadOS") {
+        @Image(source: "Documentation-SearchBarStyle-Material-Solid-iPadOS", alt: "Solid Material") {
+            Solid Material
+        }
+    }
+    @Tab("macOS") {
+        @Image(source: "Documentation-SearchBarStyle-Material-Solid-macOSTahoe", alt: "Solid Material") {
+            Solid Material
+        }
+    }
+}
+
 ## Related Types
 - ``SearchBar/SearchBar/searchBarMaterial(_:)``
 - ``SearchBar``

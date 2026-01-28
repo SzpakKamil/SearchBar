@@ -39,6 +39,29 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-iOS", alt: "Rectangle") {
+            Rectangle
+        }
+    }
+    @Tab("iPadOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-iPadOS", alt: "Rectangle") {
+            Rectangle
+        }
+    }
+    @Tab("macOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-macOSTahoe", alt: "Rectangle") {
+            Rectangle
+        }
+    }
+    @Tab("visionOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-visionOS", alt: "Rectangle") {
+            Rectangle
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarCornerStyle``

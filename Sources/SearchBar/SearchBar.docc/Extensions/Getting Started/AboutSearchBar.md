@@ -23,6 +23,29 @@ Learn about the customizable SwiftUI `SearchBar` package for enhanced search fun
 
 The `SearchBar` package extends SwiftUI’s default search bar, offering flexible customization and robust functionality. Supporting iOS, iPadOS, visionOS, and macOS, it integrates native components (`UISearchBar` for iOS/visionOS, and on macOS, it recreates `NSSearchField` from AppKit using SwiftUI components) into a unified SwiftUI API for seamless, platform-specific solutions. The package is fully localized, supporting translations for every language available on the supported operating systems, ensuring that prompts, placeholders, and system-provided text (e.g., cancel button labels) adapt to the user’s preferred language settings for a native and accessible experience.
 
+@TabNavigator {
+    @Tab("iOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-iOS", alt: "SearchBar") {
+            Rounded
+        }
+    }
+    @Tab("iPadOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-iPadOS", alt: "SearchBar") {
+            Rounded
+        }
+    }
+    @Tab("macOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-macOSTahoe", alt: "SearchBar") {
+            Rounded
+        }
+    }
+    @Tab("visionOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-visionOS", alt: "SearchBar") {
+            Rounded
+        }
+    }
+}
+
 ## Why Use SearchBar?
 
 The `SearchBar` package improves upon Apple’s default search bars with:

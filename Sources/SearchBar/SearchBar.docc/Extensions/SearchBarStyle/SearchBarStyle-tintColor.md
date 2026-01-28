@@ -38,6 +38,73 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        Apply a tint color to highlight interactive elements.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Default-iOS", alt: "Default Tint Color") {
+                    Default Tint Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Custom-iOS", alt: "Custom Tint Color") {
+                    Custom Tint Color
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Use tint colors to draw attention to search actions and focus.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Default-iPadOS", alt: "Default Tint Color") {
+                    Default Tint Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Custom-iPadOS", alt: "Custom Tint Color") {
+                    Custom Tint Color
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Set the tint color to align with the system accent or your app's brand.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Default-macOSTahoe", alt: "Default Tint Color") {
+                    Default Tint Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Custom-macOSTahoe", alt: "Custom Tint Color") {
+                    Custom Tint Color
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Configure the tint color for clear interactive cues in spatial computing.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Default-visionOS", alt: "Default Tint Color") {
+                    Default Tint Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Custom-visionOS", alt: "Custom Tint Color") {
+                    Custom Tint Color
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarStyle``

@@ -56,3 +56,69 @@ struct ContentView: View {
     }
 }
 ```
+
+@TabNavigator {
+    @Tab("iOS") {
+        Choose from three distinct scales to optimize the SearchBar's size for your iOS application's layout.
+
+        @TabNavigator {
+            @Tab("Small") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Small-iOS", alt: "Small Scale") {
+                    Small Scale
+                }
+            }
+            @Tab("Medium") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Medium-iOS", alt: "Medium Scale") {
+                    Medium Scale
+                }
+            }
+            @Tab("Large") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Large-iOS", alt: "Large Scale") {
+                    Large Scale
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        On iPadOS, you can adjust the SearchBar scale to better fit the larger display and various multitasking modes.
+
+        @TabNavigator {
+            @Tab("Small") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Small-iPadOS", alt: "Small Scale") {
+                    Small Scale
+                }
+            }
+            @Tab("Medium") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Medium-iPadOS", alt: "Medium Scale") {
+                    Medium Scale
+                }
+            }
+            @Tab("Large") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Large-iPadOS", alt: "Large Scale") {
+                    Large Scale
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Use these scales to ensure the SearchBar integrates seamlessly with the desktop environment.
+
+        @TabNavigator {
+            @Tab("Small") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Small-macOSTahoe", alt: "Small Scale") {
+                    Small Scale
+                }
+            }
+            @Tab("Medium") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Medium-macOSTahoe", alt: "Medium Scale") {
+                    Medium Scale
+                }
+            }
+            @Tab("Large") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Large-macOSTahoe", alt: "Large Scale") {
+                    Large Scale
+                }
+            }
+        }
+    }
+}

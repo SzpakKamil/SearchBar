@@ -52,6 +52,57 @@ struct ContentView: View {
 
 This example provides a dynamic list of suggested tokens and manages current tokens to enable selection functionality.
 
+@TabNavigator {
+    @Tab("iOS") {
+        Provide suggested tokens to guide users through available filters.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Default-iOS", alt: "Default Suggested Tokens") {
+                    Default Suggested Tokens
+                }
+            }
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Enabled-iOS", alt: "Enabled Suggested Tokens") {
+                    Enabled Suggested Tokens
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Offer suggested tokens to enhance the search experience on larger screens.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Default-iPadOS", alt: "Default Suggested Tokens") {
+                    Default Suggested Tokens
+                }
+            }
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Enabled-iPadOS", alt: "Enabled Suggested Tokens") {
+                    Enabled Suggested Tokens
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Configure suggested tokens for intuitive spatial filtering suggestions.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Default-visionOS", alt: "Default Suggested Tokens") {
+                    Default Suggested Tokens
+                }
+            }
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Enabled-visionOS", alt: "Enabled Suggested Tokens") {
+                    Enabled Suggested Tokens
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarToken``

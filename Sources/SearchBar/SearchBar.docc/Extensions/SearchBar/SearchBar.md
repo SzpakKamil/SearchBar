@@ -61,6 +61,29 @@ struct ContentView: View {
 
 This example creates a `SearchBar` with a capsule style, a custom icon, and event handling for clearing and text changes. It also includes platform-specific modifiers for iOS/visionOS.
 
+@TabNavigator {
+    @Tab("iOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-iOS", alt: "Capsule SearchBar") {
+            Capsule SearchBar
+        }
+    }
+    @Tab("iPadOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-iPadOS", alt: "Capsule SearchBar") {
+            Capsule SearchBar
+        }
+    }
+    @Tab("macOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-macOSTahoe", alt: "Capsule SearchBar") {
+            Capsule SearchBar
+        }
+    }
+    @Tab("visionOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-visionOS", alt: "Capsule SearchBar") {
+            Capsule SearchBar
+        }
+    }
+}
+
 ## Topics
 
 ### Initializers

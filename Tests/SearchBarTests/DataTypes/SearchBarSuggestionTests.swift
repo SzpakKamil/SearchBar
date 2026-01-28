@@ -265,7 +265,7 @@ struct SearchBarSuggestionTests {
         #expect(uiSuggestionWithNilDescription.localizedDescription == nil, "Expected UISearchSuggestionItem localizedDescription to be nil when description is nil")
         
         #if os(iOS)
-        // Verify icon behavior on iOS
+        // Verify icon behavior
         let expectedIcon = UIImage(systemName: "magnifyingglass")
         #expect(uiSuggestionWithIcon.iconImage?.pngData() == expectedIcon?.pngData(), "Expected UISearchSuggestionItem iconImage to match the system image for 'magnifyingglass' when systemName is present")
         #expect(uiSuggestionWithoutIcon.iconImage == nil, "Expected UISearchSuggestionItem iconImage to be nil when systemName is nil")

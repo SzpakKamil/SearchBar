@@ -37,3 +37,21 @@ struct ContentView: View {
     }
 }
 ```
+
+@TabNavigator {
+    @Tab("iOS") {
+        @Image(source: "Documentation-SearchBarStyle-Scale-Large-iOS", alt: "Large Scale") {
+            Large Scale
+        }
+    }
+    @Tab("iPadOS") {
+        @Image(source: "Documentation-SearchBarStyle-Scale-Large-iPadOS", alt: "Large Scale") {
+            Large Scale
+        }
+    }
+    @Tab("macOS") {
+        @Image(source: "Documentation-SearchBarStyle-Scale-Large-macOSTahoe", alt: "Large Scale") {
+            Large Scale
+        }
+    }
+}

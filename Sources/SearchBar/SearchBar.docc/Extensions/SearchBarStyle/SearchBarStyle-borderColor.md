@@ -40,6 +40,25 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("macOS") {
+        Adjust the border color to enhance the search bar's visual boundaries.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BorderColor-Default-macOSTahoe", alt: "Default Border Color") {
+                    Default Border Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BorderColor-Custom-macOSTahoe", alt: "Custom Border Color") {
+                    Custom Border Color
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarStyle``

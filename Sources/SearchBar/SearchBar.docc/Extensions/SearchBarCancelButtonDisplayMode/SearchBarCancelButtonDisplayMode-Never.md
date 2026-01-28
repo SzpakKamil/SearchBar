@@ -41,6 +41,19 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Never-iOS", alt: "Never") {
+            Never
+        }
+    }
+    @Tab("iPadOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Never-iPadOS", alt: "Never") {
+            Never
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarCancelButtonDisplayMode``

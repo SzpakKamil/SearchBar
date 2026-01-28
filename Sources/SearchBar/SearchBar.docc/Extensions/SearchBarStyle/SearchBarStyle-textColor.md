@@ -38,6 +38,73 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        Configure the text color for optimal contrast and branding.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Default-iOS", alt: "Default Text Color") {
+                    Default Text Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Custom-iOS", alt: "Custom Text Color") {
+                    Custom Text Color
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Set the text color to match your application's typography.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Default-iPadOS", alt: "Default Text Color") {
+                    Default Text Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Custom-iPadOS", alt: "Custom Text Color") {
+                    Custom Text Color
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Adjust the text color to ensure clarity across various window styles.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Default-macOSTahoe", alt: "Default Text Color") {
+                    Default Text Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Custom-macOSTahoe", alt: "Custom Text Color") {
+                    Custom Text Color
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Configure text color for visibility against varied spatial backgrounds.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Default-visionOS", alt: "Default Text Color") {
+                    Default Text Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Custom-visionOS", alt: "Custom Text Color") {
+                    Custom Text Color
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarStyle``

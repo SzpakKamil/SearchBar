@@ -45,6 +45,51 @@ struct ContentView: View {
 
 This example ensures the cancel button is always visible.
 
+@TabNavigator {
+    @Tab("iOS") {
+        Configure the cancel button's appearance to improve usability.
+
+        @TabNavigator {
+            @Tab("Always") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Always-iOS", alt: "Always") {
+                    Always
+                }
+            }
+            @Tab("While Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-WhileEditing-iOS", alt: "While Editing") {
+                    While Editing
+                }
+            }
+            @Tab("Never") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Never-iOS", alt: "Never") {
+                    Never
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Adjust how the cancel button is shown to suit larger layouts.
+
+        @TabNavigator {
+            @Tab("Always") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Always-iPadOS", alt: "Always") {
+                    Always
+                }
+            }
+            @Tab("While Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-WhileEditing-iPadOS", alt: "While Editing") {
+                    While Editing
+                }
+            }
+            @Tab("Never") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Never-iPadOS", alt: "Never") {
+                    Never
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``

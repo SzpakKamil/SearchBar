@@ -38,6 +38,73 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        Adjust the corner radius to achieve the desired level of roundness for your search bar.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-iOS", alt: "Default Corner Radius") {
+                    Default Corner Radius
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Custom-iOS", alt: "Custom Corner Radius") {
+                    Custom Corner Radius
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Set a custom corner radius to match your app's layout and design.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-iPadOS", alt: "Default Corner Radius") {
+                    Default Corner Radius
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Custom-iPadOS", alt: "Custom Corner Radius") {
+                    Custom Corner Radius
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Configure the corner radius to better integrate with desktop window elements.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-macOSTahoe", alt: "Default Corner Radius") {
+                    Default Corner Radius
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Custom-macOSTahoe", alt: "Custom Corner Radius") {
+                    Custom Corner Radius
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Select a corner radius that enhances the spatial computing feel.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-visionOS", alt: "Default Corner Radius") {
+                    Default Corner Radius
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Custom-visionOS", alt: "Custom Corner Radius") {
+                    Custom Corner Radius
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarStyle``

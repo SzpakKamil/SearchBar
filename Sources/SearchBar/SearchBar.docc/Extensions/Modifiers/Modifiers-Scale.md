@@ -41,5 +41,71 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        Configure the search bar scale to match your iOS application's layout.
+
+        @TabNavigator {
+            @Tab("Small") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Small-iOS", alt: "Small Scale") {
+                    Small Scale
+                }
+            }
+            @Tab("Medium") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Medium-iOS", alt: "Medium Scale") {
+                    Medium Scale
+                }
+            }
+            @Tab("Large") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Large-iOS", alt: "Large Scale") {
+                    Large Scale
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Adjust the scale for optimal readability and accessibility.
+
+        @TabNavigator {
+            @Tab("Small") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Small-iPadOS", alt: "Small Scale") {
+                    Small Scale
+                }
+            }
+            @Tab("Medium") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Medium-iPadOS", alt: "Medium Scale") {
+                    Medium Scale
+                }
+            }
+            @Tab("Large") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Large-iPadOS", alt: "Large Scale") {
+                    Large Scale
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Scale the search bar to fit various desktop interface densities.
+
+        @TabNavigator {
+            @Tab("Small") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Small-macOSTahoe", alt: "Small Scale") {
+                    Small Scale
+                }
+            }
+            @Tab("Medium") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Medium-macOSTahoe", alt: "Medium Scale") {
+                    Medium Scale
+                }
+            }
+            @Tab("Large") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Large-macOSTahoe", alt: "Large Scale") {
+                    Large Scale
+                }
+            }
+        }
+    }
+}
+
 ## Related Types
 - ``SearchBar/SearchBarScale``

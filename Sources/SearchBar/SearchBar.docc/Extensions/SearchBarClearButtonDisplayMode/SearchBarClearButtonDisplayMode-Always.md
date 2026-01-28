@@ -38,6 +38,29 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-iOS", alt: "Always") {
+            Always
+        }
+    }
+    @Tab("iPadOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-iPadOS", alt: "Always") {
+            Always
+        }
+    }
+    @Tab("macOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-macOSTahoe", alt: "Always") {
+            Always
+        }
+    }
+    @Tab("visionOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-visionOS", alt: "Always") {
+            Always
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarClearButtonDisplayMode``

@@ -45,6 +45,41 @@ struct ContentView: View {
 
 This example optimizes the keyboard for email input.
 
+@TabNavigator {
+    @Tab("iOS") {
+        Configure the text content type to enable smarter autofill and keyboard suggestions.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarKeyboard-ContentType-Default-iOS", alt: "Default Content Type") {
+                    Default Content Type
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarKeyboard-ContentType-Custom-iOS", alt: "Custom Content Type") {
+                    Custom Content Type
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Adjust the text content type for enhanced input accuracy and predictive text.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarKeyboard-ContentType-Default-iPadOS", alt: "Default Content Type") {
+                    Default Content Type
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarKeyboard-ContentType-Custom-iPadOS", alt: "Custom Content Type") {
+                    Custom Content Type
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBar/SearchBar/searchBarKeyboardType(_:)``

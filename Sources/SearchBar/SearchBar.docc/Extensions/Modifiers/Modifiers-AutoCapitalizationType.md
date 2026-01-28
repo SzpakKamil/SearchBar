@@ -45,6 +45,87 @@ struct ContentView: View {
 
 This example disables autocapitalization, ensuring all text remains lowercase as typed.
 
+@TabNavigator {
+    @Tab("iOS") {
+        Configure the capitalization behavior for a more efficient typing experience.
+
+        @TabNavigator {
+            @Tab("None") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-None-iOS", alt: "No") {
+                    No
+                }
+            }
+            @Tab("Sentences") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-Sentences-iOS", alt: "Sentence") {
+                    Sentence
+                }
+            }
+            @Tab("Words") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-Words-iOS", alt: "Word") {
+                    Word
+                }
+            }
+            @Tab("All Characters") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-AllCharacters-iOS", alt: "All Characters") {
+                    All Characters
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Adjust the capitalization behavior to suit the larger keyboard and screen.
+
+        @TabNavigator {
+            @Tab("None") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-None-iPadOS", alt: "No") {
+                    No
+                }
+            }
+            @Tab("Sentences") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-Sentences-iPadOS", alt: "Sentence") {
+                    Sentence
+                }
+            }
+            @Tab("Words") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-Words-iPadOS", alt: "Word") {
+                    Word
+                }
+            }
+            @Tab("All Characters") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-AllCharacters-iPadOS", alt: "All Characters") {
+                    All Characters
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Customize the capitalization for a more precise spatial interaction.
+
+        @TabNavigator {
+            @Tab("None") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-None-visionOS", alt: "No") {
+                    No
+                }
+            }
+            @Tab("Sentences") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-Sentences-visionOS", alt: "Sentence") {
+                    Sentence
+                }
+            }
+            @Tab("Words") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-Words-visionOS", alt: "Word") {
+                    Word
+                }
+            }
+            @Tab("All Characters") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-AllCharacters-visionOS", alt: "All Characters") {
+                    All Characters
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBar/SearchBar/searchBarAutoCorrectionType(_:)``

@@ -45,6 +45,57 @@ struct ContentView: View {
 
 This example disables autocorrection to prevent automatic text changes.
 
+@TabNavigator {
+    @Tab("iOS") {
+        Configure the autocorrection behavior to optimize text input.
+
+        @TabNavigator {
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Enabled-iOS", alt: "Autocorrection Enabled") {
+                    Autocorrection Enabled
+                }
+            }
+            @Tab("Disabled") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Disabled-iOS", alt: "Autocorrection Disabled") {
+                    Autocorrection Disabled
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Adjust the autocorrection behavior for a more personalized experience.
+
+        @TabNavigator {
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Enabled-iPadOS", alt: "Autocorrection Enabled") {
+                    Autocorrection Enabled
+                }
+            }
+            @Tab("Disabled") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Disabled-iPadOS", alt: "Autocorrection Disabled") {
+                    Autocorrection Disabled
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Customize the autocorrection for improved text entry accuracy.
+
+        @TabNavigator {
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Enabled-visionOS", alt: "Autocorrection Enabled") {
+                    Autocorrection Enabled
+                }
+            }
+            @Tab("Disabled") {
+                @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Disabled-visionOS", alt: "Autocorrection Disabled") {
+                    Autocorrection Disabled
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBar/SearchBar/searchBarAutoCapitalizationType(_:)``

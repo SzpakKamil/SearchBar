@@ -47,3 +47,111 @@ struct ContentView: View {
     }
 }
 ```
+
+@TabNavigator {
+    @Tab("iOS") {
+        Configure when the clear button appears to streamline user interactions.
+
+        @TabNavigator {
+            @Tab("Always") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-iOS", alt: "Always") {
+                    Always
+                }
+            }
+            @Tab("While Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-WhileEditing-iOS", alt: "While Editing") {
+                    While Editing
+                }
+            }
+            @Tab("Unless Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-UnlessEditing-iOS", alt: "Unless Editing") {
+                    Unless Editing
+                }
+            }
+            @Tab("Never") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Never-iOS", alt: "Never") {
+                    Never
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Adjust the clear button's visibility to better suit the larger screen and application layout.
+
+        @TabNavigator {
+            @Tab("Always") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-iPadOS", alt: "Always") {
+                    Always
+                }
+            }
+            @Tab("While Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-WhileEditing-iPadOS", alt: "While Editing") {
+                    While Editing
+                }
+            }
+            @Tab("Unless Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-UnlessEditing-iPadOS", alt: "Unless Editing") {
+                    Unless Editing
+                }
+            }
+            @Tab("Never") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Never-iPadOS", alt: "Never") {
+                    Never
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Customize the clear button's behavior for a consistent desktop experience.
+
+        @TabNavigator {
+            @Tab("Always") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-macOSTahoe", alt: "Always") {
+                    Always
+                }
+            }
+            @Tab("While Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-WhileEditing-macOSTahoe", alt: "While Editing") {
+                    While Editing
+                }
+            }
+            @Tab("Unless Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-UnlessEditing-macOSTahoe", alt: "Unless Editing") {
+                    Unless Editing
+                }
+            }
+            @Tab("Never") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Never-macOSTahoe", alt: "Never") {
+                    Never
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Choose a clear button display mode that enhances the spatial computing experience.
+
+        @TabNavigator {
+            @Tab("Always") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-visionOS", alt: "Always") {
+                    Always
+                }
+            }
+            @Tab("While Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-WhileEditing-visionOS", alt: "While Editing") {
+                    While Editing
+                }
+            }
+            @Tab("Unless Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-UnlessEditing-visionOS", alt: "Unless Editing") {
+                    Unless Editing
+                }
+            }
+            @Tab("Never") {
+                @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Never-visionOS", alt: "Never") {
+                    Never
+                }
+            }
+        }
+    }
+}
+

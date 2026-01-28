@@ -38,6 +38,73 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        Customize the background color to match your application's theme.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-iOS", alt: "Default Background") {
+                    Default Background
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Custom-iOS", alt: "Custom Background") {
+                    Custom Background
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Set the background color to complement the large screen interface.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-iPadOS", alt: "Default Background") {
+                    Default Background
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Custom-iPadOS", alt: "Custom Background") {
+                    Custom Background
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Adjust the background color to fit the desktop environment.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-macOSTahoe", alt: "Default Background") {
+                    Default Background
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Custom-macOSTahoe", alt: "Custom Background") {
+                    Custom Background
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Choose a background color that enhances visibility in a spatial environment.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-visionOS", alt: "Default Background") {
+                    Default Background
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Custom-visionOS", alt: "Custom Background") {
+                    Custom Background
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarStyle``

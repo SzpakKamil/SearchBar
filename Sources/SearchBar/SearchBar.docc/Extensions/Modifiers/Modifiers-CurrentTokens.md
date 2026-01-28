@@ -46,6 +46,57 @@ struct ContentView: View {
 
 This example binds a dynamic list of tokens to the `SearchBar`.
 
+@TabNavigator {
+    @Tab("iOS") {
+        Manage current tokens to provide a structured filtering experience.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Default-iOS", alt: "Default Tokens") {
+                    Default Tokens
+                }
+            }
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Enabled-iOS", alt: "Enabled Tokens") {
+                    Enabled Tokens
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Adjust current tokens for better organization in larger layouts.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Default-iPadOS", alt: "Default Tokens") {
+                    Default Tokens
+                }
+            }
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Enabled-iPadOS", alt: "Enabled Tokens") {
+                    Enabled Tokens
+                }
+            }
+        }
+    }
+    @Tab("visionOS") {
+        Configure current tokens for spatial filtering interactions.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Default-visionOS", alt: "Default Tokens") {
+                    Default Tokens
+                }
+            }
+            @Tab("Enabled") {
+                @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Enabled-visionOS", alt: "Enabled Tokens") {
+                    Enabled Tokens
+                }
+            }
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarToken``

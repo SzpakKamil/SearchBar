@@ -38,6 +38,29 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-WhileEditing-iOS", alt: "While Editing") {
+            While Editing
+        }
+    }
+    @Tab("iPadOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-WhileEditing-iPadOS", alt: "While Editing") {
+            While Editing
+        }
+    }
+    @Tab("macOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-WhileEditing-macOSTahoe", alt: "While Editing") {
+            While Editing
+        }
+    }
+    @Tab("visionOS") {
+        @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-WhileEditing-visionOS", alt: "While Editing") {
+            While Editing
+        }
+    }
+}
+
 ## See Also
 
 - ``SearchBarClearButtonDisplayMode``

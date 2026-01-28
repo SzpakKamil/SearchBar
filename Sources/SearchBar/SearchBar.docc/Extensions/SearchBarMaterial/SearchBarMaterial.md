@@ -43,6 +43,57 @@ struct ContentView: View {
 }
 ```
 
+@TabNavigator {
+    @Tab("iOS") {
+        Select the material that best compliments your iOS app's design language.
+
+        @TabNavigator {
+            @Tab("Solid") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Solid-iOS", alt: "Solid Material") {
+                    Solid Material
+                }
+            }
+            @Tab("Glass") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Glass-iOS", alt: "Glass Material") {
+                    Glass Material
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Choose a material that enhances the visual hierarchy.
+
+        @TabNavigator {
+            @Tab("Solid") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Solid-iPadOS", alt: "Solid Material") {
+                    Solid Material
+                }
+            }
+            @Tab("Glass") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Glass-iPadOS", alt: "Glass Material") {
+                    Glass Material
+                }
+            }
+        }
+    }
+    @Tab("macOS") {
+        Apply the appropriate material to integrate with the macOS desktop aesthetic.
+
+        @TabNavigator {
+            @Tab("Solid") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Solid-macOSTahoe", alt: "Solid Material") {
+                    Solid Material
+                }
+            }
+            @Tab("Glass") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Glass-macOSTahoe", alt: "Glass Material") {
+                    Glass Material
+                }
+            }
+        }
+    }
+}
+
 ## Related Types
 - ``SearchBar/SearchBar/searchBarMaterial(_:)``
 - ``SearchBar``

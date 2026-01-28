@@ -43,3 +43,49 @@ struct ContentView: View {
     }
 }
 ```
+
+@TabNavigator {
+    @Tab("iOS") {
+        Configure when the cancel button appears to streamline user interactions.
+
+        @TabNavigator {
+            @Tab("Always") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Always-iOS", alt: "Always") {
+                    Always
+                }
+            }
+            @Tab("While Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-WhileEditing-iOS", alt: "While Editing") {
+                    While Editing
+                }
+            }
+            @Tab("Never") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Never-iOS", alt: "Never") {
+                    Never
+                }
+            }
+        }
+    }
+    @Tab("iPadOS") {
+        Adjust the cancel button's visibility to better suit the larger screen and application layout.
+
+        @TabNavigator {
+            @Tab("Always") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Always-iPadOS", alt: "Always") {
+                    Always
+                }
+            }
+            @Tab("While Editing") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-WhileEditing-iPadOS", alt: "While Editing") {
+                    While Editing
+                }
+            }
+            @Tab("Never") {
+                @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Never-iPadOS", alt: "Never") {
+                    Never
+                }
+            }
+        }
+    }
+}
+
