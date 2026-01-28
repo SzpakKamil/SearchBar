@@ -69,4 +69,3 @@ This creates a basic search bar that prints the search text when submitted.
 ## Next Steps
 
 - Build a sample app with <doc:FruitsList>.
-- Learn framework with <doc:SearchBarTutorial> tutorial.

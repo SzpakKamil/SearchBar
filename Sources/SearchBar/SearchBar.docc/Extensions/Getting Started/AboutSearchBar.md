@@ -140,5 +140,4 @@ The `SearchBar` package is ideal for:
 
 - Learn to integrate the package in <doc:SetUp>.
 - Explore modifier details in <doc:Modifiers>.
-- Learn framework with <doc:SearchBarTutorial> tutorial.
 - Build a sample app with <doc:FruitsList>.

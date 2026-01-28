@@ -32,17 +32,7 @@ Whether you’re adding token-based filtering, real-time suggestions, or custom 
 @Links(visualStyle: detailedGrid) {
     - <doc:AboutSearchBar>
     - <doc:SetUp>
-}
-
-## Resources
-
-@Links(visualStyle: detailedGrid) {
     - <doc:Modifiers>
-}
-
-## Sample Projects
-
-@Links(visualStyle: detailedGrid) {
     - <doc:FruitsList> 
 }
 
@@ -52,7 +42,6 @@ Whether you’re adding token-based filtering, real-time suggestions, or custom 
 - <doc:AboutSearchBar>
 - <doc:SetUp>
 - <doc:Modifiers>
-- <doc:SearchBarTutorial>
 
 
 ### Structures
