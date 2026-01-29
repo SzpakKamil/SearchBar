@@ -8,7 +8,7 @@
 
 **SearchBar** is a SwiftUI package that provides a highly customizable, native search bar component for iOS, iPadOS, macOS, and visionOS. It leverages `UISearchBar` for iOS, iPadOS, and visionOS, and a SwiftUI-reimplemented `NSSearchField` for macOS, ensuring a seamless, platform-specific experience. With advanced customization options, accessibility features, and support for search tokens and suggestions, `SearchBar` is ideal for creating modern, user-focused search interfaces.
 
-For detailed documentation, visit the [SearchBar Documentation](https://kamilszpak.com/documentation/searchbar).
+For detailed documentation, visit the [SearchBar Documentation](https://documentation.kamilszpak.com/documentation/searchbar).
 
 ## Table of Contents
 
@@ -38,9 +38,9 @@ For detailed documentation, visit the [SearchBar Documentation](https://kamilszp
 Explore additional SearchBar resources to deepen your understanding:
 
 - **Documentation**: Dive into detailed SearchBar documentation.
-  - [Modifiers](https://kamilszpak.com/documentation/searchbar/modifiers)
-  - [Token Model](https://kamilszpak.com/documentation/searchbar/searchbartoken)
-  - [Suggestion Model](https://kamilszpak.com/documentation/searchbar/searchbarsuggestion)
+  - [Modifiers](https://documentation.kamilszpak.com/documentation/searchbar/modifiers)
+  - [Token Model](https://documentation.kamilszpak.com/documentation/searchbar/searchbartoken)
+  - [Suggestion Model](https://documentation.kamilszpak.com/documentation/searchbar/searchbarsuggestion)
 
 ## Usage
 
@@ -105,7 +105,7 @@ struct ContentView: View {
 
 ## Modifiers
 
-The `SearchBar` package offers a variety of modifiers to customize its appearance, behavior, and interaction. Below are examples from each category. For a complete list, refer to the [SearchBar Documentation](https://kamilszpak.com/documentation/searchbar/modifiers).
+The `SearchBar` package offers a variety of modifiers to customize its appearance, behavior, and interaction. Below are examples from each category. For a complete list, refer to the [SearchBar Documentation](https://documentation.kamilszpak.com/documentation/searchbar/modifiers).
 
 ### Appearance Modifiers
 
