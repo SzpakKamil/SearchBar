@@ -13,7 +13,6 @@ For detailed documentation, visit the [SearchBar Documentation](https://kamilszp
 ## Table of Contents
 
 - [Features](#features)
-- [Tutorial](#tutorial)
 - [Resources](#resources)
 - [Usage](#usage)
   - [Basic Usage](#basic-usage)
@@ -34,10 +33,6 @@ For detailed documentation, visit the [SearchBar Documentation](https://kamilszp
 - **Flexible Placement**: Embed in navigation bars, toolbars, or custom layouts without UIKit/AppKit dependencies.
 - **Built-in Unit Tests**: Includes comprehensive unit tests to ensure reliability and stability across all supported platforms.
 - **Full Localization**: Translated into every language available on iOS, iPadOS, macOS, and visionOS, ensuring seamless integration with system language settings for prompts, buttons, and other UI elements.
-
-## Tutorial
-
-Check out the comprehensive tutorial at [SearchBar Tutorial](https://kamilszpak.com/tutorials/searchbartutorial). The tutorial guides you through building a dynamic **Searcher app**, focusing on intuitive search and filtering.
 
 ## Resources
 Explore additional SearchBar resources to deepen your understanding:

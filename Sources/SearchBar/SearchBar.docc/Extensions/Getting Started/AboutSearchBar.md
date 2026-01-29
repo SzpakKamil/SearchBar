@@ -50,7 +50,7 @@ The `SearchBar` package extends SwiftUI’s default search bar, offering flexibl
 
 The `SearchBar` package improves upon Apple’s default search bars with:
 
-- **Detailed Documentation**: Swift DocC with tutorials and API references for easy adoption.
+- **Detailed Documentation**: Swift DocC with API references for easy adoption.
 - **Reliable Testing**: Unit and UI tests ensure stability across platforms.
 - **Flexible Placement**: Embed in navigation bars, toolbars, or custom views without UIKit/AppKit.
 - **Custom Styling**: Modifiers for colors, borders, and corner styles to align with app design.
