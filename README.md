@@ -167,6 +167,19 @@ dependencies: [
 2. Enter the URL: `https://github.com/SzpakKamil/SearchBar.git`.
 3. Select version **2.1.0** or later.
 
+### Agent Skill
+You can install the SearchBar skill for your CLI agent to get expert guidance on SearchBar directly in your terminal.
+
+#### Using skills.sh:
+```bash
+npx skills add https://github.com/SzpakKamil/AgentSkills --skill SearchBar
+```
+
+#### Using ClawdHub:
+```bash
+npx dlx clawdhub@latest install searchbar
+```
+
 ## Requirements
 
 - **iOS**: 14.0+

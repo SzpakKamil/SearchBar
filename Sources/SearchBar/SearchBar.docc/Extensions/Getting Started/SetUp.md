@@ -23,6 +23,19 @@ Learn how to integrate the `SearchBar` package into your SwiftUI project.
 
 The `SearchBar` package provides a customizable SwiftUI search bar for iOS, iPadOS, macOS, and visionOS. This guide explains how to add the package using Swift Package Manager (SPM).
 
+## Installing Agent Skill
+You can install the SearchBar skill for your CLI agent to get expert guidance on SearchBar directly in your terminal.
+
+### Using skills.sh:
+```bash
+npx skills add https://github.com/SzpakKamil/AgentSkills --skill SearchBar
+```
+
+### Using ClawdHub:
+```bash
+npx dlx clawdhub@latest install searchbar
+```
+
 ## Adding SearchBar to Your Project
 
 Add the `SearchBar` package to your project via Swift Package Manager:
