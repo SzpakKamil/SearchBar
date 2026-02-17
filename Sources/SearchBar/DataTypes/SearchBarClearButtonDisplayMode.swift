@@ -14,7 +14,7 @@ public enum SearchBarClearButtonDisplayMode: Identifiable, Codable, Comparable, 
     case whileEditing
     case unlessEditing
     
-    #if !os(macOS)
+    #if !os(macOS) && !os(watchOS)
     public var uiTextFieldViewMode: UITextField.ViewMode{
         switch self {
         case .always:

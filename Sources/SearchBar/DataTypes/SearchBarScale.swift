@@ -26,6 +26,16 @@ public enum SearchBarScale: Identifiable, Equatable, Hashable{
     
     @_documentation(visibility: internal)
     var cornerScale: Double{
+        #if os(tvOS)
+        switch self {
+        case .small:
+            return 1.75
+        case .medium:
+            return 2.25
+        case .large:
+            return 3
+        }
+        #else
         switch self {
         case .small:
             return 1
@@ -42,11 +52,12 @@ public enum SearchBarScale: Identifiable, Equatable, Hashable{
                 return 1.4
             }
         }
+        #endif
     }
     
     @_documentation(visibility: internal)
     var heightMultiplier: Double{
-        #if os(macOS)
+        #if os(macOS) || os(tvOS)
         switch self {
         case .small:
             1

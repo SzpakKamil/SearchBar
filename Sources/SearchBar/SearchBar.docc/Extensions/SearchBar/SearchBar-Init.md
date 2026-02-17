@@ -7,6 +7,8 @@ Initializes a `SearchBar` with a binding to the search text and an optional prom
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
+    @Available(tvOS, introduced: "14.0")
+    @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")

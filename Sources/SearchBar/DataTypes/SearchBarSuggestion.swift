@@ -15,7 +15,7 @@ public struct SearchBarSuggestion: Identifiable, Hashable, Comparable, Codable, 
     public let systemName: String?
     public let token: SearchBarToken?
     
-    #if !os(macOS)
+    #if !os(macOS) && !os(watchOS)
     @available(iOS 16.0, *)
     @MainActor
     public var suggestion: UISearchSuggestionItem {

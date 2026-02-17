@@ -52,12 +52,16 @@ struct SearchBarStyleTests {
     
     @Test("Custom style with token background and nil backgroundColor")
     func testCustomStyleWithTokenAndNilBackground() async throws {
-        #if !os(macOS)
+        #if !os(macOS) && !os(tvOS) && !os(watchOS)
         let customStyleWithToken = SearchBarStyle(cornerRadius: 15, textColor: .blue, tint: .red, tokenBackground: .pink)
         #expect(customStyleWithToken.cornerRadius == 15, "Expected custom style to have a corner radius of 15")
         #expect(customStyleWithToken.textColor == .blue, "Expected custom style to have a text color of blue")
         #expect(customStyleWithToken.tintColor == .red, "Expected custom style to have a tint color of red")
+        #if os(visionOS)
+        #expect(customStyleWithToken.backgroundColor == Color.clear, "Expected custom style to have default secondarySystemBackground on non-macOS when backgroundColor is nil")
+        #else
         #expect(customStyleWithToken.backgroundColor == Color(.secondarySystemBackground), "Expected custom style to have default secondarySystemBackground on non-macOS when backgroundColor is nil")
+        #endif
         #expect(customStyleWithToken.tokenBackground == .pink, "Expected custom style to have a token background color of pink")
         #expect(customStyleWithToken.usesCustomBackground == false, "Expected custom style to not use custom background when backgroundColor is nil")
         #endif
@@ -65,7 +69,7 @@ struct SearchBarStyleTests {
     
     @Test("Custom style with token background and capsule style")
     func testCustomStyleWithTokenAndCapsule() async throws {
-        #if !os(macOS)
+        #if !os(macOS) && !os(tvOS) && !os(watchOS)
         let customStyleWithTokenDefaultCornerRadius = SearchBarStyle(style: .capsule, textColor: .blue, tint: .red, tokenBackground: .pink, backgroundColor: .green)
         #expect(customStyleWithTokenDefaultCornerRadius.cornerRadius == SearchBarCornerStyle.capsule.cornerRadius, "Expected custom style to have the same corner radius as capsule style")
         #expect(customStyleWithTokenDefaultCornerRadius.textColor == .blue, "Expected custom style to have a text color of blue")
@@ -78,12 +82,17 @@ struct SearchBarStyleTests {
     
     @Test("Custom style with token background, capsule, and nil backgroundColor")
     func testCustomStyleWithTokenCapsuleAndNilBackground() async throws {
-        #if !os(macOS)
+        #if !os(macOS) && !os(tvOS) && !os(watchOS)
         let customStyleWithTokenDefaultCornerRadius = SearchBarStyle(style: .capsule, textColor: .blue, tint: .red, tokenBackground: .pink)
         #expect(customStyleWithTokenDefaultCornerRadius.cornerRadius == SearchBarCornerStyle.capsule.cornerRadius, "Expected custom style to have the same corner radius as capsule style")
         #expect(customStyleWithTokenDefaultCornerRadius.textColor == .blue, "Expected custom style to have a text color of blue")
         #expect(customStyleWithTokenDefaultCornerRadius.tintColor == .red, "Expected custom style to have a tint color of red")
+        #if os(visionOS)
+        #expect(customStyleWithTokenDefaultCornerRadius.backgroundColor == .clear, "Expected custom style to have default secondarySystemBackground on non-macOS when backgroundColor is nil")
+        #else
         #expect(customStyleWithTokenDefaultCornerRadius.backgroundColor == Color(.secondarySystemBackground), "Expected custom style to have default secondarySystemBackground on non-macOS when backgroundColor is nil")
+        #endif
+
         #expect(customStyleWithTokenDefaultCornerRadius.tokenBackground == .pink, "Expected custom style to have a token background color of pink")
         #expect(customStyleWithTokenDefaultCornerRadius.usesCustomBackground == false, "Expected custom style to not use custom background when backgroundColor is nil")
         #endif

@@ -242,7 +242,7 @@ struct SearchBarSuggestionTests {
     @available(iOS 16.0, *)
     @MainActor
     func testUISearchSuggestionItem() async throws {
-        #if !os(macOS)
+        #if !os(macOS) && !os(tvOS) && !os(watchOS)
         // Test with systemName present
         let suggestionWithIcon = SearchBarSuggestion(text: "Search", description: "Find something", systemName: "magnifyingglass")
         let uiSuggestionWithIcon = suggestionWithIcon.suggestion

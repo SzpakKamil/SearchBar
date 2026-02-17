@@ -6,10 +6,10 @@
 //
 
 import Foundation
-#if canImport(Testing)
+#if canImport(Testing) && !os(tvOS) && !os(watchOS)
 import Testing
 import SwiftUI
-#if !os(macOS) && !os(tvOS)
+#if !os(macOS)
 import UIKit
 #endif
 @testable import SearchBar

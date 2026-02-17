@@ -14,7 +14,7 @@ struct SearchFieldClearButton: View{
         }label: {
             Image(systemName: "xmark.circle.fill")
                 .conditionalModifier{ content in
-                    if #available(iOS 15.0, macOS 12.0, *) {
+                    if #available(iOS 15.0, macOS 12.0, tvOS 15.0, *) {
                         content
                             .foregroundStyle(style.tintColor ?? .primary)
                     } else {

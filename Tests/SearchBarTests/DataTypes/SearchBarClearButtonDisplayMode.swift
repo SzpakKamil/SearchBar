@@ -61,6 +61,7 @@ struct SearchBarClearButtonDisplayModeTests {
     }
     
     // MARK: - Tests for Computed Property (uiTextFieldViewMode on non-macOS)
+    #if !os(tvOS) && !os(macOS) && !os(watchOS)
     @Test("uiTextFieldViewMode computed property on supported platforms")
     func testUITextFieldViewMode() async throws {
         #if !os(macOS)
@@ -70,5 +71,6 @@ struct SearchBarClearButtonDisplayModeTests {
         #expect(SearchBarClearButtonDisplayMode.unlessEditing.uiTextFieldViewMode == .unlessEditing, "Expected .unlessEditing to map to UITextField.ViewMode.unlessEditing")
         #endif
     }
+    #endif
 }
 #endif

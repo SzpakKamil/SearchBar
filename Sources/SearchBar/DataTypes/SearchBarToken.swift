@@ -46,7 +46,7 @@ public struct SearchBarToken: Identifiable, Codable, Comparable, Hashable, Equat
         try container.encode(systemName, forKey: .systemName)
     }
     
-    #if !os(macOS) && !os(tvOS)
+    #if !os(macOS) && !os(tvOS) && !os(watchOS)
     @MainActor
     public var searchToken: UISearchToken {
         let token = UISearchToken(icon: UIImage(systemName: systemName), text: text)

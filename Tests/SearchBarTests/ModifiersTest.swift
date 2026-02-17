@@ -18,7 +18,7 @@ struct ModifiersTests {
         SearchBar(text: .constant(""))
     }
     
-    #if !os(macOS)
+    #if !os(macOS) && !os(tvOS) && !os(watchOS)
     // MARK: - Tests for Non-macOS Modifiers
     
     @Test("searchBarCancelButtonDisplayMode updates correctly")

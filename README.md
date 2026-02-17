@@ -31,7 +31,7 @@ For detailed documentation, visit the [SearchBar Documentation](https://document
 - **Accessibility**: Built-in support for VoiceOver and Dynamic Type ensures inclusivity.
 - **Platform Consistency**: Unified SwiftUI API with tailored behaviors (e.g., capsule styling on visionOS).
 - **Flexible Placement**: Embed in navigation bars, toolbars, or custom layouts without UIKit/AppKit dependencies.
-- **Built-in Unit Tests**: Includes comprehensive unit tests to ensure reliability and stability across all supported platforms.
+- **Built-in Unit Tests**: Includes unit tests to ensure reliability and stability across all supported platforms.
 - **Full Localization**: Translated into every language available on iOS, iPadOS, macOS, and visionOS, ensuring seamless integration with system language settings for prompts, buttons, and other UI elements.
 
 ## Resources

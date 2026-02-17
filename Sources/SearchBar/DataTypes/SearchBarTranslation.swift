@@ -13,7 +13,7 @@ enum SearchBarTranslation{
     var value: String{
         switch self{
         case .prompt:
-            if #available(iOS 15, macOS 12.0, *) {
+            if #available(iOS 15, macOS 12.0, tvOS 15.0, *) {
                 return String(
                     localized: "SearchBarTranslation.Prompt",
                     defaultValue: "Search",

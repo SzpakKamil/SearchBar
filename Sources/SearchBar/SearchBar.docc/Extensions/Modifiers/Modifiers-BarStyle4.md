@@ -5,6 +5,8 @@ Configures the `SearchBar`’s style with a specific corner radius and color set
 @Metadata {
     @SupportedLanguage(swift)
     @Available(macOS, introduced: "11.0")
+    @Available(tvOS, introduced: "14.0")
+    @Available(watchOS, introduced: "10.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
     @DocumentationExtension(mergeBehavior: override)

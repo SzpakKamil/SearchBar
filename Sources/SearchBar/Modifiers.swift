@@ -8,7 +8,7 @@
 import SwiftUI
 
 public extension SearchBar{
-    #if !os(macOS)
+    #if !os(macOS) && !os(tvOS) && !os(watchOS)
     func searchBarCancelButtonDisplayMode(_ mode: SearchBarCancelButtonDisplayMode) -> SearchBar {
         var copy = self
         copy.cancelButtonDisplayMode = mode
@@ -167,7 +167,7 @@ public extension SearchBar{
     func searchBarIconView(_ view: () -> some View) -> SearchBar {
         var copy = self
         var viewWrapped: AnyView
-        if #available(iOS 15.0, macOS 12.0, *) {
+        if #available(iOS 15.0, macOS 12.0, tvOS 15.0, *) {
             viewWrapped = AnyView(
                 view().foregroundStyle(.secondary)
             )
