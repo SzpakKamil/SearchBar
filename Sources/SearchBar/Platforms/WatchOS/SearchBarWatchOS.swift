@@ -79,6 +79,21 @@ public struct SearchBar: View {
             .onAppear{
                 searchChangeAction?("")
             }
+            .onChange(of: isFocused.wrappedValue){ newValue in
+                if isUsingCustomFocus {
+                    isKeyboardFocused = newValue
+                }
+            }
+            .onChange(of: isKeyboardFocused) { newValue in
+                if isUsingCustomFocus {
+                    isFocused.wrappedValue = newValue
+                }
+                if newValue {
+                    searchBeginEditingAction?()
+                } else {
+                    searchEndEditingAction?()
+                }
+            }
             .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
             .if{ content in
 #if compiler(>=6.2)
