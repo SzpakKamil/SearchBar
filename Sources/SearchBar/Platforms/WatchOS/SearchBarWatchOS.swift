@@ -8,12 +8,10 @@
 import SwiftUI
 
 #if os(watchOS)
-import WatchKit
-
 public struct SearchBar: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var text: String
-    @State private var isKeyboardFocused: Bool = false
+    @FocusState private var isKeyboardFocused: Bool
     var style = SearchBarStyle.rounded
     var clearButtonDisplayMode = SearchBarClearButtonDisplayMode.always
     var iconView: AnyView? = nil
@@ -46,9 +44,9 @@ public struct SearchBar: View {
         ZStack{
             HStack(spacing: 5){
                 ZStack{
-                    Button{
+                    Button {
                         isKeyboardFocused = true
-                    }label: {
+                    } label: {
                         HStack(spacing: 6){
                             if let iconView{
                                 iconView
@@ -64,38 +62,21 @@ public struct SearchBar: View {
                         .font(.callout)
                         .padding(.horizontal, 12 * scale.heightMultiplier)
                         .padding(.vertical, 12 * scale.heightMultiplier)
-                        .if{ content in
-            #if compiler(>=6.2)
-                            if #available(watchOS 26.0, *), material == .glass {
-                                if style.usesCustomBackground{
-                                    content.glassEffect(.regular.tint(style.backgroundColor).interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
-                                }else{
-                                    content.glassEffect(.regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
-                                }
-                                
-                            } else {
-                                content.background(style.backgroundColor)
-                                    .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
-                            }
-            #else
-                            content.background(style.backgroundColor)
-                                .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
-            #endif
-                        }
-                        .overlay( /// apply a rounded border
-                            RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
-                                .stroke( LinearGradient(colors: style.borderColor == nil ? [Color.primary.opacity(0.3), Color.primary.opacity(0.6)] : [style.borderColor ?? .clear], startPoint: .top, endPoint: .bottom), lineWidth: material == .glass ? 0 : 0.75)
-                        )
-                        .padding(.horizontal, 1)
                     }
                     .buttonStyle(.plain)
                     .onChange(of: text) { newValue in
                         searchChangeAction?(newValue)
                     }
                 }
+                .overlay {
+                    TextField(" ", text: $text)
+                        .focused($isKeyboardFocused)
+                        .opacity(0.05)
+                        .allowsHitTesting(true)
+                    
+                }
             }
             .onAppear{
-                isKeyboardFocused = isFocused.wrappedValue
                 searchChangeAction?("")
             }
             .onChange(of: isFocused.wrappedValue){ newValue in
@@ -104,17 +85,8 @@ public struct SearchBar: View {
                 }
             }
             .onChange(of: isKeyboardFocused) { newValue in
-                if newValue{
-                    WKExtension.shared().visibleInterfaceController?.presentTextInputController(
-                        withSuggestions: [],
-                        allowedInputMode: .plain
-                    ) { result in
-                        guard let result = result as? [String], let first = result.first else {
-                            return
-                        }
-                        self.text = first
-                        isKeyboardFocused = false
-                    }
+                if isUsingCustomFocus {
+                    isFocused.wrappedValue = newValue
                 }
                 if newValue {
                     searchBeginEditingAction?()
@@ -122,7 +94,29 @@ public struct SearchBar: View {
                     searchEndEditingAction?()
                 }
             }
+            .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
+            .if{ content in
+#if compiler(>=6.2)
+                if #available(watchOS 26.0, *), material == .glass {
+                    if style.usesCustomBackground{
+                        content.glassEffect(.regular.tint(style.backgroundColor).interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
+                    }else{
+                        content.glassEffect(.regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
+                    }
+                    
+                } else {
+                    content.background(style.backgroundColor)
+                }
+#else
+                content.background(style.backgroundColor)
+#endif
+            }
 
+            .overlay( /// apply a rounded border
+                RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
+                    .stroke( LinearGradient(colors: style.borderColor == nil ? [Color.primary.opacity(0.3), Color.primary.opacity(0.6)] : [style.borderColor ?? .clear], startPoint: .top, endPoint: .bottom), lineWidth: material == .glass ? 0 : 0.75)
+            )
+            .padding(.horizontal, 1)
             
         }
     }
