@@ -1,6 +1,6 @@
 //
 //  SearchBartvOS.swift
-//  SymbolPicker
+//  SearchBar
 //
 //  Created by KamilSzpak on 11/04/2025.
 //
