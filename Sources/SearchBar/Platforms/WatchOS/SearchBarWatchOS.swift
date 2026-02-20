@@ -96,7 +96,7 @@ public struct SearchBar: View {
             }
             .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
             .if{ content in
-#if compiler(>=6.2)
+                #if compiler(>=6.2)
                 if #available(watchOS 26.0, *), material == .glass {
                     if style.usesCustomBackground{
                         content.glassEffect(.regular.tint(style.backgroundColor).interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
@@ -105,11 +105,11 @@ public struct SearchBar: View {
                     }
                     
                 } else {
-                    content.background(style.backgroundColor)
+                    content.background{ RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(style.backgroundColor) }
                 }
-#else
-                content.background(style.backgroundColor)
-#endif
+                #else
+                content.background{ RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(style.backgroundColor) }
+                #endif
             }
 
             .overlay( /// apply a rounded border
