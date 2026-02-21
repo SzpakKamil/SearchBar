@@ -344,7 +344,7 @@ struct ModifiersTests {
     @MainActor
     func testSearchBarMaterial() async throws {
         #if !os(visionOS)
-        if #available(macOS 26.0, iOS 26.0, *) {
+        if #available(macOS 26.0, iOS 26.0, tvOS 26.0, watchOS 26.0, *) {
             let material: SearchBarMaterial = .glass
             let updatedSearchBar = baseSearchBar.searchBarMaterial(material)
             #expect(updatedSearchBar.material == material, "Expected material to be updated to \(material)")

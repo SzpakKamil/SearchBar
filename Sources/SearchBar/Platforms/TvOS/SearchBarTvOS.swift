@@ -89,18 +89,19 @@ public struct SearchBar: View {
             .if { content in
 #if compiler(>=6.2)
                 if #available(tvOS 26.0, *), material == .glass {
-                    GlassEffectContainer {
-                        content
-                            .glassEffect(style.usesCustomBackground ? .regular.tint(style.backgroundColor).interactive() : .regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
-                    }
+                    content
+                        .glassEffect(style.usesCustomBackground ? .regular.tint(style.backgroundColor).interactive() : .regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
                 } else {
-                    content.background(style.backgroundColor)
+                    content.background(
+                        RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(style.backgroundColor)
+                    )
                 }
 #else
-                content.background(style.backgroundColor)
+                content.background(
+                    RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(style.backgroundColor)
+                )
 #endif
             }
-            .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
             .overlay( /// apply a rounded border
                 RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
                     .stroke( LinearGradient(colors: style.borderColor == nil ? [Color(UIColor.quaternaryLabel), Color(UIColor.tertiaryLabel)] : [style.borderColor ?? .clear], startPoint: .top, endPoint: .bottom), lineWidth: material == .glass ? 0 : 0.75)
@@ -116,4 +117,16 @@ public struct SearchBar: View {
     }
 }
 #endif
+
+
+#Preview {
+    if #available(tvOS 26.0, *){
+        SearchBar(text: .constant(""))
+            .searchBarMaterial(.solid)
+            .searchBarScale(.large)
+            .searchBarStyle(.capsule)
+    }else{
+        SearchBar(text: .constant(""))
+    }
+}
 

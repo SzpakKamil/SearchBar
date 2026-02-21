@@ -10,8 +10,7 @@ import Foundation
 import Testing
 @testable import SearchBar
 import SwiftUI
-
-@available(watchOS 10.0, tvOS 17.0, *)
+#if os(watchOS) && os(tvOS)
 struct WatchOSTvOSTests {
     // MARK: - Helper Setup
     private var baseSearchBar: SearchBar {
@@ -64,4 +63,5 @@ struct WatchOSTvOSTests {
         #expect(testValue, "Expected searchEndEditingAction to be set and called")
     }
 }
+#endif
 #endif
