@@ -68,7 +68,7 @@ public struct SearchBarStyle: Equatable, Hashable{
             #if os(visionOS)
             self.backgroundColor = .clear
             #elseif os(tvOS) || os(watchOS)
-            self.backgroundColor = Color.primary.opacity(0.2)
+            self.backgroundColor = Color.primary.opacity(0.15)
             #elseif !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else
@@ -93,7 +93,7 @@ public struct SearchBarStyle: Equatable, Hashable{
             #if os(visionOS)
             self.backgroundColor = .clear
             #elseif os(tvOS) || os(watchOS)
-            self.backgroundColor = Color.primary.opacity(0.2)
+            self.backgroundColor = Color.primary.opacity(0.15)
             #elseif !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else
@@ -115,7 +115,7 @@ public struct SearchBarStyle: Equatable, Hashable{
             #if os(visionOS)
             self.backgroundColor = .clear
             #elseif os(tvOS) || os(watchOS)
-            self.backgroundColor = Color.primary.opacity(0.2)
+            self.backgroundColor = Color.primary.opacity(0.15)
             #elseif !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else
@@ -139,7 +139,7 @@ public struct SearchBarStyle: Equatable, Hashable{
             #if os(visionOS)
             self.backgroundColor = .clear
             #elseif os(tvOS) || os(watchOS)
-            self.backgroundColor = Color.primary.opacity(0.2)
+            self.backgroundColor = Color.primary.opacity(0.15)
             #elseif !os(macOS)
             self.backgroundColor = Color(.secondarySystemBackground)
             #else

@@ -11,6 +11,7 @@ import SwiftUI
 public struct SearchBar: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var text: String
+    @FocusState var isFocusedState: Bool
     @State private var isKeyboardFocused: Bool = false
     var style = SearchBarStyle.rounded
     var clearButtonDisplayMode = SearchBarClearButtonDisplayMode.always
@@ -42,7 +43,8 @@ public struct SearchBar: View {
     @_documentation(visibility: internal)
     public var body: some View {
         ZStack{
-            KeyboardTrigger(text: $text, isKeyboardVisible: $isKeyboardFocused)
+            KeyboardTrigger(text: $text, isVisible: $isKeyboardFocused)
+                .id(isKeyboardFocused)
             HStack(spacing: 5){
                 Button {
                     isKeyboardFocused = true
@@ -52,10 +54,9 @@ public struct SearchBar: View {
                             iconView
                         }else{
                             Image(systemName: "magnifyingglass")
-                                .foregroundColor(style.textColor ?? .primary)
                         }
                         Text(text.isEmpty ? (prompt ?? SearchBarTranslation.prompt.value) : text)
-                            .foregroundColor(text.isEmpty ? (style.textColor ?? .secondary).opacity(0.75) : (style.textColor ?? .primary))
+                            .opacity(text.isEmpty ? 0.75 : 1)
                             .lineLimit(1)
                         Spacer()
                     }
@@ -63,7 +64,8 @@ public struct SearchBar: View {
                     .padding(.horizontal, 12 * scale.heightMultiplier)
                     .padding(.vertical, 12 * scale.heightMultiplier)
                 }
-                .buttonStyle(.plain)
+                .focused($isFocusedState)
+                .buttonStyle(SearchBarTVOSButtonStyle(material: material, style: style, scale: scale, isFocused: isFocusedState))
                 .onChange(of: text) { newValue in
                     searchChangeAction?(newValue)
                 }
@@ -86,27 +88,7 @@ public struct SearchBar: View {
                     searchEndEditingAction?()
                 }
             }
-            .if { content in
-#if compiler(>=6.2)
-                if #available(tvOS 26.0, *), material == .glass {
-                    content
-                        .glassEffect(style.usesCustomBackground ? .regular.tint(style.backgroundColor).interactive() : .regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
-                } else {
-                    content.background(
-                        RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(style.backgroundColor)
-                    )
-                }
-#else
-                content.background(
-                    RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(style.backgroundColor)
-                )
-#endif
-            }
-            .overlay( /// apply a rounded border
-                RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
-                    .stroke( LinearGradient(colors: style.borderColor == nil ? [Color(UIColor.quaternaryLabel), Color(UIColor.tertiaryLabel)] : [style.borderColor ?? .clear], startPoint: .top, endPoint: .bottom), lineWidth: material == .glass ? 0 : 0.75)
-            )
-            .padding(.horizontal, 1)
+
             
         }
     }
@@ -116,4 +98,67 @@ public struct SearchBar: View {
         self.prompt = prompt
     }
 }
+
+fileprivate struct SearchBarTVOSButtonStyle: ButtonStyle {
+    @Environment(\.colorScheme) var colorScheme
+    let material: SearchBarMaterial
+    let style: SearchBarStyle
+    let scale: SearchBarScale
+    let isFocused: Bool
+    
+    func getBackgroundColor(isPressed: Bool) -> Color{
+        if isFocused{
+            Color.white
+        }else if isPressed{
+            Color.white.opacity(0.9)
+        }else{
+            if #available(tvOS 26.0, *), !style.usesCustomBackground, material == .glass{
+                if colorScheme == .light{
+                    Color.white.opacity(0.65)
+                }else{
+                    .clear
+                }
+
+            }else{
+                style.backgroundColor
+            }
+        }
+    }
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundStyle(isFocused ?  .black : style.textColor ?? .primary)
+            .if { content in
+                #if compiler(>=6.2)
+                if #available(tvOS 26.0, *), material == .glass {
+                    content
+                        .glassEffect(style.usesCustomBackground ? .regular.tint(getBackgroundColor(isPressed: configuration.isPressed)).interactive() : .regular.tint(getBackgroundColor(isPressed: configuration.isPressed)).interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
+                } else if #available(tvOS 26.0, *){
+                    content
+                        .background(
+                            RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(getBackgroundColor(isPressed: configuration.isPressed))
+                        )
+                        .overlay( /// apply a rounded border
+                                RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
+                                    .stroke( LinearGradient(colors: style.borderColor == nil ? [Color(UIColor.quaternaryLabel), Color(UIColor.tertiaryLabel)] : [style.borderColor ?? .clear], startPoint: .top, endPoint: .bottom), lineWidth: material == .glass ? 0 : 0.75)
+                        )
+                }else {
+                    content.background(
+                        RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(getBackgroundColor(isPressed: configuration.isPressed))
+                    )
+                }
+                #else
+                content.background(
+                    RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(getBackgroundColor(isPressed: configuration.isPressed))
+                )
+#endif
+            }
+            .padding(.horizontal, 1)
+            .scaleEffect(isFocused ? 1.05 : 1)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .animation(.smooth(duration: 0.2), value: isFocused)
+            .animation(.smooth(duration: 0.2), value: configuration.isPressed)
+    }
+}
+
+
 #endif
