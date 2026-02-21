@@ -117,16 +117,3 @@ public struct SearchBar: View {
     }
 }
 #endif
-
-
-#Preview {
-    if #available(tvOS 26.0, *){
-        SearchBar(text: .constant(""))
-            .searchBarMaterial(.solid)
-            .searchBarScale(.large)
-            .searchBarStyle(.capsule)
-    }else{
-        SearchBar(text: .constant(""))
-    }
-}
-
