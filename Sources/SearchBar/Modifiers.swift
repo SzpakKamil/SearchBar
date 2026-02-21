@@ -101,7 +101,7 @@ public extension SearchBar{
         return copy
     }
     #if !os(visionOS)
-    @available(iOS 26.0, macOS 26.0, *)
+    @available(iOS 26.0, macOS 26.0, tvOS 26.0, watchOS 26.0, *)
     func searchBarMaterial(_ material: SearchBarMaterial) -> SearchBar {
         var copy = self
         copy.material = material

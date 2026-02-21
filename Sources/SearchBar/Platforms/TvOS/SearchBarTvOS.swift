@@ -86,16 +86,13 @@ public struct SearchBar: View {
                     searchEndEditingAction?()
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
-            .if{ content in
+            .if { content in
 #if compiler(>=6.2)
                 if #available(tvOS 26.0, *), material == .glass {
-                    if style.usesCustomBackground{
-                        content.glassEffect(.regular.tint(style.backgroundColor).interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
-                    }else{
-                        content.glassEffect(.regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
+                    GlassEffectContainer {
+                        content
+                            .glassEffect(style.usesCustomBackground ? .regular.tint(style.backgroundColor).interactive() : .regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
                     }
-                    
                 } else {
                     content.background(style.backgroundColor)
                 }
@@ -103,6 +100,7 @@ public struct SearchBar: View {
                 content.background(style.backgroundColor)
 #endif
             }
+            .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
             .overlay( /// apply a rounded border
                 RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
                     .stroke( LinearGradient(colors: style.borderColor == nil ? [Color(UIColor.quaternaryLabel), Color(UIColor.tertiaryLabel)] : [style.borderColor ?? .clear], startPoint: .top, endPoint: .bottom), lineWidth: material == .glass ? 0 : 0.75)
@@ -118,3 +116,4 @@ public struct SearchBar: View {
     }
 }
 #endif
+
