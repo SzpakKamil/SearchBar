@@ -64,7 +64,7 @@ public struct SearchBar: View {
                         .padding(.vertical, 12 * scale.heightMultiplier)
                     }
                     .buttonStyle(.plain)
-                    .onChange(of: text) { newValue in
+                    .onChange(of: text) { _, newValue in
                         searchChangeAction?(newValue)
                     }
                 }
@@ -79,12 +79,12 @@ public struct SearchBar: View {
             .onAppear{
                 searchChangeAction?("")
             }
-            .onChange(of: isFocused.wrappedValue){ newValue in
+            .onChange(of: isFocused.wrappedValue){ _, newValue in
                 if isUsingCustomFocus {
                     isKeyboardFocused = newValue
                 }
             }
-            .onChange(of: isKeyboardFocused) { newValue in
+            .onChange(of: isKeyboardFocused) { _, newValue in
                 if isUsingCustomFocus {
                     isFocused.wrappedValue = newValue
                 }
@@ -102,13 +102,17 @@ public struct SearchBar: View {
                             .glassEffect(style.usesCustomBackground ? .regular.tint(style.backgroundColor).interactive() : .regular.interactive(), in: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
                     }
                 } else {
-                    content.background(style.backgroundColor)
+                    content.background(
+                        RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(style.backgroundColor)
+                    )
                 }
                 #else
-                content.background(style.backgroundColor)
+                content.background(
+                    RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale).fill(style.backgroundColor)
+                )
                 #endif
             }
-            .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
+//            .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale))
             .overlay( /// apply a rounded border
                 RoundedRectangle(cornerRadius: style.cornerRadius * scale.cornerScale)
                     .stroke( LinearGradient(colors: style.borderColor == nil ? [Color.primary.opacity(0.3), Color.primary.opacity(0.6)] : [style.borderColor ?? .clear], startPoint: .top, endPoint: .bottom), lineWidth: material == .glass ? 0 : 0.75)
