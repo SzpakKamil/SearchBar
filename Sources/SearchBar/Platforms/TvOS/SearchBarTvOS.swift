@@ -45,6 +45,7 @@ public struct SearchBar: View {
         ZStack{
             KeyboardTrigger(text: $text, isVisible: $isKeyboardFocused)
                 .id(isKeyboardFocused)
+                .frame(width: 1, height: 1)
             HStack(spacing: 5){
                 Button {
                     isKeyboardFocused = true

@@ -72,7 +72,7 @@ struct KeyboardTrigger<Value>: UIViewRepresentable {
 
     func makeUIView(context: Context) -> UITextField {
         // Use the subclass that handles Escape
-        let textField = EscapableTextField()
+        let textField = EscapableTextField(frame: .zero)
         textField.delegate = context.coordinator
         textField.keyboardType = keyboardType
         textField.alpha = 0.0
