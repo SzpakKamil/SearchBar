@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarSuggestions(_:)-620nd``
+# ``SearchBar/searchBarSuggestions(_:)-620nd``
 
 Sets a static list of suggestions for the `SearchBar`.
 
@@ -116,4 +116,4 @@ This example sets a static list of suggestions for the `SearchBar`.
 ## See Also
 
 - ``SearchBarSuggestion``
-- ``SearchBar/SearchBar/searchBarSuggestions(_:)-syi0``
+- ``SearchBar/searchBarSuggestions(_:)-syi0``

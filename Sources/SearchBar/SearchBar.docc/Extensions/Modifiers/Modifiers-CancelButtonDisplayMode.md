@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``
+# ``SearchBar/searchBarCancelButtonDisplayMode(_:)``
 
 Configures the display behavior of the cancel button in the `SearchBar`.
 
@@ -6,6 +6,7 @@ Configures the display behavior of the cancel button in the `SearchBar`.
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
+    @Available(macOS, introduced: "12.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -92,5 +93,5 @@ This example ensures the cancel button is always visible.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``
-- ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``
+- ``SearchBar/searchBarCancelButtonAction(_:)``
+- ``SearchBar/searchBarClearButtonDisplayMode(_:)``

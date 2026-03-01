@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``
+# ``SearchBar/searchBarClearButtonDisplayMode(_:)``
 
 Configures the display behavior of the clear button in the `SearchBar`.
 
@@ -7,8 +7,6 @@ Configures the display behavior of the clear button in the `SearchBar`.
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
-    @Available(tvOS, introduced: "14.0")
-    @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -155,5 +153,5 @@ This example shows the clear button only while the user is editing.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``
-- ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``
+- ``SearchBar/searchBarClearButtonAction(_:)``
+- ``SearchBar/searchBarCancelButtonDisplayMode(_:)``

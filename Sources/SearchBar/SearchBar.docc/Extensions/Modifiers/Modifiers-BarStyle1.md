@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarStyle(_:)``
+# ``SearchBar/searchBarStyle(_:)``
 
 Applies a custom style to the `SearchBar` to configure its visual appearance.
 
@@ -7,7 +7,7 @@ Applies a custom style to the `SearchBar` to configure its visual appearance.
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
-    @Available(tvOS, introduced: "14.0")
+    @Available(tvOS, introduced: "15.0")
     @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
@@ -51,5 +51,5 @@ This example styles the `SearchBar` with a capsule shape, featuring a high corne
 ## See Also
 
 - ``SearchBarStyle``
-- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
-- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``

@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarIconView(_:)``
+# ``SearchBar/searchBarIconView(_:)``
 
 Sets a custom icon view for the `SearchBar`.
 
@@ -7,7 +7,7 @@ Sets a custom icon view for the `SearchBar`.
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
-    @Available(tvOS, introduced: "14.0")
+    @Available(tvOS, introduced: "15.0")
     @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
@@ -50,5 +50,5 @@ This example sets a magnifying glass as the search bar’s icon.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarIconView()``
-- ``SearchBar/SearchBar/searchBarStyle(_:)``
+- ``SearchBar/searchBarIconView()``
+- ``SearchBar/searchBarStyle(_:)``

@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarMaterial(_:)``
+# ``SearchBar/searchBarMaterial(_:)``
 
 A SwiftUI view modifier that applies a material style to a `SearchBar` view.
 
@@ -7,6 +7,8 @@ A SwiftUI view modifier that applies a material style to a `SearchBar` view.
     @Available(iOS, introduced: "26.0")
     @Available(iPadOS, introduced: "26.0")
     @Available(macOS, introduced: "26.0")
+    @Available(tvOS, introduced: "26.0")
+    @Available(watchOS, introduced: "26.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
     @DocumentationExtension(mergeBehavior: override)

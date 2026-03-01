@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``
+# ``SearchBar/searchBarEndEditingAction(_:)``
 
 Triggers an action when the user stops editing the `SearchBar`’s text.
 
@@ -7,6 +7,8 @@ Triggers an action when the user stops editing the `SearchBar`’s text.
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "12.0")
+    @Available(tvOS, introduced: "15.0")
+    @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -48,5 +50,5 @@ This example logs a message when editing ends.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
-- ``SearchBar/SearchBar/searchBarIsFocused(_:)``
+- ``SearchBar/searchBarBeginEditingAction(_:)``
+- ``SearchBar/searchBarIsFocused(_:)``

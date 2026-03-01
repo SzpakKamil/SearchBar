@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+# ``SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
 Applies a predefined corner style to the `SearchBar` with customizations including token background color.
 
@@ -6,6 +6,7 @@ Applies a predefined corner style to the `SearchBar` with customizations includi
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
+    @Available(macOS, introduced: "11.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -52,4 +53,4 @@ This example styles the `SearchBar` with a capsule shape and custom colors, incl
 
 - ``SearchBarStyle``
 - ``SearchBarCornerStyle``
-- ``SearchBar/SearchBar/searchBarStyle(_:)``
+- ``SearchBar/searchBarStyle(_:)``

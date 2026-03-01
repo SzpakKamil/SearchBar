@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarChangeAction(_:)``
+# ``SearchBar/searchBarChangeAction(_:)``
 
 Triggers an action when the search text in the `SearchBar` changes.
 
@@ -6,8 +6,8 @@ Triggers an action when the search text in the `SearchBar` changes.
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
-    @Available(macOS, introduced: "11.0")
-    @Available(tvOS, introduced: "14.0")
+    @Available(macOS, introduced: "12.0")
+    @Available(tvOS, introduced: "15.0")
     @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
@@ -50,5 +50,5 @@ This example logs the new search text each time it changes.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
-- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``
+- ``SearchBar/searchBarBeginEditingAction(_:)``
+- ``SearchBar/searchBarEndEditingAction(_:)``

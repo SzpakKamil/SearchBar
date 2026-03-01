@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``
+# ``SearchBar/searchBarClearButtonAction(_:)``
 
 Defines an action to perform when the clear button is clicked in the `SearchBar`.
 
@@ -7,7 +7,7 @@ Defines an action to perform when the clear button is clicked in the `SearchBar`
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
-    @Available(tvOS, introduced: "14.0")
+    @Available(tvOS, introduced: "15.0")
     @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
@@ -50,5 +50,5 @@ This example logs a message when the clear button is tapped.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``
-- ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``
+- ``SearchBar/searchBarClearButtonDisplayMode(_:)``
+- ``SearchBar/searchBarCancelButtonAction(_:)``

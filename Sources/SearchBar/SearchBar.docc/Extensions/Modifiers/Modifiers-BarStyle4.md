@@ -1,11 +1,11 @@
-# ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
+# ``SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
 
 Configures the `SearchBar`’s style with a specific corner radius and color settings.
 
 @Metadata {
     @SupportedLanguage(swift)
     @Available(macOS, introduced: "11.0")
-    @Available(tvOS, introduced: "14.0")
+    @Available(tvOS, introduced: "15.0")
     @Available(watchOS, introduced: "10.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -50,5 +50,5 @@ This example sets a custom corner radius of 10 and applies custom colors on macO
 ## See Also
 
 - ``SearchBarStyle``
-- ``SearchBar/SearchBar/searchBarStyle(_:)``
-- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBar/searchBarStyle(_:)``
+- ``SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``

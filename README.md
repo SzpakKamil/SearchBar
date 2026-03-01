@@ -1,12 +1,12 @@
 # `SearchBar`
 ![Swift Version](https://img.shields.io/badge/Swift-5.9+-teal.svg)
-![Platforms](https://img.shields.io/badge/Platforms-iOS%2014.0+%20|%20iPadOS%2014.0+%20|%20macOS%2011.0+%20|%20watchOS%2010.0+%20|%20tvOS%2014.0+%20|%20visionOS%201.0+-15437D.svg)
+![Platforms](https://img.shields.io/badge/Platforms-iOS%2014.0+%20|%20iPadOS%2014.0+%20|%20macOS%2011.0+%20|%20watchOS%2010.0+%20|%20tvOS%2015.0+%20|%20visionOS%201.0+-15437D.svg)
 ![License](https://img.shields.io/badge/License-MIT-C8ECFE.svg)
 
 ![Banner](./Resources/SearchBar-Banner.png#gh-light-mode-only)
 ![Banner](./Resources/SearchBar-BannerDark.png#gh-dark-mode-only)
 
-**SearchBar** is a SwiftUI package that provides a highly customizable, native search bar component for iOS, iPadOS, macOS, and visionOS. It leverages `UISearchBar` for iOS, iPadOS, and visionOS, and a SwiftUI-reimplemented `NSSearchField` for macOS, ensuring a seamless, platform-specific experience. With advanced customization options, accessibility features, and support for search tokens and suggestions, `SearchBar` is ideal for creating modern, user-focused search interfaces.
+**SearchBar** is a SwiftUI package that provides a highly customizable, native search bar component for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS. It leverages `UISearchBar` for iOS, iPadOS, and visionOS, and a SwiftUI-reimplemented `NSSearchField` for macOS, as well as a SwiftUI-reimplemented text field for tvOS and watchOS, ensuring a seamless, platform-specific experience. With advanced customization options, accessibility features, and support for search tokens and suggestions, `SearchBar` is ideal for creating modern, user-focused search interfaces.
 
 For detailed documentation, visit the [SearchBar Documentation](https://documentation.kamilszpak.com/documentation/searchbar).
 
@@ -24,7 +24,7 @@ For detailed documentation, visit the [SearchBar Documentation](https://document
 
 ## Features
 
-- **Native Integration**: Uses `UISearchBar` for iOS, iPadOS, and visionOS, and an implementation of SwiftUI `TextField` tailored for a native search bar experience on macOS, ensuring authentic platform behavior.
+- **Native Integration**: Uses `UISearchBar` for iOS, iPadOS, and visionOS, and an implementation of SwiftUI `TextField` tailored for a native search bar experience on macOS, tvOS, and watchOS, ensuring authentic platform behavior.
 - **Extensive Customization**: Modify appearance with styles, colors, icons, and materials via SwiftUI modifiers.
 - **Dynamic Search**: Real-time text updates with `Binding<String>` and event handling for user interactions.
 - **Tokens and Suggestions**: Supports search tokens (iOS 16.0+, visionOS 1.0+) and suggestions (iOS 16.0+, visionOS 1.0+, macOS 15.0+).
@@ -185,6 +185,8 @@ npx dlx clawdhub@latest install searchbar
 - **iOS**: 14.0+
 - **iPadOS**: 14.0+
 - **macOS**: 11.0+
+- **tvOS**: 15.0+
+- **watchOS**: 10.0+
 - **visionOS**: 1.0+
 - **Swift**: 5.9+
 - **Xcode**: 15.0+

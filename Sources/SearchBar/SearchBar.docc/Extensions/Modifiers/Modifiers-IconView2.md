@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarIconView()``
+# ``SearchBar/searchBarIconView()``
 
 Removes the custom icon view from the `SearchBar`, setting it to an empty view.
 
@@ -7,7 +7,7 @@ Removes the custom icon view from the `SearchBar`, setting it to an empty view.
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "11.0")
-    @Available(tvOS, introduced: "14.0")
+    @Available(tvOS, introduced: "15.0")
     @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
@@ -44,5 +44,5 @@ This example removes the custom icon from the `SearchBar`.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarIconView(_:)``
-- ``SearchBar/SearchBar/searchBarStyle(_:)``
+- ``SearchBar/searchBarIconView(_:)``
+- ``SearchBar/searchBarStyle(_:)``

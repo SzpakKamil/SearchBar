@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarAutoCapitalizationType(_:)``
+# ``SearchBar/searchBarAutoCapitalizationType(_:)``
 
 Configures the autocapitalization behavior of the `SearchBar`’s text input.
 
@@ -128,5 +128,5 @@ This example disables autocapitalization, ensuring all text remains lowercase as
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarAutoCorrectionType(_:)``
-- ``SearchBar/SearchBar/searchBarKeyboardType(_:)``
+- ``SearchBar/searchBarAutoCorrectionType(_:)``
+- ``SearchBar/searchBarKeyboardType(_:)``

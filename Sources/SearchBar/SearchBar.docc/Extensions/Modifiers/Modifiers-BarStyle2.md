@@ -1,11 +1,11 @@
-# ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
+# ``SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
 
 Applies a predefined corner style to the `SearchBar` with optional customizations for text color, tint, and background color.
 
 @Metadata {
     @SupportedLanguage(swift)
     @Available(macOS, introduced: "11.0")
-    @Available(tvOS, introduced: "14.0")
+    @Available(tvOS, introduced: "15.0")
     @Available(watchOS, introduced: "10.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -51,4 +51,4 @@ This example applies a rounded style to the `SearchBar` with custom colors on ma
 
 - ``SearchBarStyle``
 - ``SearchBarCornerStyle``
-- ``SearchBar/SearchBar/searchBarStyle(_:)``
+- ``SearchBar/searchBarStyle(_:)``

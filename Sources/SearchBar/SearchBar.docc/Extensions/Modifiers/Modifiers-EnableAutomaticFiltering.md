@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)``
+# ``SearchBar/searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)``
 
 Enables automatic filtering of suggestions in the `SearchBar` with an optional custom filtering action.
 
@@ -49,4 +49,4 @@ This example enables automatic filtering of suggestions.
 ## See Also
 
 - ``SearchBarSuggestion``
-- ``SearchBar/SearchBar/searchBarSuggestions(_:)-syi0``
+- ``SearchBar/searchBarSuggestions(_:)-syi0``

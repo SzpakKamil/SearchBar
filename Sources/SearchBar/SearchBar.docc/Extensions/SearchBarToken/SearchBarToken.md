@@ -39,19 +39,19 @@ struct User {
 
 ## Implementation
 
-- ``SearchBar/SearchBar/searchBarCurrentTokens(_:)`` 
+- ``SearchBar/searchBarCurrentTokens(_:)`` 
     Configures tokens for filter categories.  
     - Parameters:  
       - `tokens`: A `Binding<[SearchBarToken]>` to manage the current tokens.  
     - Availability: iOS 16.0+, visionOS 1.0+.
 
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi`` 
+- ``SearchBar/searchBarSuggestedTokens(_:)-5wxi`` 
     Configures suggested tokens for selection.  
     - Parameters:  
       - `tokens`: A `Binding<[SearchBarToken]>` to manage suggested tokens.  
     - Availability: iOS 16.0+, visionOS 1.0+.
 
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
+- ``SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
     Sets a static list of suggested tokens.  
     - Parameters:  
       - `tokens`: An `[SearchBarToken]` array for static suggestions.  

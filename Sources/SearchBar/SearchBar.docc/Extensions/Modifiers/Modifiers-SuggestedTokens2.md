@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi``
+# ``SearchBar/searchBarSuggestedTokens(_:)-5wxi``
 
 Sets a binding to a list of suggested tokens for the `SearchBar`.
 
@@ -106,5 +106,5 @@ This example provides a dynamic list of suggested tokens and manages current tok
 ## See Also
 
 - ``SearchBarToken``
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-54f3``
+- ``SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
+- ``SearchBar/searchBarSuggestedTokens(_:)-54f3``

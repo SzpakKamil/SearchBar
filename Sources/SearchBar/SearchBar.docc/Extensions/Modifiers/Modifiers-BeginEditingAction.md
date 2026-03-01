@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
+# ``SearchBar/searchBarBeginEditingAction(_:)``
 
 Triggers an action when the user begins editing the `SearchBar`’s text.
 
@@ -7,6 +7,8 @@ Triggers an action when the user begins editing the `SearchBar`’s text.
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "12.0")
+    @Available(tvOS, introduced: "15.0")
+    @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -48,5 +50,5 @@ This example logs a message when the user begins editing the search text.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``
-- ``SearchBar/SearchBar/searchBarIsFocused(_:)``
+- ``SearchBar/searchBarEndEditingAction(_:)``
+- ``SearchBar/searchBarIsFocused(_:)``

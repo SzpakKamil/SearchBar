@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarIsFocused(_:)``
+# ``SearchBar/searchBarIsFocused(_:)``
 
 Binds the `SearchBar`’s focus state to a Boolean value.
 
@@ -7,6 +7,8 @@ Binds the `SearchBar`’s focus state to a Boolean value.
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
     @Available(macOS, introduced: "12.0")
+    @Available(tvOS, introduced: "15.0")
+    @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -52,5 +54,5 @@ This example focuses the `SearchBar` when the button is pressed.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
-- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``
+- ``SearchBar/searchBarBeginEditingAction(_:)``
+- ``SearchBar/searchBarEndEditingAction(_:)``

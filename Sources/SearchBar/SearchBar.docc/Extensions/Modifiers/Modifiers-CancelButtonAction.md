@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``
+# ``SearchBar/searchBarCancelButtonAction(_:)``
 
 Defines an action to perform when the cancel button is clicked in the `SearchBar`.
 
@@ -6,6 +6,9 @@ Defines an action to perform when the cancel button is clicked in the `SearchBar
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "14.0")
     @Available(iPadOS, introduced: "14.0")
+    @Available(macOS, introduced: "12.0")
+    @Available(tvOS, introduced: "15.0")
+    @Available(watchOS, introduced: "10.0")
     @Available(visionOS, introduced: "1.0")
     @Available(swift, introduced: "5.9")
     @Available(Xcode, introduced: "15.0")
@@ -50,5 +53,5 @@ This clears the search text when the cancel button is tapped.
 
 ## See Also
 
-- ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``
-- ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``
+- ``SearchBar/searchBarCancelButtonDisplayMode(_:)``
+- ``SearchBar/searchBarClearButtonAction(_:)``

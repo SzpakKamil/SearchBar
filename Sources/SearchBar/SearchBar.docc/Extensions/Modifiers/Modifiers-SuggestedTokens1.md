@@ -1,4 +1,4 @@
-# ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
+# ``SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
 
 Sets a static list of suggested tokens for the `SearchBar`.
 
@@ -105,5 +105,5 @@ This example provides a static list of suggested tokens and manages current toke
 ## See Also
 
 - ``SearchBarToken``
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi``
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-54f3``
+- ``SearchBar/searchBarSuggestedTokens(_:)-5wxi``
+- ``SearchBar/searchBarSuggestedTokens(_:)-54f3``
