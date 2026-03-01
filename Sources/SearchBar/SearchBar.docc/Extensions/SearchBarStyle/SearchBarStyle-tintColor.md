@@ -105,6 +105,38 @@ struct ContentView: View {
             }
         }
     }
+    @Tab("tvOS") {
+        Apply a tint color to highlight interactive elements on tvOS.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Default-tvOS", alt: "Default Tint Color") {
+                    Default Tint Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Custom-tvOS", alt: "Custom Tint Color") {
+                    Custom Tint Color
+                }
+            }
+        }
+    }
+    @Tab("watchOS") {
+        Use tint colors to draw attention to search actions on the watch.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Default-watchOS", alt: "Default Tint Color") {
+                    Default Tint Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TintColor-Custom-watchOS", alt: "Custom Tint Color") {
+                    Custom Tint Color
+                }
+            }
+        }
+    }
 }
 
 ## See Also

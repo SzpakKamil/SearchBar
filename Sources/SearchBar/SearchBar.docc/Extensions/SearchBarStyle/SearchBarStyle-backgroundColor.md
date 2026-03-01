@@ -105,6 +105,38 @@ struct ContentView: View {
             }
         }
     }
+    @Tab("tvOS") {
+        Customize the background color for a consistent tvOS experience.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-tvOS", alt: "Default Background") {
+                    Default Background
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Custom-tvOS", alt: "Custom Background") {
+                    Custom Background
+                }
+            }
+        }
+    }
+    @Tab("watchOS") {
+        Set the background color to complement the watch's compact layout.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-watchOS", alt: "Default Background") {
+                    Default Background
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Custom-watchOS", alt: "Custom Background") {
+                    Custom Background
+                }
+            }
+        }
+    }
 }
 
 ## See Also

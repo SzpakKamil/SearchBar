@@ -56,6 +56,16 @@ struct ContentView: View {
             Glass Material
         }
     }
+    @Tab("tvOS") {
+        @Image(source: "Documentation-SearchBarStyle-Material-Glass-tvOS", alt: "Glass Material") {
+            Glass Material
+        }
+    }
+    @Tab("watchOS") {
+        @Image(source: "Documentation-SearchBarStyle-Material-Glass-watchOS", alt: "Glass Material") {
+            Glass Material
+        }
+    }
 }
 
 ## Related Types

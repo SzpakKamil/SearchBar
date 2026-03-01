@@ -107,6 +107,48 @@ struct ContentView: View {
             }
         }
     }
+    @Tab("tvOS") {
+        Select a scale that works best for large-screen viewing and navigation.
+
+        @TabNavigator {
+            @Tab("Small") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Small-tvOS", alt: "Small Scale") {
+                    Small Scale
+                }
+            }
+            @Tab("Medium") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Medium-tvOS", alt: "Medium Scale") {
+                    Medium Scale
+                }
+            }
+            @Tab("Large") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Large-tvOS", alt: "Large Scale") {
+                    Large Scale
+                }
+            }
+        }
+    }
+    @Tab("watchOS") {
+        Optimize the search bar scale for the watch's compact display.
+
+        @TabNavigator {
+            @Tab("Small") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Small-watchOS", alt: "Small Scale") {
+                    Small Scale
+                }
+            }
+            @Tab("Medium") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Medium-watchOS", alt: "Medium Scale") {
+                    Medium Scale
+                }
+            }
+            @Tab("Large") {
+                @Image(source: "Documentation-SearchBarStyle-Scale-Large-watchOS", alt: "Large Scale") {
+                    Large Scale
+                }
+            }
+        }
+    }
 }
 
 ## Related Types

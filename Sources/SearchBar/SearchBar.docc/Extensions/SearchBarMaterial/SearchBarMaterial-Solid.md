@@ -56,6 +56,16 @@ struct ContentView: View {
             Solid Material
         }
     }
+    @Tab("tvOS") {
+        @Image(source: "Documentation-SearchBarStyle-Material-Solid-tvOS", alt: "Solid Material") {
+            Solid Material
+        }
+    }
+    @Tab("watchOS") {
+        @Image(source: "Documentation-SearchBarStyle-Material-Solid-watchOS", alt: "Solid Material") {
+            Solid Material
+        }
+    }
 }
 
 ## Related Types

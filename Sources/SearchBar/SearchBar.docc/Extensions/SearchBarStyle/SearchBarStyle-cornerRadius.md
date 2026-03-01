@@ -105,6 +105,38 @@ struct ContentView: View {
             }
         }
     }
+    @Tab("tvOS") {
+        Adjust the corner radius for optimal display on a large screen.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-tvOS", alt: "Default Corner Radius") {
+                    Default Corner Radius
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Custom-tvOS", alt: "Custom Corner Radius") {
+                    Custom Corner Radius
+                }
+            }
+        }
+    }
+    @Tab("watchOS") {
+        Set a corner radius that complements the watch's compact display.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-watchOS", alt: "Default Corner Radius") {
+                    Default Corner Radius
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-CornerRadius-Custom-watchOS", alt: "Custom Corner Radius") {
+                    Custom Corner Radius
+                }
+            }
+        }
+    }
 }
 
 ## See Also

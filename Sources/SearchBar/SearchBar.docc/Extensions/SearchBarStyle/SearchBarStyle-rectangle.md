@@ -63,6 +63,16 @@ struct ContentView: View {
             Rectangle
         }
     }
+    @Tab("tvOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-tvOS", alt: "Rectangle") {
+            Rectangle
+        }
+    }
+    @Tab("watchOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rectangle-watchOS", alt: "Rectangle") {
+            Rectangle
+        }
+    }
 }
 
 ## See Also

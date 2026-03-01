@@ -46,6 +46,16 @@ The `SearchBar` package extends SwiftUI’s default search bar, offering flexibl
             Rounded
         }
     }
+    @Tab("tvOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-tvOS", alt: "SearchBar") {
+            Rounded
+        }
+    }
+    @Tab("watchOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-watchOS", alt: "SearchBar") {
+            Rounded
+        }
+    }
 }
 
 ## Why Use SearchBar?

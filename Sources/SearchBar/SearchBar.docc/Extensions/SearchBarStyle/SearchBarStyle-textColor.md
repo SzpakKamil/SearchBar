@@ -105,6 +105,38 @@ struct ContentView: View {
             }
         }
     }
+    @Tab("tvOS") {
+        Configure text color for optimal readability on a television screen.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Default-tvOS", alt: "Default Text Color") {
+                    Default Text Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Custom-tvOS", alt: "Custom Text Color") {
+                    Custom Text Color
+                }
+            }
+        }
+    }
+    @Tab("watchOS") {
+        Set a text color that is clear and legible on the watch's display.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Default-watchOS", alt: "Default Text Color") {
+                    Default Text Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-TextColor-Custom-watchOS", alt: "Custom Text Color") {
+                    Custom Text Color
+                }
+            }
+        }
+    }
 }
 
 ## See Also

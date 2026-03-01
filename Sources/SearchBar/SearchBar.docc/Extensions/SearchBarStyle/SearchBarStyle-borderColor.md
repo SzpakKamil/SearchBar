@@ -59,6 +59,38 @@ struct ContentView: View {
             }
         }
     }
+    @Tab("tvOS") {
+        Adjust the border color to enhance the search bar's visual boundaries.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BorderColor-Default-tvOS", alt: "Default Border Color") {
+                    Default Border Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BorderColor-Custom-tvOS", alt: "Custom Border Color") {
+                    Custom Border Color
+                }
+            }
+        }
+    }
+    @Tab("watchOS") {
+        Adjust the border color to enhance the search bar's visual boundaries.
+
+        @TabNavigator {
+            @Tab("Default") {
+                @Image(source: "Documentation-SearchBarStyle-BorderColor-Default-watchOS", alt: "Default Border Color") {
+                    Default Border Color
+                }
+            }
+            @Tab("Custom") {
+                @Image(source: "Documentation-SearchBarStyle-BorderColor-Custom-watchOS", alt: "Custom Border Color") {
+                    Custom Border Color
+                }
+            }
+        }
+    }
 }
 
 ## See Also

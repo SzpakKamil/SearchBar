@@ -21,8 +21,6 @@ A SwiftUI view modifier that applies a material style to a `SearchBar` view.
 
 The `.searchBarMaterial(_:)` modifier configures the visual material style of a `SearchBar` view, applying either a `solid` or `glass` appearance defined by the `SearchBarMaterial` enum. Introduced in iOS 26.0, iPadOS 26.0, and macOS 26.0, this modifier supports the experimental “Liquid Glass” design paradigm, providing an opaque (`solid`) or translucent (`glass`) look for search bars. The `glass` material creates a modern, frosted effect, while `solid` ensures high contrast. Use this modifier to enhance the aesthetic of a `SearchBar` in beta OS versions, combining it with `.searchBarScale(_:)` and `.searchBarCancelButtonDisplayMode(_:)` for full customization. The table below summarizes the modifier’s parameter.
 
-> Warning: This is an implementation of Liquid Glass for beta versions of operating systems. Use at your own risk.
-
 ### Parameters Grid
 | Parameter Name | Type | Description |
 |----------------|------|-------------|
@@ -88,6 +86,38 @@ struct ContentView: View {
             }
             @Tab("Glass") {
                 @Image(source: "Documentation-SearchBarStyle-Material-Glass-macOSTahoe", alt: "Glass Material") {
+                    Glass Material
+                }
+            }
+        }
+    }
+    @Tab("tvOS") {
+        Choose a material that enhances the visual hierarchy on tvOS.
+
+        @TabNavigator {
+            @Tab("Solid") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Solid-tvOS", alt: "Solid Material") {
+                    Solid Material
+                }
+            }
+            @Tab("Glass") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Glass-tvOS", alt: "Glass Material") {
+                    Glass Material
+                }
+            }
+        }
+    }
+    @Tab("watchOS") {
+        Apply the appropriate material to integrate with the watchOS aesthetic.
+
+        @TabNavigator {
+            @Tab("Solid") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Solid-watchOS", alt: "Solid Material") {
+                    Solid Material
+                }
+            }
+            @Tab("Glass") {
+                @Image(source: "Documentation-SearchBarStyle-Material-Glass-watchOS", alt: "Glass Material") {
                     Glass Material
                 }
             }

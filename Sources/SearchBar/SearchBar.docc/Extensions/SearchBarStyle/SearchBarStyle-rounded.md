@@ -63,6 +63,16 @@ struct ContentView: View {
             Rounded
         }
     }
+    @Tab("tvOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-tvOS", alt: "Rounded") {
+            Rounded
+        }
+    }
+    @Tab("watchOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Rounded-watchOS", alt: "Rounded") {
+            Rounded
+        }
+    }
 }
 
 ## See Also

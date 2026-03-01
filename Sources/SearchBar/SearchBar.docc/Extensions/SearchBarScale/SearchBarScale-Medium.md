@@ -56,4 +56,14 @@ struct ContentView: View {
             Medium Scale
         }
     }
+    @Tab("tvOS") {
+        @Image(source: "Documentation-SearchBarStyle-Scale-Medium-tvOS", alt: "Medium Scale") {
+            Medium Scale
+        }
+    }
+    @Tab("watchOS") {
+        @Image(source: "Documentation-SearchBarStyle-Scale-Medium-watchOS", alt: "Medium Scale") {
+            Medium Scale
+        }
+    }
 }

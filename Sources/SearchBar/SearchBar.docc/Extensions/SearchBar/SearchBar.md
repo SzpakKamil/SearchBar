@@ -84,6 +84,16 @@ This example creates a `SearchBar` with a capsule style, a custom icon, and even
             Capsule SearchBar
         }
     }
+    @Tab("tvOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-tvOS", alt: "Capsule SearchBar") {
+            Capsule SearchBar
+        }
+    }
+    @Tab("watchOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-watchOS", alt: "Capsule SearchBar") {
+            Capsule SearchBar
+        }
+    }
 }
 
 ## Topics

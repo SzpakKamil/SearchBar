@@ -63,6 +63,16 @@ struct ContentView: View {
             Capsule
         }
     }
+    @Tab("tvOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-tvOS", alt: "Capsule") {
+            Capsule
+        }
+    }
+    @Tab("watchOS") {
+        @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-watchOS", alt: "Capsule") {
+            Capsule
+        }
+    }
 }
 
 ## See Also
