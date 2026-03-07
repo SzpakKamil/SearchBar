@@ -8,6 +8,14 @@
 import SwiftUI
 
 public extension SearchBar{
+    #if os(iOS) || os(visionOS)
+    @available(iOS 17.0, *)
+    func searchBarLookToDictateEnabled(_ value: Bool) -> SearchBar {
+        var copy = self
+        copy.lookToDictate = value
+        return copy
+    }
+    #endif
     #if !os(macOS) && !os(tvOS) && !os(watchOS)
     func searchBarCancelButtonDisplayMode(_ mode: SearchBarCancelButtonDisplayMode) -> SearchBar {
         var copy = self

@@ -41,6 +41,7 @@ The `SearchBar` package provides a variety of modifiers to customize its appeara
 - ``SearchBar/searchBarScale(_:)``: Adjusts padding from search bar elements to its border using a scale size (`small`, `medium`, `large`). Available on iOS 14.0+, iPadOS 14.0+, macOS 11.0+, and visionOS 1.0+.
 
 ### Input Configuration Modifiers (iOS, iPadOS, and visionOS only)
+- ``SearchBar/searchBarLookToDictateEnabled(_:)``: Enables or disables the "Look to Dictate" feature (iOS 17.0+ and visionOS).
 - ``SearchBar/searchBarKeyboardType(_:)``: Sets the keyboard type (e.g., `.emailAddress`).
 - ``SearchBar/searchBarReturnKeyType(_:)``: Configures the return key type (e.g., `.search`).
 - ``SearchBar/searchBarAutoCorrectionType(_:)``: Controls autocorrection behavior, defaulting to `.default`.

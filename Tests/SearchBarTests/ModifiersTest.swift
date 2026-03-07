@@ -178,6 +178,16 @@ struct ModifiersTests {
         let updatedSearchBar = baseSearchBar.searchBarTextContentType(type)
         #expect(updatedSearchBar.textContentType == type, "Expected textContentType to be updated to \(type)")
     }
+
+    @available(iOS 17.0, *)
+    @Test("searchBarLookToDictateEnabled updates correctly")
+    @MainActor
+    func testSearchBarLookToDictateEnabled() async throws {
+        #if os(iOS) || os(visionOS)
+        let updatedSearchBar = baseSearchBar.searchBarLookToDictateEnabled(true)
+        #expect(updatedSearchBar.lookToDictate == true, "Expected lookToDictate to be true")
+        #endif
+    }
     #endif
     
     @available(macOS 12.0, *)

@@ -25,6 +25,7 @@ public struct SearchBar: View {
     var filteringAction: ((String, SearchBarSuggestion)-> Bool)? = nil
     var isUsingCustomFocus = false
     var isFocused: Binding<Bool> = .constant(false)
+    var lookToDictate = false
     var material: SearchBarMaterial = .solid
     var scale: SearchBarScale = .small
     var prompt: String?

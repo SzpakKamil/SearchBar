@@ -27,6 +27,7 @@ public struct SearchBar: UIViewRepresentable{
     var autoCapitalizationType: UITextAutocapitalizationType? = nil
     var scale: SearchBarScale = .small
     var isUsingCustomFocus = false
+    var lookToDictate = true
     var isFocused: Binding<Bool> = .constant(false)
     var cancelButtonAction: (() -> Void)? = nil
     var clearButtonAction: (() -> Void)? = nil
@@ -115,13 +116,17 @@ public struct SearchBar: UIViewRepresentable{
         if let uiView = uiView as? SearchStyleVisionOS{
             uiView.desiredCornerRadius = style.cornerRadius
         }
+        uiView.isLookToDictateEnabled = lookToDictate
         uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
         uiView.layer.cornerRadius = style.cornerRadius
         uiView.searchTextField.layer.cornerRadius = style.cornerRadius
         #else
         let uiView = view ?? UISearchBar()
         uiView.searchTextField.borderStyle = .none
-        if #available(iOS 17.0, *) {uiView.searchTextField.hoverStyle = UIHoverStyle(shape: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))}
+        if #available(iOS 17.0, *) {
+            uiView.searchTextField.hoverStyle = UIHoverStyle(shape: .rect(cornerRadius: style.cornerRadius * scale.cornerScale))
+            uiView.isLookToDictateEnabled = lookToDictate
+        }
         uiView.searchTextField.layer.cornerRadius = style.cornerRadius * scale.cornerScale
         uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
         #endif
