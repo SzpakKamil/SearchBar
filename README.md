@@ -8,7 +8,7 @@
 
 **SearchBar** is a SwiftUI package that provides a highly customizable, native search bar component for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS. It leverages `UISearchBar` for iOS, iPadOS, and visionOS, and a SwiftUI-reimplemented `NSSearchField` for macOS, as well as a SwiftUI-reimplemented text field for tvOS and watchOS, ensuring a seamless, platform-specific experience. With advanced customization options, accessibility features, and support for search tokens and suggestions, `SearchBar` is ideal for creating modern, user-focused search interfaces.
 
-For more information, visit the [SearchBar Project Site](https://kamilszpak.com/searchbar) or the [Detailed Documentation](https://documentation.kamilszpak.com/documentation/searchbar).
+Visit the [Site](https://kamilszpak.com/searchbar) or [Documentation](https://documentation.kamilszpak.com/documentation/searchbar).
 
 ## Table of Contents
 
@@ -105,7 +105,7 @@ struct ContentView: View {
 
 ## Modifiers
 
-The `SearchBar` package offers a variety of modifiers to customize its appearance, behavior, and interaction. Below are examples from each category. For a complete list, refer to the [Detailed Documentation](https://documentation.kamilszpak.com/documentation/searchbar/modifiers).
+The `SearchBar` package offers a variety of modifiers to customize its appearance, behavior, and interaction. Below are examples from each category. For a complete list, refer to the [Documentation](https://documentation.kamilszpak.com/documentation/searchbar/modifiers).
 
 ### Appearance Modifiers
 
