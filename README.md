@@ -8,7 +8,7 @@
 
 **SearchBar** is a SwiftUI package that provides a highly customizable, native search bar component for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS. It leverages `UISearchBar` for iOS, iPadOS, and visionOS, and a SwiftUI-reimplemented `NSSearchField` for macOS, as well as a SwiftUI-reimplemented text field for tvOS and watchOS, ensuring a seamless, platform-specific experience. With advanced customization options, accessibility features, and support for search tokens and suggestions, `SearchBar` is ideal for creating modern, user-focused search interfaces.
 
-For detailed documentation, visit the [SearchBar Documentation](https://documentation.kamilszpak.com/documentation/searchbar).
+For more information, visit the [SearchBar Project Site](https://kamilszpak.com/searchbar) or the [Detailed Documentation](https://documentation.kamilszpak.com/documentation/searchbar).
 
 ## Table of Contents
 
@@ -105,7 +105,7 @@ struct ContentView: View {
 
 ## Modifiers
 
-The `SearchBar` package offers a variety of modifiers to customize its appearance, behavior, and interaction. Below are examples from each category. For a complete list, refer to the [SearchBar Documentation](https://documentation.kamilszpak.com/documentation/searchbar/modifiers).
+The `SearchBar` package offers a variety of modifiers to customize its appearance, behavior, and interaction. Below are examples from each category. For a complete list, refer to the [Detailed Documentation](https://documentation.kamilszpak.com/documentation/searchbar/modifiers).
 
 ### Appearance Modifiers
 
@@ -113,17 +113,26 @@ The `SearchBar` package offers a variety of modifiers to customize its appearanc
   *Available on iOS, visionOS, and macOS.*
 - **`searchBarIconView(_:)`**: Sets a custom icon view for the search bar.  
   *Available on iOS, visionOS, and macOS.*
-- **`searchBarMaterial(_:)`**: Applies a material effect (`.solid` or `.glass`) for a modern, translucent background. Fully supported on iOS 26.0+, macOS 26.0+, and visionOS 26.0+.  
+- **`searchBarMaterial(_:)`**: Applies a material effect (`.solid` or `.glass`) for a modern, translucent background. Fully supported on iOS 26.0+, macOS 26.0+, and visionOS 26.0+ (Experimental Liquid Glass).  
   *Available on iOS (26.0+), macOS (26.0+), and visionOS (26.0+).*
+- **`searchBarScale(_:)`**: Fine-tune internal spacing with predefined scales (`.small`, `.medium`, `.large`).  
+  *Available on all platforms.*
 
-### Input Configuration Modifiers (iOS and visionOS only)
+### Input Configuration Modifiers (iOS, iPadOS, and visionOS only)
 
 - **`searchBarKeyboardType(_:)`**: Sets the keyboard type (e.g., `.emailAddress`).
+- **`searchBarReturnKeyType(_:)`**: Customizes the return key (e.g., `.search`, `.go`).
+- **`searchBarAutoCorrectionType(_:)`**: Enables or disables autocorrection for a cleaner user experience.
+- **`searchBarLookToDictateEnabled(_:)`**: Integrates "Look to Dictate" for eye-tracking interactions (iOS 17.0+).
 - **`searchBarTextContentType(_:)`**: Specifies the content type for autofill and keyboard suggestions.
 
 ### Event Handling Modifiers
 
-- **`searchBarClearButtonAction(_:)`**: Defines an action for the clear button.  
+- **`searchBarChangeAction(_:)`**: React in real-time to text changes.  
+  *Available on all platforms.*
+- **`searchBarBeginEditingAction(_:)`** & **`searchBarEndEditingAction(_:)`**: Trigger logic precisely when the user starts or finishes searching.  
+  *Available on iOS, visionOS, and macOS.*
+- **`searchBarClearButtonAction(_:)`**: Define custom logic when the search is cleared.  
   *Available on iOS, visionOS, and macOS.*
 - **`searchBarCancelButtonAction(_:)`**: Defines an action for the cancel button.  
   *Available on iOS and visionOS.*
@@ -137,27 +146,29 @@ The `SearchBar` package offers a variety of modifiers to customize its appearanc
 
 ### Tokens and Suggestions Modifiers
 
-- **`searchBarCurrentTokens(_:)`**: Manages a dynamic list of current tokens.  
-  *Available on iOS (16.0+) and visionOS (1.0+).*
-- **`searchBarSuggestions(_:)`**: Sets a list of suggestions.  
+- **`searchBarCurrentTokens(_:)`**: Manages a dynamic list of current tokens for semantic searching.  
+  *Available on iOS (16.0+), iPadOS (14.0+), and visionOS (1.0+).*
+- **`searchBarSuggestions(_:)`**: Provide contextual search suggestions to speed up user input.  
+  *Available on iOS (16.0+), visionOS (1.0+), and macOS (15.0+).*
+- **`searchBarEnableAutomaticSuggestionsFiltering(_:)`**: Let the system handle suggestion filtering automatically.  
   *Available on iOS (16.0+), visionOS (1.0+), and macOS (15.0+).*
 
 ### Focus Modifiers
 
-- **`searchBarIsFocused(_:)`**: Binds the focus state to a Boolean.  
+- **`searchBarIsFocused(_:)`**: Programmatically manage search bar focus with a simple binding.  
   *Available on iOS (14.0+), visionOS (1.0+), and macOS (12.0+).*
 
 ## Installation
 
 ### Swift Package Manager
 
-Add `SearchBar` to your project via Swift Package Manager. The minimum version required is **2.1.0**.
+Add `SearchBar` to your project via Swift Package Manager. The minimum version required is **2.1.5**.
 
 #### In `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/SzpakKamil/SearchBar.git", from: "2.1.0")
+    .package(url: "https://github.com/SzpakKamil/SearchBar.git", from: "2.1.5")
 ]
 ```
 
@@ -165,7 +176,7 @@ dependencies: [
 
 1. Go to **File > Swift Packages > Add Package Dependency**.
 2. Enter the URL: `https://github.com/SzpakKamil/SearchBar.git`.
-3. Select version **2.1.0** or later.
+3. Select version **2.1.5** or later.
 
 ### Agent Skill
 You can install the SearchBar skill for your CLI agent to get expert guidance on SearchBar directly in your terminal.
