@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarLookToDictateEnabled(_:)``
+# ``SearchBar/SearchBar/searchBarLookToDictateEnabled(_:)``
 
 Enables or disables the "Look to Dictate" feature for the search bar.
 

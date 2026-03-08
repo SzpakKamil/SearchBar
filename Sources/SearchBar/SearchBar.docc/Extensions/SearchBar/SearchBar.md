@@ -99,48 +99,49 @@ This example creates a `SearchBar` with a capsule style, a custom icon, and even
 ## Topics
 
 ### Initializers
-- ``SearchBar/init(text:prompt:)``
+- ``SearchBar/SearchBar/init(text:prompt:)``
 
 ### Appearance Modifiers
-- ``SearchBar/searchBarStyle(_:)``
-- ``SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
-- ``SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
-- ``SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
-- ``SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
-- ``SearchBar/searchBarIconView(_:)``
-- ``SearchBar/searchBarIconView()``
-- ``SearchBar/searchBarMaterial(_:)``
-- ``SearchBar/searchBarScale(_:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:)``
+- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarIconView(_:)``
+- ``SearchBar/SearchBar/searchBarIconView()``
+- ``SearchBar/SearchBar/searchBarMaterial(_:)``
+- ``SearchBar/SearchBar/searchBarScale(_:)``
 
 ### Input Configuration Modifiers (iOS and visionOS only)
-- ``SearchBar/searchBarKeyboardType(_:)``
-- ``SearchBar/searchBarReturnKeyType(_:)``
-- ``SearchBar/searchBarAutoCorrectionType(_:)``
-- ``SearchBar/searchBarAutoCapitalizationType(_:)``
-- ``SearchBar/searchBarTextContentType(_:)``
+- ``SearchBar/SearchBar/searchBarLookToDictateEnabled(_:)``
+- ``SearchBar/SearchBar/searchBarKeyboardType(_:)``
+- ``SearchBar/SearchBar/searchBarReturnKeyType(_:)``
+- ``SearchBar/SearchBar/searchBarAutoCorrectionType(_:)``
+- ``SearchBar/SearchBar/searchBarAutoCapitalizationType(_:)``
+- ``SearchBar/SearchBar/searchBarTextContentType(_:)``
 
 ### Event Handling Modifiers
-- ``SearchBar/searchBarClearButtonAction(_:)``
-- ``SearchBar/searchBarBeginEditingAction(_:)``
-- ``SearchBar/searchBarEndEditingAction(_:)``
-- ``SearchBar/searchBarCancelButtonAction(_:)``
-- ``SearchBar/searchBarChangeAction(_:)``
+- ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``
+- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
+- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``
+- ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``
+- ``SearchBar/SearchBar/searchBarChangeAction(_:)``
 
 ### Button Display Modifiers
-- ``SearchBar/searchBarClearButtonDisplayMode(_:)``
-- ``SearchBar/searchBarCancelButtonDisplayMode(_:)``
+- ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``
+- ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``
 
 ### Tokens and Suggestions Modifiers
-- ``SearchBar/searchBarCurrentTokens(_:)``
-- ``SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
-- ``SearchBar/searchBarSuggestedTokens(_:)-5wxi``
-- ``SearchBar/searchBarSuggestedTokens(_:)-54f3``
-- ``SearchBar/searchBarSuggestions(_:)-syi0``
-- ``SearchBar/searchBarSuggestions(_:)-620nd``
-- ``SearchBar/searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)``
+- ``SearchBar/SearchBar/searchBarCurrentTokens(_:)``
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi``
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-54f3``
+- ``SearchBar/SearchBar/searchBarSuggestions(_:)-syi0``
+- ``SearchBar/SearchBar/searchBarSuggestions(_:)-620nd``
+- ``SearchBar/SearchBar/searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)``
 
 ### Focus Modifiers
-- ``SearchBar/searchBarIsFocused(_:)``
+- ``SearchBar/SearchBar/searchBarIsFocused(_:)``
 
 ## See Also
 

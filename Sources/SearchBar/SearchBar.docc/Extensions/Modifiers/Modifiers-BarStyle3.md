@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+# ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
 Applies a predefined corner style to the `SearchBar` with customizations including token background color.
 
@@ -53,4 +53,4 @@ This example styles the `SearchBar` with a capsule shape and custom colors, incl
 
 - ``SearchBarStyle``
 - ``SearchBarCornerStyle``
-- ``SearchBar/searchBarStyle(_:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:)``

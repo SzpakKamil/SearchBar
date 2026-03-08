@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarBeginEditingAction(_:)``
+# ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
 
 Triggers an action when the user begins editing the `SearchBar`’s text.
 
@@ -50,5 +50,5 @@ This example logs a message when the user begins editing the search text.
 
 ## See Also
 
-- ``SearchBar/searchBarEndEditingAction(_:)``
-- ``SearchBar/searchBarIsFocused(_:)``
+- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``
+- ``SearchBar/SearchBar/searchBarIsFocused(_:)``

@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarIconView(_:)``
+# ``SearchBar/SearchBar/searchBarIconView(_:)``
 
 Sets a custom icon view for the `SearchBar`.
 
@@ -50,5 +50,5 @@ This example sets a magnifying glass as the search bar’s icon.
 
 ## See Also
 
-- ``SearchBar/searchBarIconView()``
-- ``SearchBar/searchBarStyle(_:)``
+- ``SearchBar/SearchBar/searchBarIconView()``
+- ``SearchBar/SearchBar/searchBarStyle(_:)``

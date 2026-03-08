@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarCancelButtonDisplayMode(_:)``
+# ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``
 
 Configures the display behavior of the cancel button in the `SearchBar`.
 
@@ -93,5 +93,5 @@ This example ensures the cancel button is always visible.
 
 ## See Also
 
-- ``SearchBar/searchBarCancelButtonAction(_:)``
-- ``SearchBar/searchBarClearButtonDisplayMode(_:)``
+- ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``
+- ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``

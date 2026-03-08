@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarReturnKeyType(_:)``
+# ``SearchBar/SearchBar/searchBarReturnKeyType(_:)``
 
 Configures the return key type for the `SearchBar`’s keyboard.
 
@@ -248,5 +248,5 @@ This example sets the return key to “Search” on the keyboard.
 
 ## See Also
 
-- ``SearchBar/searchBarKeyboardType(_:)``
-- ``SearchBar/searchBarTextContentType(_:)``
+- ``SearchBar/SearchBar/searchBarKeyboardType(_:)``
+- ``SearchBar/SearchBar/searchBarTextContentType(_:)``

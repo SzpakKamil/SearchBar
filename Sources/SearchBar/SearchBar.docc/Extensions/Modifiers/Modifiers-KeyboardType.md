@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarKeyboardType(_:)``
+# ``SearchBar/SearchBar/searchBarKeyboardType(_:)``
 
 Sets the keyboard type for the `SearchBar`’s text input.
 
@@ -188,5 +188,5 @@ This example uses an email keyboard for the `SearchBar`.
 
 ## See Also
 
-- ``SearchBar/searchBarAutoCapitalizationType(_:)``
-- ``SearchBar/searchBarTextContentType(_:)``
+- ``SearchBar/SearchBar/searchBarAutoCapitalizationType(_:)``
+- ``SearchBar/SearchBar/searchBarTextContentType(_:)``

@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarScale(_:)``
+# ``SearchBar/SearchBar/searchBarScale(_:)``
 
 A SwiftUI view modifier that adjusts the padding between a `SearchBar`’s elements and its border.
 

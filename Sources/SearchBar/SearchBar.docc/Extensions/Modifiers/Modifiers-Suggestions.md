@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarSuggestions(_:)-syi0``
+# ``SearchBar/SearchBar/searchBarSuggestions(_:)-syi0``
 
 Sets a binding to a list of suggestions for the `SearchBar`.
 
@@ -117,4 +117,4 @@ This example binds a dynamic list of suggestions to the `SearchBar`.
 ## See Also
 
 - ``SearchBarSuggestion``
-- ``SearchBar/searchBarSuggestions(_:)-620nd``
+- ``SearchBar/SearchBar/searchBarSuggestions(_:)-620nd``

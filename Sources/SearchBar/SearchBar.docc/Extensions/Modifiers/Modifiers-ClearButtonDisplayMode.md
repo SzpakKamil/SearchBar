@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarClearButtonDisplayMode(_:)``
+# ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``
 
 Configures the display behavior of the clear button in the `SearchBar`.
 
@@ -153,5 +153,5 @@ This example shows the clear button only while the user is editing.
 
 ## See Also
 
-- ``SearchBar/searchBarClearButtonAction(_:)``
-- ``SearchBar/searchBarCancelButtonDisplayMode(_:)``
+- ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``
+- ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``

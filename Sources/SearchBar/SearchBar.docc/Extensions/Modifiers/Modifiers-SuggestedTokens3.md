@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarSuggestedTokens(_:)-54f3``
+# ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-54f3``
 
 Converts a list of suggestions into tokens for the `SearchBar`.
 
@@ -105,5 +105,5 @@ This example converts suggestions into tokens and manages current tokens to enab
 ## See Also
 
 - ``SearchBarSuggestion``
-- ``SearchBar/searchBarSuggestedTokens(_:)-5wxi``
-- ``SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi``
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-6o8fa``

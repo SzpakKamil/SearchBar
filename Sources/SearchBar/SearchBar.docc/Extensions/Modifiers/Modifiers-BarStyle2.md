@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
+# ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
 
 Applies a predefined corner style to the `SearchBar` with optional customizations for text color, tint, and background color.
 
@@ -51,4 +51,4 @@ This example applies a rounded style to the `SearchBar` with custom colors on ma
 
 - ``SearchBarStyle``
 - ``SearchBarCornerStyle``
-- ``SearchBar/searchBarStyle(_:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:)``

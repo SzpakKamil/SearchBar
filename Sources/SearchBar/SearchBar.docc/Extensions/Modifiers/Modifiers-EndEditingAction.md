@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarEndEditingAction(_:)``
+# ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``
 
 Triggers an action when the user stops editing the `SearchBar`’s text.
 
@@ -50,5 +50,5 @@ This example logs a message when editing ends.
 
 ## See Also
 
-- ``SearchBar/searchBarBeginEditingAction(_:)``
-- ``SearchBar/searchBarIsFocused(_:)``
+- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
+- ``SearchBar/SearchBar/searchBarIsFocused(_:)``

@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarTextContentType(_:)``
+# ``SearchBar/SearchBar/searchBarTextContentType(_:)``
 
 Specifies the content type for the `SearchBar`’s text input to improve autofill and keyboard suggestions.
 
@@ -82,5 +82,5 @@ This example optimizes the keyboard for email input.
 
 ## See Also
 
-- ``SearchBar/searchBarKeyboardType(_:)``
-- ``SearchBar/searchBarAutoCorrectionType(_:)``
+- ``SearchBar/SearchBar/searchBarKeyboardType(_:)``
+- ``SearchBar/SearchBar/searchBarAutoCorrectionType(_:)``

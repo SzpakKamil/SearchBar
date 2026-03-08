@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarIsFocused(_:)``
+# ``SearchBar/SearchBar/searchBarIsFocused(_:)``
 
 Binds the `SearchBar`’s focus state to a Boolean value.
 
@@ -54,5 +54,5 @@ This example focuses the `SearchBar` when the button is pressed.
 
 ## See Also
 
-- ``SearchBar/searchBarBeginEditingAction(_:)``
-- ``SearchBar/searchBarEndEditingAction(_:)``
+- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
+- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``

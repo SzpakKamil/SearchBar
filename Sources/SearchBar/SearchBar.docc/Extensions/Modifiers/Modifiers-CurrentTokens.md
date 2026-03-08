@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarCurrentTokens(_:)``
+# ``SearchBar/SearchBar/searchBarCurrentTokens(_:)``
 
 Manages a dynamic list of current tokens for the `SearchBar`.
 
@@ -100,4 +100,4 @@ This example binds a dynamic list of tokens to the `SearchBar`.
 ## See Also
 
 - ``SearchBarToken``
-- ``SearchBar/searchBarSuggestedTokens(_:)-5wxi``
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi``

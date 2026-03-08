@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarIconView()``
+# ``SearchBar/SearchBar/searchBarIconView()``
 
 Removes the custom icon view from the `SearchBar`, setting it to an empty view.
 
@@ -44,5 +44,5 @@ This example removes the custom icon from the `SearchBar`.
 
 ## See Also
 
-- ``SearchBar/searchBarIconView(_:)``
-- ``SearchBar/searchBarStyle(_:)``
+- ``SearchBar/SearchBar/searchBarIconView(_:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:)``

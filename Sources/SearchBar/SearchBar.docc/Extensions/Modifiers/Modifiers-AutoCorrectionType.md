@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarAutoCorrectionType(_:)``
+# ``SearchBar/SearchBar/searchBarAutoCorrectionType(_:)``
 
 Controls the autocorrection behavior of the `SearchBar`’s text input.
 
@@ -98,5 +98,5 @@ This example disables autocorrection to prevent automatic text changes.
 
 ## See Also
 
-- ``SearchBar/searchBarAutoCapitalizationType(_:)``
-- ``SearchBar/searchBarKeyboardType(_:)``
+- ``SearchBar/SearchBar/searchBarAutoCapitalizationType(_:)``
+- ``SearchBar/SearchBar/searchBarKeyboardType(_:)``

@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarChangeAction(_:)``
+# ``SearchBar/SearchBar/searchBarChangeAction(_:)``
 
 Triggers an action when the search text in the `SearchBar` changes.
 
@@ -50,5 +50,5 @@ This example logs the new search text each time it changes.
 
 ## See Also
 
-- ``SearchBar/searchBarBeginEditingAction(_:)``
-- ``SearchBar/searchBarEndEditingAction(_:)``
+- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
+- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``

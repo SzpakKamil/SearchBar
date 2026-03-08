@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarCancelButtonAction(_:)``
+# ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``
 
 Defines an action to perform when the cancel button is clicked in the `SearchBar`.
 
@@ -53,5 +53,5 @@ This clears the search text when the cancel button is tapped.
 
 ## See Also
 
-- ``SearchBar/searchBarCancelButtonDisplayMode(_:)``
-- ``SearchBar/searchBarClearButtonAction(_:)``
+- ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``
+- ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``

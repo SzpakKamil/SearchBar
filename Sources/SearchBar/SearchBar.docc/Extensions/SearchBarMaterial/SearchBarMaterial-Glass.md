@@ -69,5 +69,5 @@ struct ContentView: View {
 }
 
 ## Related Types
-- ``SearchBar/searchBarMaterial(_:)``
+- ``SearchBar/SearchBar/searchBarMaterial(_:)``
 - ``SearchBar``

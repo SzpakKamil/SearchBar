@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarClearButtonAction(_:)``
+# ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``
 
 Defines an action to perform when the clear button is clicked in the `SearchBar`.
 
@@ -50,5 +50,5 @@ This example logs a message when the clear button is tapped.
 
 ## See Also
 
-- ``SearchBar/searchBarClearButtonDisplayMode(_:)``
-- ``SearchBar/searchBarCancelButtonAction(_:)``
+- ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``
+- ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``

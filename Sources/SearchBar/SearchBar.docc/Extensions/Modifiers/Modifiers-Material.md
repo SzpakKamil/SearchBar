@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarMaterial(_:)``
+# ``SearchBar/SearchBar/searchBarMaterial(_:)``
 
 A SwiftUI view modifier that applies a material style to a `SearchBar` view.
 

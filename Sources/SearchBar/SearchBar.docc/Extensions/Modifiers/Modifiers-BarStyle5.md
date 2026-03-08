@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+# ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
 Configures the `SearchBar`’s style with a specific corner radius and color settings, including token background.
 
@@ -51,5 +51,5 @@ This example sets a corner radius of 15 and custom colors, including a yellow to
 ## See Also
 
 - ``SearchBarStyle``
-- ``SearchBar/searchBarStyle(_:)``
-- ``SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:)``
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``

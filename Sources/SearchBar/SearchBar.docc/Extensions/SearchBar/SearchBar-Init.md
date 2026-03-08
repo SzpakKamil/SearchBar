@@ -1,4 +1,4 @@
-# ``SearchBar/init(text:prompt:)``
+# ``SearchBar/SearchBar/init(text:prompt:)``
 
 Initializes a `SearchBar` with a binding to the search text and an optional prompt.
 
