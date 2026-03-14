@@ -51,6 +51,8 @@ Don't fight the framework. Shape your vision with modifiers you already know and
 ## Instant Integration
 Kill the boilerplate. Drop SearchBar in and build complex filtering systems with zero overhead.
 
+The `SearchBar` prefix is used because the package is small and intended as a shortcut. To minimize the need to open documentation and to enhance discoverability, modifiers and views are prefixed with `SearchBar` (e.g., `SearchBar.searchBarStyle`), rather than just `.style`. This approach also aligns with project constraints and framework parity.
+
 ### Basic Usage
 A minimal setup for a functional search bar across platforms:
 
