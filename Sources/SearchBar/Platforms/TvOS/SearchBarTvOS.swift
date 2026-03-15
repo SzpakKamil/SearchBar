@@ -159,7 +159,7 @@ fileprivate struct SearchBarTVOSButtonStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
             .animation(.smooth(duration: 0.2), value: isFocused)
             .animation(.smooth(duration: 0.2), value: configuration.isPressed)
-            .shadow(color: .black.opacity(isFocused ? 0 : 0.35), radius: 20, y: 10)
+            .shadow(color: .black.opacity(isFocused ? 0.35 : 0), radius: 20, y: 10)
     }
 }
 
