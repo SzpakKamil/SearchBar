@@ -332,6 +332,12 @@ public class SearchStyleVisionOS: UISearchBar {
         guard layer.cornerRadius != desiredCornerRadius else { return }
         layer.cornerRadius = desiredCornerRadius
     }
+    
+    deinit {
+        for layer in observedLayers.allObjects {
+            layer.removeObserver(self, forKeyPath: "cornerRadius")
+        }
+    }
 }
 
 #endif
