@@ -98,10 +98,12 @@ public struct SearchBar: UIViewRepresentable{
         if let changeAction = searchChangeAction{
             changeAction(text)
         }
-        if (isUsingCustomFocus && isFocused.wrappedValue){
-            uiView.searchTextField.becomeFirstResponder()
-        }else if (isUsingCustomFocus && !isFocused.wrappedValue){
-            uiView.searchTextField.resignFirstResponder()
+        if isUsingCustomFocus {
+            if isFocused.wrappedValue && !uiView.searchTextField.isFirstResponder {
+                uiView.searchTextField.becomeFirstResponder()
+            } else if !isFocused.wrappedValue && uiView.searchTextField.isFirstResponder {
+                uiView.searchTextField.resignFirstResponder()
+            }
         }
         let _ = configStyle(view: uiView)
     }
@@ -120,6 +122,7 @@ public struct SearchBar: UIViewRepresentable{
         uiView.searchTextField.backgroundColor = UIColor(style.backgroundColor)
         uiView.layer.cornerRadius = style.cornerRadius
         uiView.searchTextField.layer.cornerRadius = style.cornerRadius
+        uiView.clipsToBounds = true
         #else
         let uiView = view ?? UISearchBar()
         uiView.searchTextField.borderStyle = .none
@@ -254,15 +257,20 @@ public class SearchBarCoordinator: NSObject, UISearchBarDelegate, UISearchTextFi
     }
     
     public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        if #available(iOS 26.0, *){
+        if parent.isUsingCustomFocus {
+            parent.isFocused.wrappedValue = false
+        }
+        
+        if #available(iOS 16.0, *) {
             searchBar.searchTextField.searchSuggestions = []
         }
-        searchBar.resignFirstResponder()
-        if let cancelButtonAction = parent.cancelButtonAction{
-            cancelButtonAction()
+        
+        DispatchQueue.main.async {
+            searchBar.resignFirstResponder()
+            
+            self.parent.cancelButtonAction?()
         }
     }
-    
     @available(iOS 16.0, *)
     public func searchTextField(_ searchTextField: UISearchTextField, didSelect suggestion: any UISearchSuggestion) {
         // Extract the suggestion text safely
@@ -301,43 +309,53 @@ public class SearchBarCoordinator: NSObject, UISearchBarDelegate, UISearchTextFi
 @_documentation(visibility: internal)
 public class SearchStyleVisionOS: UISearchBar {
     private var didObserveSubviews = false
-    public var desiredCornerRadius = 22.0
-    private var observedLayers = NSHashTable<CALayer>.weakObjects()
-    
-    public override func willMove(toWindow newWindow: UIWindow?) {
-        super.willMove(toWindow: newWindow)
-     
-        // Adding to window
-        guard !didObserveSubviews else { return }
-        didObserveSubviews = true
-        observeSubviews(self)
-    }
-        
-    func observeSubviews(_ view: UIView) {
-        if !observedLayers.contains(view.layer) {
-            view.layer.addObserver(self, forKeyPath: "cornerRadius", options: [.new], context: nil)
-            observedLayers.add(view.layer)
+        public var desiredCornerRadius: CGFloat = 22.0 {
+            didSet {
+                
+                for layer in observedLayers.allObjects {
+                    if layer.cornerRadius != desiredCornerRadius {
+                        layer.cornerRadius = desiredCornerRadius
+                    }
+                }
+            }
         }
         
-        view.subviews.forEach { observeSubviews($0) }
-    }
+        private var observedLayers = NSHashTable<CALayer>.weakObjects()
         
-    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        guard keyPath == "cornerRadius" else {
-            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
-            return
+        deinit {
+            for layer in observedLayers.allObjects {
+                layer.removeObserver(self, forKeyPath: "cornerRadius")
+            }
         }
         
-        guard let layer = object as? CALayer else { return }
-        guard layer.cornerRadius != desiredCornerRadius else { return }
-        layer.cornerRadius = desiredCornerRadius
-    }
-    
-    deinit {
-        for layer in observedLayers.allObjects {
-            layer.removeObserver(self, forKeyPath: "cornerRadius")
+        public override func willMove(toWindow newWindow: UIWindow?) {
+            super.willMove(toWindow: newWindow)
+            guard newWindow != nil, !didObserveSubviews else { return }
+            didObserveSubviews = true
+            observeSubviews(self)
         }
-    }
+        
+        private func observeSubviews(_ view: UIView) {
+            if !observedLayers.contains(view.layer) {
+                view.layer.addObserver(self, forKeyPath: "cornerRadius", options: [.new], context: nil)
+                observedLayers.add(view.layer)
+                
+                // Force initial state
+                view.layer.cornerRadius = desiredCornerRadius
+            }
+            view.subviews.forEach { observeSubviews($0) }
+        }
+        
+        public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+            if keyPath == "cornerRadius", let layer = object as? CALayer {
+                if layer.cornerRadius != desiredCornerRadius {
+                    // The OS tried to change it. We change it back.
+                    layer.cornerRadius = desiredCornerRadius
+                }
+            } else {
+                super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+            }
+        }
 }
 
 #endif
