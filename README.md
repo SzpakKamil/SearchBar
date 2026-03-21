@@ -6,7 +6,7 @@
 ![Banner](./Resources/SearchBar-Banner.png#gh-light-mode-only)
 ![Banner](./Resources/SearchBar-BannerDark.png#gh-dark-mode-only)
 
-A flexible and customizable search component for SwiftUI, `SearchBar` provides a powerful alternative to the standard `.searchable` modifier, offering full layout control across all Apple platforms.
+Flexible, customizable search for SwiftUI. `SearchBar` replaces standard `.searchable` modifiers with full layout control across all Apple platforms.
 
 Visit the [Site](https://kamilszpak.com/searchbar) or [Documentation](https://documentation.kamilszpak.com/documentation/searchbar).
 
@@ -25,27 +25,27 @@ Visit the [Site](https://kamilszpak.com/searchbar) or [Documentation](https://do
 
 ## Features
 
-* **Cross-Platform API**: A single, unified API for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS.
-* **Native Backend**: Utilizes `UISearchBar` on relevant platforms for a native feel, with custom SwiftUI implementations where needed.
-* **Token Support**: Built-in support for search tokens to represent filters or scopes.
-* **Suggestions**: Provide users with a list of search suggestions that can be filtered automatically.
-* **Localization & Accessibility**: Fully localized for all Apple-supported languages and includes built-in support for VoiceOver and Dynamic Type.
+* **Cross-Platform API**: Unified API for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS.
+* **Native Backend**: Uses `UISearchBar` where available, custom SwiftUI elsewhere.
+* **Token Support**: Support search tokens for filters or scopes.
+* **Suggestions**: Display and filter search suggestions.
+* **Localization & Accessibility**: Localized for all Apple languages. Supports VoiceOver and Dynamic Type.
 
 ## Customization
 
-`SearchBar` is designed to integrate seamlessly into your app's design.
+Integrate `SearchBar` seamlessly.
 
-* **Style & Appearance**: Customize the search bar's shape (`.rounded`, `.capsule`), background materials (`.glass`), colors, and corner radius.
-* **Layout Integration**: Place the search bar anywhere in your SwiftUI view hierarchy without being constrained to navigation bars.
-* **Custom Icons & Views**: Replace the default search icon with a custom `View`.
-* **Smart Input**: Automatically suggests content types like addresses, emails, or locations, and integrates with platform features like visionOS "Look to Dictate".
+* **Style & Appearance**: Customize shape, background material, color, and corner radius.
+* **Layout Integration**: Place the search bar anywhere in the view hierarchy.
+* **Custom Icons & Views**: Replace the default search icon with any `View`.
+* **Smart Input**: Suggest content types (addresses, emails). Integrate platform features like visionOS 'Look to Dictate'.
 
 ## Usage
 
-All components and modifiers are prefixed with `SearchBar` for clarity (e.g., `.searchBarStyle`).
+Components and modifiers are prefixed with `SearchBar` (e.g., `.searchBarStyle`).
 
 ### Basic
-A minimal setup for a functional search bar.
+Minimal setup for a functional search bar.
 
 ```swift
 import SwiftUI
@@ -65,7 +65,7 @@ struct ContentView: View {
 ```
 
 ### Advanced
-A more advanced configuration with custom styling, tokens, and suggestions.
+Advanced configuration with custom styling, tokens, and suggestions.
 
 ```swift
 import SwiftUI
@@ -100,21 +100,21 @@ struct ContentView: View {
 ```
 
 ## API Highlights
-A selection of key modifiers. For a complete list, see the [documentation](https://documentation.kamilszpak.com/documentation/searchbar/modifiers).
+Key modifiers. See [documentation](https://documentation.kamilszpak.com/documentation/searchbar/modifiers) for the complete list.
 
 ### Appearance
-- `searchBarStyle(_:)`: Sets the shape, like `.rounded` or `.capsule`.
-- `searchBarIconView(_:)`: Provides a custom view for the search icon.
-- `searchBarMaterial(_:)`: Applies a background material like `.glass`.
+- `searchBarStyle(_:)`: Set shape (e.g., `.rounded` or `.capsule`).
+- `searchBarIconView(_:)`: Provide a custom view for the search icon.
+- `searchBarMaterial(_:)`: Apply a background material like `.glass`.
 
 ### Input & Interaction
 - `searchBarKeyboardType(_:)`, `searchBarReturnKeyType(_:)`, `searchBarAutoCorrectionType(_:)`.
-- `searchBarLookToDictateEnabled(_:)`: Enables eye-tracking input on visionOS.
-- `searchBarTextContentType(_:)`: Configures for autofill and specific data types.
+- `searchBarLookToDictateEnabled(_:)`: Enable eye-tracking input on visionOS.
+- `searchBarTextContentType(_:)`: Configure for autofill and specific data types.
 
 ### State & Events
-- `searchBarIsFocused(_:)`: Binds the focus state to a boolean variable.
-- `searchBarChangeAction(_:)`: A closure executed when the search text changes.
+- `searchBarIsFocused(_:)`: Bind focus state to a boolean variable.
+- `searchBarChangeAction(_:)`: Execute closure when search text changes.
 - `searchBarBeginEditingAction(_:)` / `searchBarEndEditingAction(_:)`: Closures for focus events.
 
 ## Resources
@@ -125,7 +125,7 @@ A selection of key modifiers. For a complete list, see the [documentation](https
 ## Installation
 
 ### Swift Package Manager
-Add `SearchBar` via SPM. The minimum version is `2.1.5`.
+Add `SearchBar` via SPM. Minimum version is `2.1.5`.
 
 ```swift
 dependencies: [
