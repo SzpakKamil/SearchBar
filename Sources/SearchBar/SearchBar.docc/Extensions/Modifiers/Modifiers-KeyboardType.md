@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarKeyboardType(_:)``
 
-Sets the keyboard type for the `SearchBar`’s text input.
+Sets text input keyboard type.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,13 +19,13 @@ Sets the keyboard type for the `SearchBar`’s text input.
 
 ## Overview
 
-The `searchBarKeyboardType(_:)` modifier configures the type of keyboard displayed when the user edits the `SearchBar`’s text. Available on iOS and visionOS, it supports types like `.emailAddress` or `.numberPad` to match the expected input.
+`searchBarKeyboardType(_:)` configures the keyboard type. Supported on iOS and visionOS.
 
 > Note: This modifier is not supported on macOS due to platform-specific UI differences.
 
 ## Parameters
 
-- `type`: A `UIKeyboardType` specifying the keyboard type (e.g., `.default`, `.emailAddress`).
+- `type`: A `UIKeyboardType` value (e.g., `.default`, `.emailAddress`).
 
 ## Example
 
@@ -43,12 +43,10 @@ struct ContentView: View {
 }
 ```
 
-This example uses an email keyboard for the `SearchBar`.
+This uses an email keyboard.
 
 @TabNavigator {
     @Tab("iOS") {
-        Select the keyboard type that best fits your search input requirements.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarKeyboard-Type-Default-iOS", alt: "Default Keyboard") {
@@ -93,8 +91,6 @@ This example uses an email keyboard for the `SearchBar`.
         }
     }
     @Tab("iPadOS") {
-        Choose the keyboard type to optimize for various screen and multitasking configurations.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarKeyboard-Type-Default-iPadOS", alt: "Default Keyboard") {
@@ -139,8 +135,6 @@ This example uses an email keyboard for the `SearchBar`.
         }
     }
     @Tab("visionOS") {
-        Customize the keyboard type to enhance spatial text entry efficiency.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarKeyboard-Type-Default-visionOS", alt: "Default Keyboard") {

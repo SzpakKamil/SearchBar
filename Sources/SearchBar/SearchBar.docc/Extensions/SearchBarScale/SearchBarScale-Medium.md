@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarScale/medium``
 
-A case of the `SearchBarScale` enum that applies a balanced size to the `SearchBar`.
+Balanced search bar size.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,7 +20,7 @@ A case of the `SearchBarScale` enum that applies a balanced size to the `SearchB
 
 ## Overview
 
-The `medium` case specifies a balanced size for the `SearchBar` view, with a `heightMultiplier` of 0.8 (or 0.77 on iOS 26.0+; 2 on macOS) and a `cornerScale` of 1.2 (or 1.35 on iOS 26.0+). It has a fixed `id` of `1` and is applied using the `.searchBarScale(.medium)` modifier. This scale is suitable for standard layouts requiring a moderately sized search bar. Available on iOS 14.0+, iPadOS 14.0+, and macOS 11.0+.
+`medium` specifies balanced size (`heightMultiplier`: 0.8/0.77/2, `cornerScale`: 1.2/1.35). Applied via `.searchBarScale(.medium)`. Available on iOS 14.0+, iPadOS 14.0+, macOS 11.0+.
 
 > Important: This type is unavailable on visionOS.
 

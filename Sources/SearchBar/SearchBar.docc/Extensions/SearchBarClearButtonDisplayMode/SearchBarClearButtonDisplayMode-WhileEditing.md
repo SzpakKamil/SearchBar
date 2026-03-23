@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarClearButtonDisplayMode/whileEditing``
 
-A mode where the clear button is shown in the `SearchBar` only while editing.
+Clear button visible while editing.
 
 @Metadata {
     @DisplayName("WhileEditing")
@@ -18,9 +18,8 @@ A mode where the clear button is shown in the `SearchBar` only while editing.
 
 ## Overview
 
-- Specifies that the `SearchBar` clear button appears only during text editing.
-- Suitable for interfaces where the clear button is relevant only when active.
-- Used with the `searchBarClearButtonDisplayMode(_:)` modifier.
+- Clear button appears only during editing.
+- Use with `searchBarClearButtonDisplayMode(_:)`.
 
 ## Example
 

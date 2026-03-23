@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/init(style:borderColor:textColor:tint:backgroundColor:)``
 
-Creates a `SearchBarStyle` with a `SearchBarCornerStyle` and optional colors.
+Initializes `SearchBarStyle` with style.
 
 @Metadata {
     @Available(iOS, introduced: "14.0")
@@ -19,17 +19,17 @@ Creates a `SearchBarStyle` with a `SearchBarCornerStyle` and optional colors.
 
 ## Overview
 
-- Initializes a `SearchBarStyle` using a `SearchBarCornerStyle` for `cornerRadius`.
-- Accepts optional `textColor`, `tint`, and `backgroundColor` parameters.
+- Initializes using `SearchBarCornerStyle`.
+- Optional: `textColor`, `tint`, `backgroundColor`.
 - Sets `tokenBackground` to `nil`.
 
 ## Parameters
 
-- `style`: A `SearchBarCornerStyle` defining the corner shape.
-- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
-- `textColor`: An optional `Color` for the text.
-- `tint`: An optional `Color` for interactive elements.
-- `backgroundColor`: An optional `Color` for the background.
+- `style`: `SearchBarCornerStyle` for shape.
+- `borderColor`: Optional `Color` for border (macOS only).
+- `textColor`: Optional `Color` for text.
+- `tint`: Optional `Color` for tint.
+- `backgroundColor`: Optional `Color` for background.
 
 ## Example
 

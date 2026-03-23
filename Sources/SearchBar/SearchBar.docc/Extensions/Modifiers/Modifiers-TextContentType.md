@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarTextContentType(_:)``
 
-Specifies the content type for the `SearchBar`’s text input to improve autofill and keyboard suggestions.
+Specifies text content type.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,13 +19,13 @@ Specifies the content type for the `SearchBar`’s text input to improve autofil
 
 ## Overview
 
-The `searchBarTextContentType(_:)` modifier sets the content type for the `SearchBar`’s text input, enabling better autofill and keyboard suggestions (e.g., for emails or URLs). Available on iOS and visionOS, it enhances the user experience for specific input types.
+`searchBarTextContentType(_:)` sets the content type for autofill. Supported on iOS and visionOS.
 
 > Note: This modifier is not supported on macOS due to platform-specific UI differences.
 
 ## Parameters
 
-- `type`: A `UITextContentType` specifying the content type (e.g., `.emailAddress`, `.url`).
+- `type`: A `UITextContentType` value (e.g., `.emailAddress`, `.url`).
 
 ## Example
 
@@ -43,12 +43,10 @@ struct ContentView: View {
 }
 ```
 
-This example optimizes the keyboard for email input.
+This sets the content type to email.
 
 @TabNavigator {
     @Tab("iOS") {
-        Configure the text content type to enable smarter autofill and keyboard suggestions.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarKeyboard-ContentType-Default-iOS", alt: "Default Content Type") {
@@ -63,8 +61,6 @@ This example optimizes the keyboard for email input.
         }
     }
     @Tab("iPadOS") {
-        Adjust the text content type for enhanced input accuracy and predictive text.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarKeyboard-ContentType-Default-iPadOS", alt: "Default Content Type") {

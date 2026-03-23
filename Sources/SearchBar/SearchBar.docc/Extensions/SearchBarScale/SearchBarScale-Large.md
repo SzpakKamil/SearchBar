@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarScale/large``
 
-A case of the `SearchBarScale` enum that applies an expanded size to the `SearchBar`.
+Expanded search bar size.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,7 +20,7 @@ A case of the `SearchBarScale` enum that applies an expanded size to the `Search
 
 ## Overview
 
-The `large` case specifies an expanded size for the `SearchBar` view, with a `heightMultiplier` of 0.9 (or 0.8 on iOS 26.0+; 3 on macOS) and a `cornerScale` of 1.4. It has a fixed `id` of `2` and is applied using the `.searchBarScale(.large)` modifier. This scale is designed for prominent or touch-friendly interfaces where a larger search bar enhances usability. Available on iOS 14.0+, iPadOS 14.0+, and macOS 11.0+.
+`large` specifies expanded size (`heightMultiplier`: 0.9/0.8/3, `cornerScale`: 1.4). Applied via `.searchBarScale(.large)`. Available on iOS 14.0+, iPadOS 14.0+, macOS 11.0+.
 
 > Important: This type is unavailable on visionOS.
 

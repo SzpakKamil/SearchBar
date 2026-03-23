@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/init(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
-Creates a `SearchBarStyle` with a custom corner radius and optional colors, including `tokenBackground`.
+Initializes `SearchBarStyle` with radius and tokens.
 
 @Metadata {
     @Available(iOS, introduced: "14.0")
@@ -16,18 +16,18 @@ Creates a `SearchBarStyle` with a custom corner radius and optional colors, incl
 
 ## Overview
 
-- Initializes a `SearchBarStyle` with a specified `cornerRadius`.
-- Accepts optional `textColor`, `tint`, `tokenBackground`, and `backgroundColor` parameters.
+- Initializes with `cornerRadius`.
+- Optional: `textColor`, `tint`, `tokenBackground`, `backgroundColor`.
 - Unavailable on macOS due to `tokenBackground` platform dependency.
 
 ## Parameters
 
-- `cornerRadius`: A `CGFloat` for the `SearchBar`’s corner roundness.
-- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
-- `textColor`: An optional `Color` for the text.
-- `tint`: An optional `Color` for interactive elements.
-- `tokenBackground`: An optional `Color` for token backgrounds.
-- `backgroundColor`: An optional `Color` for the background.
+- `cornerRadius`: `CGFloat` for corner radius.
+- `borderColor`: Optional `Color` for border (macOS only).
+- `textColor`: Optional `Color` for text.
+- `tint`: Optional `Color` for tint.
+- `tokenBackground`: Optional `Color` for tokens.
+- `backgroundColor`: Optional `Color` for background.
 
 ## Example
 

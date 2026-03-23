@@ -1,6 +1,6 @@
 # ``SearchBar``
 
-Native, Highly Customizable Search Component
+Customizable Search Component
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -23,11 +23,9 @@ Native, Highly Customizable Search Component
 
 ## Overview
 
-The `SearchBar` package offers a SwiftUI-based search component for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS, enabling developers to create intuitive, customizable search experiences. It leverages `UIViewRepresentable` for native integration on iOS, iPadOS, and visionOS, while on macOS, tvOS and watchOS, it reimplements the default search bar using SwiftUI views for enhanced flexibility and consistency. With support for search tokens, dynamic suggestions, and event handling, `SearchBar` empowers you to build modern, user-friendly search interfaces that adapt to your app’s unique needs.
+`SearchBar` provides a SwiftUI search component for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS. It uses `UIViewRepresentable` on iOS/visionOS and native SwiftUI on other platforms. Supports tokens, suggestions, and events.
 
 @Image(source: "SearchBar-Banner.png", alt: "Searcher app on iPhone, iPad and MacBook with a sleek search bar.")
-
-Whether you’re adding token-based filtering, real-time suggestions, or custom styling, `SearchBar` provides a flexible API to enhance your app’s search functionality. Its accessibility features, like VoiceOver and Dynamic Type support, ensure an inclusive experience, while its extensive documentation makes integration straightforward. Explore the resources below to start building with `SearchBar` and see how it can transform user interactions in your app.
 
 ## Getting Started
 

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/backgroundColor``
 
-The background color of the `SearchBar`.
+`SearchBar` background color.
 
 @Metadata {
     @DisplayName("BackgroundColor")
@@ -20,8 +20,8 @@ The background color of the `SearchBar`.
 
 ## Overview
 
-- A `Color` value setting the `SearchBar`’s background.
-- Defaults to `.secondarySystemBackground` on iOS/visionOS or a light/dark-specific color on macOS.
+- `Color` value for background.
+- Defaults to platform-specific system color.
 - Setting a custom value sets ``usesCustomBackground`` to `true`.
 
 ## Example
@@ -42,8 +42,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Customize the background color to match your application's theme.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-iOS", alt: "Default Background") {
@@ -58,8 +56,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Set the background color to complement the large screen interface.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-iPadOS", alt: "Default Background") {
@@ -74,8 +70,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Adjust the background color to fit the desktop environment.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-macOSTahoe", alt: "Default Background") {
@@ -90,8 +84,6 @@ struct ContentView: View {
         }
     }
     @Tab("visionOS") {
-        Choose a background color that enhances visibility in a spatial environment.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-visionOS", alt: "Default Background") {
@@ -106,8 +98,6 @@ struct ContentView: View {
         }
     }
     @Tab("tvOS") {
-        Customize the background color for a consistent tvOS experience.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-tvOS", alt: "Default Background") {
@@ -122,8 +112,6 @@ struct ContentView: View {
         }
     }
     @Tab("watchOS") {
-        Set the background color to complement the watch's compact layout.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BackgroundColor-Default-watchOS", alt: "Default Background") {

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarAutoCapitalizationType(_:)``
 
-Configures the autocapitalization behavior of the `SearchBar`’s text input.
+Configures text input autocapitalization.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,13 +19,13 @@ Configures the autocapitalization behavior of the `SearchBar`’s text input.
 
 ## Overview
 
-The `searchBarAutoCapitalizationType(_:)` modifier sets the autocapitalization behavior for the `SearchBar`’s text input, such as capitalizing words or sentences. Available on iOS (14.0+) and visionOS (1.0+), this modifier helps tailor the keyboard experience to the expected input.
+`searchBarAutoCapitalizationType(_:)` sets autocapitalization behavior like words or sentences. Supported on iOS (14.0+) and visionOS (1.0+).
 
 > Note: This modifier is not supported on macOS due to platform-specific UI differences.
 
 ## Parameters
 
-- `type`: A `UITextAutocapitalizationType` specifying the capitalization behavior (e.g., `.none`, `.words`).
+- `type`: A `UITextAutocapitalizationType` value (e.g., `.none`, `.words`).
 
 ## Example
 
@@ -43,12 +43,10 @@ struct ContentView: View {
 }
 ```
 
-This example disables autocapitalization, ensuring all text remains lowercase as typed.
+This disables autocapitalization.
 
 @TabNavigator {
     @Tab("iOS") {
-        Configure the capitalization behavior for a more efficient typing experience.
-
         @TabNavigator {
             @Tab("None") {
                 @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-None-iOS", alt: "No") {
@@ -73,8 +71,6 @@ This example disables autocapitalization, ensuring all text remains lowercase as
         }
     }
     @Tab("iPadOS") {
-        Adjust the capitalization behavior to suit the larger keyboard and screen.
-
         @TabNavigator {
             @Tab("None") {
                 @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-None-iPadOS", alt: "No") {
@@ -99,8 +95,6 @@ This example disables autocapitalization, ensuring all text remains lowercase as
         }
     }
     @Tab("visionOS") {
-        Customize the capitalization for a more precise spatial interaction.
-
         @TabNavigator {
             @Tab("None") {
                 @Image(source: "Documentation-SearchBarKeyboard-AutoCapitalizationType-None-visionOS", alt: "No") {

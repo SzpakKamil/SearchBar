@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarToken/systemName``
 
-The system icon name for a `SearchBarToken`, used to display an associated SF Symbol.
+System icon name.
 
 @Metadata{
     @DisplayName("SystemName")
@@ -17,10 +17,9 @@ The system icon name for a `SearchBarToken`, used to display an associated SF Sy
 
 ## Overview
 
-- `systemName` is a `String` specifying the SF Symbol for a `SearchBarToken`.
-- Pairs with `text` for visual representation in `SearchBar`.
+- `String` specifying SF Symbol.
+- Visual representation alongside text.
 - Immutable, set at initialization.
-- Enhances token appearance in filtering and suggestion features.
 
 ## Example
 

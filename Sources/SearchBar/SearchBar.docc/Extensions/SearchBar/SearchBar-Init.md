@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/init(text:prompt:)``
 
-Initializes a `SearchBar` with a binding to the search text and an optional prompt.
+Initializes a `SearchBar`.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -22,14 +22,14 @@ Initializes a `SearchBar` with a binding to the search text and an optional prom
 
 ## Overview
 
-The `init(text:prompt:)` initializer creates a `SearchBar` instance, binding it to a string that holds the user’s search input. An optional prompt can be provided to display placeholder text, guiding the user on what to search for. This initializer is available on iOS (14.0+), visionOS (1.0+), and macOS (11.0+).
+`init(text:prompt:)` creates a `SearchBar` bound to user input. Available on iOS (14.0+), visionOS (1.0+), and macOS (11.0+).
 
-On iOS and visionOS, the prompt is displayed as the placeholder in the underlying `UISearchBar`. On macOS, it is used as the placeholder for the `TextField` (or `SearchFieldView` if macOS 12.0+ is available).
+The prompt appears as the placeholder text.
 
 ## Parameters
 
-- `text`: A `Binding<String>` that holds the search text entered by the user.
-- `prompt`: An optional `String` to display as a placeholder when the search bar is empty. Defaults to `nil`.
+- `text`: A `Binding<String>` for search text.
+- `prompt`: Optional placeholder `String`. Defaults to `nil`.
 
 ## Example
 
@@ -47,7 +47,7 @@ struct ContentView: View {
 }
 ```
 
-This example initializes a `SearchBar` with a placeholder prompt and applies a rounded style.
+This initializes `SearchBar` with a prompt.
 
 ## See Also
 

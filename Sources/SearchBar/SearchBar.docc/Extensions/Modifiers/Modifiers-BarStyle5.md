@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
-Configures the `SearchBar`’s style with a specific corner radius and color settings, including token background.
+Configures style with corner radius and token background.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,16 +19,16 @@ Configures the `SearchBar`’s style with a specific corner radius and color set
 
 ## Overview
 
-The `searchBarStyle(cornerRadius:textColor:tint:tokenBackground:backgroundColor:)` modifier provides detailed customization of the `SearchBar`’s appearance by setting a corner radius, text color, tint, token background color, and background color. Available on iOS and visionOS, this modifier supports token-based interfaces.
+`searchBarStyle(cornerRadius:textColor:tint:tokenBackground:backgroundColor:)` sets corner radius and colors including tokens. Supported on iOS and visionOS.
 
 ## Parameters
 
-- `cornerRadius`: A `CGFloat` defining the corner radius, defaulting to `0`.
-- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
-- `textColor`: An optional `Color` for the search bar’s text. If `nil`, uses the system default.
-- `tint`: An optional `Color` for the search bar’s tint. If `nil`, uses the system default.
-- `tokenBackground`: An optional `Color` for the background of tokens. If `nil`, uses the system default.
-- `backgroundColor`: An optional `Color` for the search bar’s background. If `nil`, uses the system default.
+- `cornerRadius`: A `CGFloat` for corner radius. Defaults to `0`.
+- `borderColor`: Optional `Color` for the border (macOS only). Defaults to system default.
+- `textColor`: Optional `Color` for text. Defaults to system default.
+- `tint`: Optional `Color` for tint. Defaults to system default.
+- `tokenBackground`: Optional `Color` for token backgrounds. Defaults to system default.
+- `backgroundColor`: Optional `Color` for background. Defaults to system default.
 
 ## Example
 
@@ -46,7 +46,7 @@ struct ContentView: View {
 }
 ```
 
-This example sets a corner radius of 15 and custom colors, including a yellow token background.
+This sets a corner radius of 15 with yellow tokens.
 
 ## See Also
 

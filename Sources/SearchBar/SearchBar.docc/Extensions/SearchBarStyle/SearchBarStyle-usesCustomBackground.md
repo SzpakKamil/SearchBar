@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/usesCustomBackground``
 
-A flag indicating whether a custom background color is set for the `SearchBar`.
+Indicates custom background.
 
 @Metadata {
     @DisplayName("UsesCustomBackground")
@@ -20,8 +20,8 @@ A flag indicating whether a custom background color is set for the `SearchBar`.
 
 ## Overview
 
-- A `Bool` value that is `true` if a custom ``backgroundColor`` is provided.
-- Set to `false` when the default system background is used.
+- `true` if custom ``backgroundColor`` is set.
+- `false` for default system background.
 - Read-only, determined during initialization.
 
 ## Example

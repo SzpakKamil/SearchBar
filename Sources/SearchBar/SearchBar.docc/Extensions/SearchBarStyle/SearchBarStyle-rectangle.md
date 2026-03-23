@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/rectangle``
 
-A predefined `SearchBarStyle` with a rectangle appearance.
+Rectangular `SearchBarStyle`.
 
 @Metadata {
     @DisplayName("Rectangle")
@@ -21,10 +21,9 @@ A predefined `SearchBarStyle` with a rectangle appearance.
 
 ## Overview
 
-- A static `SearchBarStyle` property using `SearchBarCornerStyle.rectangle`.
-- Provides a corner radius of 0 for sharp edges.
-- Applied via the `searchBarStyle(_:)` modifier for a minimalistic `SearchBar` design.
-- Suitable for geometric or modern search bar layouts.
+- Static property using `SearchBarCornerStyle.rectangle`.
+- Corner radius: 0.
+- Applied via `searchBarStyle(_:)`.
 
 ## Example
 

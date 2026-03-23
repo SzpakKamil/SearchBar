@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/textColor``
 
-The color of the text inside the `SearchBar`.
+`SearchBar` text color.
 
 @Metadata {
     @DisplayName("TextColor")
@@ -20,8 +20,8 @@ The color of the text inside the `SearchBar`.
 
 ## Overview
 
-- An optional `Color` value for the `SearchBar`’s input text.
-- If `nil`, uses the system default text color.
+- Optional `Color` for input text.
+- `nil` uses system default.
 - Applied via `SearchBarStyle` initializers.
 
 ## Example
@@ -42,8 +42,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Configure the text color for optimal contrast and branding.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TextColor-Default-iOS", alt: "Default Text Color") {
@@ -58,8 +56,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Set the text color to match your application's typography.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TextColor-Default-iPadOS", alt: "Default Text Color") {
@@ -74,8 +70,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Adjust the text color to ensure clarity across various window styles.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TextColor-Default-macOSTahoe", alt: "Default Text Color") {
@@ -90,8 +84,6 @@ struct ContentView: View {
         }
     }
     @Tab("visionOS") {
-        Configure text color for visibility against varied spatial backgrounds.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TextColor-Default-visionOS", alt: "Default Text Color") {
@@ -106,8 +98,6 @@ struct ContentView: View {
         }
     }
     @Tab("tvOS") {
-        Configure text color for optimal readability on a television screen.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TextColor-Default-tvOS", alt: "Default Text Color") {
@@ -122,8 +112,6 @@ struct ContentView: View {
         }
     }
     @Tab("watchOS") {
-        Set a text color that is clear and legible on the watch's display.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TextColor-Default-watchOS", alt: "Default Text Color") {

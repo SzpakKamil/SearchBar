@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarReturnKeyType(_:)``
 
-Configures the return key type for the `SearchBar`’s keyboard.
+Configures the return key type.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,13 +19,13 @@ Configures the return key type for the `SearchBar`’s keyboard.
 
 ## Overview
 
-The `searchBarReturnKeyType(_:)` modifier sets the type of return key displayed on the keyboard when editing the `SearchBar`’s text. Available on iOS and visionOS, it supports types like `.search` or `.done` to match the search action.
+`searchBarReturnKeyType(_:)` sets the return key type. Supported on iOS and visionOS.
 
 > Note: This modifier is not supported on macOS due to platform-specific UI differences.
 
 ## Parameters
 
-- `type`: A `UIReturnKeyType` specifying the return key type (e.g., `.search`, `.done`).
+- `type`: A `UIReturnKeyType` value (e.g., `.search`, `.done`).
 
 ## Example
 
@@ -43,12 +43,10 @@ struct ContentView: View {
 }
 ```
 
-This example sets the return key to “Search” on the keyboard.
+This sets the return key to “Search”.
 
 @TabNavigator {
     @Tab("iOS") {
-        Configure the return key type to indicate the action triggered when the user finishes typing.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarKeyboard-ReturnKeyType-Default-iOS", alt: "Default Return Key") {
@@ -113,8 +111,6 @@ This example sets the return key to “Search” on the keyboard.
         }
     }
     @Tab("iPadOS") {
-        Adjust the return key to match your search bar's context and action.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarKeyboard-ReturnKeyType-Default-iPadOS", alt: "Default Return Key") {
@@ -179,8 +175,6 @@ This example sets the return key to “Search” on the keyboard.
         }
     }
     @Tab("visionOS") {
-        Select a return key that best represents the expected spatial interaction result.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarKeyboard-ReturnKeyType-Default-visionOS", alt: "Default Return Key") {

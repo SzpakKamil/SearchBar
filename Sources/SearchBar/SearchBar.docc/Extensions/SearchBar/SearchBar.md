@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar``
 
-A SwiftUI view that provides a customizable search bar for text input and suggestions.
+Customizable search bar view.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -22,19 +22,18 @@ A SwiftUI view that provides a customizable search bar for text input and sugges
 
 ## Overview
 
-The `SearchBar` is a versatile SwiftUI component designed to facilitate search functionality within your app. It supports text input, custom styling, event handling, and suggestion filtering, with platform-specific implementations for macOS and iOS/visionOS. On iOS and visionOS, `SearchBar` leverages `UIViewRepresentable` to wrap a `UISearchBar`, while on macOS, it uses native SwiftUI views like `TextField`.
+`SearchBar` facilitates search functionality with text input, styling, events, and suggestions. It wraps `UISearchBar` on iOS/visionOS and uses native SwiftUI views on macOS.
 
-Key features include:
-- Customizable appearance via `SearchBarStyle` (e.g., corner radius, colors).
-- Support for tokens and suggestions on iOS/visionOS (iOS 16.0+).
-- Event handling for editing, clearing, and text changes.
-- Platform-specific modifiers for keyboard settings (iOS/visionOS) and focus control (macOS 12.0+).
+- **Styling**: Customize appearance with `SearchBarStyle`.
+- **Tokens/Suggestions**: Support on iOS/visionOS (iOS 16.0+).
+- **Events**: Handle editing, clearing, and text changes.
+- **Platform Specifics**: Keyboard settings (iOS) and focus control (macOS).
 
 > Note: Some features, such as tokens and certain keyboard modifiers, are exclusive to iOS and visionOS due to platform-specific UI differences.
 
 ## Example
 
-Here’s an example of using `SearchBar` with custom styling and event handling on multiple platforms:
+Example usage:
 
 ```swift
 import SwiftUI
@@ -60,8 +59,6 @@ struct ContentView: View {
     }
 }
 ```
-
-This example creates a `SearchBar` with a capsule style, a custom icon, and event handling for clearing and text changes. It also includes platform-specific modifiers for iOS/visionOS.
 
 @TabNavigator {
     @Tab("iOS") {

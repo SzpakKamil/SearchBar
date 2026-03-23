@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarSuggestion/description``
 
-The optional description text for a `SearchBarSuggestion`, providing additional context.
+Optional description text.
 
 @Metadata {
     @DisplayName("Description")
@@ -19,10 +19,9 @@ The optional description text for a `SearchBarSuggestion`, providing additional 
 
 ## Overview
 
-- `description` is an optional `String` providing context for a `SearchBarSuggestion`.
-- Displayed in the `SearchBar` suggestion interface to clarify the suggestion.
+- Optional `String` providing context.
+- Displayed in suggestion interface.
 - Immutable, set at initialization.
-- Enhances user understanding of suggestions in filtering interfaces.
 
 ## Example
 

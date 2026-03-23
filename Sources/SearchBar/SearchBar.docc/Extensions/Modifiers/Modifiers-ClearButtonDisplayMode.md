@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``
 
-Configures the display behavior of the clear button in the `SearchBar`.
+Configures clear button visibility.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,11 +20,11 @@ Configures the display behavior of the clear button in the `SearchBar`.
 
 ## Overview
 
-The `searchBarClearButtonDisplayMode(_:)` modifier determines when the clear button is visible in the `SearchBar`. Available on iOS, iPadOS, visionOS, and macOS, it supports modes like always visible or visible only while editing.
+`searchBarClearButtonDisplayMode(_:)` controls clear button visibility. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Parameters
 
-- `mode`: A `SearchBarClearButtonDisplayMode` specifying the display behavior (e.g., `.always`, `.whileEditing`).
+- `mode`: A `SearchBarClearButtonDisplayMode` value (e.g., `.always`, `.whileEditing`).
 
 ## Example
 
@@ -42,12 +42,10 @@ struct ContentView: View {
 }
 ```
 
-This example shows the clear button only while the user is editing.
+This shows the clear button only while editing.
 
 @TabNavigator {
     @Tab("iOS") {
-        Choose when the clear button should be visible to provide a clean interface.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-iOS", alt: "Always") {
@@ -72,8 +70,6 @@ This example shows the clear button only while the user is editing.
         }
     }
     @Tab("iPadOS") {
-        Optimize the clear button's display for better accessibility.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-iPadOS", alt: "Always") {
@@ -98,8 +94,6 @@ This example shows the clear button only while the user is editing.
         }
     }
     @Tab("macOS") {
-        Select a clear button display mode for macOS that fits your desktop app's workflow.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-macOSTahoe", alt: "Always") {
@@ -124,8 +118,6 @@ This example shows the clear button only while the user is editing.
         }
     }
     @Tab("visionOS") {
-        Select a mode for visionOS that optimizes spatial interaction with the clear button.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-visionOS", alt: "Always") {

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarIconView()``
 
-Removes the custom icon view from the `SearchBar`, setting it to an empty view.
+Removes the custom icon view.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -22,7 +22,7 @@ Removes the custom icon view from the `SearchBar`, setting it to an empty view.
 
 ## Overview
 
-The `searchBarIconView()` modifier resets the `SearchBar`’s icon to an empty view, effectively removing any custom icon. Available on iOS, iPadOS, visionOS, and macOS, it’s useful for removing leading icon.
+`searchBarIconView()` resets the icon to an empty view. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Example
 
@@ -40,7 +40,7 @@ struct ContentView: View {
 }
 ```
 
-This example removes the custom icon from the `SearchBar`.
+This removes the custom icon.
 
 ## See Also
 

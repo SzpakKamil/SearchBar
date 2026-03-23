@@ -1,6 +1,6 @@
 # ``SearchBarStyle``
 
-A struct that defines the visual appearance and color configuration for a `SearchBar`.
+Defines `SearchBar` visual appearance.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -21,11 +21,9 @@ A struct that defines the visual appearance and color configuration for a `Searc
 
 ## Overview
 
-`SearchBarStyle` is a core component of the `SearchBar` package, used to customize the appearance of a `SearchBar` by configuring its corner radius, text color, tint color, token background color, and background color. It integrates with `SearchBar` via the `searchBarStyle(_:)` modifier, supporting predefined styles through static properties (`capsule`, `rectangle`, `rounded`) or custom configurations via initializers. Available on macOS, iOS, iPadOS, and visionOS, with some properties limited to non-macOS platforms.
+`SearchBarStyle` configures appearance (radius, colors). Integrates via `searchBarStyle(_:)`. Supports static styles (`capsule`, `rectangle`, `rounded`) or custom initialization. Cross-platform.
 
-## Support
-
-Below is an example of a struct using `SearchBarStyle`:
+## Usage
 
 ```swift
 import SwiftUI
@@ -44,8 +42,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Customize the visual style to match your iOS app's design aesthetic.
-
         @TabNavigator {
             @Tab("Capsule") {
                 @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-iOS", alt: "Capsule") {
@@ -65,8 +61,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Select a style that compliments the iPadOS interface.
-
         @TabNavigator {
             @Tab("Capsule") {
                 @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-iPadOS", alt: "Capsule") {
@@ -86,8 +80,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Adapt the search bar's shape to fit the macOS desktop environment.
-
         @TabNavigator {
             @Tab("Capsule") {
                 @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-macOSTahoe", alt: "Capsule") {
@@ -107,8 +99,6 @@ struct ContentView: View {
         }
     }
     @Tab("visionOS") {
-        Choose a style that enhances spatial computing.
-
         @TabNavigator {
             @Tab("Capsule") {
                 @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-visionOS", alt: "Capsule") {
@@ -132,9 +122,7 @@ struct ContentView: View {
 ## Conformances
 
 ### Equatable
-- Allows comparison of `SearchBarStyle` instances based on `cornerRadius`, `backgroundColor`, `tintColor`, and `textColor`.
-- Enables equality checks for style consistency in SwiftUI views.
-- Supports use in collections requiring equality comparisons.
+- Compares instances by properties.
 
 ## Topics
 

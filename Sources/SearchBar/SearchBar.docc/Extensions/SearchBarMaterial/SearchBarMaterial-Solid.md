@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarMaterial/solid``
 
-A case of the `SearchBarMaterial` enum that applies an opaque material to the `SearchBar`.
+Opaque solid material.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -21,7 +21,7 @@ A case of the `SearchBarMaterial` enum that applies an opaque material to the `S
 
 ## Overview
 
-The `solid` case specifies an opaque material with a solid background for the `SearchBar` view, providing high contrast and clarity. It has a fixed `id` of `0` and is applied using the `.searchBarMaterial(.solid)` modifier. This material is ideal for interfaces where the search bar needs to stand out prominently against the background. Introduced in iOS 26.0, macOS 26.0, and later, it supports the modern Apple design language.
+`solid` specifies an opaque material. Applied via `.searchBarMaterial(.solid)`. Available on iOS 26.0+, macOS 26.0+.
 
 > Important: This type is unavailable on visionOS.
 

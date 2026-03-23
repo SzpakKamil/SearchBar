@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-54f3``
 
-Converts a list of suggestions into tokens for the `SearchBar`.
+Converts suggestions into tokens.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,7 +19,7 @@ Converts a list of suggestions into tokens for the `SearchBar`.
 
 ## Overview
 
-The `searchBarSuggestedTokens(_:)` modifier takes a list of `SearchBarSuggestion` objects and converts them into tokens for the `SearchBar`. Available on iOS and visionOS, it’s used to provide suggestions as selectable tokens.
+`searchBarSuggestedTokens(_:)` converts `SearchBarSuggestion` objects into tokens. Supported on iOS and visionOS.
 
 > Note: This modifier is not supported due to platform-specific UI differences.
 
@@ -27,7 +27,7 @@ The `searchBarSuggestedTokens(_:)` modifier takes a list of `SearchBarSuggestion
 
 ## Parameters
 
-- `suggestions`: An array of `SearchBarSuggestion` objects to convert into tokens.
+- `suggestions`: Array of `SearchBarSuggestion` objects.
 
 ## Example
 
@@ -49,12 +49,10 @@ struct ContentView: View {
 }
 ```
 
-This example converts suggestions into tokens and manages current tokens to enable selection functionality.
+This converts suggestions to tokens.
 
 @TabNavigator {
     @Tab("iOS") {
-        Provide suggested tokens to guide users through available filters.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Default-iOS", alt: "Default Suggested Tokens") {
@@ -69,8 +67,6 @@ This example converts suggestions into tokens and manages current tokens to enab
         }
     }
     @Tab("iPadOS") {
-        Offer suggested tokens to enhance the search experience on larger screens.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Default-iPadOS", alt: "Default Suggested Tokens") {
@@ -85,8 +81,6 @@ This example converts suggestions into tokens and manages current tokens to enab
         }
     }
     @Tab("visionOS") {
-        Configure suggested tokens for intuitive spatial filtering suggestions.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-SuggestedTokens-Default-visionOS", alt: "Default Suggested Tokens") {

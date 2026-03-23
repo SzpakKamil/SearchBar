@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarIconView(_:)``
 
-Sets a custom icon view for the `SearchBar`.
+Sets a custom icon view.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -22,11 +22,11 @@ Sets a custom icon view for the `SearchBar`.
 
 ## Overview
 
-The `searchBarIconView(_:)` modifier allows you to set a custom SwiftUI view as the icon for the `SearchBar`. Available on iOS, iPadOS, visionOS, and macOS, the icon is styled with a secondary foreground color for consistency.
+`searchBarIconView(_:)` sets a custom SwiftUI view as the icon. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Parameters
 
-- `view`: A closure returning a SwiftUI `View` to use as the icon.
+- `view`: A closure returning a SwiftUI `View`.
 
 ## Example
 
@@ -46,7 +46,7 @@ struct ContentView: View {
 }
 ```
 
-This example sets a magnifying glass as the search bar’s icon.
+This sets a magnifying glass icon.
 
 ## See Also
 

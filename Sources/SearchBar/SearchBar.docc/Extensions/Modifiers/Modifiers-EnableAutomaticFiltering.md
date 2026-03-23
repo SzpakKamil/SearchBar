@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)``
 
-Enables automatic filtering of suggestions in the `SearchBar` with an optional custom filtering action.
+Enables automatic suggestion filtering.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,12 +20,12 @@ Enables automatic filtering of suggestions in the `SearchBar` with an optional c
 
 ## Overview
 
-The `searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)` modifier enables automatic filtering of suggestions based on the user’s input, with an optional custom filtering closure. Available on iOS, iPadOS, visionOS, and macOS, it enhances suggestion usability.
+`searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)` filters suggestions based on input. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Parameters
 
-- `value`: A `Bool` indicating whether automatic filtering is enabled, defaulting to `true`.
-- `filteringAction`: An optional closure that takes a `String` (input text) and a `SearchBarSuggestion`, returning a `Bool` to determine if the suggestion should be shown.
+- `value`: `Bool` enabling filtering. Defaults to `true`.
+- `filteringAction`: Optional closure determining suggestion visibility.
 
 ## Example
 
@@ -44,7 +44,7 @@ struct ContentView: View {
 }
 ```
 
-This example enables automatic filtering of suggestions.
+This enables automatic filtering.
 
 ## See Also
 

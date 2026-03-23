@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarClearButtonDisplayMode/always``
 
-A mode where the clear button is always visible in the `SearchBar`.
+Clear button always visible.
 
 @Metadata {
     @DisplayName("Always")
@@ -18,9 +18,8 @@ A mode where the clear button is always visible in the `SearchBar`.
 
 ## Overview
 
-- Specifies that the `SearchBar` clear button is always displayed.
-- Suitable for interfaces requiring constant access to the clear action.
-- Used with the `searchBarClearButtonDisplayMode(_:)` modifier.
+- Clear button always displayed.
+- Use with `searchBarClearButtonDisplayMode(_:)`.
 
 ## Example
 

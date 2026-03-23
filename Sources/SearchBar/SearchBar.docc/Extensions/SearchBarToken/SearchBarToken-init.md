@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarToken/init(text:systemName:)``
 
-Creates a new search bar token with the specified text and system icon.
+Initializes a `SearchBarToken`.
 
 @Metadata{
     @Available(iOS, introduced: "16.0")
@@ -17,14 +17,13 @@ Creates a new search bar token with the specified text and system icon.
 
 ## Overview
 
-- Creates a `SearchBarToken` with text label and SF Symbols icon.
-- Automatically generates unique `id` by combining `text` and `systemName`.
-- Primary method for creating search tokens in filtering interfaces.
+- Initializes with text and SF Symbol.
+- Generates unique `id`.
 
 ## Parameters
 
-- `text`: Display text for the token visible to users.
-- `systemName`: SF Symbols icon name (e.g., "star", "heart.fill", "person.circle").
+- `text`: Display text.
+- `systemName`: SF Symbol name.
 
 ## Example
 

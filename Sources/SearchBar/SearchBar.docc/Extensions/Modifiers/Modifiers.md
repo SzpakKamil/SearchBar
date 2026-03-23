@@ -19,61 +19,61 @@
     @AutomaticSeeAlso(disabled)
 }
 
-Learn about the modifiers available for customizing the `SearchBar` package in SwiftUI.
+Customize `SearchBar` in SwiftUI.
 
 ## Overview
 
-The `SearchBar` package provides a variety of modifiers to customize its appearance, behavior, and interaction within SwiftUI applications. These modifiers are applied using SwiftUI’s dot syntax (e.g., `.searchBarStyle(_:)`), supporting accessibility features like VoiceOver and Dynamic Type. Below, modifiers are grouped by category, with platform-specific availability noted.
+`SearchBar` provides modifiers for appearance, behavior, and interaction using standard SwiftUI syntax. Accessibility features like VoiceOver and Dynamic Type are supported.
 
-> Important: Some modifiers are exclusive to iOS, iPadOS, and visionOS, while others are available on macOS. Check each modifier’s availability for compatibility.
+> Important: Check individual modifiers for platform compatibility.
 
 ## Modifiers
 
 ### Appearance Modifiers
-- ``SearchBar/SearchBar/searchBarStyle(_:)``: Applies a custom `SearchBarStyle` configuration. Available on iOS, iPadOS, visionOS, and macOS.
-- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``: Configures style with specific parameters including token background. Available on iOS and visionOS.
-- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``: Applies a predefined corner style with optional parameters including token background. Available on iOS and visionOS.
-- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``: Configures style with specific parameters. Available on macOS.
-- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``: Applies a predefined corner style with optional parameters. Available on macOS.
-- ``SearchBar/SearchBar/searchBarIconView(_:)``: Sets a custom icon view for the search bar. Available on iOS, iPadOS, visionOS, and macOS.
-- ``SearchBar/SearchBar/searchBarIconView()``: Removes the custom icon view, setting it to an empty view. Available on iOS, iPadOS, visionOS, and macOS.
-- ``SearchBar/SearchBar/searchBarMaterial(_:)``: Applies a material style (e.g., `solid` or `glass`) to the search bar. Available on iOS 26.0+, iPadOS 26.0+, and macOS 26.0+. Experimental “Liquid Glass” implementation.
-- ``SearchBar/SearchBar/searchBarScale(_:)``: Adjusts padding from search bar elements to its border using a scale size (`small`, `medium`, `large`). Available on iOS 14.0+, iPadOS 14.0+, macOS 11.0+, and visionOS 1.0+.
+- ``SearchBar/SearchBar/searchBarStyle(_:)``: Applies a custom `SearchBarStyle`.
+- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:tokenBackground:backgroundColor:)``: Configures style with token background.
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``: Applies corner style with token background.
+- ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``: Configures style parameters.
+- ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``: Applies corner style.
+- ``SearchBar/SearchBar/searchBarIconView(_:)``: Sets a custom icon view.
+- ``SearchBar/SearchBar/searchBarIconView()``: Removes the custom icon.
+- ``SearchBar/SearchBar/searchBarMaterial(_:)``: Applies material style (`solid`, `glass`). Supported on iOS 26.0+, iPadOS 26.0+, macOS 26.0+.
+- ``SearchBar/SearchBar/searchBarScale(_:)``: Adjusts padding and scale. Supported on iOS 14.0+, iPadOS 14.0+, macOS 11.0+, visionOS 1.0+.
 
 ### Input Configuration Modifiers (iOS, iPadOS, and visionOS only)
-- ``SearchBar/SearchBar/searchBarLookToDictateEnabled(_:)``: Enables or disables the "Look to Dictate" feature (iOS 17.0+ and visionOS).
-- ``SearchBar/SearchBar/searchBarKeyboardType(_:)``: Sets the keyboard type (e.g., `.emailAddress`).
-- ``SearchBar/SearchBar/searchBarReturnKeyType(_:)``: Configures the return key type (e.g., `.search`).
-- ``SearchBar/SearchBar/searchBarAutoCorrectionType(_:)``: Controls autocorrection behavior, defaulting to `.default`.
+- ``SearchBar/SearchBar/searchBarLookToDictateEnabled(_:)``: Controls "Look to Dictate" (iOS 17.0+, visionOS).
+- ``SearchBar/SearchBar/searchBarKeyboardType(_:)``: Sets keyboard type.
+- ``SearchBar/SearchBar/searchBarReturnKeyType(_:)``: Sets return key type.
+- ``SearchBar/SearchBar/searchBarAutoCorrectionType(_:)``: Controls autocorrection.
 - ``SearchBar/SearchBar/searchBarAutoCapitalizationType(_:)``: Sets autocapitalization behavior.
-- ``SearchBar/SearchBar/searchBarTextContentType(_:)``: Specifies the content type for autofill and keyboard suggestions.
+- ``SearchBar/SearchBar/searchBarTextContentType(_:)``: Sets content type for autofill.
 
 ### Event Handling Modifiers
-- ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``: Defines an action for the clear button. Available on iOS, iPadOS, visionOS, and macOS.
-- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``: Triggers an action when editing begins. Available on iOS 14.0+, iPadOS 14.0+, visionOS 1.0+, and macOS 12.0+.
-- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``: Triggers an action when editing ends. Available on iOS 14.0+, iPadOS 14.0+, visionOS 1.0+, and macOS 12.0+.
-- ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``: Defines an action for the cancel button. Available on iOS and visionOS.
-- ``SearchBar/SearchBar/searchBarChangeAction(_:)``: Triggers an action when the search text changes. Available on iOS, iPadOS, visionOS, and macOS.
+- ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``: Action for clear button.
+- ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``: Action when editing begins.
+- ``SearchBar/SearchBar/searchBarEndEditingAction(_:)``: Action when editing ends.
+- ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``: Action for cancel button.
+- ``SearchBar/SearchBar/searchBarChangeAction(_:)``: Action when text changes.
 
 ### Button Display Modifiers
-- ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``: Configures when the clear button is shown. Available on iOS, iPadOS, visionOS, and macOS.
-- ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``: Configures when the cancel button is shown. Available on iOS, iPadOS, and visionOS.
+- ``SearchBar/SearchBar/searchBarClearButtonDisplayMode(_:)``: Configures clear button visibility.
+- ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``: Configures cancel button visibility.
 
 ### Tokens and Suggestions Modifiers
-- ``SearchBar/SearchBar/searchBarCurrentTokens(_:)``: Manages a dynamic list of current tokens. Available on iOS 16.0+, iPadOS 14.0+, and visionOS 1.0+.
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi``: Sets a binding to suggested tokens. Available on iOS 16.0+, iPadOS 14.0+, and visionOS 1.0+.
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-6o8fa``: Sets a static list of suggested tokens. Available on iOS 16.0+, iPadOS 14.0+, and visionOS 1.0+.
-- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-54f3``: Converts suggestions to tokens. Available on iOS 16.0+, iPadOS 14.0+, and visionOS 1.0+.
-- ``SearchBar/SearchBar/searchBarSuggestions(_:)-syi0``: Sets a binding to a list of suggestions. Available on iOS 16.0+, iPadOS 14.0+, visionOS 1.0+, and macOS 15.0+.
-- ``SearchBar/SearchBar/searchBarSuggestions(_:)-620nd``: Sets a static list of suggestions. Available on iOS 16.0+, iPadOS 14.0+, visionOS 1.0+, and macOS 15.0+.
-- ``SearchBar/SearchBar/searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)``: Enables automatic suggestion filtering with an optional custom action. Available on iOS 16.0+, iPadOS 14.0+, visionOS 1.0+, and macOS 15.0+.
+- ``SearchBar/SearchBar/searchBarCurrentTokens(_:)``: Manages dynamic tokens.
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi``: Binds suggested tokens.
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-6o8fa``: Sets static suggested tokens.
+- ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-54f3``: Converts suggestions to tokens.
+- ``SearchBar/SearchBar/searchBarSuggestions(_:)-syi0``: Binds suggestions.
+- ``SearchBar/SearchBar/searchBarSuggestions(_:)-620nd``: Sets static suggestions.
+- ``SearchBar/SearchBar/searchBarEnableAutomaticSuggestionsFiltering(_:filteringAction:)``: Enables automatic filtering.
 
 ### Focus Modifiers
-- ``SearchBar/SearchBar/searchBarIsFocused(_:)``: Binds the focus state to a Boolean. Available on iOS 14.0+, iPadOS 14.0+, visionOS 1.0+, and macOS 12.0+.
+- ``SearchBar/SearchBar/searchBarIsFocused(_:)``: Binds focus state.
 
 ## Example
 
-Here’s an example combining multiple modifiers across platforms:
+Example combining modifiers:
 
 ```swift
 import SwiftUI
@@ -101,5 +101,4 @@ struct ContentView: View {
 
 ## Next Steps
 
-- Dive into detailed modifier documentation via the links above.
-- Explore the `SearchBar` setup guide in <doc:SetUp>.
+- See the setup guide in <doc:SetUp>.

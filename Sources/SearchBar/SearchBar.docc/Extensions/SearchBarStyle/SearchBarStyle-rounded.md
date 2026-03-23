@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/rounded``
 
-A predefined `SearchBarStyle` with a softly rounded appearance.
+Rounded `SearchBarStyle`.
 
 @Metadata {
     @DisplayName("Rounded")
@@ -21,10 +21,9 @@ A predefined `SearchBarStyle` with a softly rounded appearance.
 
 ## Overview
 
-- A static `SearchBarStyle` property using `SearchBarCornerStyle.rounded`.
-- Provides a corner radius of 5 (macOS) or 10 (iOS, iPadOS, visionOS).
-- Applied via the `searchBarStyle(_:)` modifier for a user-friendly `SearchBar` design.
-- Suitable for standard, approachable search bar aesthetics.
+- Static property using `SearchBarCornerStyle.rounded`.
+- Corner radius: 5 (macOS), 10 (iOS/visionOS).
+- Applied via `searchBarStyle(_:)`.
 
 ## Example
 

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarClearButtonDisplayMode``
 
-An enumeration that specifies when the clear button is displayed in a `SearchBar`.
+Enumeration for clear button visibility.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,14 +19,14 @@ An enumeration that specifies when the clear button is displayed in a `SearchBar
 
 ## Overview
 
-`SearchBarClearButtonDisplayMode` controls the visibility of the clear button in a `SearchBar`, offering four modes: `never`, `always`, `whileEditing`, or `unlessEditing`. It is used with the `searchBarClearButtonDisplayMode(_:)` modifier to configure the `SearchBar`’s behavior on macOS, iOS, and visionOS.
+`SearchBarClearButtonDisplayMode` controls clear button visibility. Used with `searchBarClearButtonDisplayMode(_:)` on macOS, iOS, and visionOS.
 
 ## Cases
 
-- ``SearchBarClearButtonDisplayMode/never``: The clear button is never shown.
-- ``SearchBarClearButtonDisplayMode/always``: The clear button is always visible.
-- ``SearchBarClearButtonDisplayMode/whileEditing``: The clear button appears only while editing.
-- ``SearchBarClearButtonDisplayMode/unlessEditing``: The clear button appears unless editing.
+- ``SearchBarClearButtonDisplayMode/never``: Clear button never shown.
+- ``SearchBarClearButtonDisplayMode/always``: Clear button always visible.
+- ``SearchBarClearButtonDisplayMode/whileEditing``: Clear button appears while editing.
+- ``SearchBarClearButtonDisplayMode/unlessEditing``: Clear button appears unless editing.
 
 ## Properties
 
@@ -50,8 +50,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Configure when the clear button appears to streamline user interactions.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-iOS", alt: "Always") {
@@ -76,8 +74,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Adjust the clear button's visibility to better suit the larger screen and application layout.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-iPadOS", alt: "Always") {
@@ -102,8 +98,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Customize the clear button's behavior for a consistent desktop experience.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-macOSTahoe", alt: "Always") {
@@ -128,8 +122,6 @@ struct ContentView: View {
         }
     }
     @Tab("visionOS") {
-        Choose a clear button display mode that enhances the spatial computing experience.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-ClearButton-Always-visionOS", alt: "Always") {
@@ -154,4 +146,3 @@ struct ContentView: View {
         }
     }
 }
-

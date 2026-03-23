@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarCornerStyle``
 
-An enumeration that specifies the corner style of a `SearchBar`.
+Enumeration for corner style.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -21,19 +21,19 @@ An enumeration that specifies the corner style of a `SearchBar`.
 
 ## Overview
 
-`SearchBarCornerStyle` defines the corner appearance of a `SearchBar`, offering three styles: `capsule`, `rectangle`, or `rounded`. It is used within `SearchBarStyle` to set the corner radius and is applied via the `searchBarStyle(_:)` modifier on macOS, iOS, iPadOS, and visionOS. The `cornerRadius` property provides platform-specific values, such as 22 for `capsule` on visionOS and 5 for `rounded` on macOS.
+`SearchBarCornerStyle` defines corner appearance (`capsule`, `rectangle`, `rounded`). Used in `SearchBarStyle` and applied via `searchBarStyle(_:)`. `cornerRadius` varies by platform.
 
 > Important: This type is unavailable on visionOS.
 
 ## Cases
 
-- ``SearchBarCornerStyle/capsule``: A fully rounded, capsule-shaped appearance.
-- ``SearchBarCornerStyle/rectangle``: A sharp-edged, rectangle appearance.
-- ``SearchBarCornerStyle/rounded``: A softly rounded appearance.
+- ``SearchBarCornerStyle/capsule``: Fully rounded, capsule-shaped.
+- ``SearchBarCornerStyle/rectangle``: Sharp-edged, rectangular.
+- ``SearchBarCornerStyle/rounded``: Softly rounded.
 
 ## Properties
 
-- ``SearchBarCornerStyle/cornerRadius``: The corner radius for the style, varying by platform.
+- ``SearchBarCornerStyle/cornerRadius``: Corner radius, varying by platform.
 
 ## Example
 
@@ -53,8 +53,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Customize the corner radius to match your iOS app's design aesthetic.
-
         @TabNavigator {
             @Tab("Capsule") {
                 @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-iOS", alt: "Capsule") {
@@ -74,8 +72,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Select a corner style that compliments the iPadOS interface.
-
         @TabNavigator {
             @Tab("Capsule") {
                 @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-iPadOS", alt: "Capsule") {
@@ -95,8 +91,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Adapt the search bar's shape to fit the macOS desktop environment.
-
         @TabNavigator {
             @Tab("Capsule") {
                 @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-macOSTahoe", alt: "Capsule") {
@@ -116,8 +110,6 @@ struct ContentView: View {
         }
     }
     @Tab("visionOS") {
-        Choose a style that enhances spatial computing.
-
         @TabNavigator {
             @Tab("Capsule") {
                 @Image(source: "Documentation-SearchBarStyle-DefaultStyle-Capsule-visionOS", alt: "Capsule") {

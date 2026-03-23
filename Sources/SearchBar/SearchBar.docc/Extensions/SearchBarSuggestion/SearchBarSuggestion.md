@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarSuggestion``
 
-A type representing suggestions for enhancing search functionality in a `SearchBar`.
+Represents search suggestions.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,11 +19,9 @@ A type representing suggestions for enhancing search functionality in a `SearchB
 
 ## Overview
 
-`SearchBarSuggestion` is a core component of the `SearchBar` package, used to provide search suggestions with a title, optional description, SF Symbol, and an optional embedded `SearchBarToken`. It integrates with `SearchBar` to offer users interactive suggestions for refining searches on iOS 16.0+ and visionOS 1.0+.
+`SearchBarSuggestion` provides interactive suggestions with title, description, SF Symbol, and optional `SearchBarToken`. Integrates with `SearchBar` on iOS 16.0+ and visionOS 1.0+.
 
-## Support
-
-Below is an example of a struct using `SearchBarSuggestion`:
+## Usage
 
 ```swift
 struct Fruit {
@@ -40,21 +38,16 @@ struct Fruit {
 ## Conformances
 
 ### Identifiable
-- Provides unique identification through the `id` property.
-- Enables use in SwiftUI lists and collections requiring identity.
+- Unique identification via `id`.
 
 ### Codable
-- Supports encoding to and decoding from external formats (e.g., JSON).
-- Enables suggestion persistence and data interchange.
+- Supports encoding/decoding.
 
 ### Equatable & Hashable
-- Allows comparison based on `id`.
-- Enables use in `Set` collections and as dictionary keys.
-- Supports efficient deduplication and lookup.
+- Compares based on `id`.
 
 ### Comparable
-- Enables sorting based on the `text` property.
-- Supports alphabetical ordering of suggestion collections.
+- Sorts by `text`.
 
 ## Topics
 

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/cornerRadius``
 
-The roundness of the `SearchBar`’s corners.
+`SearchBar` corner radius.
 
 @Metadata {
     @DisplayName("CornerRadius")
@@ -20,9 +20,9 @@ The roundness of the `SearchBar`’s corners.
 
 ## Overview
 
-- A `CGFloat` value determining the corner radius of the `SearchBar`.
-- Set directly via initializers or derived from a `SearchBarCornerStyle`.
-- Common values include 0 (rectangle), 10 (rounded on iOS/visionOS), or 18/22 (capsule).
+- `CGFloat` value for corner radius.
+- Set via initializers or `SearchBarCornerStyle`.
+- Common values: 0, 10, 18, 22.
 
 ## Example
 
@@ -42,8 +42,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Adjust the corner radius to achieve the desired level of roundness for your search bar.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-iOS", alt: "Default Corner Radius") {
@@ -58,8 +56,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Set a custom corner radius to match your app's layout and design.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-iPadOS", alt: "Default Corner Radius") {
@@ -74,8 +70,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Configure the corner radius to better integrate with desktop window elements.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-macOSTahoe", alt: "Default Corner Radius") {
@@ -90,8 +84,6 @@ struct ContentView: View {
         }
     }
     @Tab("visionOS") {
-        Select a corner radius that enhances the spatial computing feel.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-visionOS", alt: "Default Corner Radius") {
@@ -106,8 +98,6 @@ struct ContentView: View {
         }
     }
     @Tab("tvOS") {
-        Adjust the corner radius for optimal display on a large screen.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-tvOS", alt: "Default Corner Radius") {
@@ -122,8 +112,6 @@ struct ContentView: View {
         }
     }
     @Tab("watchOS") {
-        Set a corner radius that complements the watch's compact display.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-CornerRadius-Default-watchOS", alt: "Default Corner Radius") {

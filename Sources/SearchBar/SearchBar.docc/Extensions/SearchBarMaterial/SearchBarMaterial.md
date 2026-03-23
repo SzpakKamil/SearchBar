@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarMaterial``
 
-An enumeration that specifies the material style for a `SearchBar` view.
+Enumeration for material style.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -21,15 +21,15 @@ An enumeration that specifies the material style for a `SearchBar` view.
 
 ## Overview
 
-The `SearchBarMaterial` enum defines the visual material style for a `SearchBar` view, supporting two cases: `solid` and `glass`. It conforms to `Identifiable`, `Equatable`, and `Hashable`, making it suitable for use in SwiftUI views and data models. Introduced in iOS 26.0, macOS 26.0, and later, this enum enables the “Liquid Glass” design paradigm, providing a modern, translucent, or opaque appearance for search bars. The material is applied using the `.searchBarMaterial(_:)` modifier. The table below summarizes the available materials, their IDs, and descriptions.
+`SearchBarMaterial` defines visual style (`solid`, `glass`). Conforms to `Identifiable`, `Equatable`, `Hashable`. Available on iOS 26.0+, macOS 26.0+. Applied via `.searchBarMaterial(_:)`.
 
 > Important: This type is unavailable on visionOS.
 
 ### Material Grid
 | Material Name | ID | Description |
 |---------------|----|-------------|
-| Solid         | 0  | An opaque material with a solid background, ideal for high-contrast interfaces. |
-| Glass         | 1  | A translucent “Liquid Glass” material, providing a modern, frosted appearance. |
+| Solid         | 0  | Opaque material with solid background. |
+| Glass         | 1  | Translucent “Liquid Glass” material. |
 
 ### Example Usage
 ```swift
@@ -48,8 +48,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Select the material that best compliments your iOS app's design language.
-
         @TabNavigator {
             @Tab("Solid") {
                 @Image(source: "Documentation-SearchBarStyle-Material-Solid-iOS", alt: "Solid Material") {
@@ -64,8 +62,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Choose a material that enhances the visual hierarchy.
-
         @TabNavigator {
             @Tab("Solid") {
                 @Image(source: "Documentation-SearchBarStyle-Material-Solid-iPadOS", alt: "Solid Material") {
@@ -80,8 +76,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Apply the appropriate material to integrate with the macOS desktop aesthetic.
-
         @TabNavigator {
             @Tab("Solid") {
                 @Image(source: "Documentation-SearchBarStyle-Material-Solid-macOSTahoe", alt: "Solid Material") {

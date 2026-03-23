@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/tokenBackground``
 
-The background color for tokens in the `SearchBar`.
+`SearchBar` token background.
 
 @Metadata {
     @DisplayName("TokenBackground")
@@ -17,9 +17,9 @@ The background color for tokens in the `SearchBar`.
 
 ## Overview
 
-- An optional `Color` value for the background of tokens in the `SearchBar`.
-- If `nil`, uses the system default token background.
-- Unavailable due to platform-specific token rendering.
+- Optional `Color` for token backgrounds.
+- `nil` uses system default.
+- Platform-specific availability (iOS/visionOS).
 
 ## Example
 
@@ -39,8 +39,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Customize the background color of tokens to improve their visual distinction.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TokenBackground-Default-iOS", alt: "Default Token Background") {
@@ -55,8 +53,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Set the token background color to match your app's token styling.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TokenBackground-Default-iPadOS", alt: "Default Token Background") {
@@ -71,8 +67,6 @@ struct ContentView: View {
         }
     }
     @Tab("visionOS") {
-        Configure token background colors for better legibility in spatial layouts.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-TokenBackground-Default-visionOS", alt: "Default Token Background") {

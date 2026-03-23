@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarCancelButtonDisplayMode/never``
 
-A mode where the cancel button is never shown in the `SearchBar`.
+Cancel button never visible.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -18,9 +18,8 @@ A mode where the cancel button is never shown in the `SearchBar`.
 
 ## Overview
 
-- Specifies that the `SearchBar` cancel button is never displayed.
-- Suitable for interfaces where canceling is handled differently.
-- Used with the `searchBarCancelButtonDisplayMode(_:)` modifier.
+- Cancel button never displayed.
+- Use with `searchBarCancelButtonDisplayMode(_:)`.
 - Available on iOS 16.0+ and visionOS 1.0+.
 
 > Important: This case is unavailable on macOS.

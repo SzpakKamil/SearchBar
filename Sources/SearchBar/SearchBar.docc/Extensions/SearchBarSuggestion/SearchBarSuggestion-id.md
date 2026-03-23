@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarSuggestion/id``
 
-The unique identifier for a `SearchBarSuggestion`, derived from its `text` and `description`.
+Unique identifier.
 
 @Metadata {
     @DisplayName("Id")
@@ -19,10 +19,10 @@ The unique identifier for a `SearchBarSuggestion`, derived from its `text` and `
 
 ## Overview
 
-- `id` is a `String` uniquely identifying a `SearchBarSuggestion`.
-- Combines `text` and `description` (e.g., `textdescription`).
+- Unique `String` identifier.
+- Combines `text` and `description`.
 - Immutable, set at initialization.
-- Fulfills `Identifiable` protocol for suggestion management in `SearchBar`.
+- Satisfies `Identifiable` protocol.
 
 ## Example
 

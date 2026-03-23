@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)``
 
-Applies a predefined corner style to the `SearchBar` with optional customizations for text color, tint, and background color.
+Applies a corner style with optional custom colors.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,15 +19,15 @@ Applies a predefined corner style to the `SearchBar` with optional customization
 
 ## Overview
 
-The `searchBarStyle(_:textColor:tint:backgroundColor:)` modifier configures the `SearchBar`’s appearance using a `SearchBarCornerStyle` (e.g., `.rounded`) with optional overrides for text color, tint, and background color. Available on macOS, this modifier is tailored for macOS-specific styling needs.
+`searchBarStyle(_:textColor:tint:backgroundColor:)` configures appearance using `SearchBarCornerStyle` with optional color overrides. Supported on macOS.
 
 ## Parameters
 
-- `style`: A `SearchBarCornerStyle` defining the corner style, defaulting to `.rounded`.
-- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
-- `textColor`: An optional `Color` for the search bar’s text. If `nil`, uses the system default.
-- `tint`: An optional `Color` for the search bar’s tint. If `nil`, uses the system default.
-- `backgroundColor`: An optional `Color` for the search bar’s background. If `nil`, uses the system default.
+- `style`: A `SearchBarCornerStyle` value. Defaults to `.rounded`.
+- `borderColor`: Optional `Color` for the border (macOS only). Defaults to system default.
+- `textColor`: Optional `Color` for text. Defaults to system default.
+- `tint`: Optional `Color` for tint. Defaults to system default.
+- `backgroundColor`: Optional `Color` for background. Defaults to system default.
 
 ## Example
 
@@ -45,7 +45,7 @@ struct ContentView: View {
 }
 ```
 
-This example applies a rounded style to the `SearchBar` with custom colors on macOS.
+This applies a rounded style with custom colors.
 
 ## See Also
 

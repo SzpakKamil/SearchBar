@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarCancelButtonAction(_:)``
 
-Defines an action to perform when the cancel button is clicked in the `SearchBar`.
+Defines an action for the cancel button.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -22,13 +22,13 @@ Defines an action to perform when the cancel button is clicked in the `SearchBar
 
 ## Overview
 
-The `searchBarCancelButtonAction(_:)` modifier specifies a closure to execute when the user taps the cancel button. Available on iOS and visionOS, it’s ideal for handling cancellation logic, such as clearing text or dismissing the keyboard.
+`searchBarCancelButtonAction(_:)` executes a closure on cancel button tap. Supported on iOS and visionOS.
 
 > Note: This modifier is not supported on macOS due to platform-specific UI differences.
 
 ## Parameters
 
-- `action`: A closure with no parameters or return value, executed on cancel button tap.
+- `action`: A closure executed on cancel button tap.
 
 ## Example
 
@@ -49,7 +49,7 @@ struct ContentView: View {
 }
 ```
 
-This clears the search text when the cancel button is tapped.
+This clears text on cancel.
 
 ## See Also
 

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarSuggestions(_:)-620nd``
 
-Sets a static list of suggestions for the `SearchBar`.
+Sets static suggestions.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,11 +20,11 @@ Sets a static list of suggestions for the `SearchBar`.
 
 ## Overview
 
-The `searchBarSuggestions(_:)` modifier sets a static list of `SearchBarSuggestion` objects for the `SearchBar`. Available on iOS, iPadOS, visionOS, and macOS, it provides a fixed set of suggestions for the user.
+`searchBarSuggestions(_:)` sets static `SearchBarSuggestion` objects. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Parameters
 
-- `suggestions`: An array of `SearchBarSuggestion` objects representing the suggestions.
+- `suggestions`: Array of `SearchBarSuggestion` objects.
 
 ## Example
 
@@ -44,12 +44,10 @@ struct ContentView: View {
 }
 ```
 
-This example sets a static list of suggestions for the `SearchBar`.
+This sets static suggestions.
 
 @TabNavigator {
     @Tab("iOS") {
-        Display predictive suggestions to help users find what they are looking for faster.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-Suggestions-Default-iOS", alt: "Default Suggestions") {
@@ -64,8 +62,6 @@ This example sets a static list of suggestions for the `SearchBar`.
         }
     }
     @Tab("iPadOS") {
-        Adjust suggestions to leverage the additional screen real estate.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-Suggestions-Default-iPadOS", alt: "Default Suggestions") {
@@ -80,8 +76,6 @@ This example sets a static list of suggestions for the `SearchBar`.
         }
     }
     @Tab("macOS") {
-        Integrate suggestions to provide a seamless desktop search experience.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-Suggestions-Default-macOSTahoe", alt: "Default Suggestions") {
@@ -96,8 +90,6 @@ This example sets a static list of suggestions for the `SearchBar`.
         }
     }
     @Tab("visionOS") {
-        Configure suggestions for spatial search interactions.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-Suggestions-Default-visionOS", alt: "Default Suggestions") {

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarScale/small``
 
-A case of the `SearchBarScale` enum that applies a compact size to the `SearchBar`.
+Compact search bar size.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,7 +20,7 @@ A case of the `SearchBarScale` enum that applies a compact size to the `SearchBa
 
 ## Overview
 
-The `small` case specifies a compact size for the `SearchBar` view, with a `heightMultiplier` of 1.0 (or 0.82 on iOS 26.0+; 1 on macOS) and a `cornerScale` of 1.0. It has a fixed `id` of `0` and is applied using the `.searchBarScale(.small)` modifier. This scale is ideal for minimalistic interfaces where space is constrained or a subtle search bar is preferred. Available on iOS 14.0+, iPadOS 14.0+, and macOS 11.0+.
+`small` specifies compact size (`heightMultiplier`: 1.0/0.82/1, `cornerScale`: 1.0). Applied via `.searchBarScale(.small)`. Available on iOS 14.0+, iPadOS 14.0+, macOS 11.0+.
 
 > Important: This type is unavailable on visionOS.
 

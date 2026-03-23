@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarStyle(_:borderColor:textColor:tint:tokenBackground:backgroundColor:)``
 
-Applies a predefined corner style to the `SearchBar` with customizations including token background color.
+Applies a corner style with custom token background color.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,16 +20,16 @@ Applies a predefined corner style to the `SearchBar` with customizations includi
 
 ## Overview
 
-The `searchBarStyle(_:textColor:tint:tokenBackground:backgroundColor:)` modifier configures the `SearchBar`’s appearance using a `SearchBarCornerStyle` (e.g., `.rounded`) with optional overrides for text color, tint, token background, and background color. Available on iOS and visionOS, this modifier supports token-based search interfaces.
+`searchBarStyle(_:textColor:tint:tokenBackground:backgroundColor:)` configures appearance using `SearchBarCornerStyle` with optional color overrides. Supported on iOS and visionOS.
 
 ## Parameters
 
-- `style`: A `SearchBarCornerStyle` defining the corner style, defaulting to `.rounded`.
-- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
-- `textColor`: An optional `Color` for the search bar’s text. If `nil`, uses the system default.
-- `tint`: An optional `Color` for the search bar’s tint. If `nil`, uses the system default.
-- `tokenBackground`: An optional `Color` for the background of tokens. If `nil`, uses the system default.
-- `backgroundColor`: An optional `Color` for the search bar’s background. If `nil`, uses the system default.
+- `style`: A `SearchBarCornerStyle` value. Defaults to `.rounded`.
+- `borderColor`: Optional `Color` for the border (macOS only). Defaults to system default.
+- `textColor`: Optional `Color` for text. Defaults to system default.
+- `tint`: Optional `Color` for tint. Defaults to system default.
+- `tokenBackground`: Optional `Color` for token backgrounds. Defaults to system default.
+- `backgroundColor`: Optional `Color` for background. Defaults to system default.
 
 ## Example
 
@@ -47,7 +47,7 @@ struct ContentView: View {
 }
 ```
 
-This example styles the `SearchBar` with a capsule shape and custom colors, including a yellow token background.
+This styles `SearchBar` with a capsule shape and yellow tokens.
 
 ## See Also
 

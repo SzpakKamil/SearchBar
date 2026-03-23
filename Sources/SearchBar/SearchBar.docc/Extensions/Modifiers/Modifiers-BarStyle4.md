@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarStyle(cornerRadius:borderColor:textColor:tint:backgroundColor:)``
 
-Configures the `SearchBar`’s style with a specific corner radius and color settings.
+Configures style with specific corner radius and colors.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,15 +19,15 @@ Configures the `SearchBar`’s style with a specific corner radius and color set
 
 ## Overview
 
-The `searchBarStyle(cornerRadius:textColor:tint:backgroundColor:)` modifier allows precise control over the `SearchBar`’s appearance by setting a custom corner radius, text color, tint, and background color. Available on macOS, this modifier is ideal for fine-tuning the search bar’s look.
+`searchBarStyle(cornerRadius:textColor:tint:backgroundColor:)` sets custom corner radius and colors. Supported on macOS.
 
 ## Parameters
 
-- `cornerRadius`: A `CGFloat` defining the corner radius, defaulting to `0`.
-- `borderColor`: An optional `Color` for the search bar’s border. If `nil`, uses the system default (Only appears on macOS).
-- `textColor`: An optional `Color` for the search bar’s text. If `nil`, uses the system default.
-- `tint`: An optional `Color` for the search bar’s tint. If `nil`, uses the system default.
-- `backgroundColor`: An optional `Color` for the search bar’s background. If `nil`, uses the system default.
+- `cornerRadius`: A `CGFloat` for corner radius. Defaults to `0`.
+- `borderColor`: Optional `Color` for the border (macOS only). Defaults to system default.
+- `textColor`: Optional `Color` for text. Defaults to system default.
+- `tint`: Optional `Color` for tint. Defaults to system default.
+- `backgroundColor`: Optional `Color` for background. Defaults to system default.
 
 ## Example
 
@@ -45,7 +45,7 @@ struct ContentView: View {
 }
 ```
 
-This example sets a custom corner radius of 10 and applies custom colors on macOS.
+This sets a corner radius of 10 with custom colors.
 
 ## See Also
 

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarSuggestions(_:)-syi0``
 
-Sets a binding to a list of suggestions for the `SearchBar`.
+Sets a binding to suggestions.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,11 +20,11 @@ Sets a binding to a list of suggestions for the `SearchBar`.
 
 ## Overview
 
-The `searchBarSuggestions(_:)` modifier binds a list of `SearchBarSuggestion` objects to the `SearchBar` for dynamic suggestion updates. Available on iOS, iPadOS, visionOS, and macOS, it enhances search with predictive suggestions.
+`searchBarSuggestions(_:)` binds `SearchBarSuggestion` objects for dynamic updates. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Parameters
 
-- `suggestions`: A `Binding<[SearchBarSuggestion]>` to manage the suggestions.
+- `suggestions`: A `Binding<[SearchBarSuggestion]>` for suggestions.
 
 ## Example
 
@@ -45,12 +45,10 @@ struct ContentView: View {
 }
 ```
 
-This example binds a dynamic list of suggestions to the `SearchBar`.
+This binds a dynamic list of suggestions.
 
 @TabNavigator {
     @Tab("iOS") {
-        Display predictive suggestions to help users find what they are looking for faster.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-Suggestions-Default-iOS", alt: "Default Suggestions") {
@@ -65,8 +63,6 @@ This example binds a dynamic list of suggestions to the `SearchBar`.
         }
     }
     @Tab("iPadOS") {
-        Adjust suggestions to leverage the additional screen real estate.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-Suggestions-Default-iPadOS", alt: "Default Suggestions") {
@@ -81,8 +77,6 @@ This example binds a dynamic list of suggestions to the `SearchBar`.
         }
     }
     @Tab("macOS") {
-        Integrate suggestions to provide a seamless desktop search experience.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-Suggestions-Default-macOSTahoe", alt: "Default Suggestions") {
@@ -97,8 +91,6 @@ This example binds a dynamic list of suggestions to the `SearchBar`.
         }
     }
     @Tab("visionOS") {
-        Configure suggestions for spatial search interactions.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-Suggestions-Default-visionOS", alt: "Default Suggestions") {

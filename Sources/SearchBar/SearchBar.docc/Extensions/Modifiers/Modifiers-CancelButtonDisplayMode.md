@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarCancelButtonDisplayMode(_:)``
 
-Configures the display behavior of the cancel button in the `SearchBar`.
+Configures cancel button visibility.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,13 +20,13 @@ Configures the display behavior of the cancel button in the `SearchBar`.
 
 ## Overview
 
-The `searchBarCancelButtonDisplayMode(_:)` modifier determines when the cancel button is visible in the `SearchBar`. Available on iOS and visionOS, it supports modes like always visible or visible only while editing.
+`searchBarCancelButtonDisplayMode(_:)` controls cancel button visibility. Supported on iOS and visionOS.
 
 > Note: This modifier is not supported on macOS due to platform-specific UI differences.
 
 ## Parameters
 
-- `mode`: A `SearchBarCancelButtonDisplayMode` specifying the display behavior (e.g., `.always`, `.whileEditing`).
+- `mode`: A `SearchBarCancelButtonDisplayMode` value (e.g., `.always`, `.whileEditing`).
 
 ## Example
 
@@ -44,12 +44,10 @@ struct ContentView: View {
 }
 ```
 
-This example ensures the cancel button is always visible.
+This makes the cancel button always visible.
 
 @TabNavigator {
     @Tab("iOS") {
-        Configure the cancel button's appearance to improve usability.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Always-iOS", alt: "Always") {
@@ -69,8 +67,6 @@ This example ensures the cancel button is always visible.
         }
     }
     @Tab("iPadOS") {
-        Adjust how the cancel button is shown to suit larger layouts.
-
         @TabNavigator {
             @Tab("Always") {
                 @Image(source: "Documentation-SearchBarDisplayModes-CancelButton-Always-iPadOS", alt: "Always") {

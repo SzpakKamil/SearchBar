@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarClearButtonDisplayMode/never``
 
-A mode where the clear button is never shown in the `SearchBar`.
+Clear button never visible.
 
 @Metadata {
     @DisplayName("Never")
@@ -18,9 +18,8 @@ A mode where the clear button is never shown in the `SearchBar`.
 
 ## Overview
 
-- Specifies that the `SearchBar` clear button is never displayed.
-- Suitable for interfaces where clearing is handled differently.
-- Used with the `searchBarClearButtonDisplayMode(_:)` modifier.
+- Clear button never displayed.
+- Use with `searchBarClearButtonDisplayMode(_:)`.
 
 ## Example
 

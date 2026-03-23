@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarClearButtonDisplayMode/uiTextFieldViewMode``
 
-A property that maps the `SearchBarClearButtonDisplayMode` to a `UITextField.ViewMode` for UIKit integration.
+Maps to `UITextField.ViewMode`.
 
 @Metadata {
     @DisplayName("UITextFieldViewMode")
@@ -17,8 +17,8 @@ A property that maps the `SearchBarClearButtonDisplayMode` to a `UITextField.Vie
 
 ## Overview
 
-- Maps `SearchBarClearButtonDisplayMode` cases to `UITextField.ViewMode` values.
-- Used to configure the clear button behavior in UIKit-based `SearchBar` implementations.
+- Maps cases to `UITextField.ViewMode`.
+- Configures UIKit-based `SearchBar` implementations.
 - Unavailable on macOS due to UIKit dependency.
 
 ## Example

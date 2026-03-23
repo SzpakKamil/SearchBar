@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarSuggestion/token``
 
-The optional `SearchBarToken` associated with a `SearchBarSuggestion`.
+Optional associated `SearchBarToken`.
 
 @Metadata {
     @DisplayName("Token")
@@ -19,10 +19,9 @@ The optional `SearchBarToken` associated with a `SearchBarSuggestion`.
 
 ## Overview
 
-- `token` is an optional `SearchBarToken` linked to a `SearchBarSuggestion`.
-- Enables suggestions to reference a specific filter token in `SearchBar`.
+- Optional `SearchBarToken`.
+- References specific filter token.
 - Immutable, set at initialization.
-- Enhances suggestion functionality by connecting to token-based filtering.
 
 ## Example
 

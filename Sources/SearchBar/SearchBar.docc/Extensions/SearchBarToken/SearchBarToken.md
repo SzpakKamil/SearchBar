@@ -1,6 +1,7 @@
 # ``SearchBar/SearchBarToken``
 
-A type representing tokens used to manage filter categories and suggestions.
+Represents filter/suggestion tokens.
+
 @Metadata {
     @SupportedLanguage(swift)
     @Available(iOS, introduced: "16.0")
@@ -18,11 +19,9 @@ A type representing tokens used to manage filter categories and suggestions.
 
 ## Overview
 
-`SearchBarToken` is a key component of the `SearchBar` package, representing tokens for filter categories or suggested selections to enhance search functionality. It integrates with modifiers for token-based filtering and suggestions, and can be embedded in `SearchBarSuggestion` for customized search experiences.
+`SearchBarToken` represents tokens for filtering or suggestions. Integrates with token modifiers and `SearchBarSuggestion`.
 
-## Support
-
-Below is an example of a struct with a `SearchBarToken` property:
+## Usage
 
 ```swift
 struct User {
@@ -37,22 +36,22 @@ struct User {
 }
 ```
 
-## Implementation
+## Modifiers
 
 - ``SearchBar/SearchBar/searchBarCurrentTokens(_:)`` 
-    Configures tokens for filter categories.  
+    Configures filter tokens.  
     - Parameters:  
       - `tokens`: A `Binding<[SearchBarToken]>` to manage the current tokens.  
     - Availability: iOS 16.0+, visionOS 1.0+.
 
 - ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-5wxi`` 
-    Configures suggested tokens for selection.  
+    Configures selection suggestions.  
     - Parameters:  
       - `tokens`: A `Binding<[SearchBarToken]>` to manage suggested tokens.  
     - Availability: iOS 16.0+, visionOS 1.0+.
 
 - ``SearchBar/SearchBar/searchBarSuggestedTokens(_:)-6o8fa``
-    Sets a static list of suggested tokens.  
+    Sets static suggestions.  
     - Parameters:  
       - `tokens`: An `[SearchBarToken]` array for static suggestions.  
     - Availability: iOS 16.0+, visionOS 1.0+.
@@ -60,21 +59,16 @@ struct User {
 ## Conformances
 
 ### Identifiable
-- Provides unique identification through the `id` property.
-- Enables use in SwiftUI lists and collections that require identity.
+- Unique identification via `id`.
 
 ### Codable
-- Supports encoding to and decoding from external formats (JSON, property lists).
-- Enables token persistence and data interchange.
+- Supports encoding/decoding.
 
 ### Equatable & Hashable
-- Allows comparison between tokens based on their `id`.
-- Enables use in `Set` collections and as dictionary keys.
-- Supports efficient deduplication and lookup operations.
+- Compares based on `id`.
 
 ### Comparable
-- Enables sorting based on the `text` property.
-- Allows alphabetical ordering of token collections.
+- Sorts by `text`.
 
 ## Topics
 

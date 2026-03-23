@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarScale``
 
-An enumeration that specifies the size scale for a `SearchBar` view.
+Enumeration for search bar scale.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -20,17 +20,15 @@ An enumeration that specifies the size scale for a `SearchBar` view.
 
 ## Overview
 
-The `SearchBarScale` enum defines the size scale for a `SearchBar` view, supporting three cases: `small`, `medium`, and `large`. It conforms to `Identifiable`, `Equatable`, and `Hashable`, making it suitable for SwiftUI views and data models. Available on iOS 14.0+, iPadOS 14.0+, and macOS 11.0+, this enum adjusts the search bar’s height and corner radius using the `heightMultiplier` and `cornerScale` properties.
+`SearchBarScale` defines scale (`small`, `medium`, `large`). Conforms to `Identifiable`, `Equatable`, `Hashable`. Available on iOS 14.0+, iPadOS 14.0+, macOS 11.0+. Adjusts `heightMultiplier` and `cornerScale`.
 
-The `heightMultiplier` varies by platform and iOS version:
-- On macOS, it is 1, 2, or 3 for `small`, `medium`, and `large`, respectively.
-- On iOS and iPadOS (pre-iOS 26.0), it is 1.0, 0.8, and 0.9 for `small`, `medium`, and `large`, respectively.
-- On iOS and iPadOS (iOS 26.0+), it is 0.82, 0.77, and 0.8 for `small`, `medium`, and `large`, respectively.
+- macOS height multipliers: 1, 2, 3.
+- iOS < 26.0 height multipliers: 1.0, 0.8, 0.9.
+- iOS 26.0+ height multipliers: 0.82, 0.77, 0.8.
 
-The `cornerScale` adjusts the corner radius:
-- For `small`, it is 1.0.
-- For `medium`, it is 1.2 (pre-iOS 26.0) or 1.35 (iOS 26.0+).
-- For `large`, it is 1.4 (across all versions).
+- Small corner scale: 1.0.
+- Medium corner scale: 1.2 (< iOS 26), 1.35 (iOS 26+).
+- Large corner scale: 1.4.
 
 The scale is applied using the `.searchBarScale(_:)` modifier. The table below summarizes the available scales, their IDs, and descriptions.
 
@@ -39,9 +37,9 @@ The scale is applied using the `.searchBarScale(_:)` modifier. The table below s
 ### Scale Grid
 | Scale Name | ID | Description |
 |------------|----|-------------|
-| Small      | 0  | A compact search bar size, ideal for minimalistic interfaces. |
-| Medium     | 1  | A balanced search bar size, suitable for most standard layouts. |
-| Large      | 2  | An expanded search bar size, designed for prominent or touch-friendly interfaces. |
+| Small      | 0  | Compact size. |
+| Medium     | 1  | Balanced size. |
+| Large      | 2  | Expanded size. |
 
 ### Example Usage
 ```swift
@@ -61,8 +59,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Choose from three distinct scales to optimize the SearchBar's size for your iOS application's layout.
-
         @TabNavigator {
             @Tab("Small") {
                 @Image(source: "Documentation-SearchBarStyle-Scale-Small-iOS", alt: "Small Scale") {
@@ -82,8 +78,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        On iPadOS, you can adjust the SearchBar scale to better fit the larger display and various multitasking modes.
-
         @TabNavigator {
             @Tab("Small") {
                 @Image(source: "Documentation-SearchBarStyle-Scale-Small-iPadOS", alt: "Small Scale") {
@@ -103,8 +97,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Use these scales to ensure the SearchBar integrates seamlessly with the desktop environment.
-
         @TabNavigator {
             @Tab("Small") {
                 @Image(source: "Documentation-SearchBarStyle-Scale-Small-macOSTahoe", alt: "Small Scale") {

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarStyle/borderColor``
 
-The color of the `SearchBar`’s border, available on all platforms with visual effect only on macOS.
+`SearchBar` border color (macOS visual only).
 
 @Metadata {
     @DisplayName("BorderColor")
@@ -20,11 +20,11 @@ The color of the `SearchBar`’s border, available on all platforms with visual 
 
 ## Overview
 
-- A `Color` value defining the border color of the `SearchBar`, applicable on iOS, iPadOS, macOS, and visionOS.
-- Set via the `searchBarStyle(_:borderColor:textColor:tint:backgroundColor:)` modifier or directly in `SearchBarStyle`.
-- If `nil`, uses the system default border color.
+- `Color` value for border. Available cross-platform.
+- Set via `searchBarStyle(...)` or `SearchBarStyle`.
+- `nil` uses system default.
 
->Note:Visual changes are only reflected on macOS due to platform-specific rendering; other platforms accept the property to simplify cross-platform modifier consistency, particularly for visionOS styling, but do not display border color changes.
+>Note:Visual effect limited to macOS. Other platforms ignore the value for consistent API usage.
 
 ## Example
 
@@ -44,8 +44,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("macOS") {
-        Adjust the border color to enhance the search bar's visual boundaries.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BorderColor-Default-macOSTahoe", alt: "Default Border Color") {
@@ -60,8 +58,6 @@ struct ContentView: View {
         }
     }
     @Tab("tvOS") {
-        Adjust the border color to enhance the search bar's visual boundaries.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BorderColor-Default-tvOS", alt: "Default Border Color") {
@@ -76,8 +72,6 @@ struct ContentView: View {
         }
     }
     @Tab("watchOS") {
-        Adjust the border color to enhance the search bar's visual boundaries.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarStyle-BorderColor-Default-watchOS", alt: "Default Border Color") {

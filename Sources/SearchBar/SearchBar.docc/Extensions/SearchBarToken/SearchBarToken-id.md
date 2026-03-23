@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarToken/id``
 
-The unique identifier for a `SearchBarToken`, derived from its `text` and `systemName`.
+Unique token identifier.
 
 @Metadata{
     @DisplayName("Id")
@@ -17,10 +17,10 @@ The unique identifier for a `SearchBarToken`, derived from its `text` and `syste
 
 ## Overview
 
-- `id` is a `String` uniquely identifying a `SearchBarToken`.
-- Combines `text` and `systemName` (e.g., `textsystemName`).
+- Unique `String` identifier.
+- Combines `text` and `systemName`.
 - Immutable, set at initialization.
-- Fulfills `Identifiable` protocol for token management in `SearchBar` filtering and suggestions.
+- Satisfies `Identifiable` protocol.
 
 ## Example
 
@@ -33,4 +33,3 @@ The unique identifier for a `SearchBarToken`, derived from its `text` and `syste
 - ``SearchBarToken/text``
 - ``SearchBarToken/systemName``
 - ``SearchBarToken/init(text:systemName:)``
-

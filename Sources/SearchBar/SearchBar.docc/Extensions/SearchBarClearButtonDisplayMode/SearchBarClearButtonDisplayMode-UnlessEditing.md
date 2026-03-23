@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarClearButtonDisplayMode/unlessEditing``
 
-A mode where the clear button is shown in the `SearchBar` unless editing.
+Clear button visible unless editing.
 
 @Metadata {
     @DisplayName("UnlessEditing")
@@ -18,9 +18,8 @@ A mode where the clear button is shown in the `SearchBar` unless editing.
 
 ## Overview
 
-- Specifies that the `SearchBar` clear button appears when not editing.
-- Suitable for interfaces where the clear button is relevant when inactive.
-- Used with the `searchBarClearButtonDisplayMode(_:)` modifier.
+- Clear button appears when not editing.
+- Use with `searchBarClearButtonDisplayMode(_:)`.
 
 ## Example
 

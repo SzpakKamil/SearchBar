@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarCancelButtonDisplayMode/always``
 
-A mode where the cancel button is always visible in the `SearchBar`.
+Cancel button always visible.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -18,9 +18,8 @@ A mode where the cancel button is always visible in the `SearchBar`.
 
 ## Overview
 
-- Specifies that the `SearchBar` cancel button is always displayed.
-- Suitable for interfaces requiring constant access to the cancel action.
-- Used with the `searchBarCancelButtonDisplayMode(_:)` modifier.
+- Cancel button always displayed.
+- Use with `searchBarCancelButtonDisplayMode(_:)`.
 - Available on iOS 16.0+ and visionOS 1.0+.
 
 > Important: This case is unavailable on macOS.

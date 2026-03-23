@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarIsFocused(_:)``
 
-Binds the `SearchBar`’s focus state to a Boolean value.
+Binds focus state.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -22,11 +22,11 @@ Binds the `SearchBar`’s focus state to a Boolean value.
 
 ## Overview
 
-The `searchBarIsFocused(_:)` modifier allows you to control and monitor the `SearchBar`’s focus state via a `Binding<Bool>`. Available on iOS, iPadOS, visionOS, and macOS, it’s useful for programmatically focusing or defocusing the search bar.
+`searchBarIsFocused(_:)` controls focus state via `Binding<Bool>`. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Parameters
 
-- `value`: A `Binding<Bool>` indicating whether the `SearchBar` is focused.
+- `value`: A `Binding<Bool>` for focus state.
 
 ## Example
 
@@ -50,7 +50,7 @@ struct ContentView: View {
 }
 ```
 
-This example focuses the `SearchBar` when the button is pressed.
+This focuses `SearchBar` on button press.
 
 ## See Also
 

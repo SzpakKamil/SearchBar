@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarToken/text``
 
-The display title for a `SearchBarToken`, shown in the `SearchBar` interface.
+Token display title.
 
 @Metadata{
     @DisplayName("Text")
@@ -17,10 +17,9 @@ The display title for a `SearchBarToken`, shown in the `SearchBar` interface.
 
 ## Overview
 
-- `text` is a `String` defining the display title of a `SearchBarToken`.
-- Represents the visible label in the `SearchBar` interface.
+- `String` defining display title.
+- Visible label.
 - Immutable, set at initialization.
-- Works with `systemName` for clear token representation in filtering and suggestions.
 
 ## Example
 

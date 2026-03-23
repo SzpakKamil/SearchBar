@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarAutoCorrectionType(_:)``
 
-Controls the autocorrection behavior of the `SearchBar`’s text input.
+Controls text input autocorrection.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,13 +19,13 @@ Controls the autocorrection behavior of the `SearchBar`’s text input.
 
 ## Overview
 
-The `searchBarAutoCorrectionType(_:)` modifier configures whether the `SearchBar`’s text input should use autocorrection. Available on iOS (14.0+) and visionOS (1.0+), it defaults to `.default`, which typically enables autocorrection unless overridden.
+`searchBarAutoCorrectionType(_:)` configures autocorrection. Supported on iOS (14.0+) and visionOS (1.0+). Defaults to `.default`.
 
 > Note: This modifier is not supported on macOS due to platform-specific UI differences.
 
 ## Parameters
 
-- `type`: A `UITextAutocorrectionType` specifying the autocorrection behavior, defaulting to `.default`.
+- `type`: A `UITextAutocorrectionType` value. Defaults to `.default`.
 
 ## Example
 
@@ -43,12 +43,10 @@ struct ContentView: View {
 }
 ```
 
-This example disables autocorrection to prevent automatic text changes.
+This disables autocorrection.
 
 @TabNavigator {
     @Tab("iOS") {
-        Configure the autocorrection behavior to optimize text input.
-
         @TabNavigator {
             @Tab("Enabled") {
                 @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Enabled-iOS", alt: "Autocorrection Enabled") {
@@ -63,8 +61,6 @@ This example disables autocorrection to prevent automatic text changes.
         }
     }
     @Tab("iPadOS") {
-        Adjust the autocorrection behavior for a more personalized experience.
-
         @TabNavigator {
             @Tab("Enabled") {
                 @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Enabled-iPadOS", alt: "Autocorrection Enabled") {
@@ -79,8 +75,6 @@ This example disables autocorrection to prevent automatic text changes.
         }
     }
     @Tab("visionOS") {
-        Customize the autocorrection for improved text entry accuracy.
-
         @TabNavigator {
             @Tab("Enabled") {
                 @Image(source: "Documentation-SearchBarKeyboard-AutoCorrectionType-Enabled-visionOS", alt: "Autocorrection Enabled") {

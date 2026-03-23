@@ -1,6 +1,6 @@
 # ``SearchBar/searchBarBeginEditingAction(_:)``
 
-Triggers an action when the user begins editing the `SearchBar`’s text.
+Triggers an action when editing begins.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -22,11 +22,11 @@ Triggers an action when the user begins editing the `SearchBar`’s text.
 
 ## Overview
 
-The `searchBarBeginEditingAction(_:)` modifier specifies a closure to execute when the user starts editing the `SearchBar`’s text. Available on iOS, iPadOS, visionOS, and macOS, it’s useful for tracking when the search bar becomes active.
+`searchBarBeginEditingAction(_:)` executes a closure when editing begins. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Parameters
 
-- `action`: A closure with no parameters or return value, executed when editing begins.
+- `action`: A closure executed on edit start.
 
 ## Example
 
@@ -46,7 +46,7 @@ struct ContentView: View {
 }
 ```
 
-This example logs a message when the user begins editing the search text.
+This logs a message when editing begins.
 
 ## See Also
 

@@ -19,14 +19,14 @@
     @AutomaticSeeAlso(disabled)
 }
 
-Learn how to integrate the `SearchBar` package into your SwiftUI project.
+Integrate `SearchBar` into your SwiftUI project.
 
 ## Overview
 
-The `SearchBar` package provides a customizable SwiftUI search bar for iOS, iPadOS, macOS, and visionOS. This guide explains how to add the package using Swift Package Manager (SPM).
+`SearchBar` provides a customizable SwiftUI search bar for iOS, iPadOS, macOS, and visionOS. Add it using Swift Package Manager (SPM).
 
 ## Installing Agent Skill
-You can install the SearchBar skill for your CLI agent to get expert guidance on SearchBar directly in your terminal.
+Install the SearchBar skill for expert guidance in your terminal.
 
 ### Using skills.sh:
 ```bash
@@ -40,7 +40,7 @@ npx dlx clawdhub@latest install searchbar
 
 ## Adding SearchBar to Your Project
 
-Add the `SearchBar` package to your project via Swift Package Manager:
+Add `SearchBar` via Swift Package Manager:
 
 1. In Xcode, go to **File > Add Package Dependency**.
 2. Enter the package URL: `https://github.com/SzpakKamil/SearchBar.git`.
@@ -56,7 +56,7 @@ For setup instructions, supported versions, and contribution guidelines, see the
 
 ### Example Integration
 
-Here’s a minimal example of using `SearchBar` in a SwiftUI view:
+Use `SearchBar` in a SwiftUI view:
 
 ```swift
 import SwiftUI
@@ -72,14 +72,12 @@ struct ContentView: View {
 }
 ```
 
-This creates a basic search bar that prints the search text when submitted.
-
 ## Troubleshooting
 
-- **Package not found**: Verify the URL (`https://github.com/SzpakKamil/SearchBar.git`) and your internet connection.
-- **Dependency issues**: Confirm the version or branch exists in the repository. Try the `main` branch if unsure.
-- **Module not recognized**: Ensure the package is added to your project’s target and `import SearchBar` is included.
-- **Compatibility errors**: Check that your project’s deployment target meets iOS 14.0+, visionOS 1.0+, or macOS 11.0+.
+- **Package not found**: Verify the URL (`https://github.com/SzpakKamil/SearchBar.git`) and internet connection.
+- **Dependency issues**: Confirm the version or branch exists. Try `main` if unsure.
+- **Module not recognized**: Ensure the package is added to the target and `import SearchBar` is included.
+- **Compatibility errors**: Check deployment targets: iOS 14.0+, visionOS 1.0+, macOS 11.0+.
 
 ## Next Steps
 

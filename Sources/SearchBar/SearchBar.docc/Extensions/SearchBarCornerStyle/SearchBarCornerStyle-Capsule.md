@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarCornerStyle/capsule``
 
-A style where the `SearchBar` has a fully rounded, capsule-shaped appearance.
+Capsule-shaped search bar.
 
 @Metadata {
     @DisplayName("Capsule")
@@ -20,10 +20,9 @@ A style where the `SearchBar` has a fully rounded, capsule-shaped appearance.
 
 ## Overview
 
-- Specifies a capsule-shaped `SearchBar` with fully rounded edges.
-- Provides a corner radius of 18 (iOS, iPadOS, macOS) or 22 (visionOS).
-- Used with the `searchBarStyle(_:)` modifier or `SearchBarStyle.capsule`.
-- Suitable for modern, pill-like search bar designs.
+- Capsule shape with fully rounded edges.
+- Corner radius: 18 (iOS/macOS), 22 (visionOS).
+- Use with `searchBarStyle(_:)`.
 
 ## Example
 

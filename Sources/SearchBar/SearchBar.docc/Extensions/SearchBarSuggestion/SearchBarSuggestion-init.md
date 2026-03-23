@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarSuggestion/init(text:description:systemName:)``
 
-Creates a new search suggestion with the specified text, description, and optional system icon.
+Initializes suggestion.
 
 @Metadata{
     @SupportedLanguage(swift)
@@ -18,15 +18,14 @@ Creates a new search suggestion with the specified text, description, and option
 
 ## Overview
 
-- Creates a `SearchBarSuggestion` with a title, optional description, and SF Symbol.
-- Generates unique `id` by combining `text` and `description` (if provided).
-- Used for standalone suggestions in `SearchBar` interfaces.
+- Initializes with title, description, and symbol.
+- Generates unique `id`.
 
 ## Parameters
 
-- `text`: The display title for the suggestion.
-- `description`: An optional `String` providing additional context.
-- `systemName`: An optional SF Symbol name (e.g., "star.fill", "clock").
+- `text`: Display title.
+- `description`: Optional description.
+- `systemName`: Optional SF Symbol name.
 
 ## Example
 

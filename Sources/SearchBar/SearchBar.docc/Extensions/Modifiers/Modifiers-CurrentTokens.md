@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarCurrentTokens(_:)``
 
-Manages a dynamic list of current tokens for the `SearchBar`.
+Manages dynamic tokens.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -19,13 +19,13 @@ Manages a dynamic list of current tokens for the `SearchBar`.
 
 ## Overview
 
-The `searchBarCurrentTokens(_:)` modifier binds a list of `SearchBarToken` objects to the `SearchBar` to manage filter categories dynamically. Available on iOS and visionOS, it’s used for token-based filtering interfaces.
+`searchBarCurrentTokens(_:)` binds `SearchBarToken` objects to manage filters. Supported on iOS and visionOS.
 
 > Note: This modifier is not supported on macOS due to platform-specific UI differences.
 
 ## Parameters
 
-- `tokens`: A `Binding<[SearchBarToken]>` to manage the current tokens.
+- `tokens`: A `Binding<[SearchBarToken]>` for tokens.
 
 ## Example
 
@@ -44,12 +44,10 @@ struct ContentView: View {
 }
 ```
 
-This example binds a dynamic list of tokens to the `SearchBar`.
+This binds a dynamic list of tokens.
 
 @TabNavigator {
     @Tab("iOS") {
-        Manage current tokens to provide a structured filtering experience.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Default-iOS", alt: "Default Tokens") {
@@ -64,8 +62,6 @@ This example binds a dynamic list of tokens to the `SearchBar`.
         }
     }
     @Tab("iPadOS") {
-        Adjust current tokens for better organization in larger layouts.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Default-iPadOS", alt: "Default Tokens") {
@@ -80,8 +76,6 @@ This example binds a dynamic list of tokens to the `SearchBar`.
         }
     }
     @Tab("visionOS") {
-        Configure current tokens for spatial filtering interactions.
-
         @TabNavigator {
             @Tab("Default") {
                 @Image(source: "Documentation-SearchBarSuggestionsTokens-CurrentTokens-Default-visionOS", alt: "Default Tokens") {

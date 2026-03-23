@@ -1,6 +1,6 @@
 # ``SearchBarMaterial/glass``
 
-A case of the `SearchBarMaterial` enum that applies a translucent “Liquid Glass” material to the `SearchBar`.
+Translucent "Liquid Glass" material.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -21,7 +21,7 @@ A case of the `SearchBarMaterial` enum that applies a translucent “Liquid Glas
 
 ## Overview
 
-The `glass` case specifies a translucent “Liquid Glass” material for the `SearchBar` view, providing a modern, frosted appearance that blends with the background. It has a fixed `id` of `1` and is applied using the `.searchBarMaterial(.glass)` modifier. This material is ideal for interfaces aiming for a sleek, immersive aesthetic, as introduced in iOS 26.0, macOS 26.0, and later.
+`glass` specifies a translucent material. Applied via `.searchBarMaterial(.glass)`. Available on iOS 26.0+, macOS 26.0+.
 
 > Important: This type is unavailable on visionOS.
 

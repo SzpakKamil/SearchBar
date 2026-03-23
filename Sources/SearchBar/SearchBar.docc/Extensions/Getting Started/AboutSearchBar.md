@@ -19,11 +19,11 @@
     @AutomaticSeeAlso(disabled)
 }
 
-Learn about the customizable SwiftUI `SearchBar` package for enhanced search functionality.
+Use the `SearchBar` package to add customizable search functionality to SwiftUI apps.
 
 ## Overview
 
-The `SearchBar` package extends SwiftUI’s default search bar, offering flexible customization and robust functionality. Supporting iOS, iPadOS, visionOS, and macOS, it integrates native components (`UISearchBar` for iOS/visionOS, and on macOS, it recreates `NSSearchField` from AppKit using SwiftUI components) into a unified SwiftUI API for seamless, platform-specific solutions. The package is fully localized, supporting translations for every language available on the supported operating systems, ensuring that prompts, placeholders, and system-provided text (e.g., cancel button labels) adapt to the user’s preferred language settings for a native and accessible experience.
+`SearchBar` extends SwiftUI’s default search bar with flexible customization and robust functionality. It supports iOS, iPadOS, visionOS, and macOS by integrating native components (`UISearchBar` on iOS/visionOS, `NSSearchField` behavior on macOS) into a unified SwiftUI API. The package includes full localization for all supported system languages. Prompts, placeholders, and system text like cancel buttons adapt automatically to user settings.
 
 @TabNavigator {
     @Tab("iOS") {
@@ -60,28 +60,26 @@ The `SearchBar` package extends SwiftUI’s default search bar, offering flexibl
 
 ## Why Use SearchBar?
 
-The `SearchBar` package improves upon Apple’s default search bars with:
+`SearchBar` improves on Apple’s default components:
 
-- **Detailed Documentation**: Swift DocC with API references for easy adoption.
-- **Reliable Testing**: Unit and UI tests ensure stability across platforms.
-- **Flexible Placement**: Embed in navigation bars, toolbars, or custom views without UIKit/AppKit.
-- **Custom Styling**: Modifiers for colors, borders, and corner styles to align with app design.
-- **Shape and Color Styling**: Style with shape colors like token background, text color, background color, and even a custom SwiftUI view for the search icon.
-- **Tailored Input**: Configurable keyboards, return keys, and content types for optimized input.
-- **Advanced Features**: Search tokens (iOS 16.0+, visionOS 1.0+) and suggestions (iOS 16.0+, visionOS 1.0+, macOS 15.0+).
-- **Accessibility**: Supports VoiceOver and Dynamic Type for inclusive experiences.
-- **Platform Consistency**: Unified SwiftUI API with native behaviors (e.g., capsule styling on visionOS).
-- **Full Localization**: Translated into every language available on iOS, iPadOS, macOS, and visionOS, ensuring seamless integration with system language settings for prompts, buttons, and other UI elements.
-
-These features enable developers to create accessible, customized, and globally adaptable search bars efficiently.
+- **Documentation**: Comprehensive Swift DocC API references.
+- **Testing**: Unit and UI tests ensure cross-platform stability.
+- **Placement**: Embed in navigation bars, toolbars, or custom views without UIKit or AppKit.
+- **Styling**: Modifiers for colors, borders, and corner styles.
+- **Advanced Styling**: Customize token backgrounds, text colors, and icon views.
+- **Input**: Configurable keyboards, return keys, and content types.
+- **Features**: Search tokens (iOS 16.0+, visionOS 1.0+) and suggestions (iOS 16.0+, visionOS 1.0+, macOS 15.0+).
+- **Accessibility**: Full VoiceOver and Dynamic Type support.
+- **Consistency**: Unified API with native platform behaviors.
+- **Localization**: Translations for all supported system languages.
 
 ## Customization Modifiers
 
-The `SearchBar` package offers modifiers for tailoring appearance, input, and behavior using SwiftUI’s dot syntax. Here are some key examples:
+`SearchBar` uses standard SwiftUI modifiers for configuration.
 
 - **Appearance**:
   - `.searchBarStyle(_:)`: Configures corner radius, text color, tint, token background (iOS/visionOS), and background color.
-  - `.searchBarIconView(_:)`: Sets a custom icon view for the search bar.
+  - `.searchBarIconView(_:)`: Sets a custom icon view.
 
 - **Input Configuration** (iOS/visionOS):
   - `.searchBarKeyboardType(_:)`: Configures keyboard (e.g., `.emailAddress`, `.URL`).
@@ -139,17 +137,16 @@ struct ContentView: View {
 }
 ```
 
-## Target Use Cases
+## Use Cases
 
-The `SearchBar` package is ideal for:
-- **Custom Placement**: Embedding in toolbars or custom views.
-- **Branded Apps**: Matching app design with custom colors and styles.
-- **Specialized Inputs**: Apps requiring specific keyboard configurations.
-- **Cross-Platform Apps**: Consistent search across iOS, iPadOS, visionOS, and macOS.
-- **Global Applications**: Supporting every available system language for prompts, buttons, and UI elements, ensuring a native experience worldwide.
+- **Custom Placement**: Embed in toolbars or custom views.
+- **Branding**: Match app design with custom colors and styles.
+- **Input Control**: Configure specific keyboard types.
+- **Cross-Platform**: Consistent search across iOS, iPadOS, visionOS, and macOS.
+- **Global Support**: Native experience in all supported system languages.
 
 ## Next Steps
 
-- Learn to integrate the package in <doc:SetUp>.
+- Integrate the package in <doc:SetUp>.
 - Explore modifier details in <doc:Modifiers>.
 - Build a sample app with <doc:FruitsList>.

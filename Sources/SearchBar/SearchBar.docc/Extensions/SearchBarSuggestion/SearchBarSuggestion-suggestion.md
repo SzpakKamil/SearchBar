@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarSuggestion/suggestion``
 
-A `UISearchSuggestionItem` representation of the `SearchBarSuggestion` for UIKit search interfaces.
+`UISearchSuggestionItem` representation.
 
 @Metadata {
     @DisplayName("Suggestion")
@@ -19,9 +19,9 @@ A `UISearchSuggestionItem` representation of the `SearchBarSuggestion` for UIKit
 
 ## Overview
 
-- Provides a `UISearchSuggestionItem` for integrating `SearchBarSuggestion` with UIKit search bars.
-- Uses `text` for the suggestion title, `description` for additional context, and `systemName` for an optional SF Symbol.
-- Available on iOS 16.0+ and visionOS 1.0+, unavailable on macOS.
+- Provides `UISearchSuggestionItem` for UIKit integration.
+- Maps properties to UIKit equivalent.
+- Available on iOS 16.0+, visionOS 1.0+.
 - Requires `MainActor` for thread-safe UI operations.
 
 ## Example

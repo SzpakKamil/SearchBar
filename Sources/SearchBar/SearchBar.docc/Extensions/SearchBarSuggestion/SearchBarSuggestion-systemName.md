@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarSuggestion/systemName``
 
-The optional system icon name for a `SearchBarSuggestion`, used to display an associated SF Symbol.
+Optional SF Symbol name.
 
 @Metadata {
     @DisplayName("SystemName")
@@ -19,10 +19,9 @@ The optional system icon name for a `SearchBarSuggestion`, used to display an as
 
 ## Overview
 
-- `systemName` is an optional `String` specifying the SF Symbol for a `SearchBarSuggestion`.
-- Pairs with `text` and `description` for visual representation in `SearchBar`.
+- Optional `String` specifying SF Symbol.
+- Visual representation alongside text.
 - Immutable, set at initialization.
-- Enhances suggestion appearance in UIKit search interfaces.
 
 ## Example
 

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarLookToDictateEnabled(_:)``
 
-Enables or disables the "Look to Dictate" feature for the search bar.
+Controls "Look to Dictate".
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -18,13 +18,11 @@ Enables or disables the "Look to Dictate" feature for the search bar.
 
 ## Overview
 
-The `searchBarLookToDictateEnabled(_:)` modifier controls whether the "Look to Dictate" feature is enabled for the search bar. This feature is particularly relevant for visionOS and compatible iOS devices, allowing users to initiate dictation by looking at the microphone icon in the search field.
-
-> Note: This modifier is only available on iOS 17.0+ and visionOS.
+`searchBarLookToDictateEnabled(_:)` controls the "Look to Dictate" feature. Supported on iOS 17.0+ and visionOS.
 
 ## Parameters
 
-- `value`: A `Bool` indicating whether "Look to Dictate" is enabled.
+- `value`: `Bool` enabling "Look to Dictate".
 
 ## Example
 
@@ -42,7 +40,7 @@ struct ContentView: View {
 }
 ```
 
-This example enables "Look to Dictate" for the search bar.
+This enables "Look to Dictate".
 
 ## See Also
 

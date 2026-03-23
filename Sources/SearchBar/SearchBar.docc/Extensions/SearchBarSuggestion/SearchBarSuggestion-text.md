@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarSuggestion/text``
 
-The display title for a `SearchBarSuggestion`, shown in the `SearchBar` interface.
+Display title.
 
 @Metadata {
     @DisplayName("Text")
@@ -19,10 +19,9 @@ The display title for a `SearchBarSuggestion`, shown in the `SearchBar` interfac
 
 ## Overview
 
-- `text` is a `String` defining the display title of a `SearchBarSuggestion`.
-- Represents the primary label shown in the `SearchBar` suggestion interface.
+- `String` defining display title.
+- Primary label.
 - Immutable, set at initialization.
-- Used for user-facing suggestion text in filtering interfaces.
 
 ## Example
 

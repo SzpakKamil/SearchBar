@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarClearButtonAction(_:)``
 
-Defines an action to perform when the clear button is clicked in the `SearchBar`.
+Defines an action for the clear button.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -22,11 +22,11 @@ Defines an action to perform when the clear button is clicked in the `SearchBar`
 
 ## Overview
 
-The `searchBarClearButtonAction(_:)` modifier specifies a closure to execute when the user taps the clear button. Available on iOS, iPadOS, visionOS, and macOS, it’s ideal for handling clearing logic, such as resetting the search state.
+`searchBarClearButtonAction(_:)` executes a closure on clear button tap. Supported on iOS, iPadOS, visionOS, and macOS.
 
 ## Parameters
 
-- `action`: A closure with no parameters or return value, executed on clear button tap.
+- `action`: A closure executed on clear button tap.
 
 ## Example
 
@@ -46,7 +46,7 @@ struct ContentView: View {
 }
 ```
 
-This example logs a message when the clear button is tapped.
+This logs a message on clear.
 
 ## See Also
 

@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBar/searchBarScale(_:)``
 
-A SwiftUI view modifier that adjusts the padding between a `SearchBar`’s elements and its border.
+Adjusts `SearchBar` scaling and padding.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -21,12 +21,12 @@ A SwiftUI view modifier that adjusts the padding between a `SearchBar`’s eleme
 
 ## Overview
 
-The `.searchBarScale(_:)` modifier configures the size and padding of a `SearchBar` view, adjusting the spacing between its elements (e.g., text field, icons) and its border using the `SearchBarScale` enum’s cases: `small`, `medium`, or `large`. Available on iOS 14.0+, iPadOS 14.0+, macOS 11.0+, and visionOS 1.0+, this modifier scales the search bar’s height via the `heightMultiplier` property (e.g., 1.0, 0.80, 0.9 on iOS; 1, 2, 3 on macOS) and its corner radius via the `cornerScale` property (1.0, 1.15, 1.25). Use this modifier to customize the search bar’s layout for different interface needs, combining it with `.searchBarMaterial(_:)` and `.searchBarCancelButtonDisplayMode(_:)` for a cohesive design. The table below summarizes the modifier’s parameter.
+`searchBarScale(_:)` configures size and padding using `SearchBarScale`. Supported on iOS 14.0+, iPadOS 14.0+, macOS 11.0+, and visionOS 1.0+.
 
 ### Parameters Grid
 | Parameter Name | Type | Description |
 |----------------|------|-------------|
-| scale          | SearchBarScale | The scale size to apply, either `.small`, `.medium`, or `.large`. |
+| scale          | SearchBarScale | The scale size: `.small`, `.medium`, or `.large`. |
 
 ### Example Usage
 ```swift
@@ -45,8 +45,6 @@ struct ContentView: View {
 
 @TabNavigator {
     @Tab("iOS") {
-        Configure the search bar scale to match your iOS application's layout.
-
         @TabNavigator {
             @Tab("Small") {
                 @Image(source: "Documentation-SearchBarStyle-Scale-Small-iOS", alt: "Small Scale") {
@@ -66,8 +64,6 @@ struct ContentView: View {
         }
     }
     @Tab("iPadOS") {
-        Adjust the scale for optimal readability and accessibility.
-
         @TabNavigator {
             @Tab("Small") {
                 @Image(source: "Documentation-SearchBarStyle-Scale-Small-iPadOS", alt: "Small Scale") {
@@ -87,8 +83,6 @@ struct ContentView: View {
         }
     }
     @Tab("macOS") {
-        Scale the search bar to fit various desktop interface densities.
-
         @TabNavigator {
             @Tab("Small") {
                 @Image(source: "Documentation-SearchBarStyle-Scale-Small-macOSTahoe", alt: "Small Scale") {
@@ -108,8 +102,6 @@ struct ContentView: View {
         }
     }
     @Tab("tvOS") {
-        Select a scale that works best for large-screen viewing and navigation.
-
         @TabNavigator {
             @Tab("Small") {
                 @Image(source: "Documentation-SearchBarStyle-Scale-Small-tvOS", alt: "Small Scale") {
@@ -129,8 +121,6 @@ struct ContentView: View {
         }
     }
     @Tab("watchOS") {
-        Optimize the search bar scale for the watch's compact display.
-
         @TabNavigator {
             @Tab("Small") {
                 @Image(source: "Documentation-SearchBarStyle-Scale-Small-watchOS", alt: "Small Scale") {

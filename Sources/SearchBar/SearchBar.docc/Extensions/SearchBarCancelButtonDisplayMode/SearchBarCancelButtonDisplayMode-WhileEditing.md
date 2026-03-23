@@ -1,6 +1,6 @@
 # ``SearchBar/SearchBarCancelButtonDisplayMode/whileEditing``
 
-A mode where the cancel button is shown in the `SearchBar` only while editing.
+Cancel button visible while editing.
 
 @Metadata {
     @SupportedLanguage(swift)
@@ -18,9 +18,8 @@ A mode where the cancel button is shown in the `SearchBar` only while editing.
 
 ## Overview
 
-- Specifies that the `SearchBar` cancel button appears only during text editing.
-- Suitable for interfaces where the cancel button is relevant only when active.
-- Used with the `searchBarCancelButtonDisplayMode(_:)` modifier.
+- Cancel button appears only during editing.
+- Use with `searchBarCancelButtonDisplayMode(_:)`.
 - Available on iOS 16.0+ and visionOS 1.0+.
 
 > Important: This case is unavailable on macOS.
