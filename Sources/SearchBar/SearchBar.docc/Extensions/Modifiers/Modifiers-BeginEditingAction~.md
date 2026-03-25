@@ -1,4 +1,4 @@
-# ``SearchBar/searchBarBeginEditingAction(_:)``
+# ``SearchBar/SearchBar/searchBarBeginEditingAction(_:)``
 
 Triggers an action when editing begins.
 
