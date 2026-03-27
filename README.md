@@ -6,7 +6,7 @@
 ![Banner](./Resources/SearchBar-Banner.png#gh-light-mode-only)
 ![Banner](./Resources/SearchBar-BannerDark.png#gh-dark-mode-only)
 
-Flexible, customizable search for SwiftUI. `SearchBar` replaces standard `.searchable` modifiers with full layout control across all Apple platforms.
+`SearchBar` replaces standard `.searchable` modifiers with layout control across all Apple platforms.
 
 Visit the [Site](https://kamilszpak.com/searchbar) or [Documentation](https://documentation.kamilszpak.com/documentation/searchbar).
 
@@ -25,20 +25,18 @@ Visit the [Site](https://kamilszpak.com/searchbar) or [Documentation](https://do
 
 ## Features
 
-* **Cross-Platform API**: Unified API for iOS, iPadOS, macOS, tvOS, watchOS, and visionOS.
-* **Native Backend**: Uses `UISearchBar` where available, custom SwiftUI elsewhere.
-* **Token Support**: Support search tokens for filters or scopes.
-* **Suggestions**: Display and filter search suggestions.
-* **Localization & Accessibility**: Localized for all Apple languages. Supports VoiceOver and Dynamic Type.
+* Unified API across iOS, iPadOS, macOS, tvOS, watchOS, and visionOS.
+* Uses `UISearchBar` where available; custom SwiftUI elsewhere.
+* Search tokens for filters or scopes.
+* Display and filter search suggestions.
+* Localized for all Apple languages; supports VoiceOver and Dynamic Type.
 
 ## Customization
 
-Integrate `SearchBar` seamlessly.
-
-* **Style & Appearance**: Customize shape, background material, color, and corner radius.
-* **Layout Integration**: Place the search bar anywhere in the view hierarchy.
-* **Custom Icons & Views**: Replace the default search icon with any `View`.
-* **Smart Input**: Suggest content types (addresses, emails). Integrate platform features like visionOS 'Look to Dictate'.
+* Customize shape, background material, color, and corner radius.
+* Place the search bar anywhere in the view hierarchy.
+* Replace the default search icon with any `View`.
+* Suggest content types (addresses, emails) and use platform features like visionOS 'Look to Dictate'.
 
 ## Usage
 
