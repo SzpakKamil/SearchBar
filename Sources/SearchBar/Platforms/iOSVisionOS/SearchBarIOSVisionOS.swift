@@ -345,7 +345,6 @@ public class SearchStyleVisionOS: UISearchBar {
             }
             view.subviews.forEach { observeSubviews($0) }
         }
-        
         public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
             if keyPath == "cornerRadius", let layer = object as? CALayer {
                 if layer.cornerRadius != desiredCornerRadius {
