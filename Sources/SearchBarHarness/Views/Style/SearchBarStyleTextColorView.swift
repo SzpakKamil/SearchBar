@@ -21,6 +21,7 @@ struct SearchBarStyleTextColorView: View {
                         SearchBar(text: .constant("Hello"))
                     }
                 }
+                .allowsHitTesting(false)
                 .padding(.horizontal, 5)
                 Spacer()
             }

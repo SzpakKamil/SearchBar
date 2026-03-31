@@ -17,7 +17,8 @@ struct SearchBarKeyboardAutoCorrectionTypeView: View {
                 SearchBar(text: .constant(""))
                     .searchBarAutoCorrectionType(isOn ? .yes : .no)
                     .searchBarIsFocused(.constant(true))
-                    .padding(.horizontal, 5)
+                    .allowsHitTesting(false)
+                .padding(.horizontal, 5)
                 Spacer()
             }
             .id(isOn)

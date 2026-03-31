@@ -21,6 +21,7 @@ struct SearchBarStyleBorderColorView: View {
                         SearchBar(text: .constant(""))
                     }
                 }
+                .allowsHitTesting(false)
                 .padding(.horizontal, 5)
                 Spacer()
             }

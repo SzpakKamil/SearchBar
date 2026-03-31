@@ -16,7 +16,8 @@ struct SearchBarStyleScaleView: View {
                 #if !os(visionOS)
                     SearchBar(text: .constant(""))
                         .searchBarScale(variant)
-                        .padding(.horizontal, 5)
+                        .allowsHitTesting(false)
+                .padding(.horizontal, 5)
                 #endif
                 Spacer()
             }

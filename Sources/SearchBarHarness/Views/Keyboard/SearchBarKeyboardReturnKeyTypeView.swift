@@ -17,7 +17,8 @@ struct SearchBarKeyboardReturnKeyTypeView: View {
                 SearchBar(text: .constant(""))
                     .searchBarReturnKeyType(variant)
                     .searchBarIsFocused(.constant(true))
-                    .padding(.horizontal, 5)
+                    .allowsHitTesting(false)
+                .padding(.horizontal, 5)
                 Spacer()
             }
             .id(variant)

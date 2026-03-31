@@ -23,6 +23,7 @@ struct SearchBarStyleTintColorView: View {
                             .versionSpecificisFocused(.constant(true))
                     }
                 }
+                .allowsHitTesting(false)
                 .padding(.horizontal, 5)
                 Spacer()
             }

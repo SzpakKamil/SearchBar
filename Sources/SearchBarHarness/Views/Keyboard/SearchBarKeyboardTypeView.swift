@@ -17,7 +17,8 @@ struct SearchBarKeyboardTypeView: View {
                 SearchBar(text: .constant(""))
                     .searchBarKeyboardType(variant)
                     .searchBarIsFocused(.constant(true))
-                    .padding(.horizontal, 5)
+                    .allowsHitTesting(false)
+                .padding(.horizontal, 5)
                 Spacer()
             }
             .id(variant)

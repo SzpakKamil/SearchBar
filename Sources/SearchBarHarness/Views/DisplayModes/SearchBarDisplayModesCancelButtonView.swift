@@ -17,6 +17,7 @@ struct SearchBarDisplayModesCancelButtonView: View {
                 SearchBar(text: .constant(""))
                     .searchBarCancelButtonDisplayMode(variant)
                     .searchBarIsFocused(.constant(variant != .always))
+                    .allowsHitTesting(false)
                     .padding(.horizontal, 5)
                 Spacer()
             }

@@ -16,7 +16,8 @@ struct SearchBarDisplayModesClearButtonView: View {
                 SearchBar(text: .constant(""))
                     .searchBarClearButtonDisplayMode(variant)
                     .versionSpecificisFocused(.constant(true))
-                    .padding(.horizontal, 5)
+                    .allowsHitTesting(false)
+                .padding(.horizontal, 5)
                 Spacer()
             }
             .id(variant)

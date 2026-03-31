@@ -15,7 +15,8 @@ struct SearchBarStyleDefaultStyleView: View {
             VStack{
                 SearchBar(text: .constant(""))
                     .searchBarStyle(variant)
-                    .padding(.horizontal, 5)
+                    .allowsHitTesting(false)
+                .padding(.horizontal, 5)
                 Spacer()
             }
             .id(variant)
