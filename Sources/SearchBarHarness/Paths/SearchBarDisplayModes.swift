@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import HarnessKit
 
+#if !os(tvOS) && !os(watchOS)
 extension SearchBarHK {
     public enum DisplayModes: Int, PathFolder {
         #if os(macOS)
@@ -55,3 +56,4 @@ extension SearchBarHK {
 
     }
 }
+#endif

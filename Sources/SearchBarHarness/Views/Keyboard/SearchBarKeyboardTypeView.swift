@@ -9,8 +9,8 @@ import SwiftUI
 import SearchBar
 import HarnessKit
 
+#if os(iOS) || os(visionOS)
 struct SearchBarKeyboardTypeView: View {
-    #if !os(macOS)
     var body: some View {
         HarnessPreview([UIKeyboardType.default, .numbersAndPunctuation, .URL, .numberPad, .phonePad, .namePhonePad, .emailAddress, .decimalPad, .twitter, .webSearch, .alphabet] ){ variant in
             ZStack{
@@ -22,19 +22,11 @@ struct SearchBarKeyboardTypeView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
-        #if os(macOS)
-        .windowSize(.custom(width: 550, height: 400))
-        #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
-    #else
-    
-    var body: some View{
-        SearchBarStyleTextColorView()
-    }
-    #endif
 }
 
 #Preview {
     SearchBarKeyboardTypeView()
 }
+#endif

@@ -9,8 +9,8 @@ import SwiftUI
 import SearchBar
 import HarnessKit
 
+#if os(iOS) || os(visionOS)
 struct SearchBarKeyboardAutoCapitalizationTypeView: View {
-    #if !os(macOS)
     var body: some View {
         HarnessPreview([UITextAutocapitalizationType.none, .words, .sentences, .allCharacters ] ){ variant in
             ZStack{
@@ -43,18 +43,11 @@ struct SearchBarKeyboardAutoCapitalizationTypeView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
-        #if os(macOS)
-        .windowSize(.custom(width: 550, height: 400))
-        #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
-    #else
-    var body: some View{
-        SearchBarStyleTextColorView()
-    }
-    #endif
 }
 
 #Preview {
     SearchBarKeyboardAutoCapitalizationTypeView()
 }
+#endif

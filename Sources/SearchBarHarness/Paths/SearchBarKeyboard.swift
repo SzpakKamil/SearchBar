@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import HarnessKit
 
+#if os(iOS) || os(visionOS)
 extension SearchBarHK {
     public enum Keyboard: Int, PathFolder {
         public static let options: [any PathFolder] = [
@@ -62,3 +63,4 @@ extension SearchBarHK {
         public static let name = "Keyboard"
     }
 }
+#endif

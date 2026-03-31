@@ -16,7 +16,7 @@ struct SearchBarDisplayModesClearButtonView: View {
             ZStack{
                 SearchBar(text: .constant(""))
                     .searchBarClearButtonDisplayMode(variant)
-                    .searchBarIsFocused(.constant(true))
+                    .versionSpecificisFocused(.constant(true))
                     .padding(.horizontal, 5)
             }
             frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -25,7 +25,7 @@ struct SearchBarDisplayModesClearButtonView: View {
         #if os(macOS)
         .windowSize(.custom(width: 550, height: 400))
         #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
 }
 

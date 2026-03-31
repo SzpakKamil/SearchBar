@@ -18,7 +18,7 @@ struct SearchBarStyleMaterialView: View {
                 LinearGradient(colors: [.blue, .green], startPoint: .leading, endPoint: .trailing)
                     .opacity(colorScheme == .dark ? 0.25 : 0.5)
                 #if !os(visionOS)
-                if #available(iOS 26.0, visionOS 26.0, tvOS 26.0, watchOS 26.0, *){
+                if #available(iOS 26.0, visionOS 26.0, tvOS 26.0, watchOS 26.0, macOS 26.0, *){
                     SearchBar(text: .constant(""))
                         .searchBarMaterial(variant)
                         .padding(.horizontal, 5)
@@ -31,7 +31,7 @@ struct SearchBarStyleMaterialView: View {
         #if os(macOS)
         .windowSize(.custom(width: 550, height: 400))
         #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
 }
 

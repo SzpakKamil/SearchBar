@@ -9,11 +9,11 @@ import SwiftUI
 import SearchBar
 import HarnessKit
 
+#if os(iOS) || os(visionOS)
 struct SearchBarSuggestedTokensView: View {
     var body: some View {
         HarnessPreview{ isOn in
             ZStack{
-                #if os(iOS) || os(visionOS)
                 Group{
                     if #available(iOS 16.0, *), isOn{
                         SearchBar(text: .constant("Text"))
@@ -25,15 +25,11 @@ struct SearchBarSuggestedTokensView: View {
                     }
                 }
                 .padding(.horizontal, 5)
-                #endif
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
         }
-        #if os(macOS)
-        .windowSize(.custom(width: 550, height: 400))
-        #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
         
     }
 }
@@ -41,3 +37,4 @@ struct SearchBarSuggestedTokensView: View {
 #Preview {
     SearchBarSuggestedTokensView()
 }
+#endif

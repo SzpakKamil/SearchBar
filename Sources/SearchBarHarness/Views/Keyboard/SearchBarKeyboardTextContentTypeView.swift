@@ -9,8 +9,8 @@ import SwiftUI
 import HarnessKit
 import SearchBar
 
+#if os(iOS) || os(visionOS)
 struct SearchBarKeyboardTextContentTypeView: View {
-    #if !os(macOS)
     var body: some View {
         HarnessPreview{ isOn in
             ZStack{
@@ -28,18 +28,11 @@ struct SearchBarKeyboardTextContentTypeView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
         }
-        #if os(macOS)
-        .windowSize(.custom(width: 550, height: 400))
-        #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
-    #else
-    var body: some View{
-        SearchBarStyleTextColorView()
-    }
-    #endif
 }
 
 #Preview {
     SearchBarKeyboardTextContentTypeView()
 }
+#endif

@@ -9,23 +9,22 @@ import SwiftUI
 import HarnessKit
 import SearchBar
 
+#if os(iOS) || os(visionOS) || os(macOS)
 struct SearchBarSuggestionsView: View {
     var body: some View {
         HarnessPreview{ isOn in
             ZStack{
-                #if os(iOS) || os(visionOS) || os(macOS)
                 Group{
-                    if #available(iOS 16.0, *), isOn{
+                    if #available(iOS 16.0, macOS 15.0, *), isOn{
                         SearchBar(text: .constant(""))
                             .searchBarSuggestions(.constant([.init(text: "Triangle", description: "3 Corners", systemName: "triangle.fill"), .init(text: "Circle", description: "Perfectly Round", systemName: "circle.fill"), .init(text: "Square", description: "4 Corners", systemName: "square.fill")]))
                             .searchBarIsFocused(.constant(true))
-                    }else{
+                    }else if #available(macOS 12.0, *){
                         SearchBar(text: .constant(""))
                             .searchBarIsFocused(.constant(true))
                     }
                 }
                 .padding(.horizontal, 5)
-                #endif
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
@@ -33,10 +32,11 @@ struct SearchBarSuggestionsView: View {
         #if os(macOS)
         .windowSize(.custom(width: 550, height: 400))
         #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
 }
 
 #Preview {
     SearchBarSuggestionsView()
 }
+#endif

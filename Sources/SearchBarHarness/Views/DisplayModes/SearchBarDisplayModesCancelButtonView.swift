@@ -9,6 +9,7 @@ import SwiftUI
 import HarnessKit
 import SearchBar
 
+#if os(iOS) || os(visionOS)
 struct SearchBarDisplayModesCancelButtonView: View {
     var body: some View {
         HarnessPreview([SearchBarCancelButtonDisplayMode.never, .always, .whileEditing] ){ variant in
@@ -24,12 +25,11 @@ struct SearchBarDisplayModesCancelButtonView: View {
         #if os(macOS)
         .windowSize(.custom(width: 550, height: 400))
         #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
 }
 
 #Preview {
     SearchBarDisplayModesCancelButtonView()
 }
-
-
+#endif

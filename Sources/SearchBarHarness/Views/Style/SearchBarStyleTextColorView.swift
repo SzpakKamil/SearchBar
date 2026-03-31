@@ -30,7 +30,7 @@ struct SearchBarStyleTextColorView: View {
         #if os(macOS)
         .windowSize(.custom(width: 550, height: 400))
         #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
 }
 

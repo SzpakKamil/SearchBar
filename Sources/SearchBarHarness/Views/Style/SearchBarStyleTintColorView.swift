@@ -18,10 +18,10 @@ struct SearchBarStyleTintColorView: View {
                     if isOn{
                         SearchBar(text: .constant("Hello"))
                             .searchBarStyle(tint: .red)
-                            .searchBarIsFocused(.constant(true))
+                            .versionSpecificisFocused(.constant(true))
                     }else{
                         SearchBar(text: .constant("Hello"))
-                            .searchBarIsFocused(.constant(true))
+                            .versionSpecificisFocused(.constant(true))
                     }
                 }
                 .padding(.horizontal, 5)
@@ -32,7 +32,7 @@ struct SearchBarStyleTintColorView: View {
         #if os(macOS)
         .windowSize(.custom(width: 550, height: 400))
         #endif
-        .navigationBarBackButtonHidden()
+        .versionSpecificNavigationButtonHidden()
     }
 }
 
