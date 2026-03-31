@@ -58,7 +58,7 @@ extension SearchBarHK {
             
         }
         #endif
-        
+        public static var folders: [any PathFolder.Type] { [] }
         public typealias ParentSection = SearchBarHK
         public static let name = "Style"
     }
