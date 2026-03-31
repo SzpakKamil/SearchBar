@@ -24,8 +24,10 @@ struct SearchBarCurrentTokensView: View {
                             .searchBarIsFocused(.constant(true))
                     }
                 }
-                .allowsHitTesting(false)
-                .allowsHitTesting(false)
+                                    .allowsHitTesting(false)
+                    .versionSpecificFocusable()
+                                    .allowsHitTesting(false)
+                    .versionSpecificFocusable()
                 .padding(.horizontal, 5)
                 Spacer()
             }

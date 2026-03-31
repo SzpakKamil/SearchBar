@@ -35,3 +35,19 @@ extension View{
         }
     }
 }
+
+extension View{
+    @ViewBuilder
+    func versionSpecificFocusable() -> some View{
+        #if os(tvOS)
+        if #available(tvOS 17.0, *){
+            self
+                .focusable(false)
+        }else{
+            self
+        }
+        #else
+        self
+        #endif
+    }
+}

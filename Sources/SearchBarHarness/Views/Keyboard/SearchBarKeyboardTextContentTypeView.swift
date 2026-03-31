@@ -18,12 +18,14 @@ struct SearchBarKeyboardTextContentTypeView: View {
                     SearchBar(text: .constant(""))
                         .searchBarTextContentType(.telephoneNumber)
                         .searchBarIsFocused(.constant(true))
-                        .allowsHitTesting(false)
+                                            .allowsHitTesting(false)
+                    .versionSpecificFocusable()
                 .padding(.horizontal, 5)
                 }else{
                     SearchBar(text: .constant(""))
                         .searchBarIsFocused(.constant(true))
-                        .allowsHitTesting(false)
+                                            .allowsHitTesting(false)
+                    .versionSpecificFocusable()
                 .padding(.horizontal, 5)
                 }
                 Spacer()
