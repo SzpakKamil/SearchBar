@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import HarnessKit
 
+#if !os(watchOS) && !os(tvOS)
 extension SearchBarHK {
     public enum SuggestionsTokens: Int, PathFolder {
         #if os(macOS)
@@ -26,17 +27,6 @@ extension SearchBarHK {
         case SearchBarCurrentTokens
         case SearchBarSuggestedTokens
 
-        public var description: String{
-            switch self {
-                case .SearchBarSuggestions:
-                    return "SearchBarSuggestions"
-                case .SearchBarCurrentTokens:
-                    return "SearchBarCurrentTokens"
-                case .SearchBarSuggestedTokens:
-                    return "SearchBarSuggestedTokens"
-            }
-        }
-        
         #if canImport(SearchBar)
         @ViewBuilder
         public var view: some View{
@@ -59,3 +49,4 @@ extension SearchBarHK {
         public static let name = "Suggestions & Tokens"
     }
 }
+#endif

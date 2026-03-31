@@ -13,7 +13,7 @@ import HarnessKit
 struct SearchBarKeyboardAutoCapitalizationTypeView: View {
     var body: some View {
         HarnessPreview([UITextAutocapitalizationType.none, .words, .sentences, .allCharacters ] ){ variant in
-            ZStack{
+            VStack{
                 Group{
                     switch variant {
                     case .none:
@@ -39,8 +39,8 @@ struct SearchBarKeyboardAutoCapitalizationTypeView: View {
                     }
                 }
                 .padding(.horizontal, 5)
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
         .versionSpecificNavigationButtonHidden()

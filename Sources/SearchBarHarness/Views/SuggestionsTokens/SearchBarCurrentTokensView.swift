@@ -13,7 +13,7 @@ import HarnessKit
 struct SearchBarCurrentTokensView: View {
     var body: some View {
         HarnessPreview{ isOn in
-            ZStack{
+            VStack{
                 Group{
                     if #available(iOS 16.0, *), isOn{
                         SearchBar(text: .constant(""))
@@ -25,6 +25,7 @@ struct SearchBarCurrentTokensView: View {
                     }
                 }
                 .padding(.horizontal, 5)
+                Spacer()
             }
             .id(isOn)
         }

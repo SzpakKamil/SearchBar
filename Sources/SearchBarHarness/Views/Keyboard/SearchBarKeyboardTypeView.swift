@@ -13,13 +13,13 @@ import HarnessKit
 struct SearchBarKeyboardTypeView: View {
     var body: some View {
         HarnessPreview([UIKeyboardType.default, .numbersAndPunctuation, .URL, .numberPad, .phonePad, .namePhonePad, .emailAddress, .decimalPad, .twitter, .webSearch, .alphabet] ){ variant in
-            ZStack{
+            VStack{
                 SearchBar(text: .constant(""))
                     .searchBarKeyboardType(variant)
                     .searchBarIsFocused(.constant(true))
                     .padding(.horizontal, 5)
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
         .versionSpecificNavigationButtonHidden()

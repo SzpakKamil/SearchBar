@@ -5,7 +5,6 @@
 //  Created by Kamil Szpak on 07/01/2026.
 //
 
-
 import SwiftUI
 import SearchBar
 import HarnessKit
@@ -13,14 +12,14 @@ import HarnessKit
 struct SearchBarStyleScaleView: View {
     var body: some View {
         HarnessPreview([SearchBarScale.small, .medium, .large]){ variant in
-            ZStack{
+            VStack{
                 #if !os(visionOS)
                     SearchBar(text: .constant(""))
                         .searchBarScale(variant)
                         .padding(.horizontal, 5)
                 #endif
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
         #if os(macOS)

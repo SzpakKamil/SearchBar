@@ -31,29 +31,6 @@ extension SearchBarHK {
         case SearchBarStyleMaterial
         case SearchBarStyleScale
         case SearchBarStyleDefaultStyle
-
-        public var description: String{
-            switch self {
-                case .SearchBarStyleCornerRadius:
-                    "SearchBarStyleCornerRadius"
-                case .SearchBarStyleBorderColor:
-                    "SearchBarStyleBorderColor"
-                case .SearchBarStyleTextColor:
-                    "SearchBarStyleTextColor"
-                case .SearchBarStyleTintColor:
-                    "SearchBarStyleTintColor"
-                case .SearchBarStyleTokenBackground:
-                    "SearchBarStyleTokenBackground"
-                case .SearchBarStyleBackgroundColor:
-                    "SearchBarStyleBackgroundColor"
-                case .SearchBarStyleMaterial:
-                    "SearchBarStyleMaterial"
-                case .SearchBarStyleScale:
-                    "SearchBarStyleScale"
-                case .SearchBarStyleDefaultStyle:
-                    "SearchBarStyleDefaultStyle"
-            }
-        }
         
         #if canImport(SearchBar)
         @ViewBuilder

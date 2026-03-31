@@ -13,13 +13,13 @@ import SearchBar
 struct SearchBarDisplayModesCancelButtonView: View {
     var body: some View {
         HarnessPreview([SearchBarCancelButtonDisplayMode.never, .always, .whileEditing] ){ variant in
-            ZStack{
+            VStack{
                 SearchBar(text: .constant(""))
                     .searchBarCancelButtonDisplayMode(variant)
                     .searchBarIsFocused(.constant(variant != .always))
                     .padding(.horizontal, 5)
+                Spacer()
             }
-            frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
         #if os(macOS)

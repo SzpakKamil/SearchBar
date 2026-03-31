@@ -13,13 +13,13 @@ import SearchBar
 struct SearchBarKeyboardAutoCorrectionTypeView: View {
     var body: some View {
         HarnessPreview{ isOn in
-            ZStack{
+            VStack{
                 SearchBar(text: .constant(""))
                     .searchBarAutoCorrectionType(isOn ? .yes : .no)
                     .searchBarIsFocused(.constant(true))
                     .padding(.horizontal, 5)
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
         }
         .versionSpecificNavigationButtonHidden()

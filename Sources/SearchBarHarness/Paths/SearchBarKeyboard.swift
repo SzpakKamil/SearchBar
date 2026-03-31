@@ -24,21 +24,6 @@ extension SearchBarHK {
         case SearchBarKeyboardAutoCorrectionType
         case SearchBarKeyboardAutoCapitalizationType
         case SearchBarKeyboardTextContentType
-
-        public var description: String{
-            switch self {
-                case .SearchBarKeyboardType:
-                    "SearchBarKeyboardType"
-                case .SearchBarKeyboardReturnKeyType:
-                    "SearchBarKeyboardReturnKeyType"
-                case .SearchBarKeyboardAutoCorrectionType:
-                    "SearchBarKeyboardAutoCorrectionType"
-                case .SearchBarKeyboardAutoCapitalizationType:
-                    "SearchBarKeyboardAutoCapitalizationType"
-                case .SearchBarKeyboardTextContentType:
-                    "SearchBarKeyboardTextContentType"
-            }
-        }
         
         #if canImport(SearchBar)
         @ViewBuilder

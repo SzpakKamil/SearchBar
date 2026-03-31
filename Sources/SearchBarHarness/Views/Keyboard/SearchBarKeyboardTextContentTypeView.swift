@@ -13,7 +13,7 @@ import SearchBar
 struct SearchBarKeyboardTextContentTypeView: View {
     var body: some View {
         HarnessPreview{ isOn in
-            ZStack{
+            VStack{
                 if isOn{
                     SearchBar(text: .constant(""))
                         .searchBarTextContentType(.telephoneNumber)
@@ -24,8 +24,8 @@ struct SearchBarKeyboardTextContentTypeView: View {
                         .searchBarIsFocused(.constant(true))
                         .padding(.horizontal, 5)
                 }
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
         }
         .versionSpecificNavigationButtonHidden()

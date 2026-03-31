@@ -13,7 +13,7 @@ import SearchBar
 struct SearchBarSuggestionsView: View {
     var body: some View {
         HarnessPreview{ isOn in
-            ZStack{
+            VStack{
                 Group{
                     if #available(iOS 16.0, macOS 15.0, *), isOn{
                         SearchBar(text: .constant(""))
@@ -25,8 +25,8 @@ struct SearchBarSuggestionsView: View {
                     }
                 }
                 .padding(.horizontal, 5)
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
         }
         #if os(macOS)

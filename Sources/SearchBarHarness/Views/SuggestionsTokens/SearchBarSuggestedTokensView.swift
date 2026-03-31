@@ -13,7 +13,7 @@ import HarnessKit
 struct SearchBarSuggestedTokensView: View {
     var body: some View {
         HarnessPreview{ isOn in
-            ZStack{
+            VStack{
                 Group{
                     if #available(iOS 16.0, *), isOn{
                         SearchBar(text: .constant("Text"))
@@ -25,8 +25,8 @@ struct SearchBarSuggestedTokensView: View {
                     }
                 }
                 .padding(.horizontal, 5)
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
         }
         .versionSpecificNavigationButtonHidden()

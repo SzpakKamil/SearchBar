@@ -5,16 +5,14 @@
 //  Created by Kamil Szpak on 07/01/2026.
 //
 
-
 import SwiftUI
 import SearchBar
 import HarnessKit
 
-
 struct SearchBarStyleCornerRadiusView: View {
     var body: some View {
         HarnessPreview{ isOn in
-            ZStack{
+            VStack{
                 Group{
                     if isOn{
                         SearchBar(text: .constant(""))
@@ -24,8 +22,8 @@ struct SearchBarStyleCornerRadiusView: View {
                     }
                 }
                 .padding(.horizontal, 5)
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
         }
         #if os(macOS)

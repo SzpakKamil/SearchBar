@@ -5,7 +5,6 @@
 //  Created by Kamil Szpak on 07/01/2026.
 //
 
-
 import SwiftUI
 import SearchBar
 import HarnessKit
@@ -13,13 +12,13 @@ import HarnessKit
 struct SearchBarDisplayModesClearButtonView: View {
     var body: some View {
         HarnessPreview([SearchBarClearButtonDisplayMode.always, .never, .whileEditing, .unlessEditing] ){ variant in
-            ZStack{
+            VStack{
                 SearchBar(text: .constant(""))
                     .searchBarClearButtonDisplayMode(variant)
                     .versionSpecificisFocused(.constant(true))
                     .padding(.horizontal, 5)
+                Spacer()
             }
-            frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
         #if os(macOS)

@@ -14,7 +14,6 @@ extension SearchBarHK {
     public enum DisplayModes: Int, PathFolder {
         #if os(macOS)
         public static let options: [any PathFolder] = [
-            SearchBarDisplayModesCancelButton,
             SearchBarDisplayModesClearButton
         ]
         #else
@@ -25,15 +24,6 @@ extension SearchBarHK {
         #endif
         case SearchBarDisplayModesCancelButton
         case SearchBarDisplayModesClearButton
-
-        public var description: String{
-            switch self {
-                case .SearchBarDisplayModesCancelButton:
-                    "SearchBarDisplayModesCancelButton"
-                case .SearchBarDisplayModesClearButton:
-                    "SearchBarDisplayModesClearButton"
-            }
-        }
         
         #if canImport(SearchBar)
         @ViewBuilder

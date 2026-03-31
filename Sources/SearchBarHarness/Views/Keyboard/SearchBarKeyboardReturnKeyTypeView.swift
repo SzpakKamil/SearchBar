@@ -5,7 +5,6 @@
 //  Created by Kamil Szpak on 07/01/2026.
 //
 
-
 import SwiftUI
 import SearchBar
 import HarnessKit
@@ -14,13 +13,13 @@ import HarnessKit
 struct SearchBarKeyboardReturnKeyTypeView: View {
     var body: some View {
         HarnessPreview([UIReturnKeyType.default, .go, .google, .join, .next, .route, .search, .send, .yahoo, .done, .emergencyCall, .continue] ){ variant in
-            ZStack{
+            VStack{
                 SearchBar(text: .constant(""))
                     .searchBarReturnKeyType(variant)
                     .searchBarIsFocused(.constant(true))
                     .padding(.horizontal, 5)
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
         .versionSpecificNavigationButtonHidden()

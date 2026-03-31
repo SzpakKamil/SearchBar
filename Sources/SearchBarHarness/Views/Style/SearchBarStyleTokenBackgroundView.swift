@@ -5,7 +5,6 @@
 //  Created by Kamil Szpak on 07/01/2026.
 //
 
-
 import SwiftUI
 import SearchBar
 import HarnessKit
@@ -13,7 +12,7 @@ import HarnessKit
 struct SearchBarStyleTokenBackgroundView: View {
     var body: some View {
         HarnessPreview{ isOn in
-            ZStack{
+            VStack{
                 #if !os(macOS) && !os(tvOS) && !os(watchOS)
                 if #available(iOS 16.0, *), isOn{
                     SearchBar(text: .constant(""))
@@ -26,8 +25,8 @@ struct SearchBarStyleTokenBackgroundView: View {
                 #else
                 SearchBar(text: .constant(""))
                 #endif
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(isOn)
         }
         #if os(macOS)

@@ -5,7 +5,6 @@
 //  Created by Kamil Szpak on 07/01/2026.
 //
 
-
 import SwiftUI
 import SearchBar
 import HarnessKit
@@ -14,7 +13,7 @@ struct SearchBarStyleMaterialView: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         HarnessPreview([SearchBarMaterial.solid, .glass]){ variant in
-            ZStack{
+            VStack{
                 LinearGradient(colors: [.blue, .green], startPoint: .leading, endPoint: .trailing)
                     .opacity(colorScheme == .dark ? 0.25 : 0.5)
                 #if !os(visionOS)
@@ -24,8 +23,8 @@ struct SearchBarStyleMaterialView: View {
                         .padding(.horizontal, 5)
                 }
                 #endif
+                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .id(variant)
         }
         #if os(macOS)
