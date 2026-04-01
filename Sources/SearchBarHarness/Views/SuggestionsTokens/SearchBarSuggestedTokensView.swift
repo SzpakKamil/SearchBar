@@ -24,7 +24,6 @@ struct SearchBarSuggestedTokensView: View {
                             .searchBarIsFocused(.constant(true))
                     }
                 }
-                .allowsHitTesting(false)
                 .versionSpecificFocusable()
                 .padding(.horizontal, 5)
                 Spacer()
