@@ -22,9 +22,9 @@ struct SearchBarStyleMaterialView: View {
                     if #available(iOS 26.0, visionOS 26.0, tvOS 26.0, watchOS 26.0, macOS 26.0, *){
                         SearchBar(text: .constant(""))
                             .searchBarMaterial(variant)
-                                                .allowsHitTesting(false)
-                    .versionSpecificFocusable()
-                .padding(.horizontal, 5)
+                            .allowsHitTesting(false)
+                            .versionSpecificFocusable()
+                            .padding(.horizontal, 5)
                     }
                     #endif
                     Spacer()

@@ -9,11 +9,11 @@ import SwiftUI
 import SearchBar
 import HarnessKit
 
+#if !os(macOS) && !os(tvOS) && !os(watchOS)
 struct SearchBarStyleTokenBackgroundView: View {
     var body: some View {
         HarnessPreview{ isOn in
             VStack{
-                #if !os(macOS) && !os(tvOS) && !os(watchOS)
                 if #available(iOS 16.0, *), isOn{
                     SearchBar(text: .constant(""))
                         .searchBarStyle(tokenBackground: .red)
@@ -22,16 +22,10 @@ struct SearchBarStyleTokenBackgroundView: View {
                     SearchBar(text: .constant(""))
                         .searchBarCurrentTokens(.constant([SearchBarToken(text: "Hello", systemName: "globe")]))
                 }
-                #else
-                SearchBar(text: .constant(""))
-                #endif
                 Spacer()
             }
             .id(isOn)
         }
-        #if os(macOS)
-        .windowSize(.custom(width: 550, height: 400))
-        #endif
         .versionSpecificNavigationButtonHidden()
     }
 }
@@ -39,3 +33,4 @@ struct SearchBarStyleTokenBackgroundView: View {
 #Preview {
     SearchBarStyleTokenBackgroundView()
 }
+#endif

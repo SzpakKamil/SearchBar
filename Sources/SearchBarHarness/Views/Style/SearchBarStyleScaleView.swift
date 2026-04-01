@@ -14,12 +14,12 @@ struct SearchBarStyleScaleView: View {
         HarnessPreview([SearchBarScale.small, .medium, .large]){ variant in
             VStack{
                 #if !os(visionOS)
-                    SearchBar(text: .constant(""))
-                        .searchBarScale(variant)
-                                            .allowsHitTesting(false)
+                SearchBar(text: .constant(""))
+                    .searchBarScale(variant)
+                    .allowsHitTesting(false)
                     .versionSpecificFocusable()
-                .padding(.horizontal, 5)
-                #endif
+                    .padding(.horizontal, 5)
+                    #endif
                 Spacer()
             }
             .id(variant)

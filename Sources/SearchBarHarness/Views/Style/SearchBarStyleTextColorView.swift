@@ -21,8 +21,8 @@ struct SearchBarStyleTextColorView: View {
                         SearchBar(text: .constant("Hello"))
                     }
                 }
-                                    .allowsHitTesting(false)
-                    .versionSpecificFocusable()
+                .allowsHitTesting(false)
+                .versionSpecificFocusable()
                 .padding(.horizontal, 5)
                 Spacer()
             }

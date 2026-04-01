@@ -11,6 +11,7 @@ import HarnessKit
 
 extension SearchBarHK {
     public enum Style: Int, PathFolder {
+        #if os(iOS) || os(visionOS)
         public static let options: [any PathFolder] = [
             SearchBarStyleCornerRadius,
             SearchBarStyleBorderColor,
@@ -22,6 +23,18 @@ extension SearchBarHK {
             SearchBarStyleScale,
             SearchBarStyleDefaultStyle
         ]
+        #else
+        public static let options: [any PathFolder] = [
+            SearchBarStyleCornerRadius,
+            SearchBarStyleBorderColor,
+            SearchBarStyleTextColor,
+            SearchBarStyleTintColor,
+            SearchBarStyleBackgroundColor,
+            SearchBarStyleMaterial,
+            SearchBarStyleScale,
+            SearchBarStyleDefaultStyle
+        ]
+        #endif
         case SearchBarStyleCornerRadius
         case SearchBarStyleBorderColor
         case SearchBarStyleTextColor
@@ -45,7 +58,11 @@ extension SearchBarHK {
                 case .SearchBarStyleTintColor:
                     SearchBarStyleTintColorView()
                 case .SearchBarStyleTokenBackground:
+                #if os(iOS) || os(visionOS)
                     SearchBarStyleTokenBackgroundView()
+                #else
+                    EmptyView()
+                #endif
                 case .SearchBarStyleBackgroundColor:
                     SearchBarStyleBackgroundColorView()
                 case .SearchBarStyleMaterial:
