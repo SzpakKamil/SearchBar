@@ -1,6 +1,6 @@
 //
 //  SearchBarSuggestionsTokens.swift
-//  PackagesPhotosCreatorUITests
+//  SearchBarHarness
 //
 //  Created by Kamil Szpak on 12/11/2025.
 //

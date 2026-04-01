@@ -1,6 +1,6 @@
 //
 //  SearchBarKeyboardAutoCorrectionTypeView.swift
-//  PackagesPhotosCreator
+//  SearchBarHarness
 //
 //  Created by Kamil Szpak on 07/01/2026.
 //
