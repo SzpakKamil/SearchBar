@@ -5,13 +5,15 @@
 //  Created by Kamil Szpak on 12/11/2025.
 //
 
-import Foundation
-import SwiftUI
 import HarnessKit
+import SwiftUI
 
 #if !os(watchOS) && !os(tvOS)
 extension SearchBarHK {
     public enum SuggestionsTokens: Int, PathFolder {
+        public typealias ParentSection = SearchBarHK
+        public static let name = "Suggestions & Tokens"
+        
         #if os(macOS)
         public static let options: [any PathFolder] = [
             SearchBarSuggestions,
@@ -23,6 +25,8 @@ extension SearchBarHK {
             SearchBarSuggestedTokens
         ]
         #endif
+        public static var folders: [any PathFolder.Type] { [] }
+        
         case SearchBarSuggestions
         case SearchBarCurrentTokens
         case SearchBarSuggestedTokens
@@ -44,9 +48,6 @@ extension SearchBarHK {
             #endif
         }
         #endif
-        public static var folders: [any PathFolder.Type] { [] }
-        public typealias ParentSection = SearchBarHK
-        public static let name = "Suggestions & Tokens"
     }
 }
 #endif

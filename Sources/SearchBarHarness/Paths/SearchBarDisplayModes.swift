@@ -5,13 +5,15 @@
 //  Created by Kamil Szpak on 12/11/2025.
 //
 
-import Foundation
-import SwiftUI
 import HarnessKit
+import SwiftUI
 
 #if !os(tvOS) && !os(watchOS)
 extension SearchBarHK {
     public enum DisplayModes: Int, PathFolder {
+        public typealias ParentSection = SearchBarHK
+        public static let name = "Display Modes"
+        
         #if os(macOS)
         public static let options: [any PathFolder] = [
             SearchBarDisplayModesClearButton
@@ -22,6 +24,8 @@ extension SearchBarHK {
             SearchBarDisplayModesClearButton
         ]
         #endif
+        public static var folders: [any PathFolder.Type] { [] }
+
         case SearchBarDisplayModesCancelButton
         case SearchBarDisplayModesClearButton
         
@@ -40,10 +44,6 @@ extension SearchBarHK {
             #endif
         }
         #endif
-        public static var folders: [any PathFolder.Type] { [] }
-        public typealias ParentSection = SearchBarHK
-        public static let name = "Display Modes"
-
     }
 }
 #endif

@@ -5,9 +5,9 @@
 //  Created by Kamil Szpak on 10/01/2026.
 //
 
-import SwiftUI
 import HarnessKit
 import SearchBar
+import SwiftUI
 
 #if os(iOS) || os(visionOS) || os(macOS)
 struct SearchBarSuggestionsView: View {

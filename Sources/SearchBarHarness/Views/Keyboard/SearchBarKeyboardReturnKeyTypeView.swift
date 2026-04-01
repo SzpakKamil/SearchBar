@@ -5,9 +5,9 @@
 //  Created by Kamil Szpak on 07/01/2026.
 //
 
-import SwiftUI
-import SearchBar
 import HarnessKit
+import SearchBar
+import SwiftUI
 
 #if os(iOS) || os(visionOS)
 struct SearchBarKeyboardReturnKeyTypeView: View {

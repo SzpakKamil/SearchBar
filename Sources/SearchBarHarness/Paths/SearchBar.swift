@@ -5,8 +5,8 @@
 //  Created by Kamil Szpak on 12/11/2025.
 //
 
-import Foundation
 import HarnessKit
+import SwiftUI
 
 public enum SearchBarHK: PathProject {
     public static let name = "SearchBar"

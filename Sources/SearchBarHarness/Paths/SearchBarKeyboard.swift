@@ -5,13 +5,15 @@
 //  Created by Kamil Szpak on 12/11/2025.
 //
 
-import Foundation
-import SwiftUI
 import HarnessKit
+import SwiftUI
 
 #if os(iOS) || os(visionOS)
 extension SearchBarHK {
     public enum Keyboard: Int, PathFolder {
+        public typealias ParentSection = SearchBarHK
+        public static let name = "Keyboard"
+        
         public static let options: [any PathFolder] = [
             SearchBarKeyboardType,
             SearchBarKeyboardReturnKeyType,
@@ -19,6 +21,8 @@ extension SearchBarHK {
             SearchBarKeyboardAutoCapitalizationType,
             SearchBarKeyboardTextContentType,
         ]
+        public static var folders: [any PathFolder.Type] { [] }
+        
         case SearchBarKeyboardType
         case SearchBarKeyboardReturnKeyType
         case SearchBarKeyboardAutoCorrectionType
@@ -42,10 +46,6 @@ extension SearchBarHK {
             }
         }
         #endif
-
-        public static var folders: [any PathFolder.Type] { [] }
-        public typealias ParentSection = SearchBarHK
-        public static let name = "Keyboard"
     }
 }
 #endif

@@ -5,9 +5,9 @@
 //  Created by Kamil Szpak on 07/01/2026.
 //
 
-import SwiftUI
-import SearchBar
 import HarnessKit
+import SearchBar
+import SwiftUI
 
 struct SearchBarStyleTintColorView: View {
     var body: some View {

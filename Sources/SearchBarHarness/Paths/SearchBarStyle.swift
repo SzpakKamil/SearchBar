@@ -5,12 +5,14 @@
 //  Created by Kamil Szpak on 12/11/2025.
 //
 
-import Foundation
-import SwiftUI
 import HarnessKit
+import SwiftUI
 
 extension SearchBarHK {
     public enum Style: Int, PathFolder {
+        public typealias ParentSection = SearchBarHK
+        public static let name = "Style"
+        
         #if os(iOS) || os(visionOS)
         public static let options: [any PathFolder] = [
             SearchBarStyleCornerRadius,
@@ -35,6 +37,8 @@ extension SearchBarHK {
             SearchBarStyleDefaultStyle
         ]
         #endif
+        public static var folders: [any PathFolder.Type] { [] }
+        
         case SearchBarStyleCornerRadius
         case SearchBarStyleBorderColor
         case SearchBarStyleTextColor
@@ -75,8 +79,5 @@ extension SearchBarHK {
             
         }
         #endif
-        public static var folders: [any PathFolder.Type] { [] }
-        public typealias ParentSection = SearchBarHK
-        public static let name = "Style"
     }
 }
